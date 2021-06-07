@@ -2,23 +2,8 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
-public class Solution100 {
+public class Solution122 {
 
-  ////////////////////////////////////////////////////////////////////////////////
-  // LC1
-  public static int[] twoSum(int[] a, int sum) {
-    Map<Integer, Integer> lookup = new HashMap<>();
-    for (int i = 0; i < a.length; i++) {
-      if (lookup.containsKey(a[i])) {
-        return new int[] {lookup.get(a[i]), i};
-      }
-      lookup.put(sum - a[i], i);
-    }
-    return null;
-  }
-
-  ////////////////////////////////////////////////////////////////////////////////
-  // LC
   public static int maxProfit0(int[] a) {
     int n = a.length, mi = 0, s = 0;
     for (int i = 0; i < n; i++) {
@@ -60,15 +45,6 @@ public class Solution100 {
     // }
 
     return dp[n - 1][0];
-  }
-
-  public static void twoSumT01() {
-    int[] a = {2, 3, 5, 9};
-    int n = 11;
-    System.out.println(Arrays.toString(a));
-    System.out.println(n);
-    System.out.println("========================================");
-    System.out.println(Arrays.toString(twoSum(a, n)));
   }
 
   public static void main(String args[]) {
