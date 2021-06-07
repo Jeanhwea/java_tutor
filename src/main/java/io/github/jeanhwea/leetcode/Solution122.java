@@ -2,6 +2,12 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
+/**
+ * 股票交易最大收益
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-07, JDK1.8
+ */
 public class Solution122 {
 
   public static int maxProfit0(int[] a) {

@@ -2,6 +2,12 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
+/**
+ * 选择数组
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-07, JDK1.8
+ */
 public class Solution189 {
 
   public static void rotate(int[] a, int k) {
