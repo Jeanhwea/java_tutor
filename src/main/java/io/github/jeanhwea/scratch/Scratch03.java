@@ -18,9 +18,7 @@ public class Scratch03 {
       for (int j = i + 1; j < n; j++) {
         if (a[j] < a[mi]) mi = j;
       }
-      int t = a[i];
-      a[i] = a[mi];
-      a[mi] = t;
+      int t = a[i]; a[i] = a[mi]; a[mi] = t;
     }
   }
 
@@ -29,11 +27,7 @@ public class Scratch03 {
     int n = a.length;
     for (int i = 0; i < n; i++) {
       for (int j = i + 1; j < n; j++) {
-        if (a[i] > a[j]) {
-          int t = a[i];
-          a[i] = a[j];
-          a[j] = t;
-        }
+        if (a[i] > a[j]) {int t = a[i]; a[i] = a[j]; a[j] = t;}
       }
     }
   }
