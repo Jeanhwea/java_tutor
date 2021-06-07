@@ -1,14 +1,8 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
-/**
- * 链表操作
- *
- * @author Jinghui Hu
- * @since 2021-06-06, JDK1.8
- */
-public class Scratch05 {
+public class Solution002 {
 
   public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode p = l1, q = l2, h = null, t = null;
