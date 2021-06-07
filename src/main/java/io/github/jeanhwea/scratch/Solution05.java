@@ -40,6 +40,7 @@ public class Solution05 {
     ListNode ans = addTwoNumbers(l1, l2);
     System.out.println(listToString(l1));
     System.out.println(listToString(l2));
+    System.out.println("========================================");
     System.out.println(listToString(ans));
   }
 
