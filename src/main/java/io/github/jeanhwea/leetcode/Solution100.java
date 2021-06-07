@@ -1,4 +1,4 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 

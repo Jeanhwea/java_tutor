@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Solution01 {
+public class Scratch01 {
 
   public static int bsearch(int[] a, int key) {
     int i = 0, j = a.length - 1;

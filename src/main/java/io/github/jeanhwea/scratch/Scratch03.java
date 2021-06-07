@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Solution03 {
+public class Scratch03 {
 
   // selection sort
   public static void ssort(int[] a) {

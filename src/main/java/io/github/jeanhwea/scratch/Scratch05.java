@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Solution05 {
+public class Scratch05 {
 
   public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode p = l1, q = l2, h = null, t = null;

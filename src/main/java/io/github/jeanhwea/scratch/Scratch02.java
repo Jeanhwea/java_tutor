@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Solution02 {
+public class Scratch02 {
 
   public static void calc(String[] tokens) {
     Stack<String> ops = new Stack<String>();
