@@ -4,16 +4,12 @@ import java.util.*;
 
 public class Solution349 {
 
-  public static int[] intersect0(int[] a, int[] b) {
+  public static int[] intersect(int[] a, int[] b) {
     int n = a.length, m = b.length;
 
     Set<Integer> s1 = new HashSet<>(), s2 = new HashSet<>();
     for (int i = 0; i < n; i++) s1.add(a[i]);
-    for (int i = 0; i < m; i++) {
-      if (s1.contains(b[i]) && !s2.contains(b[i])) {
-        s2.add(b[i]);
-      }
-    }
+    for (int i = 0; i < m; i++) if (s1.contains(b[i])) s2.add(b[i]);
 
     int[] res = new int[s2.size()];
     int k = 0;
@@ -23,7 +19,7 @@ public class Solution349 {
     return res;
   }
 
-  public static int[] intersect(int[] a, int[] b) {
+  public static int[] intersect1(int[] a, int[] b) {
     int n = a.length, m = b.length;
     Arrays.sort(a);
     Arrays.sort(b);
