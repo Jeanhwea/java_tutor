@@ -31,18 +31,18 @@ public class Scratch04 {
   }
 
   public static void sink(int[] a, int p, int n) {
-    int s = 2 * p + 1, ma = p;
+    int mi = p;
     while (true) {
-      if (s < n && a[s] > a[ma]) ma = s;
-      if ((s + 1) < n && a[s + 1] > a[ma]) ma = s + 1;
-      if (p != ma) {
-        int t = a[p];
-        a[p] = a[ma];
-        a[ma] = t;
-      } else break;
+      int s = 2 * p + 1;
+      while (s < n && a[s] < a[mi]) mi = s;
+      ++s;
+      while (s < n && a[s] < a[mi]) mi = s;
+      if (p == mi) break;
 
-      p = ma;
-      s = 2 * p + 1;
+      int t = a[mi];
+      a[mi] = a[p];
+      a[p] = t;
+      p = mi;
     }
   }
 

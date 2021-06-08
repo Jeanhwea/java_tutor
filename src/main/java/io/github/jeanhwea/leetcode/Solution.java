@@ -4,49 +4,44 @@ import java.util.*;
 
 public class Solution {
 
-  public static int[] intersect(int[] a, int[] b) {
-    int n = a.length, m = b.length;
-    Set<Integer> st = new HashSet<>();
-    List<Integer> c = new ArrayList<>();
-    for (int i = 0; i < m; i++) {
-      st.add(b[i]);
-    }
-    for (int i = 0; i < n; i++) {
-      if (st.contains(a[i])) {
-        c.add(a[i]);
-      }
-    }
+  public static void sink(int[] a, int p, int n) {
+    int mi = p;
+    while (true) {
+      int s = 2 * p + 1;
+      while (s < n && a[s] < a[mi]) mi = s;
+      ++s;
+      while (s < n && a[s] < a[mi]) mi = s;
+      if (p == mi) break;
 
-    int[] res = new int[c.size()];
-    for (int i = 0; i < c.size(); i++) {
-      res[i] = c.get(i);
+      int t = a[mi];
+      a[mi] = a[p];
+      a[p] = t;
+      p = mi;
     }
-    return res;
   }
 
   public static void main(String args[]) {
-    // int[] a = genArray(6);
-    // display(a);
-    // System.out.println("========================================");
-    // System.out.println(containsDuplicate(a));
-
-    int[] a = new int[] {4, 9, 5};
-    int[] b = new int[] {9, 4, 9, 8, 4};
+    int[] a = genArray(8);
     display(a);
-    display(b);
-    System.out.println("========================================");
-    int[] c = intersect(a, b);
-    System.out.println(c);
-    for (int i = 0; i < c.length; i++) {
-      System.out.println(c[i]);
+    for (int i = a.length / 2 - 1; i >= 0; i--) {
+      sink(a, i, a.length);
     }
+    display(a);
+
+    int[] b = new int[a.length];
+    for (int i = 0; i < b.length; i++) {
+      b[i] = a[0];
+      a[0] = a[b.length - i - 1];
+      sink(a, 0, b.length - i);
+    }
+    display(b);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
   public static int[] genArray(int n) {
     int[] a = new int[n];
     for (int i = 0; i < n; i++) {
-      a[i] = (int) (Math.random() * 30);
+      a[i] = (int) (Math.random() * 50);
     }
     return a;
   }
