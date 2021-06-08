@@ -2,44 +2,62 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
-public class Solution {
+public class Solution349 {
+
+  public static int[] intersect0(int[] a, int[] b) {
+    int n = a.length, m = b.length;
+
+    Set<Integer> s1 = new HashSet<>(), s2 = new HashSet<>();
+    for (int i = 0; i < n; i++) s1.add(a[i]);
+    for (int i = 0; i < m; i++) {
+      if (s1.contains(b[i]) && !s2.contains(b[i])) {
+        s2.add(b[i]);
+      }
+    }
+
+    int[] res = new int[s2.size()];
+    int k = 0;
+    for (Integer e : s2) {
+      res[k++] = e;
+    }
+    return res;
+  }
 
   public static int[] intersect(int[] a, int[] b) {
     int n = a.length, m = b.length;
-    Set<Integer> st = new HashSet<>();
-    List<Integer> c = new ArrayList<>();
-    for (int i = 0; i < m; i++) {
-      st.add(b[i]);
-    }
-    for (int i = 0; i < n; i++) {
-      if (st.contains(a[i])) {
+    Arrays.sort(a);
+    Arrays.sort(b);
+
+    Set<Integer> c = new HashSet<>();
+    int i = 0, j = 0;
+    while (i < n && j < m) {
+      if (a[i] < b[j]) i++;
+      else if (a[i] > b[j]) j++;
+      else {
         c.add(a[i]);
+        i++;
+        j++;
       }
     }
 
     int[] res = new int[c.size()];
-    for (int i = 0; i < c.size(); i++) {
-      res[i] = c.get(i);
+    int k = 0;
+    for (Integer e : c) {
+      res[k++] = e;
     }
     return res;
   }
 
   public static void main(String args[]) {
-    // int[] a = genArray(6);
-    // display(a);
-    // System.out.println("========================================");
-    // System.out.println(containsDuplicate(a));
-
     int[] a = new int[] {4, 9, 5};
     int[] b = new int[] {9, 4, 9, 8, 4};
+    // int[] a = new int[] {1};
+    // int[] b = new int[] {1, 2};
     display(a);
     display(b);
     System.out.println("========================================");
     int[] c = intersect(a, b);
-    System.out.println(c);
-    for (int i = 0; i < c.length; i++) {
-      System.out.println(c[i]);
-    }
+    display(c);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
