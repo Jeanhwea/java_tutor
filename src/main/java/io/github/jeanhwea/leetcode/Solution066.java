@@ -2,6 +2,12 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
+/**
+ * 加一
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-08, JDK1.8
+ */
 public class Solution066 {
 
   public static int[] plusOne(int[] a) {
