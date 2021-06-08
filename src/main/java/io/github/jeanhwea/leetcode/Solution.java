@@ -31,6 +31,7 @@ public class Solution {
     System.out.println(containsDuplicate(a));
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
   public static int[] genArray(int n) {
     int[] a = new int[n];
     for (int i = 0; i < n; i++) {
