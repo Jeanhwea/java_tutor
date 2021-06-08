@@ -2,6 +2,12 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
+/**
+ * 存在重复元素
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-08, JDK1.8
+ */
 public class Solution217 {
 
   public static boolean containsDuplicate(int[] a) {
