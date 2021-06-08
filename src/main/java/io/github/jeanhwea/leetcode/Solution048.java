@@ -2,6 +2,12 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
+/**
+ * 旋转图像
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-09, JDK1.8
+ */
 public class Solution048 {
 
   public static void rotate0(int[][] a) {
@@ -20,12 +26,13 @@ public class Solution048 {
     }
   }
 
-
   public static void rotate(int[][] a) {
     int n = a.length;
     for (int i = 0; i < n; i++) {
-      for (int j = 0; j < n/2; j++) {
-        int t = a[i][j]; a[i][j] = a[i][n-j-1]; a[i][n-j-1]=t;
+      for (int j = 0; j < n / 2; j++) {
+        int t = a[i][j];
+        a[i][j] = a[i][n - j - 1];
+        a[i][n - j - 1] = t;
       }
     }
 
