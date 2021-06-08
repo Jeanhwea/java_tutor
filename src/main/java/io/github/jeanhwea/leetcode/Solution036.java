@@ -94,8 +94,11 @@ public class Solution036 {
       {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
       {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
     };
-    // System.out.println(Arrays.deepToString(a));
+    System.out.println(Arrays.deepToString(a).replace("], ", "],\n "));
+    System.out.println("========================================");
     System.out.println(isValidSudoku(a));
+
+    System.out.println("");
 
     char[][] b = {
       {'8', '3', '.', '.', '7', '.', '.', '.', '.'},
@@ -108,6 +111,8 @@ public class Solution036 {
       {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
       {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
     };
+    System.out.println(Arrays.deepToString(b).replace("], ", "],\n "));
+    System.out.println("========================================");
     System.out.println(isValidSudoku(b));
   }
 }
