@@ -3,7 +3,7 @@ package io.github.jeanhwea.leetcode;
 import java.util.*;
 
 /**
- * 选择数组
+ * 旋转数组
  *
  * @author Jinghui Hu
  * @since 2021-06-07, JDK1.8
