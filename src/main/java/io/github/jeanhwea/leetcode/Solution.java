@@ -6,10 +6,10 @@ public class Solution {
 
   public static boolean containsDuplicate(int[] a) {
     int n = a.length;
-    Set<Integer> tb = new HashSet<>();
+    Set<Integer> st = new HashSet<>();
     for (int i = 0; i < n; i++) {
-      if (tb.contains(a[i])) return true;
-      else tb.add(a[i]);
+      if (st.contains(a[i])) return true;
+      else st.add(a[i]);
     }
     return false;
   }
@@ -23,12 +23,36 @@ public class Solution {
     return false;
   }
 
-  public static void main(String args[]) {
-    int[] a = genArray(6);
+  public static int singleNumber0(int[] a) {
+    int n = a.length;
+    Set<Integer> st = new HashSet<>();
+    for (int i = 0; i < n; i++) {
+      if (st.contains(a[i])) st.remove(a[i]);
+      else st.add(a[i]);
+    }
 
+    return (int) st.toArray()[0];
+  }
+
+  public static int singleNumber(int[] a) {
+    int n = a.length, ans = 0;
+    for (int i = 0; i < n; i++) {
+      ans ^= a[i];
+    }
+    return ans;
+  }
+
+  public static void main(String args[]) {
+    // int[] a = genArray(6);
+    // display(a);
+    // System.out.println("========================================");
+    // System.out.println(containsDuplicate(a));
+
+    int[] a = new int[] {1, 2, 3, 1, 3};
     display(a);
     System.out.println("========================================");
-    System.out.println(containsDuplicate(a));
+    int res = singleNumber(a);
+    System.out.println(res);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
