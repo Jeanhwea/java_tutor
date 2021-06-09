@@ -3,7 +3,7 @@ package io.github.jeanhwea.leetcode;
 import java.util.*;
 
 /**
- * 翻转整数
+ * 整数反转
  *
  * @author Jinghui Hu
  * @since 2021-06-07, JDK1.8
