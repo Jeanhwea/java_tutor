@@ -4,27 +4,8 @@ import java.util.*;
 
 public class Solution {
 
-  public static boolean isAnagram(String s, String t) {
-    int n = s.length(), m = t.length(), total = 26;
-    if (n != m) return false;
-
-    int[] a = new int[total], b = new int[total];
-    for (int i = 0; i < n; i++) {
-      int ai = s.charAt(i) - 'a', bi = t.charAt(i) - 'a';
-      a[ai] = a[ai] + 1;
-      b[bi] = b[bi] + 1;
-    }
-
-    for (int i = 0; i < total; i++) {
-      if (a[i] != b[i]) return false;
-    }
-
-    return true;
-  }
-
   public static void main(String args[]) {
-    String s = "nl", t = "cx";
-    System.out.println(isAnagram(s, t));
+    // pass
   }
 
   ////////////////////////////////////////////////////////////////////////////////
