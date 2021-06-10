@@ -18,7 +18,7 @@ public class Solution {
       p.next = t.next;
       t.next = p.next;
       p.next = t;
-      p = t;
+      p = p.next;
     }
 
     return head;
@@ -28,8 +28,8 @@ public class Solution {
     int[] a = {1, 2, 3, 4, 5};
     ListNode p = makeList(a);
     display(p);
-    reverseRange(p, 2, 4);
-    display(p);
+    ListNode p1 = reverseRange(p, 2, 4);
+    display(p1);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
