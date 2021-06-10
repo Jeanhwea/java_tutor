@@ -10,6 +10,12 @@ import java.util.*;
  */
 public class Solution028 {
 
+  /**
+   * 暴露搜索法
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-10, JDK1.8
+   */
   public static int strStr0(String s, String t) {
     if (t.isEmpty()) return 0;
 
@@ -23,6 +29,34 @@ public class Solution028 {
         }
       }
       if (found) return i;
+    }
+
+    return -1;
+  }
+
+  /**
+   * KMP 算法
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-10, JDK1.8
+   */
+  public static int strStr(String s, String t) {
+    if ("".equals(t)) return 0;
+
+    int[] next = calcNext(t);
+    int n = s.length(), m = t.length(), i = 0, j = 0;
+
+    while (i < n) {
+      if (s.charAt(i) == t.charAt(j)) {
+        i++;
+        j++;
+      } else if (j > 0) {
+        j = next[j];
+      } else {
+        i++;
+      }
+
+      if (j >= m) return i - j;
     }
 
     return -1;
@@ -47,6 +81,7 @@ public class Solution028 {
   }
 
   public static int[] calcNext(String p) {
+    System.out.println(p);
     int n = p.length();
     int[] next = new int[n];
 
@@ -55,37 +90,13 @@ public class Solution028 {
       if (p.charAt(j) == p.charAt(i)) {
         next[++i] = ++j;
       } else if (j > 0) {
-        j = next[j - 1];
+        j = next[j];
       } else {
         i++;
       }
     }
 
     return next;
-  }
-
-  public static int strStr(String s, String t) {
-    if ("".equals(t)) return 0;
-
-    int[] next = calcNext0(t);
-    int n = s.length(), m = t.length(), i = 0, j = 0;
-    // System.out.println(Arrays.toString(next));
-
-    while (i < n) {
-      if (s.charAt(i) == t.charAt(j)) {
-        i++;
-        j++;
-      } else if (j > 0) {
-        j = next[j];
-      } else {
-        i++;
-      }
-
-      // System.out.println(String.format("i = %d, j = %d, m = %d", i, j, m));
-      if (j >= m) return i - j;
-    }
-
-    return -1;
   }
 
   public static void main(String args[]) {
@@ -104,16 +115,14 @@ public class Solution028 {
     // System.out.println(strStr("cba", "a"));
     // System.out.println(strStr("a", "a"));
 
-    System.out.println(strStr0("aabaaabaaac", "aabaaac"));
-    System.out.println(strStr("aabaaabaaac", "aabaaac"));
-
-
+    // System.out.println(strStr0("aabaaabaaac", "aabaaac"));
+    // System.out.println(strStr("aabaaabaaac", "aabaaac"));
 
     // String t1 = "abaabc";
     // String t1 = "abaabcaaaba";
     // String t1 = "aaa";
-    // String t1 = "ababacb";
-    // System.out.println(Arrays.toString(calcNext0(t1)));
-    // System.out.println(Arrays.toString(calcNext(t1)));
+    String t1 = "aabaaac";
+    System.out.println(Arrays.toString(calcNext0(t1)));
+    System.out.println(Arrays.toString(calcNext(t1)));
   }
 }
