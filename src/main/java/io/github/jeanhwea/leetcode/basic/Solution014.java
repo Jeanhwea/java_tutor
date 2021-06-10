@@ -9,17 +9,12 @@ public class Solution014 {
     int n = strs[0].length();
 
     for (int i = 0; i < n; i++) {
-      boolean same = true;
-      char ch1 = strs[0].charAt(i);
-      for (int j = 1; j < n; j++) {
-        char ch2 = strs[j].charAt(i);
-        if (ch1 != ch2 || i < strs[j].length()) {
-          same = false;
-          break;
+      for (int j = 1; j < n&&j<strs[i].length(); j++) {
+        if (strs[j].charAt(i) != strs[j].charAt(i)) {
+          //
         }
       }
-      if (same) sb.append(ch1);
-    }
+   }
 
     return sb.toString();
   }
