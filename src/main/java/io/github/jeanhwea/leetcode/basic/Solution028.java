@@ -28,7 +28,7 @@ public class Solution028 {
     return -1;
   }
 
-  public static int[] calcNext(String p) {
+  public static int[] calcNext0(String p) {
     int n = p.length();
     int[] next = new int[n];
 
@@ -40,6 +40,28 @@ public class Solution028 {
           next[i] = j;
           break;
         }
+      }
+    }
+
+    return next;
+  }
+
+  public static int[] calcNext(String p) {
+    int n = p.length();
+    int[] next = new int[n];
+    next[0] = -1;
+
+    int i = 1, now = 0;
+    while (i < n) {
+      // System.out.println(String.format("i = %d, now = %d", i, now));
+      if (p.charAt(now) == p.charAt(i)) {
+        now++;
+        i++;
+        next[i] = now;
+      } else if (next[now] >= 0) {
+        now = next[now];
+      } else {
+        i++;
       }
     }
 
@@ -72,17 +94,16 @@ public class Solution028 {
   public static void main(String args[]) {
     // System.out.println(strStr("aabc", ""));
     // System.out.println(strStr("aabc", "ab"));
-    System.out.println(strStr("aabc", "c"));
-    System.out.println(strStr("aabc", "a"));
+    // System.out.println(strStr("aabc", "c"));
+    // System.out.println(strStr("aabc", "a"));
 
     String s = "abababacb";
     String t = "ababacb";
 
     // System.out.println(strStr0(s, t));
-    System.out.println(strStr(s, t));
+    // System.out.println(strStr(s, t));
 
-    // int[] next = calcNext(s);
-    // System.out.println(Arrays.toString(next));
-
+    System.out.println(Arrays.toString(calcNext0(s)));
+    System.out.println(Arrays.toString(calcNext(s)));
   }
 }
