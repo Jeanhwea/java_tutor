@@ -32,8 +32,8 @@ public class Solution028 {
     int n = p.length();
     int[] next = new int[n];
 
-    next[0] = -1;
-    for (int i = 1; i < n - 1; i++) {
+    // next[0] = 0;
+    for (int i = 2; i < n; i++) {
       for (int j = i - 1; j > 0; j--) {
         String s1 = p.substring(0, j), s2 = p.substring(i - j, i);
         if (s1.equals(s2)) {
@@ -49,17 +49,13 @@ public class Solution028 {
   public static int[] calcNext(String p) {
     int n = p.length();
     int[] next = new int[n];
-    next[0] = -1;
 
-    int i = 1, now = 0;
-    while (i < n) {
-      // System.out.println(String.format("i = %d, now = %d", i, now));
-      if (p.charAt(now) == p.charAt(i)) {
-        now++;
-        i++;
-        next[i] = now;
-      } else if (next[now] >= 0) {
-        now = next[now];
+    int i = 1, j = 0;
+    while (i < n - 1) {
+      if (p.charAt(j) == p.charAt(i)) {
+        next[++i] = ++j;
+      } else if (j > 0) {
+        j = next[j - 1];
       } else {
         i++;
       }
@@ -71,21 +67,22 @@ public class Solution028 {
   public static int strStr(String s, String t) {
     if ("".equals(t)) return 0;
 
-    int[] next = calcNext(t);
+    int[] next = calcNext0(t);
     int n = s.length(), m = t.length(), i = 0, j = 0;
     // System.out.println(Arrays.toString(next));
 
-    while (i <= n && j <= m) {
-      if (j == m) return i - m;
+    while (i < n) {
       if (s.charAt(i) == t.charAt(j)) {
         i++;
         j++;
-      } else if (next[j] >= 0) {
+      } else if (j > 0) {
         j = next[j];
       } else {
         i++;
-        j = 0;
       }
+
+      // System.out.println(String.format("i = %d, j = %d, m = %d", i, j, m));
+      if (j >= m) return i - j;
     }
 
     return -1;
@@ -99,11 +96,24 @@ public class Solution028 {
 
     String s = "abababacb";
     String t = "ababacb";
+    // String s = "aaaaa";
+    // String t = "bba";
 
     // System.out.println(strStr0(s, t));
     // System.out.println(strStr(s, t));
+    // System.out.println(strStr("cba", "a"));
+    // System.out.println(strStr("a", "a"));
 
-    System.out.println(Arrays.toString(calcNext0(s)));
-    System.out.println(Arrays.toString(calcNext(s)));
+    System.out.println(strStr0("aabaaabaaac", "aabaaac"));
+    System.out.println(strStr("aabaaabaaac", "aabaaac"));
+
+
+
+    // String t1 = "abaabc";
+    // String t1 = "abaabcaaaba";
+    // String t1 = "aaa";
+    // String t1 = "ababacb";
+    // System.out.println(Arrays.toString(calcNext0(t1)));
+    // System.out.println(Arrays.toString(calcNext(t1)));
   }
 }
