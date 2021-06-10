@@ -13,22 +13,44 @@ public class Solution {
     // System.out.println(q.val);
 
     ListNode t = p;
-    while (t != q) {
-      t = p.next;
-      p.next = t.next;
-      t.next = p.next;
-      p.next = t;
-      p = p.next;
-    }
+    t = p.next;
+    p.next = q;
+
+    // while (t != q) {
+    //   t = p.next;
+    //   p.next = t.next;
+    //   t.next = p.next;
+    //   p.next = t;
+    //   p = p.next;
+    // }
 
     return head;
   }
 
+  public static ListNode reverse(ListNode head) {
+    ListNode p = head, h = null, q;
+
+    while (p != null) {
+      if (h == null) {
+        h = p;
+        p = p.next;
+        h.next = null;
+      } else {
+        q = h;
+        h = p;
+        p = p.next;
+        h.next = q;
+      }
+    }
+
+    return h;
+  }
+
   public static void main(String args[]) {
-    int[] a = {1, 2, 3, 4, 5};
+    int[] a = {1, 2, 3, 4};
     ListNode p = makeList(a);
     display(p);
-    ListNode p1 = reverseRange(p, 2, 4);
+    ListNode p1 = reverse(p);
     display(p1);
   }
 
