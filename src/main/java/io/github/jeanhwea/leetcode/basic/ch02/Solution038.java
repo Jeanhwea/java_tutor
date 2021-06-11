@@ -1,9 +1,9 @@
-package io.github.jeanhwea.leetcode.basic;
+package io.github.jeanhwea.leetcode.basic.ch02;
 
 import java.util.*;
 
 /**
- * 外观数组
+ * 外观数列
  *
  * @author Jinghui Hu
  * @since 2021-06-11, JDK1.8

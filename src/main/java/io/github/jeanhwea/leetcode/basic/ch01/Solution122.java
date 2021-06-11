@@ -1,9 +1,9 @@
-package io.github.jeanhwea.leetcode.basic;
+package io.github.jeanhwea.leetcode.basic.ch01;
 
 import java.util.*;
 
 /**
- * 股票交易最大收益
+ * 股票交易最大收益 II
  *
  * @author Jinghui Hu
  * @since 2021-06-07, JDK1.8
