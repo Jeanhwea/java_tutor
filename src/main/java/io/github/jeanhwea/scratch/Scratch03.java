@@ -3,124 +3,124 @@ package io.github.jeanhwea.scratch;
 import java.util.*;
 
 /**
- * 各种排序算法
+ * 优先队列，堆，堆排序
  *
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
 public class Scratch03 {
 
-  // selection sort
-  public static void ssort(int[] a) {
-    int n = a.length;
-    for (int i = 0; i < n; i++) {
-      int mi = i; // min index
-      for (int j = i + 1; j < n; j++) {
-        if (a[j] < a[mi]) mi = j;
-      }
-      int t = a[i]; a[i] = a[mi]; a[mi] = t;
+  /**
+   * 优先队列的堆实现方式使用：上浮 (swim) 和下沉 (sink) 两个操作
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-06, JDK1.8
+   */
+  public static void swim(int[] a, int s) {
+    int p = (s - 1) / 2;
+    while (true) {
+      if (s > 0 && a[p] < a[s]) {
+        int t = a[s];
+        a[s] = a[p];
+        a[p] = t;
+      } else break;
+
+      s = p;
+      p = (s - 1) / 2;
     }
   }
 
-  // bubble sort
-  public static void bsort(int[] a) {
-    int n = a.length;
-    for (int i = 0; i < n; i++) {
-      for (int j = i + 1; j < n; j++) {
-        if (a[i] > a[j]) {int t = a[i]; a[i] = a[j]; a[j] = t;}
-      }
+  public static void sink(int[] a, int p, int n) {
+    int mi = p;
+    while (true) {
+      int s = 2 * p + 1;
+      while (s < n && a[s] < a[mi]) mi = s;
+      ++s;
+      while (s < n && a[s] < a[mi]) mi = s;
+      if (p == mi) break;
+
+      int t = a[mi];
+      a[mi] = a[p];
+      a[p] = t;
+      p = mi;
     }
   }
 
-  // insertion sort
-  public static void isort(int[] a) {
-    int n = a.length;
-    for (int i = 0; i < n - 1; i++) {
-      int v = a[i + 1];
-      int j = 0;
-      while (j <= i && a[j] < v) j++;
-      for (int k = i + 1; k > j; k--) a[k] = a[k - 1];
-      a[j] = v;
+  ////////////////////////////////////////////////////////////////////////////////
+
+  /**
+   * 最大堆满足：k+1 层的元素大于 k 层元素
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-06, JDK1.8
+   */
+  public static void heaplify(int[] a, int p, int n) {
+    int l = 2 * p + 1, r = 2 * p + 2, ma = p;
+    while (true) {
+      if (l < n && a[l] > a[ma]) ma = l;
+      if (r < n && a[r] > a[ma]) ma = r;
+      if (p != ma) {
+        int t = a[ma];
+        a[ma] = a[p];
+        a[p] = t;
+      } else break;
+
+      // fix broken children
+      p = ma;
+      l = 2 * p + 1;
+      r = 2 * p + 2;
     }
   }
 
-  // quick sort
-  public static void qsort(int a[], int lo, int hi) {
-    if (hi <= lo) return;
-
-    int i = lo, j = hi;
-    int p = a[i]; // pivot
-    while (i < j) {
-      // right scan
-      while (j > i && a[j] >= p) j--;
-      a[i] = a[j]; // a[i] is kept
-
-      // left scan
-      while (i < j && a[i] <= p) i++;
-      a[j] = a[i]; // a[j] is kept
+  public static void makeHeap(int[] a, int n) {
+    for (int i = n / 2 - 1; i >= 0; i--) {
+      heaplify(a, i, n);
     }
-
-    // now i equals j
-    a[i] = p;
-
-    qsort(a, lo, i - 1);
-    qsort(a, i + 1, hi);
   }
 
-  public static void qsort0(int a[], int lo, int hi) {
-    if (hi <= lo) return;
-
-    int[] b = new int[hi - lo + 1];
-    for (int k = 0; k < b.length; k++) {
-      b[k] = a[k + lo];
-    }
-
-    int i = lo, j = hi, p = b[0];
-    for (int k = 1; k < b.length; k++) {
-      if (b[k] < p) {
-        a[i++] = b[k];
-      } else {
-        a[j--] = b[k];
-      }
-    }
-    a[i] = p;
-
-    qsort0(a, lo, i - 1);
-    qsort0(a, i + 1, hi);
-  }
-
-  // heap sort
+  /**
+   * 堆排序
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-06, JDK1.8
+   */
   public static void hsort(int[] a) {
-    int n = a.length;
-    PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
-    for (int i = 0; i < n; i++) {
-      heap.add(a[i]);
-    }
-    for (int i = 0; i < n; i++) {
-      a[i] = heap.poll();
+    makeHeap(a, a.length);
+    for (int i = a.length - 1; i >= 1; --i) {
+      int t = a[i];
+      a[i] = a[0];
+      a[0] = t;
+      makeHeap(a, i);
     }
   }
 
   public static void main(String args[]) {
-    int arrSize = 6;
+    int arrSize = 8;
     int[] a = new int[arrSize];
     for (int i = 0; i < arrSize; i++) {
-      int e = (int) (Math.random() * 30);
+      int e = (int) (1 + Math.random() * 30);
       a[i] = e;
     }
 
-    System.out.println(Arrays.toString(a));
-    System.out.println("========================================");
-    // bsort(a);
-    // isort(b);
-    // isort(a);
-    // qsort(a, 0, a.length - 1);
-    // Arrays.sort(b); // JDK sort
-    hsort(a);
-    System.out.println(Arrays.toString(a));
+    int[] b = new int[arrSize];
+    for (int i = 0; i < arrSize; i++) {
+      int e = a[i];
+      b[i] = e;
+      swim(b, i);
+      System.out.println(e);
+      System.out.println(Arrays.toString(b));
+    }
 
-    // int[] b = {9, 2, 3, 1, 9, 22, 0};
-    // Arrays.sort(b); // JDK sort
-    // System.out.println(Arrays.toString(b));
+    System.out.println("========================================");
+    for (int i = arrSize - 1; i >= 0; i--) {
+      b[0] = b[i];
+      b[i] = 0;
+      sink(b, 0, i);
+      System.out.println(Arrays.toString(b));
+    }
+
+    // System.out.println(Arrays.toString(a));
+    // hsort(a);
+    // System.out.println(Arrays.toString(a));
   }
 }

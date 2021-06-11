@@ -2,7 +2,7 @@ package io.github.jeanhwea.scratch;
 
 import java.util.*;
 
-public class Scratch06 {
+public class Scratch11 {
 
   public static Stack<Integer> stackSort(Stack<Integer> s) {
     Stack<Integer> t = new Stack<>();

@@ -4,52 +4,9 @@ import java.util.*;
 
 public class Solution {
 
-  public static ListNode reverseRange(ListNode head, int m, int n) {
-    ListNode p = head, q = null, t = null, s = null;
-    for (int i = 0; i < n; i++) {
-      if (i < m - 1) {
-        q = p;
-        p = p != null ? p.next : null;
-      } else if (i < m) {
-        t = p;
-        p = p.next;
-      } else {
-        if (q == null) {
-          s = head; head = p; p = p.next; head.next = s;
-        } else {
-          s = q.next; q.next = p; p = p.next; q.next.next = s;
-        }
-      }
-    }
-
-    if (t != null) t.next = p;
-
-    return head;
-  }
-
-  public static ListNode reverse(ListNode head) {
-    ListNode p = head, h = null, q;
-
-    while (p != null) {
-      if (h == null) {
-        h = p;
-        p = p.next;
-        h.next = null;
-      } else {
-        q = h;
-        h = p;
-        p = p.next;
-        h.next = q;
-      }
-    }
-
-    return h;
-  }
 
   public static void main(String args[]) {
     ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
-    display(p);
-    display(reverseRange(p, 2, 4));
   }
 
   ////////////////////////////////////////////////////////////////////////////////

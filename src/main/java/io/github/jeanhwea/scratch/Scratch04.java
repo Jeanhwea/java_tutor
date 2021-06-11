@@ -3,124 +3,120 @@ package io.github.jeanhwea.scratch;
 import java.util.*;
 
 /**
- * 优先队列，堆，堆排序
+ * 链表
  *
  * @author Jinghui Hu
- * @since 2021-06-06, JDK1.8
+ * @since 2021-06-11, JDK1.8
  */
 public class Scratch04 {
 
-  /**
-   * 优先队列的堆实现方式使用：上浮 (swim) 和下沉 (sink) 两个操作
-   *
-   * @author Jinghui Hu
-   * @since 2021-06-06, JDK1.8
-   */
-  public static void swim(int[] a, int s) {
-    int p = (s - 1) / 2;
-    while (true) {
-      if (s > 0 && a[p] < a[s]) {
-        int t = a[s];
-        a[s] = a[p];
-        a[p] = t;
-      } else break;
-
-      s = p;
-      p = (s - 1) / 2;
+  public static ListNode reverseRange(ListNode head, int m, int n) {
+    ListNode p = head, q = null, t = null, s = null;
+    for (int i = 0; i < n; i++) {
+      if (i < m - 1) {
+        q = p;
+        p = p != null ? p.next : null;
+      } else if (i < m) {
+        t = p;
+        p = p.next;
+      } else {
+        if (q == null) {
+          s = head;
+          head = p;
+          p = p.next;
+          head.next = s;
+        } else {
+          s = q.next;
+          q.next = p;
+          p = p.next;
+          q.next.next = s;
+        }
+      }
     }
+
+    if (t != null) t.next = p;
+
+    return head;
   }
 
-  public static void sink(int[] a, int p, int n) {
-    int mi = p;
-    while (true) {
-      int s = 2 * p + 1;
-      while (s < n && a[s] < a[mi]) mi = s;
-      ++s;
-      while (s < n && a[s] < a[mi]) mi = s;
-      if (p == mi) break;
+  public static ListNode reverse(ListNode head) {
+    ListNode p = head, h = null, q;
 
-      int t = a[mi];
-      a[mi] = a[p];
-      a[p] = t;
-      p = mi;
+    while (p != null) {
+      if (h == null) {
+        h = p;
+        p = p.next;
+        h.next = null;
+      } else {
+        q = h;
+        h = p;
+        p = p.next;
+        h.next = q;
+      }
     }
-  }
 
-  ////////////////////////////////////////////////////////////////////////////////
-
-  /**
-   * 最大堆满足：k+1 层的元素大于 k 层元素
-   *
-   * @author Jinghui Hu
-   * @since 2021-06-06, JDK1.8
-   */
-  public static void heaplify(int[] a, int p, int n) {
-    int l = 2 * p + 1, r = 2 * p + 2, ma = p;
-    while (true) {
-      if (l < n && a[l] > a[ma]) ma = l;
-      if (r < n && a[r] > a[ma]) ma = r;
-      if (p != ma) {
-        int t = a[ma];
-        a[ma] = a[p];
-        a[p] = t;
-      } else break;
-
-      // fix broken children
-      p = ma;
-      l = 2 * p + 1;
-      r = 2 * p + 2;
-    }
-  }
-
-  public static void makeHeap(int[] a, int n) {
-    for (int i = n / 2 - 1; i >= 0; i--) {
-      heaplify(a, i, n);
-    }
-  }
-
-  /**
-   * 堆排序
-   *
-   * @author Jinghui Hu
-   * @since 2021-06-06, JDK1.8
-   */
-  public static void hsort(int[] a) {
-    makeHeap(a, a.length);
-    for (int i = a.length - 1; i >= 1; --i) {
-      int t = a[i];
-      a[i] = a[0];
-      a[0] = t;
-      makeHeap(a, i);
-    }
+    return h;
   }
 
   public static void main(String args[]) {
-    int arrSize = 8;
-    int[] a = new int[arrSize];
-    for (int i = 0; i < arrSize; i++) {
-      int e = (int) (1 + Math.random() * 30);
-      a[i] = e;
+    ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
+    display(p);
+    display(reverseRange(p, 2, 4));
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  public static int[] genArray(int n) {
+    int[] a = new int[n];
+    for (int i = 0; i < n; i++) {
+      a[i] = (int) (Math.random() * 50);
+    }
+    return a;
+  }
+
+  public static void display(int[] a) {
+    System.out.println(Arrays.toString(a));
+  }
+
+  public static void display(Collection<Integer> a) {
+    System.out.println(Arrays.toString(a.toArray()));
+  }
+
+  public static void display(ListNode head) {
+    List<Integer> vals = new LinkedList<Integer>();
+    ListNode p = head;
+    while (p != null) {
+      vals.add(p.val);
+      p = p.next;
+    }
+    display(vals);
+  }
+
+  public static ListNode makeList(int[] a) {
+    ListNode head = null, p = null;
+    for (int i = 0; i < a.length; i++) {
+      ListNode t = new ListNode(a[i], null);
+      if (head == null) {
+        head = p = t;
+      } else {
+        p = p.next = t;
+      }
+    }
+    return head;
+  }
+
+  public static class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {}
+
+    ListNode(int val) {
+      this.val = val;
     }
 
-    int[] b = new int[arrSize];
-    for (int i = 0; i < arrSize; i++) {
-      int e = a[i];
-      b[i] = e;
-      swim(b, i);
-      System.out.println(e);
-      System.out.println(Arrays.toString(b));
+    ListNode(int val, ListNode next) {
+      this.val = val;
+      this.next = next;
     }
-
-    System.out.println("========================================");
-    for (int i = arrSize - 1; i >= 0; i--) {
-      b[0] = b[i];
-      b[i] = 0;
-      sink(b, 0, i);
-      System.out.println(Arrays.toString(b));
-    }
-
-    // System.out.println(Arrays.toString(a));
-    // hsort(a);
-    // System.out.println(Arrays.toString(a));
   }
 }
