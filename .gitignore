@@ -30,3 +30,4 @@
 /tmp
 .meghanada/
 assets/*.jar
+*.class

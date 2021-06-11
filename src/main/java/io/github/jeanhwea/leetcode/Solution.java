@@ -5,24 +5,27 @@ import java.util.*;
 public class Solution {
 
   public static ListNode reverseRange(ListNode head, int m, int n) {
-    ListNode p = head, q = head;
-    for (int i = 0; i < n - 1; i++) {
-      if (i < m - 2) p = p.next;
-      q = q.next;
+    ListNode p = head, q = null, t = null, s = null;
+    for (int i = 0; i < n; i++) {
+      if (i < m - 1) {
+        q = p;
+        p = p != null ? p.next : null;
+      } else if (i < m) {
+        if (q == null) {
+          q = p; p = p.next; t = p;
+        } else {
+          t = p; p = p.next; t.next = null;
+        }
+      } else {
+        if (q == null) {
+          q = p; p = p.next;
+        } else {
+          s = q.next; q.next = p; p = p.next; p.next = s;
+        }
+      }
     }
-    // System.out.println(q.val);
 
-    ListNode t = p;
-    t = p.next;
-    p.next = q;
-
-    // while (t != q) {
-    //   t = p.next;
-    //   p.next = t.next;
-    //   t.next = p.next;
-    //   p.next = t;
-    //   p = p.next;
-    // }
+    if (s != null) s.next = p;
 
     return head;
   }
@@ -47,11 +50,9 @@ public class Solution {
   }
 
   public static void main(String args[]) {
-    int[] a = {1, 2, 3, 4};
-    ListNode p = makeList(a);
+    ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
     display(p);
-    ListNode p1 = reverse(p);
-    display(p1);
+    display(reverseRange(p, 1, 4));
   }
 
   ////////////////////////////////////////////////////////////////////////////////
