@@ -35,15 +35,15 @@ public class TreeNode {
       int size = queue.size();
       for (int i = 0; i < size; i++) {
         TreeNode p = queue.poll();
-        int c = m + 2 * i;
-        if (c < n && a[c] > 0) {
-          TreeNode q = new TreeNode(a[c]);
+        int k = m + 2 * i;
+        if (k < n && a[k] > 0) {
+          TreeNode q = new TreeNode(a[k]);
           p.left = q;
           queue.offer(q);
         }
-        c++;
-        if (c < n && a[c] > 0) {
-          TreeNode q = new TreeNode(a[c]);
+        k++;
+        if (k < n && a[k] > 0) {
+          TreeNode q = new TreeNode(a[k]);
           p.right = q;
           queue.offer(q);
         }
