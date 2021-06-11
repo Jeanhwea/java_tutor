@@ -11,21 +11,18 @@ public class Solution {
         q = p;
         p = p != null ? p.next : null;
       } else if (i < m) {
-        if (q == null) {
-          q = p; p = p.next; t = p;
-        } else {
-          t = p; p = p.next; t.next = null;
-        }
+        t = p;
+        p = p.next;
       } else {
         if (q == null) {
-          q = p; p = p.next;
+          s = head; head = p; p = p.next; head.next = s;
         } else {
-          s = q.next; q.next = p; p = p.next; p.next = s;
+          s = q.next; q.next = p; p = p.next; q.next.next = s;
         }
       }
     }
 
-    if (s != null) s.next = p;
+    if (t != null) t.next = p;
 
     return head;
   }
@@ -52,7 +49,7 @@ public class Solution {
   public static void main(String args[]) {
     ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
     display(p);
-    display(reverseRange(p, 1, 4));
+    display(reverseRange(p, 2, 4));
   }
 
   ////////////////////////////////////////////////////////////////////////////////
