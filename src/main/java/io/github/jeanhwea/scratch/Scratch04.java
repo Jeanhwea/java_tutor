@@ -61,7 +61,7 @@ public class Scratch04 {
   public static void main(String args[]) {
     ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
     display(p);
-    display(reverseRange(p, 2, 4));
+    display(reverseRange(p, 1, 3));
   }
 
   ////////////////////////////////////////////////////////////////////////////////
