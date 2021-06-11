@@ -40,28 +40,48 @@ public class Scratch04 {
   }
 
   public static ListNode reverse(ListNode head) {
-    ListNode p = head, h = null, q;
+    ListNode p = head, q;
 
     while (p != null) {
-      if (h == null) {
-        h = p;
+      if (p == head) {
         p = p.next;
-        h.next = null;
+        head.next = null;
       } else {
-        q = h;
-        h = p;
+        q = head;
+        head = p;
         p = p.next;
-        h.next = q;
+        head.next = q;
       }
     }
 
-    return h;
+    return head;
+  }
+
+  public static ListNode removeNthFromEnd(ListNode head, int k) {
+    int n = 0;
+    ListNode p = head;
+    while (p != null) {
+      n++;
+      p = p.next;
+    }
+    // System.out.println(n);
+
+    p = head;
+    for (int i = 0; i < n - k - 1; i++) p = p.next;
+
+    if (k == n) {
+      head = head.next;
+    } else {
+      p.next = p.next.next;
+    }
+
+    return head;
   }
 
   public static void main(String args[]) {
-    ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
-    display(p);
-    display(reverseRange(p, 1, 3));
+    ListNode head = makeList(new int[] {1, 2, 3, 4});
+    display(head);
+    display(removeNthFromEnd(head, 1));
   }
 
   ////////////////////////////////////////////////////////////////////////////////
