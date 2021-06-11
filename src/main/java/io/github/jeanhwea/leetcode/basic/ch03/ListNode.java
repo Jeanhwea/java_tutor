@@ -3,7 +3,7 @@ package io.github.jeanhwea.leetcode.basic.ch03;
 import java.util.*;
 
 /**
- * 链表的数据结构
+ * 链表节点
  *
  * @author Jinghui Hu
  * @since 2021-06-11, JDK1.8
