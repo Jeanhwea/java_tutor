@@ -4,9 +4,33 @@ import java.util.*;
 
 public class Solution {
 
+  public static String countAndSay(int k) {
+    if (k <= 1) return "1";
+    String p = countAndSay(k - 1), s = "";
+    int n = p.length(), count = 0;
+    for (int i = 0; i < n; i++) {
+      char ch = p.charAt(i);
+      if (i == n - 1) {
+        s += String.valueOf(count + 1) + ch;
+      } else {
+        char peek = p.charAt(i + 1);
+        if (ch == peek) {
+          count++;
+        } else {
+          s += String.valueOf(count + 1) + ch;
+          ch = peek;
+          count = 0;
+        }
+      }
+    }
+    return s;
+  }
 
   public static void main(String args[]) {
-    ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
+    // ListNode p = makeList(new int[] {1, 2, 3, 4, 5, 6, 7, 8});
+    for (int i = 0; i < 10; i++) {
+      System.out.println(countAndSay(i));
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
