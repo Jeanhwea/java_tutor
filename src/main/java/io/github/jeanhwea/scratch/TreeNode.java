@@ -64,24 +64,41 @@ public class TreeNode {
     List<Integer> vals = new LinkedList<>();
     Queue<TreeNode> queue = new LinkedList<>();
     queue.offer(root);
-    while (!queue.isEmpty()) {
+    while (true) {
       int size = queue.size();
-      boolean bottom = true;
+      boolean done = true;
       for (int i = 0; i < size; i++) {
         TreeNode node = queue.poll();
-        if (null == node) vals.add(-1);
-        else {
+        if (null == node) {
+          vals.add(-1);
+          continue;
+        } else {
           vals.add(node.val);
-          bottom = false;
+        }
+
+        if (null == node.left) {
+          queue.offer(null);
+        } else {
+          queue.offer(node.left);
+          done = false;
+        }
+
+        if (null == node.right) {
+          queue.offer(null);
+        } else {
+          queue.offer(node.right);
+          done = false;
         }
       }
-      if (bottom) break;
+      if (done) break;
     }
+
+    System.out.println(Arrays.toString(vals.toArray()));
   }
 
   public static void main(String args[]) {
     TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
-    display(root);
-    System.out.println("====");
+    // display(root);
+    // System.out.println("====");
   }
 }
