@@ -32,17 +32,19 @@ public class TreeNode {
     Queue<TreeNode> nodes = new LinkedList<>();
     TreeNode root = new TreeNode(a[0]), p = null;
     nodes.offer(root);
-    while (Math.pow(2, depth - 1) - 1 < n) {
-      s = (int) Math.pow(2, depth) - 1;
+    while (Math.pow(2, depth - 1) < n) {
       for (int i = 0; i < Math.pow(2, depth - 1); i++) {
         p = nodes.poll();
         if (p == null) continue;
+
+        s = 2 * i + (int) Math.pow(2, depth - 1);
         if (s < n && a[s] > 0) {
           p.left = new TreeNode(a[s]);
           nodes.offer(p.left);
         } else {
           nodes.offer(null);
         }
+
         s++;
         if (s < n && a[s] > 0) {
           p.right = new TreeNode(a[s]);
@@ -50,7 +52,6 @@ public class TreeNode {
         } else {
           nodes.offer(null);
         }
-        s++;
       }
       depth++;
     }
