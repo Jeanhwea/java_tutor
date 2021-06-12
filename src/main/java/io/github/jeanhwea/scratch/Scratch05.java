@@ -68,6 +68,40 @@ public class Scratch05 {
     return values;
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+  // 二叉树中遍历
+  public static List<Integer> inorder(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new LinkedList<>();
+    if (root.left != null) values.addAll(inorder(root.left));
+    values.add(root.val);
+    if (root.right != null) values.addAll(inorder(root.right));
+
+    return values;
+  }
+
+  public static List<Integer> inorder1(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new LinkedList<>();
+    Stack<TreeNode> nodes = new Stack<>();
+    Set<TreeNode> visited = new HashSet<>();
+    nodes.push(root);
+    while (!nodes.isEmpty()) {
+      TreeNode p = nodes.pop();
+      while (p.left != null && !visited.contains(p.left)) {
+        nodes.push(p);
+        p = p.left;
+      }
+      values.add(p.val);
+      visited.add(p);
+      if (p.right != null) nodes.push(p.right);
+    }
+
+    return values;
+  }
+
   public static void main(String args[]) {
     List<TreeNode> trees = new LinkedList<>();
     TreeNode tree1 = null;
@@ -97,6 +131,14 @@ public class Scratch05 {
       List<Integer> v0 = preorder(t);
       System.out.println(Arrays.toString(v0.toArray()));
       List<Integer> v1 = preorder1(t);
+      System.out.println(Arrays.toString(v1.toArray()));
+    }
+
+    System.out.println("===== In-Order =====");
+    for (TreeNode t : trees) {
+      List<Integer> v0 = inorder(t);
+      System.out.println(Arrays.toString(v0.toArray()));
+      List<Integer> v1 = inorder1(t);
       System.out.println(Arrays.toString(v1.toArray()));
     }
   }
