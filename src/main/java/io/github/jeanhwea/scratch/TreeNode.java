@@ -26,13 +26,31 @@ public class TreeNode {
   }
 
   public static TreeNode makeTree(int[] a) {
-    if (a.length<1) return null;
+    if (a.length < 1) return null;
+    int n = a.length, m = 1, s = 0;
 
-    Queue<TreeNode> queue = LinkedList<>();
-    TreeNode root = new TreeNode(a[0]);
-    queue.offer(queue);
-    while(!queue.isEmpty()) {
-      TreeNode node =
+    Queue<TreeNode> queue = new LinkedList<>();
+    TreeNode root = new TreeNode(a[0]), p = null;
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+      for (int i = 0; i < size; i++) {
+        TreeNode node = queue.poll();
+        s = 2 * i + m;
+        if (s < n && a[s] >= 0) {
+          p = new TreeNode(a[s]);
+          node.left = p;
+          queue.offer(p);
+        }
+        s++;
+        if (s < n && a[s] >= 0) {
+          p = new TreeNode(a[s]);
+          node.right = p;
+          queue.offer(p);
+        }
+        s++;
+      }
+      m = s;
     }
 
     return root;
