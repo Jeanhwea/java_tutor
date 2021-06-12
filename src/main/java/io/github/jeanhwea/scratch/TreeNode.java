@@ -27,30 +27,32 @@ public class TreeNode {
 
   public static TreeNode makeTree(int[] a) {
     if (a.length < 1) return null;
-    int n = a.length, m = 1, s = 0;
+    int n = a.length, depth = 1, s = 0;
 
-    Queue<TreeNode> queue = new LinkedList<>();
+    Queue<TreeNode> nodes = new LinkedList<>();
     TreeNode root = new TreeNode(a[0]), p = null;
-    queue.offer(root);
-    while (!queue.isEmpty()) {
-      int size = queue.size();
-      for (int i = 0; i < size; i++) {
-        TreeNode node = queue.poll();
-        s = 2 * i + m;
-        if (s < n && a[s] >= 0) {
-          p = new TreeNode(a[s]);
-          node.left = p;
-          queue.offer(p);
+    nodes.offer(root);
+    while (Math.pow(2, depth - 1) - 1 < n) {
+      s = (int) Math.pow(2, depth) - 1;
+      for (int i = 0; i < Math.pow(2, depth - 1); i++) {
+        p = nodes.poll();
+        if (p == null) continue;
+        if (s < n && a[s] > 0) {
+          p.left = new TreeNode(a[s]);
+          nodes.offer(p.left);
+        } else {
+          nodes.offer(null);
         }
         s++;
-        if (s < n && a[s] >= 0) {
-          p = new TreeNode(a[s]);
-          node.right = p;
-          queue.offer(p);
+        if (s < n && a[s] > 0) {
+          p.right = new TreeNode(a[s]);
+          nodes.offer(p.right);
+        } else {
+          nodes.offer(null);
         }
         s++;
       }
-      m = s;
+      depth++;
     }
 
     return root;
@@ -97,7 +99,8 @@ public class TreeNode {
   }
 
   public static void main(String args[]) {
-    TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
+    // TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
+    TreeNode tree4 = makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
     // display(root);
     // System.out.println("====");
   }

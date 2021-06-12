@@ -39,6 +39,19 @@ public class Scratch05 {
     return depth;
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+  // 二叉树前序变量
+  public static List<Integer> preorder(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new LinkedList<>();
+    values.add(root.val);
+    if (root.left != null) values.addAll(preorder(root.left));
+    if (root.right != null) values.addAll(preorder(root.right));
+
+    return values;
+  }
+
   public static void main(String args[]) {
     List<TreeNode> trees = new LinkedList<>();
     TreeNode tree1 = null;
@@ -52,10 +65,21 @@ public class Scratch05 {
     trees.add(tree4);
     trees.add(tree5);
 
+    System.out.println("===== tree list =====");
+    for (TreeNode t : trees) {
+      TreeNode.display(t);
+    }
+
     System.out.println("===== tree depth =====");
     for (TreeNode t : trees) {
       String out = String.format("depth = %d, depth2 = %d", depth(t), depth2(t));
       System.out.println(out);
+    }
+
+    System.out.println("===== Pre-Order =====");
+    for (TreeNode t : trees) {
+      List<Integer> v = preorder(t);
+      System.out.println(Arrays.toString(v.toArray()));
     }
   }
 }
