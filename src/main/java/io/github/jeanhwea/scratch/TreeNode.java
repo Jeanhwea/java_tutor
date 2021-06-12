@@ -75,6 +75,7 @@ public class TreeNode {
   public static void display(TreeNode root) {
     if (root == null) {
       System.out.println("null");
+      return;
     }
 
     List<Integer> values = new ArrayList<>();
