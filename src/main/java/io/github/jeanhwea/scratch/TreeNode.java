@@ -56,8 +56,32 @@ public class TreeNode {
     return root;
   }
 
+  public static void display(TreeNode root) {
+    if (root == null) {
+      System.out.println("null");
+    }
+
+    List<Integer> vals = new LinkedList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+      boolean bottom = true;
+      for (int i = 0; i < size; i++) {
+        TreeNode node = queue.poll();
+        if (null == node) vals.add(-1);
+        else {
+          vals.add(node.val);
+          bottom = false;
+        }
+      }
+      if (bottom) break;
+    }
+  }
+
   public static void main(String args[]) {
     TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
+    display(root);
     System.out.println("====");
   }
 }
