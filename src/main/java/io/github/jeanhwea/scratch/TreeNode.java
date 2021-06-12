@@ -77,13 +77,54 @@ public class TreeNode {
       System.out.println("null");
     }
 
-    List<Integer> vals = new LinkedList<>();
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.offer(root);
+    List<Integer> values = new ArrayList<>();
+    Queue<TreeNode> nodes = new LinkedList<>();
+    nodes.offer(root);
+    values.add(root.val);
 
-    while (true) {}
+    int depth = 1;
+    while (true) {
+      int size = 1 << depth;
+      boolean done = true;
+      for (int i = 0; i < size / 2; i++) {
+        TreeNode p = nodes.poll();
+        if (p == null) {
+          nodes.offer(null);
+          nodes.offer(null);
+          values.add(-1);
+          values.add(-1);
+        } else {
+          if (p.left != null) {
+            nodes.offer(p.left);
+            values.add(p.left.val);
+            done = false;
+          } else {
+            nodes.offer(null);
+            values.add(-1);
+          }
 
-    // System.out.println(Arrays.toString(vals.toArray()));
+          if (p.right != null) {
+            nodes.offer(p.right);
+            values.add(p.right.val);
+            done = false;
+          } else {
+            nodes.offer(null);
+            values.add(-1);
+          }
+        }
+      }
+      if (done) break;
+      depth++;
+    }
+
+    int k = values.size() - 1;
+    while (k >= 0) {
+      if (values.get(k) >= 0) break;
+      k--;
+    }
+    values = values.subList(0, k + 1);
+
+    System.out.println(Arrays.toString(values.toArray()));
   }
 
   public static void main(String args[]) {
