@@ -33,31 +33,38 @@ public class TreeNode {
     TreeNode root = new TreeNode(a[0]), p = null;
     nodes.offer(root);
 
-    while ((1 << depth) <= n) {
-      for (int i = 0; i < (1 << (depth - 1)); i++) {
+    while (true) {
+      int size = 1 << depth;
+      if (n < size) break;
+
+      for (int i = 0; i < size / 2; i++) {
         p = nodes.poll();
         if (p == null) {
           nodes.offer(null);
           nodes.offer(null);
-          continue;
-        }
-
-        s = 2 * i + (1 << depth) - 1;
-        if (s < n && a[s] >= 0) {
-          p.left = new TreeNode(a[s]);
-          nodes.offer(p.left);
         } else {
-          nodes.offer(null);
-        }
+          s = 2 * i + size - 1;
+          if (s < n) {
+            if (a[s] >= 0) {
+              p.left = new TreeNode(a[s]);
+              nodes.offer(p.left);
+            } else {
+              nodes.offer(null);
+            }
+          } else break;
 
-        s++;
-        if (s < n && a[s] >= 0) {
-          p.right = new TreeNode(a[s]);
-          nodes.offer(p.right);
-        } else {
-          nodes.offer(null);
+          s++;
+          if (s < n) {
+            if (a[s] >= 0) {
+              p.right = new TreeNode(a[s]);
+              nodes.offer(p.right);
+            } else {
+              nodes.offer(null);
+            }
+          } else break;
         }
       }
+
       depth++;
     }
 
