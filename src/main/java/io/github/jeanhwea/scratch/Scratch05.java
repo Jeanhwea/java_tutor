@@ -1,8 +1,6 @@
 package io.github.jeanhwea.scratch;
 
-import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 /**
  * 二叉树
