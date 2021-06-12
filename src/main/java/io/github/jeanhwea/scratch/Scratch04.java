@@ -79,9 +79,9 @@ public class Scratch04 {
   }
 
   public static void main(String args[]) {
-    ListNode head = makeList(new int[] {1, 2, 3, 4});
-    display(head);
-    display(removeNthFromEnd(head, 1));
+    ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4});
+    ListNode.display(head);
+    ListNode.display(removeNthFromEnd(head, 1));
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -99,44 +99,5 @@ public class Scratch04 {
 
   public static void display(Collection<Integer> a) {
     System.out.println(Arrays.toString(a.toArray()));
-  }
-
-  public static void display(ListNode head) {
-    List<Integer> vals = new LinkedList<Integer>();
-    ListNode p = head;
-    while (p != null) {
-      vals.add(p.val);
-      p = p.next;
-    }
-    display(vals);
-  }
-
-  public static ListNode makeList(int[] a) {
-    ListNode head = null, p = null;
-    for (int i = 0; i < a.length; i++) {
-      ListNode t = new ListNode(a[i], null);
-      if (head == null) {
-        head = p = t;
-      } else {
-        p = p.next = t;
-      }
-    }
-    return head;
-  }
-
-  public static class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {}
-
-    ListNode(int val) {
-      this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-      this.val = val;
-      this.next = next;
-    }
   }
 }
