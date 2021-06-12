@@ -40,7 +40,7 @@ public class Scratch05 {
   }
 
   ////////////////////////////////////////////////////////////////////////////////
-  // 二叉树前序变量
+  // 二叉树前序遍历
   public static List<Integer> preorder(TreeNode root) {
     if (root == null) return new LinkedList<>();
 
