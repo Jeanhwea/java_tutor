@@ -24,13 +24,13 @@ public class ListNode {
   }
 
   public static ListNode makeList(int[] a) {
-    ListNode head = null, p = null;
+    ListNode head = null, tail = null;
     for (int i = 0; i < a.length; i++) {
-      ListNode t = new ListNode(a[i], null);
+      ListNode node = new ListNode(a[i], null);
       if (head == null) {
-        head = p = t;
+        head = tail = node;
       } else {
-        p = p.next = t;
+        tail = tail.next = node;
       }
     }
     return head;
@@ -38,11 +38,16 @@ public class ListNode {
 
   public static void display(ListNode head) {
     List<Integer> vals = new LinkedList<Integer>();
-    ListNode p = head;
-    while (p != null) {
-      vals.add(p.val);
-      p = p.next;
+    ListNode tail = head;
+    while (tail != null) {
+      vals.add(tail.val);
+      tail = tail.next;
     }
     System.out.println(Arrays.toString(vals.toArray()));
+  }
+
+  public static void main(String args[]) {
+    ListNode head = makeList(new int[] {1, 2, 3, 4});
+    display(head);
   }
 }
