@@ -52,6 +52,22 @@ public class Scratch05 {
     return values;
   }
 
+  public static List<Integer> preorder1(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new LinkedList<>();
+    Stack<TreeNode> nodes = new Stack<>();
+    nodes.push(root);
+    while (!nodes.isEmpty()) {
+      TreeNode p = nodes.pop();
+      values.add(p.val);
+      if (p.right != null) nodes.add(p.right);
+      if (p.left != null) nodes.add(p.left);
+    }
+
+    return values;
+  }
+
   public static void main(String args[]) {
     List<TreeNode> trees = new LinkedList<>();
     TreeNode tree1 = null;
@@ -78,8 +94,10 @@ public class Scratch05 {
 
     System.out.println("===== Pre-Order =====");
     for (TreeNode t : trees) {
-      List<Integer> v = preorder(t);
-      System.out.println(Arrays.toString(v.toArray()));
+      List<Integer> v0 = preorder(t);
+      System.out.println(Arrays.toString(v0.toArray()));
+      List<Integer> v1 = preorder1(t);
+      System.out.println(Arrays.toString(v1.toArray()));
     }
   }
 }
