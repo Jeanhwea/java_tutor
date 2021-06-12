@@ -26,13 +26,14 @@ public class TreeNode {
   }
 
   public static TreeNode makeTree(int[] a) {
+    int n = a.length;
     if (a.length < 1) return null;
-    int n = a.length, depth = 1, s = 0;
 
     Queue<TreeNode> nodes = new LinkedList<>();
     TreeNode root = new TreeNode(a[0]), p = null;
     nodes.offer(root);
 
+    int depth = 1;
     while (true) {
       int size = 1 << depth;
       if (n < size) break;
@@ -43,7 +44,7 @@ public class TreeNode {
           nodes.offer(null);
           nodes.offer(null);
         } else {
-          s = 2 * i + size - 1;
+          int s = 2 * i + size - 1;
           if (s < n) {
             if (a[s] >= 0) {
               p.left = new TreeNode(a[s]);
@@ -79,36 +80,10 @@ public class TreeNode {
     List<Integer> vals = new LinkedList<>();
     Queue<TreeNode> queue = new LinkedList<>();
     queue.offer(root);
-    while (true) {
-      int size = queue.size();
-      boolean done = true;
-      for (int i = 0; i < size; i++) {
-        TreeNode node = queue.poll();
-        if (null == node) {
-          vals.add(-1);
-          continue;
-        } else {
-          vals.add(node.val);
-        }
 
-        if (null == node.left) {
-          queue.offer(null);
-        } else {
-          queue.offer(node.left);
-          done = false;
-        }
+    while (true) {}
 
-        if (null == node.right) {
-          queue.offer(null);
-        } else {
-          queue.offer(node.right);
-          done = false;
-        }
-      }
-      if (done) break;
-    }
-
-    System.out.println(Arrays.toString(vals.toArray()));
+    // System.out.println(Arrays.toString(vals.toArray()));
   }
 
   public static void main(String args[]) {
