@@ -86,17 +86,15 @@ public class Scratch05 {
 
     List<Integer> values = new LinkedList<>();
     Stack<TreeNode> nodes = new Stack<>();
-    Set<TreeNode> visited = new HashSet<>();
-    nodes.push(root);
-    while (!nodes.isEmpty()) {
-      TreeNode p = nodes.pop();
-      while (p.left != null && !visited.contains(p.left)) {
+    TreeNode p = root;
+    while (p != null || !nodes.isEmpty()) {
+      while (p != null) {
         nodes.push(p);
         p = p.left;
       }
+      p = nodes.pop();
       values.add(p.val);
-      visited.add(p);
-      if (p.right != null) nodes.push(p.right);
+      p = p.right;
     }
 
     return values;
