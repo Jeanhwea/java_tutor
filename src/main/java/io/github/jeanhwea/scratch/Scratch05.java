@@ -58,7 +58,7 @@ public class Scratch05 {
     TreeNode tree2 = TreeNode.makeTree(new int[] {1});
     TreeNode tree3 = TreeNode.makeTree(new int[] {1, 2, 3, 4, 5});
     TreeNode tree4 = TreeNode.makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
-    TreeNode tree5 = TreeNode.makeTree(new int[] {1, 2, -1, -1, 4});
+    TreeNode tree5 = TreeNode.makeTree(new int[] {1, 2, 3, 4});
     trees.add(tree1);
     trees.add(tree2);
     trees.add(tree3);

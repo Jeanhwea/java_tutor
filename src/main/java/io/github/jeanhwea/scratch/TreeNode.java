@@ -33,7 +33,7 @@ public class TreeNode {
     TreeNode root = new TreeNode(a[0]), p = null;
     nodes.offer(root);
 
-    while ((1 << depth) < n) {
+    while ((1 << depth) <= n) {
       for (int i = 0; i < (1 << (depth - 1)); i++) {
         p = nodes.poll();
         if (p == null) {
@@ -107,6 +107,8 @@ public class TreeNode {
   public static void main(String args[]) {
     // TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
     TreeNode tree4 = makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
+    // TreeNode tree4 = makeTree(new int[] {1, 2, 3});
+    display(tree4);
     // System.out.println(1 << 3);
     // display(root);
     // System.out.println("====");
