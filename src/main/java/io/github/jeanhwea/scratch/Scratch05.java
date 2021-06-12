@@ -1,6 +1,8 @@
 package io.github.jeanhwea.scratch;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 /**
  * 二叉树
@@ -69,7 +71,7 @@ public class Scratch05 {
   }
 
   ////////////////////////////////////////////////////////////////////////////////
-  // 二叉树中遍历
+  // 二叉树中序遍历
   public static List<Integer> inorder(TreeNode root) {
     if (root == null) return new LinkedList<>();
 
@@ -97,6 +99,36 @@ public class Scratch05 {
       p = p.right;
     }
 
+    return values;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // 二叉树后序遍历
+  public static List<Integer> postorder(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new LinkedList<>();
+    if (root.left != null) values.addAll(postorder(root.left));
+    if (root.right != null) values.addAll(postorder(root.right));
+    values.add(root.val);
+
+    return values;
+  }
+
+  public static List<Integer> postorder1(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new ArrayList<>();
+    Stack<TreeNode> nodes = new Stack<>();
+    nodes.push(root);
+    while (!nodes.isEmpty()) {
+      TreeNode p = nodes.pop();
+      values.add(p.val);
+      if (p.left != null) nodes.add(p.left);
+      if (p.right != null) nodes.add(p.right);
+    }
+
+    Collections.reverse(values);
     return values;
   }
 
@@ -137,6 +169,14 @@ public class Scratch05 {
       List<Integer> v0 = inorder(t);
       System.out.println(Arrays.toString(v0.toArray()));
       List<Integer> v1 = inorder1(t);
+      System.out.println(Arrays.toString(v1.toArray()));
+    }
+
+    System.out.println("===== Post-Order =====");
+    for (TreeNode t : trees) {
+      List<Integer> v0 = postorder(t);
+      System.out.println(Arrays.toString(v0.toArray()));
+      List<Integer> v1 = postorder1(t);
       System.out.println(Arrays.toString(v1.toArray()));
     }
   }
