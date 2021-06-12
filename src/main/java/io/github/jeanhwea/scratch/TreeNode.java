@@ -32,13 +32,18 @@ public class TreeNode {
     Queue<TreeNode> nodes = new LinkedList<>();
     TreeNode root = new TreeNode(a[0]), p = null;
     nodes.offer(root);
-    while (Math.pow(2, depth - 1) < n) {
-      for (int i = 0; i < Math.pow(2, depth - 1); i++) {
-        p = nodes.poll();
-        if (p == null) continue;
 
-        s = 2 * i + (int) Math.pow(2, depth - 1);
-        if (s < n && a[s] > 0) {
+    while ((1 << depth) < n) {
+      for (int i = 0; i < (1 << (depth - 1)); i++) {
+        p = nodes.poll();
+        if (p == null) {
+          nodes.offer(null);
+          nodes.offer(null);
+          continue;
+        }
+
+        s = 2 * i + (1 << depth) - 1;
+        if (s < n && a[s] >= 0) {
           p.left = new TreeNode(a[s]);
           nodes.offer(p.left);
         } else {
@@ -46,7 +51,7 @@ public class TreeNode {
         }
 
         s++;
-        if (s < n && a[s] > 0) {
+        if (s < n && a[s] >= 0) {
           p.right = new TreeNode(a[s]);
           nodes.offer(p.right);
         } else {
@@ -102,6 +107,7 @@ public class TreeNode {
   public static void main(String args[]) {
     // TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
     TreeNode tree4 = makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
+    // System.out.println(1 << 3);
     // display(root);
     // System.out.println("====");
   }
