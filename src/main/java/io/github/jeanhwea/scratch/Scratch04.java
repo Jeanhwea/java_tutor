@@ -39,6 +39,8 @@ public class Scratch04 {
     return head;
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+  // 反转链表
   public static ListNode reverse(ListNode head) {
     ListNode p = head, q;
 
