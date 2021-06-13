@@ -11,6 +11,17 @@ import java.util.*;
 public class Scratch04 {
 
   ////////////////////////////////////////////////////////////////////////////////
+  // 链表的大小
+  public static int listSize(ListNode head) {
+    int n = 0;
+    while (head != null) {
+      n++;
+      head = head.next;
+    }
+    return n;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
   // 插入链表
   public static ListNode insert(ListNode head, int k, int val) {
     ListNode p = null;
@@ -57,6 +68,7 @@ public class Scratch04 {
     ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
     ListNode.display(head);
     System.out.println("========================================");
+    ListNode.display(listSize(head));
     ListNode.display(remove(head, 7));
   }
 }
