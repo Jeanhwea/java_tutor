@@ -10,22 +10,31 @@ import java.util.*;
  */
 public class Solution190 {
 
-  public static int reverseBits(int n) {
-    int mask1 = 1;
+  public static int reverseBits0(int n) {
+    int mask = 1;
     for (int i = 0; i < 16; i++) {
-      int p = n & (mask1 << i), q = n & (mask1 << (31 - i));
+      int p = n & (mask << i), q = n & (mask << (31 - i));
       if (q == 0) {
-        n &= (mask1 << i) ^ -1;
+        n &= (mask << i) ^ -1;
       } else {
-        n |= mask1 << i;
+        n |= mask << i;
       }
       if (p == 0) {
-        n &= (mask1 << (31 - i)) ^ -1;
+        n &= (mask << (31 - i)) ^ -1;
       } else {
-        n |= mask1 << (31 - i);
+        n |= mask << (31 - i);
       }
     }
     return n;
+  }
+
+  public static int reverseBits(int n) {
+    int mask = 1, ans = 0;
+    for (int i = 0; i < 32 && n != 0; i++) {
+      ans |= (n & mask) << (31 - i);
+      n >>>= 1;
+    }
+    return ans;
   }
 
   public static void display(int n) {
@@ -42,7 +51,6 @@ public class Solution190 {
     int n = -3;
     // display(1^-1);
     display(n);
-    System.out.println("");
     int m = reverseBits(n);
     display(m);
   }
