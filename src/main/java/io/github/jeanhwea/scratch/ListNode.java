@@ -37,6 +37,11 @@ public class ListNode {
   }
 
   public static void display(ListNode head) {
+    if (head == null) {
+      System.out.println("null");
+      return;
+    }
+
     List<Integer> vals = new LinkedList<Integer>();
     ListNode tail = head;
     while (tail != null) {

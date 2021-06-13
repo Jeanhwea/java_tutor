@@ -3,72 +3,124 @@ package io.github.jeanhwea.scratch;
 import java.util.*;
 
 /**
- * 链表
+ * 各种排序算法
  *
  * @author Jinghui Hu
- * @since 2021-06-11, JDK1.8
+ * @since 2021-06-06, JDK1.8
  */
 public class Scratch04 {
 
-  ////////////////////////////////////////////////////////////////////////////////
-  // 链表的大小
-  public static int listSize(ListNode head) {
-    int n = 0;
-    while (head != null) {
-      n++;
-      head = head.next;
+  // selection sort
+  public static void ssort(int[] a) {
+    int n = a.length;
+    for (int i = 0; i < n; i++) {
+      int mi = i; // min index
+      for (int j = i + 1; j < n; j++) {
+        if (a[j] < a[mi]) mi = j;
+      }
+      int t = a[i]; a[i] = a[mi]; a[mi] = t;
     }
-    return n;
   }
 
-  ////////////////////////////////////////////////////////////////////////////////
-  // 插入链表
-  public static ListNode insert(ListNode head, int k, int val) {
-    ListNode p = null;
-    for (int i = 0; i < k - 1; i++) {
-      p = p != null ? p.next : head;
+  // bubble sort
+  public static void bsort(int[] a) {
+    int n = a.length;
+    for (int i = 0; i < n; i++) {
+      for (int j = i + 1; j < n; j++) {
+        if (a[i] > a[j]) {int t = a[i]; a[i] = a[j]; a[j] = t;}
+      }
     }
-
-    ListNode q = new ListNode(val);
-    if (p == null) {
-      q.next = head;
-      head = q;
-    } else {
-      q.next = p.next;
-      p.next = q;
-    }
-
-    return head;
   }
 
-  ////////////////////////////////////////////////////////////////////////////////
-  // 删除链表
-  public static ListNode remove(ListNode head, int k) {
-    ListNode p = null;
-    for (int i = 0; i < k - 1; i++) {
-      p = p != null ? p.next : head;
+  // insertion sort
+  public static void isort(int[] a) {
+    int n = a.length;
+    for (int i = 0; i < n - 1; i++) {
+      int v = a[i + 1];
+      int j = 0;
+      while (j <= i && a[j] < v) j++;
+      for (int k = i + 1; k > j; k--) a[k] = a[k - 1];
+      a[j] = v;
     }
-
-    if (p == null) {
-      head = head.next;
-    } else {
-      p.next = p.next.next;
-    }
-
-    return head;
   }
 
-  ////////////////////////////////////////////////////////////////////////////////
-  // 反转链表
-  public static ListNode reverse(ListNode head) {
-    return null;
+  // quick sort
+  public static void qsort(int a[], int lo, int hi) {
+    if (hi <= lo) return;
+
+    int i = lo, j = hi;
+    int p = a[i]; // pivot
+    while (i < j) {
+      // right scan
+      while (j > i && a[j] >= p) j--;
+      a[i] = a[j]; // a[i] is kept
+
+      // left scan
+      while (i < j && a[i] <= p) i++;
+      a[j] = a[i]; // a[j] is kept
+    }
+
+    // now i equals j
+    a[i] = p;
+
+    qsort(a, lo, i - 1);
+    qsort(a, i + 1, hi);
+  }
+
+  public static void qsort0(int a[], int lo, int hi) {
+    if (hi <= lo) return;
+
+    int[] b = new int[hi - lo + 1];
+    for (int k = 0; k < b.length; k++) {
+      b[k] = a[k + lo];
+    }
+
+    int i = lo, j = hi, p = b[0];
+    for (int k = 1; k < b.length; k++) {
+      if (b[k] < p) {
+        a[i++] = b[k];
+      } else {
+        a[j--] = b[k];
+      }
+    }
+    a[i] = p;
+
+    qsort0(a, lo, i - 1);
+    qsort0(a, i + 1, hi);
+  }
+
+  // heap sort
+  public static void hsort(int[] a) {
+    int n = a.length;
+    PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
+    for (int i = 0; i < n; i++) {
+      heap.add(a[i]);
+    }
+    for (int i = 0; i < n; i++) {
+      a[i] = heap.poll();
+    }
   }
 
   public static void main(String args[]) {
-    ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
-    ListNode.display(head);
+    int arrSize = 6;
+    int[] a = new int[arrSize];
+    for (int i = 0; i < arrSize; i++) {
+      int e = (int) (Math.random() * 30);
+      a[i] = e;
+    }
+
+    System.out.println(Arrays.toString(a));
     System.out.println("========================================");
-    System.out.println(listSize(head));
-    ListNode.display(remove(head, 7));
+    // bsort(a);
+    // isort(b);
+    // isort(a);
+    // qsort(a, 0, a.length - 1);
+    // Arrays.sort(b); // JDK sort
+    hsort(a);
+    System.out.println(Arrays.toString(a));
+
+    // int[] b = {9, 2, 3, 1, 9, 22, 0};
+    // Arrays.sort(b); // JDK sort
+    // System.out.println(Arrays.toString(b));
   }
 }
