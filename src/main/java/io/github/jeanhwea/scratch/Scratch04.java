@@ -68,7 +68,7 @@ public class Scratch04 {
     ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
     ListNode.display(head);
     System.out.println("========================================");
-    ListNode.display(listSize(head));
+    System.out.println(listSize(head));
     ListNode.display(remove(head, 7));
   }
 }
