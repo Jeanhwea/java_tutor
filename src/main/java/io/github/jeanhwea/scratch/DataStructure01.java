@@ -78,12 +78,14 @@ public class DataStructure01 {
 
   public static void main(String args[]) {
     ListNode tree0 = null;
-    ListNode tree1 = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
-    ListNode tree2 = ListNode.makeList(new int[] {1});
+    ListNode tree1 = ListNode.makeList(new int[] {1});
+    ListNode tree2 = ListNode.makeList(new int[] {1, 2});
+    ListNode tree3 = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
     ListNode.display(tree1);
     System.out.println("========================================");
     // System.out.println(listSize(tree1));
     // ListNode.display(remove(tree1, 7));
     ListNode.display(reverse(tree0));
+    ListNode.display(reverse(tree2));
   }
 }
