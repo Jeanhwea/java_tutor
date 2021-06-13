@@ -11,10 +11,24 @@ import java.util.*;
 public class Solution278 {
 
   private static boolean isBadVersion(int version) {
-    return version > 0;
+    return version > 3;
   }
 
+  // 单向缩紧区间
   public static int firstBadVersion(int n) {
+    int i = 1, j = n;
+
+    while (i < j) {
+      int k = i + (j - i) / 2;
+      if (isBadVersion(k)) j = k;
+      else i = k + 1;
+    }
+
+    return i;
+  }
+
+  // 二分查找
+  public static int firstBadVersion0(int n) {
     int i = 1, j = n;
 
     while (i <= j) {
