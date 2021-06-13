@@ -26,31 +26,47 @@ public class TreeNode {
   }
 
   public static TreeNode makeTree(int[] a) {
+    int n = a.length;
     if (a.length < 1) return null;
-    int n = a.length, m = 1, s = 0;
 
-    Queue<TreeNode> queue = new LinkedList<>();
+    Queue<TreeNode> nodes = new LinkedList<>();
     TreeNode root = new TreeNode(a[0]), p = null;
-    queue.offer(root);
-    while (!queue.isEmpty()) {
-      int size = queue.size();
-      for (int i = 0; i < size; i++) {
-        TreeNode node = queue.poll();
-        s = 2 * i + m;
-        if (s < n && a[s] >= 0) {
-          p = new TreeNode(a[s]);
-          node.left = p;
-          queue.offer(p);
+    nodes.offer(root);
+
+    int depth = 1;
+    while (true) {
+      int size = 1 << depth;
+      if (n < size) break;
+
+      for (int i = 0; i < size / 2; i++) {
+        p = nodes.poll();
+        if (p == null) {
+          nodes.offer(null);
+          nodes.offer(null);
+        } else {
+          int s = 2 * i + size - 1;
+          if (s < n) {
+            if (a[s] >= 0) {
+              p.left = new TreeNode(a[s]);
+              nodes.offer(p.left);
+            } else {
+              nodes.offer(null);
+            }
+          } else break;
+
+          s++;
+          if (s < n) {
+            if (a[s] >= 0) {
+              p.right = new TreeNode(a[s]);
+              nodes.offer(p.right);
+            } else {
+              nodes.offer(null);
+            }
+          } else break;
         }
-        s++;
-        if (s < n && a[s] >= 0) {
-          p = new TreeNode(a[s]);
-          node.right = p;
-          queue.offer(p);
-        }
-        s++;
       }
-      m = s;
+
+      depth++;
     }
 
     return root;
@@ -59,40 +75,66 @@ public class TreeNode {
   public static void display(TreeNode root) {
     if (root == null) {
       System.out.println("null");
+      return;
     }
 
-    List<Integer> vals = new LinkedList<>();
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.offer(root);
+    List<Integer> values = new ArrayList<>();
+    Queue<TreeNode> nodes = new LinkedList<>();
+    nodes.offer(root);
+    values.add(root.val);
+
+    int depth = 1;
     while (true) {
-      int size = queue.size();
+      int size = 1 << depth;
       boolean done = true;
-      for (int i = 0; i < size; i++) {
-        TreeNode node = queue.poll();
-        if (null == node) {
-          vals.add(-1);
-          continue;
+      for (int i = 0; i < size / 2; i++) {
+        TreeNode p = nodes.poll();
+        if (p == null) {
+          nodes.offer(null);
+          nodes.offer(null);
+          values.add(-1);
+          values.add(-1);
         } else {
-          vals.add(node.val);
-        }
+          if (p.left != null) {
+            nodes.offer(p.left);
+            values.add(p.left.val);
+            done = false;
+          } else {
+            nodes.offer(null);
+            values.add(-1);
+          }
 
-        if (null == node.left) {
-          queue.offer(null);
-        } else {
-          queue.offer(node.left);
-          done = false;
-        }
-
-        if (null == node.right) {
-          queue.offer(null);
-        } else {
-          queue.offer(node.right);
-          done = false;
+          if (p.right != null) {
+            nodes.offer(p.right);
+            values.add(p.right.val);
+            done = false;
+          } else {
+            nodes.offer(null);
+            values.add(-1);
+          }
         }
       }
       if (done) break;
+      depth++;
     }
 
-    System.out.println(Arrays.toString(vals.toArray()));
+    int k = values.size() - 1;
+    while (k >= 0) {
+      if (values.get(k) >= 0) break;
+      k--;
+    }
+    values = values.subList(0, k + 1);
+
+    System.out.println(Arrays.toString(values.toArray()));
+  }
+
+  public static void main(String args[]) {
+    // TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
+    TreeNode tree4 = makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
+    // TreeNode tree4 = makeTree(new int[] {1, 2, 3});
+    display(tree4);
+    // System.out.println(1 << 3);
+    // display(root);
+    // System.out.println("====");
   }
 }
