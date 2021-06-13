@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Scratch09 {
+public class DataStructure03 {
 
   /**
    * 优先队列的堆实现方式使用：上浮 (swim) 和下沉 (sink) 两个操作

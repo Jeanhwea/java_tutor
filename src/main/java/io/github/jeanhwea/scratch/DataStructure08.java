@@ -13,7 +13,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Scratch07 {
+public class DataStructure08 {
 
   public static class RBTree {
     public int val;

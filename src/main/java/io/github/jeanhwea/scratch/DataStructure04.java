@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-12, JDK1.8
  */
-public class Scratch05 {
+public class DataStructure04 {
 
   ////////////////////////////////////////////////////////////////////////////////
   // 递归求树的深度
