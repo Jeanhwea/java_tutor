@@ -13,7 +13,6 @@ public class Solution108 {
   public static TreeNode sortedArrayToBST(int[] a) {
     int n = a.length;
     if (n <= 0) return null;
-    if (n <= 1) return new TreeNode(a[0]);
 
     int p = n / 2;
     TreeNode root = new TreeNode(a[p]);
