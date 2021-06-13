@@ -1,0 +1,24 @@
+package io.github.jeanhwea.leetcode.basic.ch08;
+
+import java.util.*;
+
+/**
+ * 3的幂
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-13, JDK1.8
+ */
+public class Solution326 {
+
+  public static boolean isPowerOfThree(int n) {
+    if (n < 1) return false;
+    while (n % 3 == 0) n /= 3;
+    return n == 1;
+  }
+
+  public static void main(String args[]) {
+    for (int i = -10; i < 100; i++) {
+      System.out.printf("%d = %s\n", i, isPowerOfThree(i));
+    }
+  }
+}
