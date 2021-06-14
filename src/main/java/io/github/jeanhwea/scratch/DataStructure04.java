@@ -86,15 +86,14 @@ public class DataStructure04 {
 
     List<Integer> values = new LinkedList<>();
     Stack<TreeNode> nodes = new Stack<>();
-    TreeNode p = root;
-    while (p != null || !nodes.isEmpty()) {
-      while (p != null) {
-        nodes.push(p);
-        p = p.left;
+    while (root != null || !nodes.isEmpty()) {
+      while (root != null) {
+        nodes.push(root);
+        root = root.left;
       }
-      p = nodes.pop();
-      values.add(p.val);
-      p = p.right;
+      root = nodes.pop();
+      values.add(root.val);
+      root = root.right;
     }
 
     return values;
@@ -116,18 +115,41 @@ public class DataStructure04 {
   public static List<Integer> postorder1(TreeNode root) {
     if (root == null) return new LinkedList<>();
 
-    List<Integer> values = new ArrayList<>();
+    Deque<Integer> values = new LinkedList<>();
     Stack<TreeNode> nodes = new Stack<>();
     nodes.push(root);
     while (!nodes.isEmpty()) {
       TreeNode p = nodes.pop();
-      values.add(p.val);
+      values.addFirst(p.val);
       if (p.left != null) nodes.add(p.left);
       if (p.right != null) nodes.add(p.right);
     }
 
-    Collections.reverse(values);
-    return values;
+    return (List<Integer>) values;
+  }
+
+  public static List<Integer> postorder2(TreeNode root) {
+    if (root == null) return new LinkedList<>();
+
+    List<Integer> values = new LinkedList<>();
+    Deque<TreeNode> stack = new LinkedList<>();
+    TreeNode prev = null;
+    while (root != null || !stack.isEmpty()) {
+      while (root != null) {
+        stack.push(root);
+        root = root.left;
+      }
+      root = stack.pop();
+      if (root.left == prev || root.right == null) {
+        values.add(root.val);
+        prev = root;
+        root = null;
+      } else {
+        root = root.right;
+      }
+    }
+
+    return new LinkedList<>();
   }
 
   public static void main(String args[]) {
@@ -176,6 +198,8 @@ public class DataStructure04 {
       System.out.println(Arrays.toString(v0.toArray()));
       List<Integer> v1 = postorder1(t);
       System.out.println(Arrays.toString(v1.toArray()));
+      List<Integer> v2 = postorder2(t);
+      System.out.println(Arrays.toString(v2.toArray()));
     }
   }
 }
