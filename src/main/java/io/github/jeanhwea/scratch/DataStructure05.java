@@ -36,26 +36,17 @@ public class DataStructure05 {
     List<Integer> tree = new LinkedList<>();
     Set<Integer> visited = new HashSet<>();
     Stack<Integer> vertex = new Stack<>();
-    tree.add(start);
     visited.add(start);
     vertex.push(start);
-    int v = -1;
     while (!vertex.isEmpty()) {
-      v = vertex.pop();
-      boolean nonLast = false;
-      do {
-        nonLast = false;
-        for (int i = 0; i < n; i++) {
-          if (!visited.contains(i) && edges[v][i] == 1) {
-            tree.add(i);
-            visited.add(i);
-            vertex.push(i);
-            nonLast = true;
-            v = i;
-            break;
-          }
+      int v = vertex.pop();
+      tree.add(v);
+      for (int i = 0; i < n; i++) {
+        if (!visited.contains(i) && edges[v][i] == 1) {
+          visited.add(i);
+          vertex.push(i);
         }
-      } while (nonLast);
+      }
     }
     System.out.println(Arrays.toString(tree.toArray()));
   }
@@ -64,11 +55,11 @@ public class DataStructure05 {
     int[][] edges = makeGraph();
     // edges[1][0] = -1;
     display(edges);
-    System.out.println("========================================");
+    System.out.println("========== BFS ==========");
     bfs(edges, 6, 0);
     bfs(edges, 6, 1);
     bfs(edges, 6, 2);
-    System.out.println("========================================");
+    System.out.println("========== DFS ==========");
     dfs(edges, 6, 0);
     dfs(edges, 6, 1);
     dfs(edges, 6, 2);
