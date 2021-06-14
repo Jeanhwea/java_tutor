@@ -13,18 +13,18 @@ public class DataStructure05 {
   // 广度优先搜索 Breadth First Search
   public static void bfs(int[][] edges, int n, int start) {
     List<Integer> tree = new LinkedList<>();
-    Queue<Integer> vertex = new LinkedList<>();
     Set<Integer> visited = new HashSet<>();
-    vertex.offer(start);
-    visited.add(start);
+    Queue<Integer> vertex = new LinkedList<>();
     tree.add(start);
+    visited.add(start);
+    vertex.offer(start);
     while (!vertex.isEmpty()) {
       int v = vertex.poll();
       for (int i = 0; i < n; i++) {
         if (!visited.contains(i) && edges[v][i] == 1) {
+          tree.add(i);
           visited.add(i);
           vertex.offer(i);
-          tree.add(i);
         }
       }
     }
@@ -34,18 +34,19 @@ public class DataStructure05 {
   // 深度优先搜索 Depth First Search
   public static void dfs(int[][] edges, int n, int start) {
     List<Integer> tree = new LinkedList<>();
-    Stack<Integer> vertex = new Stack<>();
     Set<Integer> visited = new HashSet<>();
-    vertex.push(start);
-    visited.add(start);
+    Stack<Integer> vertex = new Stack<>();
     tree.add(start);
+    visited.add(start);
+    vertex.push(start);
     while (!vertex.isEmpty()) {
       int v = vertex.pop();
       for (int i = 0; i < n; i++) {
         if (!visited.contains(i) && edges[v][i] == 1) {
-          vertex.push(i);
-          visited.add(i);
           tree.add(i);
+          visited.add(i);
+          vertex.push(i);
+          break;
         }
       }
     }
@@ -54,6 +55,9 @@ public class DataStructure05 {
 
   public static void main(String args[]) {
     int[][] edges = makeGraph();
+    // edges[1][0] = -1;
+    display(edges);
+    System.out.println("========================================");
     bfs(edges, 6, 0);
     bfs(edges, 6, 1);
     bfs(edges, 6, 2);
@@ -66,6 +70,14 @@ public class DataStructure05 {
   }
 
   private static void display(int[][] a) {
+    int n = a.length;
+    for (int i = 0; i < n; i++) {
+      for (int j = i; j < n; j++) {
+        int t = a[i][j];
+        a[i][j] = a[j][i];
+        a[j][i] = t;
+      }
+    }
     System.out.println(Arrays.deepToString(a).replace("], [", "],\n ["));
   }
 
