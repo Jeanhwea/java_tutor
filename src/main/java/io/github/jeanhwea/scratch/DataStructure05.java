@@ -10,9 +10,28 @@ import java.util.*;
  */
 public class DataStructure05 {
 
+  public static void bfs(int[][] edges, int n) {
+    Queue<Integer> vertex = new LinkedList<>();
+    Set<Integer> visited = new HashSet<>();
+    vertex.offer(0);
+    while (!vertex.isEmpty()) {
+      int v = vertex.poll();
+      for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+          if (edges[i][j] == 1 && !visited.contains(i)) {
+            visited.add(j);
+            vertex.offer(j);
+            System.out.println(j);
+          }
+        }
+      }
+    }
+  }
+
   public static void main(String args[]) {
     int[][] edges = makeGraph();
-    display(edges);
+    bfs(edges, 6);
+    // display(edges);
   }
 
   private static void display(int[][] a) {
