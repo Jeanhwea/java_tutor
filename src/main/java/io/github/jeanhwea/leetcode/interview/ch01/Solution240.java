@@ -10,25 +10,16 @@ import java.util.*;
  */
 public class Solution240 {
 
-  // 二分搜索
+  // 从左下往右上搜索法
   public static boolean searchMatric(int[][] a, int target) {
     int n = a.length, m = a[0].length;
 
-    int i = 0, j = n;
-    while (i <= j) {
-      int mid1 = i + (j - i) / 2;
-
-      int p = 0, q = m;
-      while (p < q) {
-        int mid2 = p + (q - p) / 2;
-        if (a[mid1][mid2] == target) return true;
-        else if (a[mid1][mid2] > target) q = mid2;
-        else q = mid2 + 1;
-      }
-
-      if (a[mid1][p] == target) return true;
-      else if (a[mid1][p] > target) j = mid1 - 1;
-      else i = mid1 + 1;
+    int i = n - 1, j = 0;
+    while (i >= 0 && j < m) {
+      // System.out.printf("a[%d][%d]=%d\n", i, j, a[i][j]);
+      if (a[i][j] == target) return true;
+      else if (a[i][j] > target) i--;
+      else j++;
     }
 
     return false;
@@ -56,7 +47,7 @@ public class Solution240 {
       {10, 13, 14, 17, 24},
       {18, 21, 23, 26, 30}
     };
-    int target = 5;
+    int target = 12;
     System.out.println(searchMatric(matrix, target));
   }
 }
