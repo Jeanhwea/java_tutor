@@ -56,7 +56,7 @@ public class DataStructure04 {
     if (root == null) return new LinkedList<>();
 
     List<Integer> values = new LinkedList<>();
-    Stack<TreeNode> nodes = new Stack<>();
+    Deque<TreeNode> nodes = new LinkedList<>();
     nodes.push(root);
     while (!nodes.isEmpty()) {
       TreeNode p = nodes.pop();
@@ -85,7 +85,7 @@ public class DataStructure04 {
     if (root == null) return new LinkedList<>();
 
     List<Integer> values = new LinkedList<>();
-    Stack<TreeNode> nodes = new Stack<>();
+    Deque<TreeNode> nodes = new LinkedList<>();
     while (root != null || !nodes.isEmpty()) {
       while (root != null) {
         nodes.push(root);
@@ -116,7 +116,7 @@ public class DataStructure04 {
     if (root == null) return new LinkedList<>();
 
     Deque<Integer> values = new LinkedList<>();
-    Stack<TreeNode> nodes = new Stack<>();
+    Deque<TreeNode> nodes = new LinkedList<>();
     nodes.push(root);
     while (!nodes.isEmpty()) {
       TreeNode p = nodes.pop();
