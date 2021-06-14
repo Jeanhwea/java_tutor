@@ -95,32 +95,19 @@ public class DataStructure03 {
   }
 
   public static void main(String args[]) {
-    int arrSize = 8;
-    int[] a = new int[arrSize];
-    for (int i = 0; i < arrSize; i++) {
+    int[] a = makeArray(8);
+    int[] b = makeArray(6);
+    System.out.println(Arrays.toString(a));
+    System.out.println(Arrays.toString(b));
+    System.out.println("========================================");
+  }
+
+  private static int[] makeArray(int n) {
+    int[] a = new int[n];
+    for (int i = 0; i < n; i++) {
       int e = (int) (1 + Math.random() * 30);
       a[i] = e;
     }
-
-    int[] b = new int[arrSize];
-    for (int i = 0; i < arrSize; i++) {
-      int e = a[i];
-      b[i] = e;
-      swim(b, i);
-      System.out.println(e);
-      System.out.println(Arrays.toString(b));
-    }
-
-    System.out.println("========================================");
-    for (int i = arrSize - 1; i >= 0; i--) {
-      b[0] = b[i];
-      b[i] = 0;
-      sink(b, 0, i);
-      System.out.println(Arrays.toString(b));
-    }
-
-    // System.out.println(Arrays.toString(a));
-    // hsort(a);
-    // System.out.println(Arrays.toString(a));
+    return a;
   }
 }
