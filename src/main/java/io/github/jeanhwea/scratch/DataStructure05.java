@@ -11,6 +11,15 @@ import java.util.*;
 public class DataStructure05 {
 
   public static void main(String args[]) {
+    int[][] edges = makeGraph();
+    display(edges);
+  }
+
+  private static void display(int[][] a) {
+    System.out.println(Arrays.deepToString(a).replace("], [", "],\n ["));
+  }
+
+  private static int[][] makeGraph() {
     int n = 6;
     int[][] edges = new int[n][n];
     edges[0][1] = edges[0][2] = 1;
@@ -22,10 +31,6 @@ public class DataStructure05 {
         edges[j][i] = i == j ? 1 : edges[i][j];
       }
     }
-    display(edges);
-  }
-
-  private static void display(int[][] a) {
-    System.out.println(Arrays.deepToString(a).replace("], [", "],\n ["));
+    return edges;
   }
 }
