@@ -39,16 +39,23 @@ public class DataStructure05 {
     tree.add(start);
     visited.add(start);
     vertex.push(start);
+    int v = -1;
     while (!vertex.isEmpty()) {
-      int v = vertex.pop();
-      for (int i = 0; i < n; i++) {
-        if (!visited.contains(i) && edges[v][i] == 1) {
-          tree.add(i);
-          visited.add(i);
-          vertex.push(i);
-          break;
+      v = vertex.pop();
+      boolean nonLast = false;
+      do {
+        nonLast = false;
+        for (int i = 0; i < n; i++) {
+          if (!visited.contains(i) && edges[v][i] == 1) {
+            tree.add(i);
+            visited.add(i);
+            vertex.push(i);
+            nonLast = true;
+            v = i;
+            break;
+          }
         }
-      }
+      } while (nonLast);
     }
     System.out.println(Arrays.toString(tree.toArray()));
   }
