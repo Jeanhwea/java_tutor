@@ -103,12 +103,12 @@ public class DataStructure03 {
 
     PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.value));
     for (int i = 0; i < 8; i++) {
-      Pair p = new Pair("E" + i, a[i]);
+      Pair p = new Pair(String.format("E%02d", i + 1), a[i]);
       pq.offer(p);
     }
     for (int i = 0; i < 8; i++) {
       Pair e = pq.poll();
-      System.out.printf("%s %d\n", e.key, e.value);
+      System.out.printf("%s=%d ", e.key, e.value);
     }
   }
 
