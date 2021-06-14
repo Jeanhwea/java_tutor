@@ -17,8 +17,8 @@ public class DataStructure05 {
     while (!vertex.isEmpty()) {
       int v = vertex.poll();
       for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-          if (edges[i][j] == 1 && !visited.contains(i)) {
+        for (int j = 0; j < n; j++) {
+          if (edges[i][j] == 1 && !visited.contains(j)) {
             visited.add(j);
             vertex.offer(j);
             System.out.println(j);
