@@ -11,7 +11,7 @@ import java.util.*;
 public class Solution148 {
 
   // TODO 添加归并排序
-  public static ListNode sortList0(ListNode head) {
+  public static ListNode sortList1(ListNode head) {
     return head;
   }
 
