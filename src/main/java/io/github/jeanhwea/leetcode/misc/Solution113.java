@@ -34,15 +34,15 @@ public class Solution113 {
         ans.add(path);
       }
 
-      int s0 = sum.getOrDefault(p, 0);
+      int s = sum.getOrDefault(p, 0);
       if (p.left != null) {
         nodes.add(p.left);
-        sum.put(p.left, s0 + p.left.val);
+        sum.put(p.left, s + p.left.val);
         parent.put(p.left, p);
       }
       if (p.right != null) {
         nodes.add(p.right);
-        sum.put(p.right, s0 + p.right.val);
+        sum.put(p.right, s + p.right.val);
         parent.put(p.right, p);
       }
     }
