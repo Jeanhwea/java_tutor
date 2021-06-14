@@ -100,6 +100,26 @@ public class DataStructure03 {
     System.out.println(Arrays.toString(a));
     System.out.println(Arrays.toString(b));
     System.out.println("========================================");
+
+    PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.value));
+    for (int i = 0; i < 8; i++) {
+      Pair p = new Pair("E" + i, a[i]);
+      pq.offer(p);
+    }
+    for (int i = 0; i < 8; i++) {
+      Pair e = pq.poll();
+      System.out.printf("%s %d\n", e.key, e.value);
+    }
+  }
+
+  private static class Pair {
+    public String key;
+    public int value;
+
+    public Pair(String key, int value) {
+      this.key = key;
+      this.value = value;
+    }
   }
 
   private static int[] makeArray(int n) {
