@@ -11,7 +11,7 @@ import java.util.*;
 public class Solution139 {
 
   // 动态规划， dp[i] 表示字符串 s 的前 i 个字串能否单词拆分
-  public static boolean workBreak(String s, List<String> wordDict) {
+  public static boolean wordBreak(String s, List<String> wordDict) {
     int n = s.length();
     Set<String> dict = new HashSet<>(wordDict);
 
@@ -31,7 +31,7 @@ public class Solution139 {
   public static void main(String args[]) {
     String s = "abca";
     List<String> dict = Arrays.asList("ab", "bc");
-    // System.out.println(workBreak(s, dict));
-    System.out.println(workBreak("leetcode", Arrays.asList("leet", "code")));
+    // System.out.println(wordBreak(s, dict));
+    System.out.println(wordBreak("leetcode", Arrays.asList("leet", "code")));
   }
 }
