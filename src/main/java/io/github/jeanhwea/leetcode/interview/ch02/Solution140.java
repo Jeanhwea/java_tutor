@@ -2,7 +2,6 @@ package io.github.jeanhwea.leetcode.interview.ch02;
 
 import java.util.*;
 
-
 /**
  * 单词拆分 II
  *
@@ -11,7 +10,7 @@ import java.util.*;
  */
 public class Solution140 {
 
-  public List<String> wordBreak(String s, List<String> wordDict) {
+  public static List<String> wordBreak(String s, List<String> wordDict) {
     Map<Integer, List<List<String>>> map = new HashMap<>();
     List<List<String>> wordBreaks = backtrack(s, s.length(), new HashSet<>(wordDict), 0, map);
     List<String> breakList = new LinkedList<>();
@@ -21,7 +20,7 @@ public class Solution140 {
     return breakList;
   }
 
-  public List<List<String>> backtrack(
+  public static List<List<String>> backtrack(
       String s, int n, Set<String> dict, int k, Map<Integer, List<List<String>>> map) {
     if (!map.containsKey(k)) {
       List<List<String>> wordBreaks = new LinkedList<>();
@@ -46,8 +45,8 @@ public class Solution140 {
 
   public static void main(String args[]) {
     String s = "abca";
-    List<String> dict = Arrays.asList("ab", "bc");
-    workBreak(s, dict);
-    System.out.println();
+    List<String> dict = Arrays.asList("a", "ab", "bc");
+    List<String> sentences = wordBreak(s, dict);
+    System.out.println(sentences);
   }
 }
