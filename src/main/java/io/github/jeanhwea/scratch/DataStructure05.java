@@ -32,13 +32,24 @@ public class DataStructure05 {
   }
 
   // 深度优先搜索 Depth First Search
-  public static void dfs(int[][] edges, int n) {
+  public static void dfs(int[][] edges, int n, int start) {
+    List<Integer> tree = new LinkedList<>();
     Stack<Integer> vertex = new Stack<>();
     Set<Integer> visited = new HashSet<>();
-    vertex.add(0);
-    for (int i = 0; i < n; i++) {
-      // for
+    vertex.push(start);
+    visited.add(start);
+    tree.add(start);
+    while (!vertex.isEmpty()) {
+      int v = vertex.pop();
+      for (int i = 0; i < n; i++) {
+        if (!visited.contains(i) && edges[v][i] == 1) {
+          vertex.push(i);
+          visited.add(i);
+          tree.add(i);
+        }
+      }
     }
+    System.out.println(Arrays.toString(tree.toArray()));
   }
 
   public static void main(String args[]) {
@@ -46,6 +57,11 @@ public class DataStructure05 {
     bfs(edges, 6, 0);
     bfs(edges, 6, 1);
     bfs(edges, 6, 2);
+    System.out.println("========================================");
+    dfs(edges, 6, 0);
+    dfs(edges, 6, 1);
+    dfs(edges, 6, 2);
+    dfs(edges, 6, 5);
     // display(edges);
   }
 
