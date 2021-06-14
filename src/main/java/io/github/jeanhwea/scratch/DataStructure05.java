@@ -10,27 +10,42 @@ import java.util.*;
  */
 public class DataStructure05 {
 
-  public static void bfs(int[][] edges, int n) {
+  // 广度优先搜索 Breadth First Search
+  public static void bfs(int[][] edges, int n, int start) {
+    List<Integer> tree = new LinkedList<>();
     Queue<Integer> vertex = new LinkedList<>();
     Set<Integer> visited = new HashSet<>();
-    vertex.offer(0);
+    vertex.offer(start);
+    visited.add(start);
+    tree.add(start);
     while (!vertex.isEmpty()) {
       int v = vertex.poll();
       for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-          if (edges[i][j] == 1 && !visited.contains(j)) {
-            visited.add(j);
-            vertex.offer(j);
-            System.out.println(j);
-          }
+        if (!visited.contains(i) && edges[v][i] == 1) {
+          visited.add(i);
+          vertex.offer(i);
+          tree.add(i);
         }
       }
+    }
+    System.out.println(Arrays.toString(tree.toArray()));
+  }
+
+  // 深度优先搜索 Depth First Search
+  public static void dfs(int[][] edges, int n) {
+    Stack<Integer> vertex = new Stack<>();
+    Set<Integer> visited = new HashSet<>();
+    vertex.add(0);
+    for (int i = 0; i < n; i++) {
+      // for
     }
   }
 
   public static void main(String args[]) {
     int[][] edges = makeGraph();
-    bfs(edges, 6);
+    bfs(edges, 6, 0);
+    bfs(edges, 6, 1);
+    bfs(edges, 6, 2);
     // display(edges);
   }
 
