@@ -145,8 +145,7 @@ public class DataStructure04 {
       root = nodes.peek();
       if (root.right == prev || root.right == null) {
         values.add(root.val);
-        root = nodes.pop();
-        prev = root;
+        prev = nodes.pop();
         root = null;
       } else {
         root = root.right;
