@@ -44,7 +44,7 @@ public class Solution140 {
   }
 
   public static void main(String args[]) {
-    String s = "abca";
+    String s = "abcabcaabaxasdf";
     List<String> dict = Arrays.asList("a", "ab", "bc");
     List<String> sentences = wordBreak(s, dict);
     System.out.println(sentences);

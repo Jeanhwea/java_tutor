@@ -23,7 +23,7 @@ public class Solution {
       String s, int k, List<String> choose, List<List<String>> sentences, Set<String> dict) {
     int n = s.length();
     if (k == n) {
-      sentences.add(new ArrayList(choose));
+      sentences.add(new ArrayList<String>(choose));
       return;
     }
 

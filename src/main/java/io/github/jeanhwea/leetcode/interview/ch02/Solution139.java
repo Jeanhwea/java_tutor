@@ -11,7 +11,7 @@ import java.util.*;
 public class Solution139 {
 
   // 动态规划， dp[i] 表示字符串 s 的前 i 个字串能否单词拆分
-  public static boolean wordBreak(String s, List<String> wordDict) {
+  public static boolean wordBreak0(String s, List<String> wordDict) {
     int n = s.length();
     Set<String> dict = new HashSet<>(wordDict);
 
@@ -26,6 +26,35 @@ public class Solution139 {
     }
 
     return dp[n] == 1;
+  }
+
+  // 回溯法
+  public static boolean wordBreak(String s, List<String> wordDict) {
+    Set<String> dict = new HashSet<>(wordDict);
+
+    List<List<String>> sentences = new LinkedList<>();
+    List<String> choose = new LinkedList<>();
+    backtrack(s, 0, choose, sentences, dict);
+
+    return !sentences.isEmpty();
+  }
+
+  public static void backtrack(
+      String s, int k, List<String> choose, List<List<String>> sentences, Set<String> dict) {
+    int n = s.length();
+    if (k == n) {
+      sentences.add(new ArrayList<String>(choose));
+      return;
+    }
+
+    for (int i = k; i < n; i++) {
+      String word = s.substring(k, i + 1);
+      if (dict.contains(word)) {
+        choose.add(s.substring(k, i + 1));
+        backtrack(s, i + 1, choose, sentences, dict);
+        choose.remove(choose.size() - 1);
+      }
+    }
   }
 
   public static void main(String args[]) {
