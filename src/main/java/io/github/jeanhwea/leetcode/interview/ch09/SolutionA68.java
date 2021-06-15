@@ -46,17 +46,17 @@ public class SolutionA68 {
   public static void main(String args[]) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {3, 5, 1, 6, 2, 0, 8, -1, -1, 7, 4});
     TreeNode.display(tree1);
-    TreeNode p = findNode(tree1, 5);
-    TreeNode q = findNode(tree1, 1);
+    TreeNode p = findOneNode(tree1, 5);
+    TreeNode q = findOneNode(tree1, 1);
     TreeNode ans = lowestCommonAncestor(tree1, p, q);
     System.out.println(ans.val);
   }
 
-  private static TreeNode findNode(TreeNode root, int val) {
+  private static TreeNode findOneNode(TreeNode root, int val) {
     if (root == null) return null;
     if (root.val == val) return root;
-    TreeNode p = findNode(root.left, val);
-    TreeNode q = findNode(root.right, val);
+    TreeNode p = findOneNode(root.left, val);
+    TreeNode q = findOneNode(root.right, val);
     return p == null ? q : p;
   }
 }
