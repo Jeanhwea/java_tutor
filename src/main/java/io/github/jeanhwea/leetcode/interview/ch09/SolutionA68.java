@@ -30,13 +30,14 @@ public class SolutionA68 {
       }
     }
 
+    Set<TreeNode> seen = new HashSet<>();
     while (p != null) {
-      TreeNode t = q;
-      while (t != null) {
-        if (t == p) return p;
-        t = parent.get(t);
-      }
+      seen.add(p);
       p = parent.get(p);
+    }
+    while (q != null) {
+      if (seen.contains(q)) return q;
+      q = parent.get(q);
     }
 
     return null;
