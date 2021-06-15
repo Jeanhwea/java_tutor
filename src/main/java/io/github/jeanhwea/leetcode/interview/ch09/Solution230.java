@@ -42,6 +42,8 @@ public class Solution230 {
     TreeNode tree1 = TreeNode.makeTree(new int[] {3, 1, 4, -1, 2});
     TreeNode.display(tree1);
     System.out.println("========================================");
-    System.out.println(kthSmallest(tree1, 4));
+    for (int k = 1; k < 5; k++) {
+      System.out.println(kthSmallest(tree1, k));
+    }
   }
 }
