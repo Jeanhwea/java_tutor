@@ -9,5 +9,5 @@
 
 
 * 书目
-  1. 初级算法
-  2. 算法面试题汇总
+  1. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/][初级算法]]
+  2. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions/][算法面试题汇总]]
