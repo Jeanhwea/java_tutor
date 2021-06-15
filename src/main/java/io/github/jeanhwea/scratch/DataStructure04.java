@@ -130,6 +130,7 @@ public class DataStructure04 {
     return values;
   }
 
+  // 后序遍历第二种实现
   public static List<Integer> postorder2(TreeNode root) {
     if (root == null) return new LinkedList<>();
 
