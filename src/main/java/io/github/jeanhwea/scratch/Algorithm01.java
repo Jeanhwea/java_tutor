@@ -10,6 +10,12 @@ import java.util.*;
  */
 public class Algorithm01 {
 
+  private static void swap(int[] a, int i, int j) {
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
+  }
+
   // selection sort
   public static void ssort(int[] a) {
     int n = a.length;
@@ -18,7 +24,7 @@ public class Algorithm01 {
       for (int j = i + 1; j < n; j++) {
         if (a[j] < a[mi]) mi = j;
       }
-      int t = a[i]; a[i] = a[mi]; a[mi] = t;
+      swap(a, i, mi);
     }
   }
 
@@ -27,7 +33,7 @@ public class Algorithm01 {
     int n = a.length;
     for (int i = 0; i < n; i++) {
       for (int j = i + 1; j < n; j++) {
-        if (a[i] > a[j]) {int t = a[i]; a[i] = a[j]; a[j] = t;}
+        if (a[i] > a[j]) swap(a, i, j);
       }
     }
   }
