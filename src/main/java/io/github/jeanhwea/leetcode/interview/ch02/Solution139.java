@@ -43,6 +43,7 @@ public class Solution139 {
       String s, int k, List<String> choose, List<List<String>> sentences, Set<String> dict) {
     int n = s.length();
     if (k == n) {
+      // System.out.println(choose);
       sentences.add(new ArrayList<String>(choose));
       return;
     }
