@@ -61,8 +61,8 @@ public class DataStructure04 {
     while (!nodes.isEmpty()) {
       TreeNode p = nodes.pop();
       values.add(p.val);
-      if (p.right != null) nodes.add(p.right);
-      if (p.left != null) nodes.add(p.left);
+      if (p.right != null) nodes.push(p.right);
+      if (p.left != null) nodes.push(p.left);
     }
 
     return values;
@@ -112,36 +112,39 @@ public class DataStructure04 {
     return values;
   }
 
+  // 后序遍历第一种实现
   public static List<Integer> postorder1(TreeNode root) {
     if (root == null) return new LinkedList<>();
 
-    Deque<Integer> values = new LinkedList<>();
+    List<Integer> values = new LinkedList<>();
     Deque<TreeNode> nodes = new LinkedList<>();
     nodes.push(root);
     while (!nodes.isEmpty()) {
       TreeNode p = nodes.pop();
-      values.addFirst(p.val);
-      if (p.left != null) nodes.add(p.left);
-      if (p.right != null) nodes.add(p.right);
+      values.add(p.val);
+      if (p.left != null) nodes.push(p.left);
+      if (p.right != null) nodes.push(p.right);
     }
 
-    return (List<Integer>) values;
+    Collections.reverse(values);
+    return values;
   }
 
   public static List<Integer> postorder2(TreeNode root) {
     if (root == null) return new LinkedList<>();
 
     List<Integer> values = new LinkedList<>();
-    Deque<TreeNode> stack = new LinkedList<>();
+    Deque<TreeNode> nodes = new LinkedList<>();
     TreeNode prev = null;
-    while (root != null || !stack.isEmpty()) {
+    while (root != null || !nodes.isEmpty()) {
       while (root != null) {
-        stack.push(root);
+        nodes.push(root);
         root = root.left;
       }
-      root = stack.pop();
-      if (root.left == prev || root.right == null) {
+      root = nodes.peek();
+      if (root.right == prev || root.right == null) {
         values.add(root.val);
+        root = nodes.pop();
         prev = root;
         root = null;
       } else {
@@ -149,7 +152,7 @@ public class DataStructure04 {
       }
     }
 
-    return new LinkedList<>();
+    return values;
   }
 
   public static void main(String args[]) {
@@ -194,6 +197,7 @@ public class DataStructure04 {
 
     System.out.println("===== Post-Order =====");
     for (TreeNode t : trees) {
+      // TreeNode.display(t);
       List<Integer> v0 = postorder(t);
       System.out.println(Arrays.toString(v0.toArray()));
       List<Integer> v1 = postorder1(t);
