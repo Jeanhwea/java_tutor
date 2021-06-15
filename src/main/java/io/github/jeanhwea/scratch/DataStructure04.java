@@ -59,10 +59,10 @@ public class DataStructure04 {
     Deque<TreeNode> nodes = new LinkedList<>();
     nodes.push(root);
     while (!nodes.isEmpty()) {
-      TreeNode p = nodes.pop();
-      values.add(p.val);
-      if (p.right != null) nodes.push(p.right);
-      if (p.left != null) nodes.push(p.left);
+      root = nodes.pop();
+      values.add(root.val);
+      if (root.right != null) nodes.push(root.right);
+      if (root.left != null) nodes.push(root.left);
     }
 
     return values;
