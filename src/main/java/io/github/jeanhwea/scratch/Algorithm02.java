@@ -112,11 +112,11 @@ public class Algorithm02 {
     }
 
     // 对于第 k 个元素，只可能出现 选取 或 不选取，故直接写出两种情况
+    comb(a, k + 1, choose, ans);
+
     choose.add(a[k]);
     comb(a, k + 1, choose, ans);
     choose.remove(choose.size() - 1);
-
-    comb(a, k + 1, choose, ans);
   }
 
   public static void main(String args[]) {
