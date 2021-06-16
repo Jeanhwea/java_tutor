@@ -34,30 +34,34 @@ public class Solution208 {
     public boolean search(String word) {
       Trie p = this;
       int n = word.length(), i = 0;
+
       while (i < n) {
         char ch = word.charAt(i++);
         p = p.children[ch - 'a'];
         if (p == null) break;
       }
+
       return p != null && p.isLeaf && (i == n);
     }
 
     public boolean startsWith(String prefix) {
       Trie p = this;
       int n = prefix.length(), i = 0;
+
       while (i < n) {
         char ch = prefix.charAt(i++);
         p = p.children[ch - 'a'];
         if (p == null) break;
       }
 
-      return (i == n);
+      return p != null && (i == n);
     }
   }
 
   public static void main(String args[]) {
     Trie trie1 = new Trie();
-    trie1.search("a");
+    System.out.println(trie1.search("a"));
+
     // trie1.insert("ab");
     // System.out.println(trie1.search("ab"));
     // System.out.println(trie1.search("a"));
