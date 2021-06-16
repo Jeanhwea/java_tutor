@@ -100,7 +100,7 @@ public class Algorithm02 {
     }
   }
 
-  // 回溯法求全组合 k表示当前处理的起始下标
+  // 回溯法求全组合 k 表示当前处理的起始下标
   public static void comb1(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
     System.out.printf("k=%d, choose=%s\n", k, choose.toString());
 
