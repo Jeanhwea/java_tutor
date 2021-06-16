@@ -25,7 +25,7 @@ public class Solution160 {
   }
 
   // O(1) 复杂度：链表移动次数相同都为 a+b+c
-  public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+  public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
     if (headA == null || headB == null) return null;
 
     ListNode p = headA, q = headB;
