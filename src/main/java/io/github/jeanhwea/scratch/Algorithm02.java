@@ -62,7 +62,7 @@ public class Algorithm02 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void testTokenize() {
     String s = "abcb";
     List<String> wordDict = Arrays.asList("a", "bc", "ac", "b");
     System.out.println(s);
@@ -71,5 +71,37 @@ public class Algorithm02 {
     List<String> ans = tokenize(s, wordDict);
     System.out.println("----------------------------------------");
     System.out.println(ans);
+  }
+
+  public static void swap(int[] a, int i, int j) {
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
+  }
+
+  public static void perm(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
+    System.out.printf("k=%d, choose=%s\n", k, choose.toString());
+
+    int n = a.length;
+    if (k >= n) {
+      ans.add(new ArrayList<>(choose));
+      System.out.println(choose);
+      return;
+    }
+
+    for (int i = k; i < n; i++) {
+      choose.add(a[i]);
+      swap(a, k, i);
+      perm(a, k + 1, choose, ans);
+      swap(a, k, i);
+      choose.remove(choose.size() - 1);
+    }
+  }
+
+  public static void main(String args[]) {
+    int[] a = {1, 2, 3};
+    List<Integer> choose = new LinkedList<>();
+    List<List<Integer>> ans = new LinkedList<>();
+    perm(a, 0, choose, ans);
   }
 }
