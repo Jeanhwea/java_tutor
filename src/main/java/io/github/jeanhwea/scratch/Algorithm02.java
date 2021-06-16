@@ -101,23 +101,29 @@ public class Algorithm02 {
     }
   }
 
-  static void comb(
-      int[] a, int start, int end, int k, List<Integer> choose, List<List<Integer>> ans) {
+  static void comb(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
+    // System.out.printf("k=%d, choose=%s\n", k, choose.toString());
+
     int n = a.length;
     if (k >= n) {
+      ans.add(new ArrayList<>(choose));
+      System.out.println(choose);
       return;
     }
 
-    for (int i = start; i <= end && end - i + 1 >= n - k; i++) {
-      data[k] = a[i];
-      comb(a, i + 1, end, k + 1, choose, ans);
-    }
+    // case 1: if choose a[k]
+    choose.add(a[k]);
+    comb(a, k + 1, choose, ans);
+    choose.remove(choose.size() - 1);
+
+    // case 2: if not choose a[k]
+    comb(a, k + 1, choose, ans);
   }
 
   public static void main(String args[]) {
     int[] a = {1, 2, 3};
     List<Integer> choose = new LinkedList<>();
     List<List<Integer>> ans = new LinkedList<>();
-    perm(a, 0, choose, ans);
+    comb(a, 0, choose, ans);
   }
 }
