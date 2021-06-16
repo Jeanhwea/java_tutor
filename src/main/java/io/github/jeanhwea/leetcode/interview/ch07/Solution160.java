@@ -10,6 +10,7 @@ import java.util.*;
  */
 public class Solution160 {
 
+  // 记忆所经过的节点
   public ListNode getIntersectionNode(ListNode p, ListNode q) {
     Set<ListNode> st = new HashSet<>();
     while (p != null) {
@@ -23,6 +24,7 @@ public class Solution160 {
     return null;
   }
 
+  // O(1) 复杂度：链表移动次数相同都为 a+b+c
   public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
     if (headA == null || headB == null) return null;
 
