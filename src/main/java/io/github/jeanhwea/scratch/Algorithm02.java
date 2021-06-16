@@ -100,9 +100,9 @@ public class Algorithm02 {
     }
   }
 
-  // 回溯法求全组合 k 表示当前处理的起始下标
-  public static void comb1(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
-    System.out.printf("k=%d, choose=%s\n", k, choose.toString());
+  // 回溯法求全组合，k 表示当前处理的起始下标
+  public static void comb(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
+    // System.out.printf("k=%d, choose=%s\n", k, choose.toString());
 
     int n = a.length;
     if (k >= n) {
@@ -113,27 +113,10 @@ public class Algorithm02 {
 
     // 对于第 k 个元素，只可能出现 选取 或 不选取，故直接写出两种情况
     choose.add(a[k]);
-    comb1(a, k + 1, choose, ans);
+    comb(a, k + 1, choose, ans);
     choose.remove(choose.size() - 1);
 
-    comb1(a, k + 1, choose, ans);
-  }
-
-  // 回溯发求全组合 II
-  public static void comb2(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
-    System.out.printf("k=%d, choose=%s\n", k, choose.toString());
-    int n = a.length;
-    if (k >= n) {
-      ans.add(new ArrayList<>(choose));
-      System.out.println(choose);
-      return;
-    }
-
-    for (int i = k; i < n; i++) {
-      choose.add(a[i]);
-      comb2(a, k + 1, choose, ans);
-      choose.remove(choose.size() - 1);
-    }
+    comb(a, k + 1, choose, ans);
   }
 
   public static void main(String args[]) {
@@ -141,6 +124,7 @@ public class Algorithm02 {
     List<Integer> choose = new LinkedList<>();
     List<List<Integer>> ans = new LinkedList<>();
     perm(a, 0, choose, ans);
-    // comb1(a, 0, choose, ans);
+    System.out.println("========================================");
+    comb(a, 0, choose, ans);
   }
 }
