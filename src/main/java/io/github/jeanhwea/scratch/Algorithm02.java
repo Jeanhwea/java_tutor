@@ -81,7 +81,7 @@ public class Algorithm02 {
 
   // 回溯法求全排列
   public static void perm(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
-    System.out.printf("k=%d, choose=%s\n", k, choose.toString());
+    // System.out.printf("k=%d, choose=%s\n", k, choose.toString());
 
     int n = a.length;
     if (k >= n) {
@@ -90,6 +90,7 @@ public class Algorithm02 {
       return;
     }
 
+    // 枚举 n-k 种情况
     for (int i = k; i < n; i++) {
       choose.add(a[i]);
       if (a[i] >= a[k]) {
@@ -101,8 +102,9 @@ public class Algorithm02 {
     }
   }
 
+  // 回溯法求全组合
   static void comb(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
-    // System.out.printf("k=%d, choose=%s\n", k, choose.toString());
+    System.out.printf("k=%d, choose=%s\n", k, choose.toString());
 
     int n = a.length;
     if (k >= n) {
@@ -111,12 +113,11 @@ public class Algorithm02 {
       return;
     }
 
-    // case 1: if choose a[k]
+    // 对于第 k 个元素，只可能出现 选取 或 不选取，故直接写出两种情况
     choose.add(a[k]);
     comb(a, k + 1, choose, ans);
     choose.remove(choose.size() - 1);
 
-    // case 2: if not choose a[k]
     comb(a, k + 1, choose, ans);
   }
 
