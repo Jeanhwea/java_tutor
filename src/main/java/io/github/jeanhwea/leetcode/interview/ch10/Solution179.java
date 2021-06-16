@@ -43,23 +43,8 @@ public class Solution179 {
     Arrays.sort(
         arr,
         (x, y) -> {
-          String s = String.valueOf(x), t = String.valueOf(y);
-          int i = 0, j = 0, ns = s.length(), nt = t.length(), ret = 0;
-          while (i < ns || j < nt) {
-            char ch1 = i < ns ? s.charAt(i) : '9' + 1;
-            char ch2 = j < nt ? t.charAt(i) : '9' + 1;
-            if (ch1 > ch2) {
-              ret = -1;
-              break;
-            } else if (ch1 < ch2) {
-              ret = 1;
-              break;
-            }
-            i++;
-            j++;
-          }
-
-          return ret;
+          String s = "" + x + y, t = "" + y + x;
+          return (int) (Long.parseLong(t) - Long.parseLong(s));
         });
 
     if (arr[0] == 0) return "0";
