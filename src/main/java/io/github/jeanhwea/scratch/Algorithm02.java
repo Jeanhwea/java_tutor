@@ -79,6 +79,7 @@ public class Algorithm02 {
     a[j] = t;
   }
 
+  // 回溯法求全排列
   public static void perm(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
     System.out.printf("k=%d, choose=%s\n", k, choose.toString());
 
@@ -91,10 +92,25 @@ public class Algorithm02 {
 
     for (int i = k; i < n; i++) {
       choose.add(a[i]);
-      swap(a, k, i);
-      perm(a, k + 1, choose, ans);
-      swap(a, k, i);
+      if (a[i] >= a[k]) {
+        swap(a, k, i);
+        perm(a, k + 1, choose, ans);
+        swap(a, k, i);
+      }
       choose.remove(choose.size() - 1);
+    }
+  }
+
+  static void comb(
+      int[] a, int start, int end, int k, List<Integer> choose, List<List<Integer>> ans) {
+    int n = a.length;
+    if (k >= n) {
+      return;
+    }
+
+    for (int i = start; i <= end && end - i + 1 >= n - k; i++) {
+      data[k] = a[i];
+      comb(a, i + 1, end, k + 1, choose, ans);
     }
   }
 
