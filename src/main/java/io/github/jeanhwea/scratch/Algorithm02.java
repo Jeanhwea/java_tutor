@@ -120,7 +120,7 @@ public class Algorithm02 {
   }
 
   public static void main(String args[]) {
-    int[] a = {1, 2, 3};
+    int[] a = {1, 2, 3, 4};
     List<Integer> choose = new LinkedList<>();
     List<List<Integer>> ans = new LinkedList<>();
     perm(a, 0, choose, ans);
