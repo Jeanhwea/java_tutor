@@ -22,39 +22,34 @@ public class Solution208 {
       Trie p = this;
       int n = word.length();
       for (int i = 0; i < n; i++) {
-        char ch = word.charAt(i);
-        if (p.children[ch - 'a'] == null) {
-          p.children[ch - 'a'] = new Trie();
+        int k = word.charAt(i) - 'a';
+        if (p.children[k] == null) {
+          p.children[k] = new Trie();
         }
-        p = p.children[ch - 'a'];
+        p = p.children[k];
       }
       p.isLeaf = true;
     }
 
     public boolean search(String word) {
-      Trie p = this;
-      int n = word.length(), i = 0;
-
-      while (i < n) {
-        char ch = word.charAt(i++);
-        p = p.children[ch - 'a'];
-        if (p == null) break;
-      }
-
-      return p != null && p.isLeaf && (i == n);
+      Trie p = searchPrefix(word);
+      return p != null && p.isLeaf;
     }
 
     public boolean startsWith(String prefix) {
+      Trie p = searchPrefix(prefix);
+      return p != null;
+    }
+
+    private Trie searchPrefix(String prefix) {
       Trie p = this;
-      int n = prefix.length(), i = 0;
-
-      while (i < n) {
-        char ch = prefix.charAt(i++);
-        p = p.children[ch - 'a'];
-        if (p == null) break;
+      int n = prefix.length();
+      for (int i = 0; i < n; i++) {
+        int k = prefix.charAt(i) - 'a';
+        if (p.children[k] == null) return null;
+        p = p.children[k];
       }
-
-      return p != null && (i == n);
+      return p;
     }
   }
 
