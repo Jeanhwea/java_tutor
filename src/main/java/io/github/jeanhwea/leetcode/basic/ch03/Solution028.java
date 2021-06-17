@@ -41,11 +41,10 @@ public class Solution028 {
    * @since 2021-06-10, JDK1.8
    */
   public static int strStr(String s, String t) {
-    if ("".equals(t)) return 0;
-
-    int[] next = calcNext(t);
+    int[] next = getNext(t);
     int n = s.length(), m = t.length(), i = 0, j = 0;
 
+    // System.out.println(Arrays.toString(next));
     while (i < n) {
       if (s.charAt(i) == t.charAt(j)) {
         i++;
@@ -55,16 +54,17 @@ public class Solution028 {
       } else {
         i++;
       }
-
-      if (j >= m) return i - j;
     }
 
+    if (j >= m) return i - j;
     return -1;
   }
 
-  public static int[] calcNext0(String p) {
+  // 暴力使用前缀计算 next 数组
+  public static int[] getNext0(String p) {
     int n = p.length();
     int[] next = new int[n];
+    Arrays.fill(next, 0);
 
     // next[0] = 0;
     for (int i = 2; i < n; i++) {
@@ -80,15 +80,16 @@ public class Solution028 {
     return next;
   }
 
-  public static int[] calcNext(String p) {
-    System.out.println(p);
+  public static int[] getNext(String p) {
     int n = p.length();
     int[] next = new int[n];
+    Arrays.fill(next, 0);
 
-    int i = 1, j = 0;
-    while (i < n - 1) {
-      if (p.charAt(j) == p.charAt(i)) {
-        next[++i] = ++j;
+    int i = 2, j = 0;
+    while (i < n) {
+      if (p.charAt(i - 1) == p.charAt(j)) {
+        next[i] = ++j;
+        i++;
       } else if (j > 0) {
         j = next[j];
       } else {
@@ -122,7 +123,7 @@ public class Solution028 {
     // String t1 = "abaabcaaaba";
     // String t1 = "aaa";
     String t1 = "aabaaac";
-    System.out.println(Arrays.toString(calcNext0(t1)));
-    System.out.println(Arrays.toString(calcNext(t1)));
+    System.out.println(Arrays.toString(getNext0(t1)));
+    System.out.println(Arrays.toString(getNext(t1)));
   }
 }

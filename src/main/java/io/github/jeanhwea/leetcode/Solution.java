@@ -40,7 +40,7 @@ public class Solution {
       }
 
       if (j >= m) {
-        // System.out.printf("i=%d, found=%d\n", i, i - m);
+        System.out.printf("i=%d, found=%d\n", i, i - m);
         i++;
         j = 0;
       }
@@ -48,8 +48,8 @@ public class Solution {
   }
 
   public static void main(String[] args) {
-    String s = "aabacaabcaab";
-    String t = "aab";
+    String s = "hello";
+    String t = "ll";
     kmpSearch(s, t);
   }
 }
