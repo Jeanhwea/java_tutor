@@ -16,7 +16,7 @@ public class Scratch11 {
     return t;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     Stack<Integer> a = new Stack<>();
     a.push(4);
     a.push(2);

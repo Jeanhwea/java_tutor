@@ -30,7 +30,7 @@ public class Solution019 {
     return head;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4});
     for (int i = 1; i <= 4; i++) {
       ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4});

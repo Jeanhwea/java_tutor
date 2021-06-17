@@ -13,7 +13,7 @@ public class Solution877 {
     return 0;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println(superEggDrop(3, 8));
   }
 

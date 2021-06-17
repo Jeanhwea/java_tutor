@@ -99,7 +99,7 @@ public class Solution028 {
     return next;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // System.out.println(strStr("aabc", ""));
     // System.out.println(strStr("aabc", "ab"));
     // System.out.println(strStr("aabc", "c"));

@@ -27,7 +27,7 @@ public class Solution268 {
     return missing;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {3, 1, 0};
     System.out.println(misssingNumber(a));
   }

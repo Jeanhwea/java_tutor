@@ -28,7 +28,7 @@ public class Solution461 {
     return count;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int x = 1, y = 4;
     System.out.println(hammingDistance(x, y));
   }

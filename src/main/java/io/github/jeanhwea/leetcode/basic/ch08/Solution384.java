@@ -38,7 +38,7 @@ public class Solution384 {
     return this.nums;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {1, 2, 3, 4, 5, 6};
     Solution384 sol = new Solution384(a);
     System.out.println(Arrays.toString(sol.reset()));

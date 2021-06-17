@@ -65,7 +65,7 @@ public class Solution108 {
     return root;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // int[] nums = {0, 1, 2, 3, 4, 5, 6, 7};
     int[] nums = {1, 2};
     TreeNode tree1 = sortedArrayToBST(nums);

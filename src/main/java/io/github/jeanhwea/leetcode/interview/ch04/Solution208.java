@@ -53,7 +53,7 @@ public class Solution208 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     Trie trie1 = new Trie();
     System.out.println(trie1.search("a"));
 

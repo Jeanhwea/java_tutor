@@ -38,7 +38,7 @@ public class DataStructure02 {
     ListNode.display(stack.next);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode stack0 = null;
     ListNode stack1 = makeStack(new int[] {1});
     ListNode stack2 = makeStack(new int[] {1, 2});

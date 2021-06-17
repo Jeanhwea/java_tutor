@@ -39,7 +39,7 @@ public class Solution278 {
     return -1;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println(firstBadVersion(6));
   }
 }

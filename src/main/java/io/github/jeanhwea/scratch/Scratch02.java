@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Scratch02 {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
   }
 
 }

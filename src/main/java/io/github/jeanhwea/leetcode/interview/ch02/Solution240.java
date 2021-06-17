@@ -85,7 +85,7 @@ public class Solution240 {
     return false;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[][] matrix = {
       {1, 4, 7, 11, 15},
       {2, 5, 8, 12, 19},

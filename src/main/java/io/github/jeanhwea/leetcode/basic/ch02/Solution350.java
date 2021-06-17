@@ -52,7 +52,7 @@ public class Solution350 {
     return Arrays.copyOfRange(c, 0, ci);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // int[] a = new int[] {4, 9, 5};
     // int[] b = new int[] {9, 4, 9, 8, 4};
     int[] a = new int[] {2, 2};

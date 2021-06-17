@@ -49,7 +49,7 @@ public class Solution234 {
     return true;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode p = ListNode.makeList(new int[] {1, 2, 2, 1});
     // ListNode.display(p);
     System.out.println(isPalindrome(p));

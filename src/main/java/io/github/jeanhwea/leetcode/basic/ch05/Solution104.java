@@ -35,7 +35,7 @@ public class Solution104 {
     return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TreeNode tree = TreeNode.makeTree(new int[] {1, 2, 3, 4, -1, -1, -1, 5});
     System.out.println(maxDepth(tree));
   }

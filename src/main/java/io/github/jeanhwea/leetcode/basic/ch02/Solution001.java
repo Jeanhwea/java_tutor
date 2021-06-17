@@ -21,7 +21,7 @@ public class Solution001 {
     return null;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {2, 3, 5, 9};
     int n = 11;
     System.out.println(Arrays.toString(a));

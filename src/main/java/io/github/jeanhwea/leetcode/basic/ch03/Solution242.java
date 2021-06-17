@@ -26,7 +26,7 @@ public class Solution242 {
     return true;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String s = "nl", t = "cx";
     System.out.println(isAnagram(s, t));
   }

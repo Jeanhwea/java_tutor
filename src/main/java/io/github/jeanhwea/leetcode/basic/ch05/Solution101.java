@@ -78,7 +78,7 @@ public class Solution101 {
     return true;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {2, 3, 3});
     TreeNode.display(tree1);
     System.out.println("========================================");

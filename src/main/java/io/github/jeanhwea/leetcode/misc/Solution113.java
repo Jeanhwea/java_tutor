@@ -50,7 +50,7 @@ public class Solution113 {
     return ans;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TreeNode tree1 =
         TreeNode.makeTree(new int[] {5, 4, 8, 11, -1, 13, 4, 7, 2, -1, -1, -1, -1, 5, 1});
     int targetSum = 22;

@@ -42,7 +42,7 @@ public class Solution008 {
     return (int) ans * sign;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println(myAtoi("-9834"));
     System.out.println(myAtoi("9834"));
     System.out.println(myAtoi("-9.834"));

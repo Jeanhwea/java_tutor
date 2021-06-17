@@ -119,7 +119,7 @@ public class Algorithm02 {
     choose.remove(choose.size() - 1);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {1, 2, 3, 4};
     List<Integer> choose = new LinkedList<>();
     List<List<Integer>> ans = new LinkedList<>();

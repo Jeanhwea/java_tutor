@@ -38,7 +38,7 @@ public class Solution230 {
     return -1;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {3, 1, 4, -1, 2});
     TreeNode.display(tree1);
     System.out.println("========================================");

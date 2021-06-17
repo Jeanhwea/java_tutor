@@ -36,7 +36,7 @@ public class Scratch01 {
     perm0(a, 0, n - 1);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     perm(4);
   }
 }

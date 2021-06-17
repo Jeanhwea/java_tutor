@@ -26,7 +26,7 @@ public class Solution387 {
     return -1;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String s = "loveleetcode";
     System.out.println(firstUniqChar(s));
 

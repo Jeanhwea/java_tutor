@@ -128,7 +128,7 @@ public class TreeNode {
     System.out.println(Arrays.toString(values.toArray()));
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
     TreeNode tree4 = makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
     // TreeNode tree4 = makeTree(new int[] {1, 2, 3});

@@ -62,7 +62,7 @@ public class Solution021 {
     return head;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode p = ListNode.makeList(new int[] {1, 2, 3, 3, 4});
     ListNode q = ListNode.makeList(new int[] {1, 1, 2, 3, 3, 4});
     ListNode head = mergeTwoLists(p, q);

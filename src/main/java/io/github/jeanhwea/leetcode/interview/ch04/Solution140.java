@@ -43,7 +43,7 @@ public class Solution140 {
     return map.get(k);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String s = "abcabcaabaxasdf";
     List<String> dict = Arrays.asList("a", "ab", "bc");
     List<String> sentences = wordBreak(s, dict);

@@ -41,5 +41,5 @@ public class Solution141 {
     return false;
   }
 
-  public static void main(String args[]) {}
+  public static void main(String[] args) {}
 }

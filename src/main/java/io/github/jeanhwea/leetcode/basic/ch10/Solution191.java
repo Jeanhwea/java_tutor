@@ -18,7 +18,7 @@ public class Solution191 {
     return count;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int n = 0b1011;
     // n = -2;
     System.out.println(hammingWeight(n));

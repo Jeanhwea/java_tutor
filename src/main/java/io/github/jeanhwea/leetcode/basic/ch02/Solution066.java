@@ -21,7 +21,7 @@ public class Solution066 {
     return Arrays.copyOfRange(b, c > 0 ? 0 : 1, n + 1);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {0};
     System.out.println(Arrays.toString(a));
     System.out.println("========================================");

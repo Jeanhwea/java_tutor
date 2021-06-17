@@ -36,7 +36,7 @@ public class Solution160 {
     return p;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // pass
   }
 }

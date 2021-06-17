@@ -51,7 +51,7 @@ public class Solution122 {
     return dp[n - 1][0];
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {2, 5, 4, 6};
     System.out.println(maxProfit(a));
   }

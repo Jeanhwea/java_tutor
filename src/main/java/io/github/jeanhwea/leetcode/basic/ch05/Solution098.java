@@ -53,7 +53,7 @@ public class Solution098 {
     return true;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TreeNode tree = TreeNode.makeTree(new int[] {5, 1, 4, -1, -1, 3, 6});
     System.out.println(isValidBST(tree));
   }

@@ -21,7 +21,7 @@ public class Solution198 {
     return dp[n];
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {2, 7, 9, 3, 1};
     System.out.println(Arrays.toString(a));
     System.out.println(rob(a));

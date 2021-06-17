@@ -61,7 +61,7 @@ public class Solution131 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String s = "abcd";
     backtrack(s, 0);
     // List<List<String>> ans = partition(s);

@@ -21,7 +21,7 @@ public class Scratch12 {
     return -1;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {1, 2, 3, 4, 19, 33};
     System.out.println(bsearch(a, 3));
     System.out.println(bsearch(a, 1));

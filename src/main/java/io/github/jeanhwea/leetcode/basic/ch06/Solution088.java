@@ -44,7 +44,7 @@ public class Solution088 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {1, 2, 3, 0, 0, 0};
     int[] b = {2, 5, 6};
     merge(a, 3, b, 3);

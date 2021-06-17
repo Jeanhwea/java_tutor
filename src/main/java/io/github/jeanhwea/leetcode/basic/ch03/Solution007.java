@@ -18,7 +18,7 @@ public class Solution007 {
     return (int) (n > 0 ? s : -s);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println(reverse(1239999991));
     System.out.println(reverse(1239999992));
   }

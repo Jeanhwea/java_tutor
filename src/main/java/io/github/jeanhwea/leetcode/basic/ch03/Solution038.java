@@ -49,7 +49,7 @@ public class Solution038 {
     return s0;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // System.out.println(countAndSay(4));
     for (int i = 0; i < 10; i++) {
       System.out.println(countAndSay0(i));

@@ -56,7 +56,7 @@ public class Solution179 {
     return ans;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {3, 30, 34, 5, 9};
     System.out.println(largestNumber(a));
   }

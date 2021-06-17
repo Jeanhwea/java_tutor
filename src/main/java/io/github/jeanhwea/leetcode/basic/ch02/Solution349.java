@@ -50,7 +50,7 @@ public class Solution349 {
     return res;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = new int[] {4, 9, 5};
     int[] b = new int[] {9, 4, 9, 8, 4};
     // int[] a = new int[] {1};

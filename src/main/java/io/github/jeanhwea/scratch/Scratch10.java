@@ -52,7 +52,7 @@ public class Scratch10 {
     System.out.println("----------------------------------------");
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String exp = "( ( 4 * 3 ) + ( 15 / 5 ) )";
     String[] tokens = exp.split(" ");
 

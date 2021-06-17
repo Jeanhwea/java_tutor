@@ -49,7 +49,7 @@ public class Solution334 {
     return false;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // int[] a = {1, 2, 3, 4, 5};
     // int[] a = {5, 4, 3, 2, 1};
     // int[] a = {1, 5, 0, 4, 1, 3};

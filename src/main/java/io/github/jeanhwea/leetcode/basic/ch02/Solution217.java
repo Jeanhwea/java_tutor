@@ -29,7 +29,7 @@ public class Solution217 {
     return false;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = genArray(6);
     display(a);
     System.out.println("========================================");

@@ -34,7 +34,7 @@ public class Solution002 {
     return h;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode l1 = ListNode.makeList(new int[] {2, 3, 4});
     ListNode l2 = ListNode.makeList(new int[] {5, 6, 4});
     ListNode ans = addTwoNumbers(l1, l2);

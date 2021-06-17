@@ -39,7 +39,7 @@ public class Solution204 {
     return count;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println(countPrimes(2));
     System.out.println(countPrimes(10));
   }

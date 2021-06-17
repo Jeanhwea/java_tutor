@@ -13,7 +13,7 @@ public class Solution237 {
     node.next = node.next.next;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5});
     ListNode node = head.next;
     ListNode.display(head);

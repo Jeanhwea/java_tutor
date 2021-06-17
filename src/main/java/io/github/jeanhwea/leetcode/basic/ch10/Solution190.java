@@ -45,7 +45,7 @@ public class Solution190 {
     System.out.println(out);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int n = -3;
     // display(1^-1);
     display(n);

@@ -155,7 +155,7 @@ public class DataStructure04 {
     return values;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     List<TreeNode> trees = new LinkedList<>();
     TreeNode tree1 = null;
     TreeNode tree2 = TreeNode.makeTree(new int[] {1});

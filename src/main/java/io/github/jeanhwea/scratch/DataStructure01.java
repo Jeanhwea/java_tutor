@@ -76,7 +76,7 @@ public class DataStructure01 {
     return head;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode list0 = null;
     ListNode list1 = ListNode.makeList(new int[] {1});
     ListNode list2 = ListNode.makeList(new int[] {1, 2});

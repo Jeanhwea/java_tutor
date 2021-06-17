@@ -26,7 +26,7 @@ public class Solution215 {
     return pq.peek();
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {3, 2, 1, 5, 6, 4};
     System.out.println(findKthLargest(a, 2));
   }

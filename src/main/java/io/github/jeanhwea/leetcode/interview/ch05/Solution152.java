@@ -42,7 +42,7 @@ public class Solution152 {
     return max;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] nums = {4, -9, -1, 2, 3, -1, 4};
     // int[] nums = {0, 2};
     System.out.println(Arrays.toString(nums));

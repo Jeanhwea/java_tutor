@@ -69,7 +69,7 @@ public class Solution148 {
     return head;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode list1 = ListNode.makeList(new int[] {4, 2, 1, 3});
     ListNode.display(list1);
     list1 = sortList(list1);

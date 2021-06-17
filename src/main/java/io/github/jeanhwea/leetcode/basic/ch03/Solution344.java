@@ -17,7 +17,7 @@ public class Solution344 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     char[] a = {'h', 'e', 'l', 'l', 'o'};
     System.out.println(a);
     System.out.println("========================================");

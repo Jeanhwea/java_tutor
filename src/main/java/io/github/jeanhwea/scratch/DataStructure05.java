@@ -51,7 +51,7 @@ public class DataStructure05 {
     System.out.println(Arrays.toString(path.toArray()));
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[][] edges = makeGraph();
     // edges[1][0] = -1;
     display(edges);

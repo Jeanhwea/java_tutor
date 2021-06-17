@@ -107,7 +107,7 @@ public class Algorithm01 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int arrSize = 6;
     int[] a = new int[arrSize];
     for (int i = 0; i < arrSize; i++) {

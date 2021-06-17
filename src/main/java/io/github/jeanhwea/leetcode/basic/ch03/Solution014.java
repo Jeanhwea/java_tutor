@@ -25,7 +25,7 @@ public class Solution014 {
     return strs[0];
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String[] strs = {"flo", "flower", "flow", "fligtht"};
     System.out.println(Arrays.toString(strs));
     System.out.println("========================================");

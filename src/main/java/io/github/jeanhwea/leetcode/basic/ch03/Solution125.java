@@ -48,7 +48,7 @@ public class Solution125 {
     return true;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     // String s = "A man, a plan, a canal; Panama";
     String s = "0P";
     System.out.println(isPalindrome(s));

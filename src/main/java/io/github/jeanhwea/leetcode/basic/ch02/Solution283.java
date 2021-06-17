@@ -19,7 +19,7 @@ public class Solution283 {
     while (h < n) a[h++] = 0;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a = {0, 3, 2, 0, 0, 2, 3, 9};
     System.out.println(Arrays.toString(a));
     moveZeroes(a);

@@ -51,7 +51,7 @@ public class Solution013 {
     return sum;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String rn = "MCMXCIV";
     System.out.println(rn);
     System.out.println(romanToInt(rn));

@@ -43,7 +43,7 @@ public class Solution236 {
     return null;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {3, 5, 1, 6, 2, 0, 8, -1, -1, 7, 4});
     TreeNode.display(tree1);
     TreeNode p = findOneNode(tree1, 5);

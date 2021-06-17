@@ -82,7 +82,7 @@ public class Solution036 {
     return true;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     char[][] a = {
       {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
       {'6', '.', '.', '1', '9', '5', '.', '.', '.'},

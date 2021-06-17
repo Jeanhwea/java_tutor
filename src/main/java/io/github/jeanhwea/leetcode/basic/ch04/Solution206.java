@@ -26,7 +26,7 @@ public class Solution206 {
     return head;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5});
     ListNode.display(head);
     System.out.println("========================================");

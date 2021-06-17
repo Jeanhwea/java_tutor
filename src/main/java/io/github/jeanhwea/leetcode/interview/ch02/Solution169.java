@@ -21,7 +21,7 @@ public class Solution169 {
     return -1;
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int[] a1 = {1, 2, 3, 4, 2, 2, 2};
     System.out.println(majorityElement(a1));
   }

@@ -58,7 +58,7 @@ public class Solution139 {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     String s = "abca";
     List<String> dict = Arrays.asList("ab", "bc");
     // System.out.println(wordBreak(s, dict));
