@@ -33,6 +33,7 @@ public class Solution334 {
     return false;
   }
 
+  // 贪心算法
   // 记录当前最小的数字和当前第二小的数字
   public static boolean increasingTriplet(int[] a) {
     int n = a.length;
