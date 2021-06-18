@@ -10,6 +10,7 @@ import java.util.*;
  */
 public class Solution295 {
 
+  // 双堆缓存
   public static class MedianFinder {
 
     PriorityQueue<Integer> small, large;
@@ -20,39 +21,17 @@ public class Solution295 {
     }
 
     public void addNum(int num) {
-      if (small.isEmpty()) {
-        small.offer(num);
-      } else if (large.isEmpty()) {
-        if (num < small.peek()) {
-          large.offer(small.poll());
-          small.offer(num);
-        } else {
-          large.offer(num);
-        }
-      } else {
-        int s = small.peek();
-        if (num <= s) {
-          if (small.size() > large.size()) {
-            large.offer(small.poll());
-          }
-          small.offer(num);
-        } else {
-          if (large.size() >= small.size()) {
-            small.offer(large.poll());
-          }
-          large.offer(num);
-        }
+      small.offer(num);
+      large.offer(small.poll());
+      if (large.size() > small.size()) {
+        small.offer(large.poll());
       }
+      // System.out.printf("%d: %s, %s\n", num, small, large);
     }
 
     public double findMedian() {
-      if (small.isEmpty()) return -1;
-      else if (large.isEmpty()) {
-        return small.peek();
-      }
-
       if (small.size() == large.size()) {
-        return ((double) (small.peek() + large.peek())) / 2;
+        return 0.5 * (small.peek() + large.peek());
       } else {
         return (double) small.peek();
       }
@@ -60,16 +39,11 @@ public class Solution295 {
   }
 
   public static void main(String[] args) {
+    int[] a = {1, 6, 3, 2, 3, 2, 9, 8};
     MedianFinder obj = new MedianFinder();
-    obj.addNum(-1);
-    System.out.println(obj.findMedian());
-    obj.addNum(-2);
-    System.out.println(obj.findMedian());
-    obj.addNum(-3);
-    System.out.println(obj.findMedian());
-    obj.addNum(-4);
-    System.out.println(obj.findMedian());
-    obj.addNum(-5);
+    for (int i = 0; i < a.length; i++) {
+      obj.addNum(a[i]);
+    }
     System.out.println(obj.findMedian());
   }
 }
