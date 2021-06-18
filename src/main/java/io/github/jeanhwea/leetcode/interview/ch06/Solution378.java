@@ -40,6 +40,14 @@ public class Solution378 {
     return lo;
   }
 
+  /**
+   * 利用矩阵按行或按列都递增的性质
+   * <li>从矩阵左下向右上查找
+   * <li>变量 count 记录小于等于 mid 值的数量
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-18, JDK1.8
+   */
   public static boolean check(int[][] a, int mid, int n, int k) {
     int i = n - 1, j = 0, count = 0;
     while (i >= 0 && j < n) {
