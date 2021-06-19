@@ -4,52 +4,31 @@ import java.util.*;
 
 public class Solution {
 
-  public static int[] getNext(String p) {
-    int n = p.length();
-    int[] next = new int[n];
-    Arrays.fill(next, 0);
-
-    int i = 2, j = 0;
-    while (i < n) {
-      if (p.charAt(i - 1) == p.charAt(j)) {
-        next[i] = ++j;
-        i++;
-      } else if (j > 0) {
-        j = next[j];
+  public static int[] maxSlidingWindow(int[] a, int k) {
+    int n = a.length;
+    int[] b = new int[n - k + 1];
+    Deque<Integer> dq = new LinkedList<>();
+    for (int i = 0; i < n; i++) {
+      if (dq.isEmpty() || a[dq.getLast()] > a[i]) {
+        dq.addLast(i);
       } else {
-        i++;
+        while (dq.isEmpty() || a[dq.getLast()] >= a[i]) {
+          dq.removeLast();
+        }
+        dq.addLast(i);
+      }
+      if (i >= k) {
+        while (dq.getFirst() < i - k) {
+          dq.removeFirst();
+        }
+        b[i] = a[dq.peekFirst()];
       }
     }
-
-    return next;
-  }
-
-  public static void kmpSearch(String s, String t) {
-    int[] next = getNext(t);
-    int n = s.length(), m = t.length(), i = 0, j = 0;
-
-    System.out.println(Arrays.toString(next));
-    while (i < n) {
-      if (s.charAt(i) == t.charAt(j)) {
-        i++;
-        j++;
-      } else if (j > 0) {
-        j = next[j];
-      } else {
-        i++;
-      }
-
-      if (j >= m) {
-        System.out.printf("i=%d, found=%d\n", i, i - m);
-        i++;
-        j = 0;
-      }
-    }
+    return b;
   }
 
   public static void main(String[] args) {
-    String s = "hello";
-    String t = "ll";
-    kmpSearch(s, t);
+    int[] a = {1, 3, -1, -3, 5, 3, 6, 7};
+    maxSlidingWindow(a, 3);
   }
 }
