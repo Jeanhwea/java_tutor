@@ -16,19 +16,19 @@ public class Solution150 {
     for (int i = 0; i < tokens.length; i++) {
       String t = tokens[i];
       if (opList.contains(t)) {
-        int op2 = val.pop(), op1 = val.pop();
+        int val2 = val.pop(), val1 = val.pop();
         switch (t) {
           case "+":
-            val.push(op1 + op2);
+            val.push(val1 + val2);
             break;
           case "-":
-            val.push(op1 - op2);
+            val.push(val1 - val2);
             break;
           case "*":
-            val.push(op1 * op2);
+            val.push(val1 * val2);
             break;
           case "/":
-            val.push(op1 / op2);
+            val.push(val1 / val2);
             break;
         }
       } else {
