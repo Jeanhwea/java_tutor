@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Solution328 {
 
-  public static ListNode oddEvenList(ListNode head) {
+  public static ListNode oddEvenList0(ListNode head) {
     ListNode p = head, h1 = null, h2 = null, t1 = null, t2 = null;
     while (p != null) {
       if (h1 == null) {
@@ -32,6 +32,29 @@ public class Solution328 {
     return head;
   }
 
+  public static ListNode oddEvenList(ListNode head) {
+    ListNode head2, p, q;
+    p = head;
+    head2 = q = null;
+    while (p != null && p.next != null) {
+      if (head2 == null) {
+        q = head2 = p.next;
+        continue;
+      }
+
+      if (p.next.next == null) break;
+
+      p.next = q.next;
+      p = p.next;
+      q.next = p.next;
+      q = q.next;
+    }
+
+    if (p != null) p.next = head2;
+    if (q != null) q.next = null;
+    return head;
+  }
+
   public static void main(String[] args) {
     ListNode list1 = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6});
     ListNode.display(list1);
@@ -42,5 +65,8 @@ public class Solution328 {
     ListNode list3 = ListNode.makeList(new int[] {});
     ListNode.display(list3);
     ListNode.display(oddEvenList(list3));
+    ListNode list4 = ListNode.makeList(new int[] {1, 2});
+    ListNode.display(list4);
+    ListNode.display(oddEvenList(list4));
   }
 }
