@@ -10,8 +10,25 @@ import java.util.*;
  */
 public class Solution239 {
 
-  // 单调队列 使用双向队列保存第 k 大的数字
+  // 优先队列
   public static int[] maxSlidingWindow(int[] a, int k) {
+    int n = a.length;
+    int[] b = new int[n - k + 1];
+    PriorityQueue<int[]> pq = new PriorityQueue<>((x, y) -> x[0] != y[0] ? y[1] - x[1] : 0);
+
+    for (int i = 0; i < n; i++) {
+      pq.offer(new int[] {i, a[i]});
+      if (i + 1 >= k) {
+        while (pq.peek()[0] < i - k + 1) pq.poll();
+        b[i - k + 1] = pq.peek()[1];
+      }
+    }
+
+    return b;
+  }
+
+  // 单调队列 使用双向队列保存第 k 大的数字
+  public static int[] maxSlidingWindow0(int[] a, int k) {
     int n = a.length;
     int[] b = new int[n - k + 1];
     Deque<Integer> dq = new LinkedList<>();
