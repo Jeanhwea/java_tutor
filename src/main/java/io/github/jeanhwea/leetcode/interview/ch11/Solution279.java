@@ -11,22 +11,12 @@ import java.util.*;
 public class Solution279 {
 
   public static int numSquares(int n) {
-    List<Integer> square = new LinkedList<>();
-    int k = 1;
-    while (k * k <= n) {
-      square.add(k * k);
-      k++;
-    }
-
     int[] dp = new int[n + 1];
     dp[0] = 0;
-    dp[1] = 1;
-    for (int i = 2; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
       int min = Integer.MAX_VALUE;
-      for (int j = 0; j < square.size(); j++) {
-        int s = square.get(j);
-        if (s > i) break;
-        int count = dp[i - s] + 1;
+      for (int j = 1; j * j <= i; j++) {
+        int count = dp[i - j * j] + 1;
         if (count < min) min = count;
       }
       dp[i] = min;
@@ -37,6 +27,6 @@ public class Solution279 {
   }
 
   public static void main(String[] args) {
-    numSquares(12);
+    System.out.println(numSquares(12));
   }
 }
