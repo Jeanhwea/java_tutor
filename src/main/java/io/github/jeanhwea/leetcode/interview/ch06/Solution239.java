@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Solution239 {
 
-  // 双向队列保存第 k 大的数字
+  // 单调队列 使用双向队列保存第 k 大的数字
   public static int[] maxSlidingWindow(int[] a, int k) {
     int n = a.length;
     int[] b = new int[n - k + 1];
