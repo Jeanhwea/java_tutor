@@ -1,9 +1,16 @@
-package io.github.jeanhwea.leetcode;
+package io.github.jeanhwea.leetcode.interview.ch06;
 
 import java.util.*;
 
-public class Solution {
+/**
+ * 滑动窗口最大值
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-19, JDK1.8
+ */
+public class Solution239 {
 
+  // 双向队列保存第 k 大的数字
   public static int[] maxSlidingWindow(int[] a, int k) {
     int n = a.length;
     int[] b = new int[n - k + 1];
