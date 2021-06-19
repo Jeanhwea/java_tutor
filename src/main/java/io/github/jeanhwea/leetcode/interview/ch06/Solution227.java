@@ -1,8 +1,14 @@
-package io.github.jeanhwea.leetcode;
+package io.github.jeanhwea.leetcode.interview.ch06;
 
 import java.util.*;
 
-public class Solution {
+/**
+ * 基本计算器 II
+ *
+ * @author Jinghui Hu
+ * @since 2021-06-19, JDK1.8
+ */
+public class Solution227 {
 
   public static int calculate(String s) {
     s = s.replaceAll("(\\+|-|\\*|/)", " $1 ").replaceAll("  ", " ").trim();
