@@ -38,7 +38,9 @@ public class Solution341 {
         if (val.isInteger()) {
           this.stack.push(val);
           return true;
-        } else this.addIntegers(val.getList());
+        } else {
+          this.addIntegers(val.getList());
+        }
       }
       return false;
     }
