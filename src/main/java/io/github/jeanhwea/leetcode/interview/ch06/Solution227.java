@@ -11,6 +11,51 @@ import java.util.*;
 public class Solution227 {
 
   public static int calculate(String s) {
+    int n = s.length(), i = 0;
+    Deque<Integer> val = new LinkedList<>();
+    Deque<Character> op = new LinkedList<>();
+    String token = "";
+    while (i < n) {
+      if (s.charAt(i) == ' ') {
+        i++;
+        continue;
+      } else if (Character.isDigit(s.charAt(i))) {
+        int num = 0;
+        while (i < n && Character.isDigit(s.charAt(i))) {
+          num = 10 * num + s.charAt(i++) - '0';
+        }
+        if (val.isEmpty()) {
+          val.push(num);
+        } else {
+          char ch = op.peek();
+          switch (ch) {
+            case '*':
+              op.pop();
+              val.push(val.pop() * num);
+              break;
+            case '/':
+              op.pop();
+              val.push(val.pop() / num);
+              break;
+            case '-':
+              op.pop();
+              val.push(-num);
+              break;
+            default:
+              val.push(num);
+          }
+        }
+      } else {
+        op.push(s.charAt(i++));
+      }
+    }
+
+    int ans = 0;
+    while (!val.isEmpty()) ans += val.pop();
+    return ans;
+  }
+
+  public static int calculate0(String s) {
     s = s.replaceAll("(\\+|-|\\*|/)", " $1 ").replaceAll("  ", " ").trim();
     String[] tokens = s.split(" ");
     Deque<String> op = new LinkedList<>();
@@ -49,7 +94,7 @@ public class Solution227 {
   }
 
   public static void main(String[] args) {
-    String s = "3+2*2";
+    String s = "  31 + 2*4/8  ";
     int res = calculate(s);
     System.out.println(res);
   }
