@@ -108,12 +108,13 @@ public class BuiltIn {
   ////////////////////////////////////////////////////////////////////////////////
   // 集合和列表
   ////////////////////////////////////////////////////////////////////////////////
-  public static void setIntro() {
+  public static void setMapIntro() {
     // 集合
     Set<Integer> set1 = new HashSet<>();
     set1.add(3);
     set1.add(3);
     set1.add(4);
+    set1.contains(4);
     // System.out.println(set1);
 
     // 散列表
@@ -125,6 +126,13 @@ public class BuiltIn {
     map1.get("c"); // 查找 key, 如果不存在返回 null
     map1.getOrDefault("c", 0);
     // System.out.println(map1);
+
+    map1.containsKey("s");
+    map1.containsValue(8);
+
+    map1.keySet(); // 键的集合
+    map1.values(); // 值的集合
+    map1.entrySet(); // 键值对的集合
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -156,7 +164,7 @@ public class BuiltIn {
     listIntro();
     queueIntro();
     stackIntro();
-    setIntro();
+    setMapIntro();
     stringIntro();
   }
 }
