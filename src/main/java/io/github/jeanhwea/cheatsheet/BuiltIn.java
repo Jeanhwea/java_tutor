@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class BuiltIn {
 
-  public static void array() {
+  public static void arrayIntro() {
     // 定义数组
     int[] arr1 = new int[10];
     int[] arr2 = {1, 2, 3, 4};
@@ -39,6 +39,6 @@ public class BuiltIn {
   }
 
   public static void main(String[] args) {
-    array();
+    arrayIntro();
   }
 }
