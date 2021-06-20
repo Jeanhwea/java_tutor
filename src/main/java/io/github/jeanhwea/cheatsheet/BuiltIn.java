@@ -76,6 +76,7 @@ public class BuiltIn {
     queue1.poll();
     queue1.peek();
     queue1.isEmpty();
+    // System.out.println(queue1);
 
     // 双向队列 （和双向链表一样）
     Deque<Integer> deque1 = new LinkedList<>();
