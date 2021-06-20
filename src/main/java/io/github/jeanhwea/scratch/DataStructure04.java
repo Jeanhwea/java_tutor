@@ -42,12 +42,17 @@ public class DataStructure04 {
   ////////////////////////////////////////////////////////////////////////////////
   // 二叉树前序遍历
   public static List<Integer> preorder(TreeNode root) {
-    if (root == null) return new LinkedList<>();
-
     List<Integer> values = new LinkedList<>();
+    if (root == null) return values;
+    return preorder0(root, values);
+  }
+
+  public static List<Integer> preorder0(TreeNode root, List<Integer> values) {
+    if (root == null) return null;
+
     values.add(root.val);
-    if (root.left != null) values.addAll(preorder(root.left));
-    if (root.right != null) values.addAll(preorder(root.right));
+    if (root.left != null) preorder0(root.left, values);
+    if (root.right != null) preorder0(root.right, values);
 
     return values;
   }
@@ -71,12 +76,17 @@ public class DataStructure04 {
   ////////////////////////////////////////////////////////////////////////////////
   // 二叉树中序遍历
   public static List<Integer> inorder(TreeNode root) {
-    if (root == null) return new LinkedList<>();
-
     List<Integer> values = new LinkedList<>();
-    if (root.left != null) values.addAll(inorder(root.left));
+    if (root == null) return values;
+    return inorder0(root, values);
+  }
+
+  public static List<Integer> inorder0(TreeNode root, List<Integer> values) {
+    if (root == null) return null;
+
+    if (root.left != null) inorder0(root.left, values);
     values.add(root.val);
-    if (root.right != null) values.addAll(inorder(root.right));
+    if (root.right != null) inorder0(root.right, values);
 
     return values;
   }
@@ -102,11 +112,16 @@ public class DataStructure04 {
   ////////////////////////////////////////////////////////////////////////////////
   // 二叉树后序遍历
   public static List<Integer> postorder(TreeNode root) {
-    if (root == null) return new LinkedList<>();
-
     List<Integer> values = new LinkedList<>();
-    if (root.left != null) values.addAll(postorder(root.left));
-    if (root.right != null) values.addAll(postorder(root.right));
+    if (root == null) return values;
+    return postorder0(root, values);
+  }
+
+  public static List<Integer> postorder0(TreeNode root, List<Integer> values) {
+    if (root == null) return null;
+
+    if (root.left != null) postorder0(root.left, values);
+    if (root.right != null) postorder0(root.right, values);
     values.add(root.val);
 
     return values;
