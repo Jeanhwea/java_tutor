@@ -10,6 +10,12 @@ import java.util.*;
  */
 public class Solution033 {
 
+  /**
+   * 将数组一分为二，必定一个子数组有序，判断 k 是否在有序组中来进行二分查找
+   *
+   * @author Jinghui Hu
+   * @since 2021-06-20, JDK1.8
+   */
   public static int search(int[] a, int k) {
     int n = a.length, lo = 0, hi = n - 1, mid;
     while (lo <= hi) {
