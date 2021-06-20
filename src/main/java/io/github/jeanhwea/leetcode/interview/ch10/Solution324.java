@@ -27,31 +27,49 @@ public class Solution324 {
     return pq.peek();
   }
 
-  public static void wiggleSort(int[] a) {
+  // 荷兰旗问题（通过 mid 三分数组，左端小于 mid ，右端大于 mid）
+  private static int[] threeWayPart(int[] a, int mid) {
     int n = a.length;
-    int mid = findKth(a, n / 2);
-    System.out.println(mid);
-
-    // 荷兰旗问题（通过 mid 三分数组）
     int[] b = Arrays.copyOf(a, n);
     int i = 0, j = 0, k = n - 1;
-    while (i < k) {
-      if (b[i] < mid) {
+    while (j < k) {
+      // System.out.printf("i=%d,j=%d,k=%d\n", i, j, k);
+      // System.out.println(Arrays.toString(b));
+      if (b[j] < mid) {
+        swap(b, i, j);
         i++;
         j++;
-      } else if (b[i] > mid) {
-        swap(b, i, k--);
+      } else if (b[j] > mid) {
+        swap(b, j, k);
+        k--;
       } else {
-        swap(b, i++, j++);
+        j++;
       }
     }
+    return b;
+  }
 
-    System.out.println(Arrays.toString(b));
-    for (i = 0; i < n; i++) {}
+  // O(nlog(n)) 解法，TODO: 添加 O(n) 的解法
+  public static void wiggleSort(int[] a) {
+    Arrays.sort(a);
+    int n = a.length, i = 0;
+    int[] smaller = new int[n % 2 == 0 ? n / 2 : (n / 2 + 1)], bigger = new int[n / 2];
+
+    System.arraycopy(a, 0, smaller, 0, smaller.length);
+    System.arraycopy(a, smaller.length, bigger, 0, n / 2);
+
+    for (; i < n / 2; i++) {
+      a[2 * i] = smaller[smaller.length - 1 - i];
+      a[2 * i + 1] = bigger[n / 2 - 1 - i];
+    }
+
+    if (n % 2 != 0) {
+      a[2 * i] = smaller[smaller.length - 1 - i];
+    }
   }
 
   public static void main(String[] args) {
-    int[] a = {1, 5, 1, 1, 6, 4};
+    int[] a = {1, 1, 2, 1, 2, 2, 1, 1};
     System.out.println(Arrays.toString(a));
     wiggleSort(a);
     System.out.println(Arrays.toString(a));
