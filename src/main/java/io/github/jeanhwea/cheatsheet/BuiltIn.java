@@ -53,21 +53,84 @@ public class BuiltIn {
     // System.out.println(list1);
 
     // 双向链表
+    Deque<Integer> delist1 = new LinkedList<>(Arrays.asList(2, 3, 4));
+    delist1.offerFirst(1); // 往表头插入 1 个元素
+    delist1.offerLast(8); // 往表尾插入 1 个元素
+
+    delist1.pollFirst(); // 删除表头的 1 个元素
+    delist1.pollLast(); // 删除表尾的 1 个元素
+
+    delist1.peekFirst(); // 查看表头的元素
+    delist1.peekLast(); // 查看表尾的元素
+
+    System.out.println(delist1);
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // 队列
+  ////////////////////////////////////////////////////////////////////////////////
+  public static void queueIntro() {
+    // 队列
+    Queue<Integer> queue1 = new LinkedList<>();
+    queue1.offer(7);
+    queue1.poll();
+    queue1.peek();
+    queue1.isEmpty();
+
+    // 双向队列 （和双向链表一样）
     Deque<Integer> deque1 = new LinkedList<>();
-    deque1.offerFirst(1); // 往表头插入 1 个元素
-    deque1.offerLast(8); // 往表尾插入 1 个元素
+  }
 
-    deque1.pollFirst(); // 删除表头的 1 个元素
-    deque1.pollLast(); // 删除表尾的 1 个元素
+  ////////////////////////////////////////////////////////////////////////////////
+  // 堆栈
+  ////////////////////////////////////////////////////////////////////////////////
+  public static void stackIntro() {
+    // 栈
+    Deque<Integer> stack1 = new LinkedList<>();
+    stack1.push(2);
+    stack1.push(3);
+    stack1.pop();
+    stack1.peek();
+    stack1.isEmpty();
+    // System.out.println(stack1.isEmpty());
 
-    deque1.peekFirst(); // 查看表头的元素
-    deque1.peekLast(); // 查看表尾的元素
+    // 优先队列（堆）
+    PriorityQueue<Integer> pq1 = new PriorityQueue<>(); // 新建一个小根堆
+    PriorityQueue<Integer> pq2 = new PriorityQueue<>((x, y) -> y - x); // 新建一个大根堆
+    pq1.offer(3); // 往堆添加 1 个元素
+    pq1.poll(); // 删除堆中的元素
+    pq1.peek(); // 查看堆顶的元素
+    pq1.isEmpty();
+    // System.out.println(pq1);
+  }
 
-    System.out.println(deque1);
+  ////////////////////////////////////////////////////////////////////////////////
+  // 集合和列表
+  ////////////////////////////////////////////////////////////////////////////////
+  public static void setIntro() {
+    // 集合
+    Set<Integer> set1 = new HashSet<>();
+    set1.add(3);
+    set1.add(3);
+    set1.add(4);
+    // System.out.println(set1);
+
+    // 散列表
+    Map<String, Integer> map1 = new HashMap<>();
+    map1.put("a", 3);
+    map1.put("b", 4);
+    map1.put("b", 8);
+    map1.putIfAbsent("b", 8);
+    map1.get("c"); // 查找 key, 如果不存在返回 null
+    map1.getOrDefault("c", 0);
+    // System.out.println(map1);
   }
 
   public static void main(String[] args) {
     arrayIntro();
     listIntro();
+    queueIntro();
+    stackIntro();
+    setIntro();
   }
 }
