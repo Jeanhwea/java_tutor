@@ -63,7 +63,7 @@ public class BuiltIn {
     delist1.peekFirst(); // 查看表头的元素
     delist1.peekLast(); // 查看表尾的元素
 
-    System.out.println(delist1);
+    // System.out.println(delist1);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -127,11 +127,36 @@ public class BuiltIn {
     // System.out.println(map1);
   }
 
+  ////////////////////////////////////////////////////////////////////////////////
+  // 集合和列表
+  ////////////////////////////////////////////////////////////////////////////////
+  public static void stringIntro() {
+    // 字符串
+    String str1 = "abcdef";
+    str1.substring(0, 3); // => "abc"
+
+    // 字符串分割和合并
+    String str2 = "1,2,3,4";
+    String[] res1 = str2.split(",");
+    // System.out.println(Arrays.toString(res1));
+
+    List<String> res2 = Arrays.asList(res1);
+    // res2.add("xxx"); // => throw UnsupportedOperationException
+    System.out.println(res2);
+    List<String> res3 = new LinkedList<>(Arrays.asList(res1));
+    res3.add("xxx"); // now is OK
+    System.out.println(res3);
+
+    String str3 = String.join(":", res3);
+    System.out.println(str3);
+  }
+
   public static void main(String[] args) {
     arrayIntro();
     listIntro();
     queueIntro();
     stackIntro();
     setIntro();
+    stringIntro();
   }
 }
