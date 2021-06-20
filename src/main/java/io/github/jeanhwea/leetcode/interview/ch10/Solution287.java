@@ -23,8 +23,8 @@ public class Solution287 {
 
   // 二分法
   public static int findDuplicate(int[] a) {
-    int n = a.length, beg = 0, end = n - 1, ans = -1;
-    while (beg <= end) {
+    int n = a.length, beg = 0, end = n - 1;
+    while (beg < end) {
       int mid = beg + (end - beg) / 2;
       int count = 0;
       for (int i = 0; i < n; i++) {
@@ -33,11 +33,10 @@ public class Solution287 {
       if (count <= mid) {
         beg = mid + 1;
       } else {
-        end = mid - 1;
-        ans = mid;
+        end = mid;
       }
     }
-    return ans;
+    return beg;
   }
 
   public static void main(String[] args) {
