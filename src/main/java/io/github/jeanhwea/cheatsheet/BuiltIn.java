@@ -150,13 +150,19 @@ public class BuiltIn {
 
     List<String> res2 = Arrays.asList(res1);
     // res2.add("xxx"); // => throw UnsupportedOperationException
-    System.out.println(res2);
+    // System.out.println(res2);
     List<String> res3 = new LinkedList<>(Arrays.asList(res1));
     res3.add("xxx"); // now is OK
-    System.out.println(res3);
+    // System.out.println(res3);
 
-    String str3 = String.join(":", res3);
-    System.out.println(str3);
+    String str3 = String.join(":", res3); // => "1:2:3:4:xxx"
+    // System.out.println(str3);
+
+
+    // 正则表达式
+    String str6 = "3 +5-4";
+    str6 = str6.replaceAll("(\\+|-|\\*|/)", " $1 ").replaceAll("  ", " ").trim();
+    // System.out.println(str6);
   }
 
   public static void main(String[] args) {
