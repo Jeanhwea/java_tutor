@@ -6,7 +6,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-20, JDK1.8
  */
-public class BuiltIn {
+public class BuiltInDS {
 
   ////////////////////////////////////////////////////////////////////////////////
   // 数组
