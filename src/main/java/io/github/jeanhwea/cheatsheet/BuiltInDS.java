@@ -145,8 +145,8 @@ public class BuiltInDS {
 
     // 字符串分割和合并
     String str2 = "1,2,3,4";
-    String[] res1 = str2.split(",");
-    // System.out.println(Arrays.toString(res1));
+    String[] res1 = str2.split(","); // => ["1", "2", "3", "4"]
+    System.out.println(Arrays.toString(res1));
 
     List<String> res2 = Arrays.asList(res1);
     // res2.add("xxx"); // => throw UnsupportedOperationException
