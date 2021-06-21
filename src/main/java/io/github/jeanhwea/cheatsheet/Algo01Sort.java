@@ -1,4 +1,4 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Algorithm01 {
+public class Algo01Sort {
 
   private static void swap(int[] a, int i, int j) {
     int t = a[i];

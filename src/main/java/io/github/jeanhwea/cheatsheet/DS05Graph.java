@@ -1,4 +1,4 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-14, JDK1.8
  */
-public class DataStructure05 {
+public class DS05Graph {
 
   // 广度优先搜索 Breadth First Search
   public static void bfs(int[][] edges, int n, int start) {

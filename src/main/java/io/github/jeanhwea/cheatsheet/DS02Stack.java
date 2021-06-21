@@ -1,4 +1,5 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
+
 
 import java.util.*;
 
@@ -8,7 +9,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
-public class DataStructure02 {
+public class DS02Stack {
 
   ////////////////////////////////////////////////////////////////////////////////
   // 出栈

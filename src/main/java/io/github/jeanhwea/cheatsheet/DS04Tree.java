@@ -1,4 +1,4 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
 
 import java.util.*;
 
@@ -8,18 +8,28 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-12, JDK1.8
  */
-public class DataStructure04 {
+public class DS04Tree {
 
-  ////////////////////////////////////////////////////////////////////////////////
-  // 递归求树的深度
-  public static int depth(TreeNode root) {
-    if (root == null) return 0;
-    return Math.max(depth(root.left), depth(root.right)) + 1;
+  // 二叉树定义
+  public static class TreeNode {
+    int val;
+    TreeNode left, right;
+
+    TreeNode(int val) {
+      this.val = val;
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
-  // 层序变量求数的深度
-  public static int depth2(TreeNode root) {
+  // 递归求树的高度
+  public static int height(TreeNode root) {
+    if (root == null) return 0;
+    return Math.max(height(root.left), height(root.right)) + 1;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // 层序遍历求树的高度
+  public static int height2(TreeNode root) {
     if (root == null) return 0;
 
     int depth = 0;
@@ -171,54 +181,54 @@ public class DataStructure04 {
   }
 
   public static void main(String[] args) {
-    List<TreeNode> trees = new LinkedList<>();
-    TreeNode tree1 = null;
-    TreeNode tree2 = TreeNode.makeTree(new int[] {1});
-    TreeNode tree3 = TreeNode.makeTree(new int[] {1, 2, 3, 4, 5});
-    TreeNode tree4 = TreeNode.makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
-    TreeNode tree5 = TreeNode.makeTree(new int[] {1, 2, 3, 4});
-    trees.add(tree1);
-    trees.add(tree2);
-    trees.add(tree3);
-    trees.add(tree4);
-    trees.add(tree5);
+    // List<TreeNode> trees = new LinkedList<>();
+    // TreeNode tree1 = null;
+    // TreeNode tree2 = TreeNode.makeTree(new int[] {1});
+    // TreeNode tree3 = TreeNode.makeTree(new int[] {1, 2, 3, 4, 5});
+    // TreeNode tree4 = TreeNode.makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
+    // TreeNode tree5 = TreeNode.makeTree(new int[] {1, 2, 3, 4});
+    // trees.add(tree1);
+    // trees.add(tree2);
+    // trees.add(tree3);
+    // trees.add(tree4);
+    // trees.add(tree5);
 
-    System.out.println("===== tree list =====");
-    for (TreeNode t : trees) {
-      TreeNode.display(t);
-    }
+    // System.out.println("===== tree list =====");
+    // for (TreeNode t : trees) {
+    //   TreeNode.display(t);
+    // }
 
-    System.out.println("===== tree depth =====");
-    for (TreeNode t : trees) {
-      String out = String.format("depth = %d, depth2 = %d", depth(t), depth2(t));
-      System.out.println(out);
-    }
+    // System.out.println("===== tree depth =====");
+    // for (TreeNode t : trees) {
+    //   String out = String.format("depth = %d, depth2 = %d", depth(t), depth2(t));
+    //   System.out.println(out);
+    // }
 
-    System.out.println("===== Pre-Order =====");
-    for (TreeNode t : trees) {
-      List<Integer> v0 = preorder(t);
-      System.out.println(Arrays.toString(v0.toArray()));
-      List<Integer> v1 = preorder1(t);
-      System.out.println(Arrays.toString(v1.toArray()));
-    }
+    // System.out.println("===== Pre-Order =====");
+    // for (TreeNode t : trees) {
+    //   List<Integer> v0 = preorder(t);
+    //   System.out.println(Arrays.toString(v0.toArray()));
+    //   List<Integer> v1 = preorder1(t);
+    //   System.out.println(Arrays.toString(v1.toArray()));
+    // }
 
-    System.out.println("===== In-Order =====");
-    for (TreeNode t : trees) {
-      List<Integer> v0 = inorder(t);
-      System.out.println(Arrays.toString(v0.toArray()));
-      List<Integer> v1 = inorder1(t);
-      System.out.println(Arrays.toString(v1.toArray()));
-    }
+    // System.out.println("===== In-Order =====");
+    // for (TreeNode t : trees) {
+    //   List<Integer> v0 = inorder(t);
+    //   System.out.println(Arrays.toString(v0.toArray()));
+    //   List<Integer> v1 = inorder1(t);
+    //   System.out.println(Arrays.toString(v1.toArray()));
+    // }
 
-    System.out.println("===== Post-Order =====");
-    for (TreeNode t : trees) {
-      // TreeNode.display(t);
-      List<Integer> v0 = postorder(t);
-      System.out.println(Arrays.toString(v0.toArray()));
-      List<Integer> v1 = postorder1(t);
-      System.out.println(Arrays.toString(v1.toArray()));
-      List<Integer> v2 = postorder2(t);
-      System.out.println(Arrays.toString(v2.toArray()));
-    }
+    // System.out.println("===== Post-Order =====");
+    // for (TreeNode t : trees) {
+    //   // TreeNode.display(t);
+    //   List<Integer> v0 = postorder(t);
+    //   System.out.println(Arrays.toString(v0.toArray()));
+    //   List<Integer> v1 = postorder1(t);
+    //   System.out.println(Arrays.toString(v1.toArray()));
+    //   List<Integer> v2 = postorder2(t);
+    //   System.out.println(Arrays.toString(v2.toArray()));
+    // }
   }
 }

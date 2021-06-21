@@ -1,4 +1,4 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
 
 import java.util.*;
 
@@ -13,7 +13,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class DataStructure08 {
+public class DS10RbTree {
 
   public static class RBTree {
     public int val;

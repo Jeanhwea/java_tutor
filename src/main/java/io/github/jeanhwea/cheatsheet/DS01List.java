@@ -1,4 +1,5 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
+
 
 import java.util.*;
 
@@ -8,7 +9,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-11, JDK1.8
  */
-public class DataStructure01 {
+public class DS01List {
 
   ////////////////////////////////////////////////////////////////////////////////
   // 链表的大小

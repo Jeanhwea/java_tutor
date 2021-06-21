@@ -1,4 +1,4 @@
-package io.github.jeanhwea.scratch;
+package io.github.jeanhwea.cheatsheet;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class DataStructure03 {
+public class DS03Heap {
 
   /**
    * 优先队列的堆实现方式使用：上浮 (swim) 和下沉 (sink) 两个操作
