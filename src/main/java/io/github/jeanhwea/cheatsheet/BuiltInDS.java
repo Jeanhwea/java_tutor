@@ -106,7 +106,7 @@ public class BuiltInDS {
   }
 
   ////////////////////////////////////////////////////////////////////////////////
-  // 集合和列表
+  // 集合和散列表
   ////////////////////////////////////////////////////////////////////////////////
   public static void setMapIntro() {
     // 集合
@@ -157,7 +157,6 @@ public class BuiltInDS {
 
     String str3 = String.join(":", res3); // => "1:2:3:4:xxx"
     // System.out.println(str3);
-
 
     // 正则表达式
     String str6 = "3 +5-4";
