@@ -16,7 +16,8 @@ public class Algorithm01 {
     a[j] = t;
   }
 
-  // selection sort
+  ////////////////////////////////////////////////////////////////////////////////
+  // 选择排序 selection sort
   public static void ssort(int[] a) {
     int n = a.length;
     for (int i = 0; i < n; i++) {
@@ -28,7 +29,8 @@ public class Algorithm01 {
     }
   }
 
-  // bubble sort
+  ////////////////////////////////////////////////////////////////////////////////
+  // 冒泡排序 bubble sort
   public static void bsort(int[] a) {
     int n = a.length;
     for (int i = 0; i < n; i++) {
@@ -38,7 +40,8 @@ public class Algorithm01 {
     }
   }
 
-  // insertion sort
+  ////////////////////////////////////////////////////////////////////////////////
+  // 插入排序 insertion sort
   public static void isort(int[] a) {
     int n = a.length;
     for (int i = 0; i < n - 1; i++) {
@@ -50,7 +53,8 @@ public class Algorithm01 {
     }
   }
 
-  // quick sort
+  ////////////////////////////////////////////////////////////////////////////////
+  // 快速排序 quick sort
   public static void qsort(int a[], int lo, int hi) {
     if (hi <= lo) return;
 
@@ -95,7 +99,8 @@ public class Algorithm01 {
     qsort0(a, i + 1, hi);
   }
 
-  // heap sort
+  ////////////////////////////////////////////////////////////////////////////////
+  // 堆排序 heap sort
   public static void hsort(int[] a) {
     int n = a.length;
     PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
