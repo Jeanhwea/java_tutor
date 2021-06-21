@@ -11,7 +11,7 @@ public class BuiltInDS {
   ////////////////////////////////////////////////////////////////////////////////
   // 数组
   ////////////////////////////////////////////////////////////////////////////////
-  public static void arrayIntro() {
+  public static void introArray() {
     // 定长数组
     int[] arr1 = new int[10]; // 定义数组
     int[] arr2 = {1, 2, 3, 4}; // 定义并初始化数组
@@ -41,7 +41,7 @@ public class BuiltInDS {
   ////////////////////////////////////////////////////////////////////////////////
   // 链表
   ////////////////////////////////////////////////////////////////////////////////
-  public static void listIntro() {
+  public static void introList() {
     // 单链表
     Deque<Integer> list1 = new LinkedList<>(Arrays.asList(1, 2, 3));
     Deque<Integer> list2 = new LinkedList<>(); // 初始化空的单链表
@@ -69,7 +69,7 @@ public class BuiltInDS {
   ////////////////////////////////////////////////////////////////////////////////
   // 队列
   ////////////////////////////////////////////////////////////////////////////////
-  public static void queueIntro() {
+  public static void introQueue() {
     // 队列
     Queue<Integer> queue1 = new LinkedList<>();
     queue1.offer(7);
@@ -85,7 +85,7 @@ public class BuiltInDS {
   ////////////////////////////////////////////////////////////////////////////////
   // 堆栈
   ////////////////////////////////////////////////////////////////////////////////
-  public static void stackIntro() {
+  public static void introStackAndHeap() {
     // 栈
     Deque<Integer> stack1 = new LinkedList<>();
     stack1.push(2);
@@ -108,7 +108,7 @@ public class BuiltInDS {
   ////////////////////////////////////////////////////////////////////////////////
   // 集合和散列表
   ////////////////////////////////////////////////////////////////////////////////
-  public static void setMapIntro() {
+  public static void introSetAndMap() {
     // 集合
     Set<Integer> set1 = new HashSet<>();
     set1.add(3);
@@ -138,7 +138,7 @@ public class BuiltInDS {
   ////////////////////////////////////////////////////////////////////////////////
   // 字符串
   ////////////////////////////////////////////////////////////////////////////////
-  public static void stringIntro() {
+  public static void introString() {
     // 字符串
     String str1 = "abcdef";
     str1.substring(0, 3); // => "abc"
@@ -165,11 +165,11 @@ public class BuiltInDS {
   }
 
   public static void main(String[] args) {
-    arrayIntro();
-    listIntro();
-    queueIntro();
-    stackIntro();
-    setMapIntro();
-    stringIntro();
+    introArray();
+    introList();
+    introQueue();
+    introStackAndHeap();
+    introSetAndMap();
+    introString();
   }
 }
