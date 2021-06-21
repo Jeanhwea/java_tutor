@@ -20,9 +20,7 @@ public class DS03Heap {
     int p = (s - 1) / 2;
     while (true) {
       if (s > 0 && a[p] < a[s]) {
-        int t = a[s];
-        a[s] = a[p];
-        a[p] = t;
+        swap(a, s, p);
       } else break;
 
       s = p;
@@ -39,9 +37,7 @@ public class DS03Heap {
       while (s < n && a[s] < a[mi]) mi = s;
       if (p == mi) break;
 
-      int t = a[mi];
-      a[mi] = a[p];
-      a[p] = t;
+      swap(a, mi, p);
       p = mi;
     }
   }
@@ -60,9 +56,7 @@ public class DS03Heap {
       if (l < n && a[l] > a[ma]) ma = l;
       if (r < n && a[r] > a[ma]) ma = r;
       if (p != ma) {
-        int t = a[ma];
-        a[ma] = a[p];
-        a[p] = t;
+        swap(a, ma, p);
       } else break;
 
       // fix broken children
@@ -87,9 +81,7 @@ public class DS03Heap {
   public static void hsort(int[] a) {
     makeHeap(a, a.length);
     for (int i = a.length - 1; i >= 1; --i) {
-      int t = a[i];
-      a[i] = a[0];
-      a[0] = t;
+      swap(a, 0, i);
       makeHeap(a, i);
     }
   }
@@ -129,5 +121,11 @@ public class DS03Heap {
       a[i] = e;
     }
     return a;
+  }
+
+  private static void swap(int[] a, int i, int j) {
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
   }
 }

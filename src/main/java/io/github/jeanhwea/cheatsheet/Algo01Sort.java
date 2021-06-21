@@ -10,12 +10,6 @@ import java.util.*;
  */
 public class Algo01Sort {
 
-  private static void swap(int[] a, int i, int j) {
-    int t = a[i];
-    a[i] = a[j];
-    a[j] = t;
-  }
-
   ////////////////////////////////////////////////////////////////////////////////
   // 选择排序 selection sort
   public static void ssort(int[] a) {
@@ -133,5 +127,11 @@ public class Algo01Sort {
     // int[] b = {9, 2, 3, 1, 9, 22, 0};
     // Arrays.sort(b); // JDK sort
     // System.out.println(Arrays.toString(b));
+  }
+
+  private static void swap(int[] a, int i, int j) {
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
   }
 }
