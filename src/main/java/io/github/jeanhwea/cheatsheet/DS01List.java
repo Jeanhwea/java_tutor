@@ -1,6 +1,5 @@
 package io.github.jeanhwea.cheatsheet;
 
-
 import java.util.*;
 
 /**
@@ -10,6 +9,16 @@ import java.util.*;
  * @since 2021-06-11, JDK1.8
  */
 public class DS01List {
+
+  // 链表节点定义
+  public static class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+      this.val = val;
+    }
+  }
 
   ////////////////////////////////////////////////////////////////////////////////
   // 链表的大小
@@ -79,14 +88,41 @@ public class DS01List {
 
   public static void main(String[] args) {
     ListNode list0 = null;
-    ListNode list1 = ListNode.makeList(new int[] {1});
-    ListNode list2 = ListNode.makeList(new int[] {1, 2});
-    ListNode list3 = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
-    ListNode.display(list1);
+    ListNode list1 = makeList(new int[] {1});
+    ListNode list2 = makeList(new int[] {1, 2});
+    ListNode list3 = makeList(new int[] {1, 2, 3, 4, 5, 6, 7});
+    dispList(list1);
     System.out.println("========================================");
-    // System.out.println(listSize(list1));
-    // ListNode.display(remove(list1, 7));
-    ListNode.display(reverse(list0));
-    ListNode.display(reverse(list2));
+    dispList(reverse(list0));
+    dispList(reverse(list2));
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  public static ListNode makeList(int[] a) {
+    ListNode head = null, tail = null;
+    for (int i = 0; i < a.length; i++) {
+      ListNode node = new ListNode(a[i]);
+      if (head == null) {
+        head = tail = node;
+      } else {
+        tail = tail.next = node;
+      }
+    }
+    return head;
+  }
+
+  public static void dispList(ListNode head) {
+    if (head == null) {
+      System.out.println("null");
+      return;
+    }
+
+    List<Integer> vals = new LinkedList<Integer>();
+    ListNode tail = head;
+    while (tail != null) {
+      vals.add(tail.val);
+      tail = tail.next;
+    }
+    System.out.println(Arrays.toString(vals.toArray()));
   }
 }

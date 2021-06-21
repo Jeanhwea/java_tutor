@@ -1,6 +1,5 @@
 package io.github.jeanhwea.cheatsheet;
 
-
 import java.util.*;
 
 /**
@@ -10,6 +9,16 @@ import java.util.*;
  * @since 2021-06-13, JDK1.8
  */
 public class DS02Stack {
+
+  // 链表节点定义
+  public static class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+      this.val = val;
+    }
+  }
 
   ////////////////////////////////////////////////////////////////////////////////
   // 出栈
@@ -28,17 +37,6 @@ public class DS02Stack {
     stack.next = p;
   }
 
-  public static ListNode makeStack(int[] a) {
-    ListNode list = ListNode.makeList(a);
-    ListNode stack = new ListNode();
-    stack.next = list;
-    return stack;
-  }
-
-  public static void display(ListNode stack) {
-    ListNode.display(stack.next);
-  }
-
   public static void main(String[] args) {
     ListNode stack0 = null;
     ListNode stack1 = makeStack(new int[] {1});
@@ -48,9 +46,39 @@ public class DS02Stack {
     push(stack2, 4);
     push(stack2, 8);
     for (int i = 0; i < 3; i++) {
-      display(stack2);
+      dispStack(stack2);
       int top = pop(stack2);
       System.out.println(top);
     }
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  public static ListNode makeStack(int[] a) {
+    ListNode head = null, tail = null;
+    for (int i = 0; i < a.length; i++) {
+      ListNode node = new ListNode(a[i]);
+      if (head == null) {
+        head = node;
+      } else {
+        node.next = head;
+        head = node;
+      }
+    }
+    return head;
+  }
+
+  public static void dispStack(ListNode head) {
+    if (head == null) {
+      System.out.println("null");
+      return;
+    }
+
+    List<Integer> vals = new LinkedList<Integer>();
+    ListNode tail = head;
+    while (tail != null) {
+      vals.add(tail.val);
+      tail = tail.next;
+    }
+    System.out.println(Arrays.toString(vals.toArray()));
   }
 }
