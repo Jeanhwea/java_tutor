@@ -15,7 +15,8 @@ public class Solution395 {
   }
 
   public static void main(String[] args) {
-    String s = "ababbc", k = 2;
+    String s = "ababbc";
+    int k = 2;
     System.out.println(longestSubstring(s, k));
   }
 }
