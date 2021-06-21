@@ -27,6 +27,7 @@ public class BuiltInDS {
     ArrayList<Integer> vec1 = new ArrayList<Integer>();
     vec1.add(1); // 添加元素到数组最后
     vec1.add(3);
+    vec1.add(4);
     vec1.get(0); // 获取第 0 个元素
     vec1.size(); // 数组的长度
     // System.out.println(vec1);
@@ -36,6 +37,9 @@ public class BuiltInDS {
     // System.out.println(vec1);
     vec1.remove(1); // 删除第 1 个元素
     // System.out.println(vec1);
+
+    List<Integer> vec2 = vec1.subList(0, 2); // 获取子链表的前 2 个元素
+    System.out.println(vec2);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -146,7 +150,7 @@ public class BuiltInDS {
     // 字符串分割和合并
     String str2 = "1,2,3,4";
     String[] res1 = str2.split(","); // => ["1", "2", "3", "4"]
-    System.out.println(Arrays.toString(res1));
+    // System.out.println(Arrays.toString(res1));
 
     List<String> res2 = Arrays.asList(res1);
     // res2.add("xxx"); // => throw UnsupportedOperationException
