@@ -125,7 +125,7 @@ public class TreeNode {
     }
     values = values.subList(0, k + 1);
 
-    System.out.println(Arrays.toString(values.toArray()));
+    System.out.println(values);
   }
 
   public static void main(String[] args) {
