@@ -12,13 +12,10 @@ public class Runner01 {
     for (int i = 0; i < 10; i++) {
       Thread t =
           new Thread(
-              new Runnable() {
-                @Override
-                public void run() {
-                  while (num1 < 999) {
-                    String threadName = Thread.currentThread().getName();
-                    System.out.printf("%03d: %s\n", num1++, threadName);
-                  }
+              () -> {
+                while (num1 < 999) {
+                  String threadName = Thread.currentThread().getName();
+                  System.out.printf("%03d: %s\n", num1++, threadName);
                 }
               });
       t.start();
@@ -33,14 +30,11 @@ public class Runner01 {
     for (int i = 0; i < 10; i++) {
       Thread t =
           new Thread(
-              new Runnable() {
-                @Override
-                public void run() {
-                  synchronized (Runner01.class) {
-                    while (num1 < 999) {
-                      String threadName = Thread.currentThread().getName();
-                      System.out.printf("%03d: %s\n", num1++, threadName);
-                    }
+              () -> {
+                synchronized (Runner01.class) {
+                  while (num1 < 999) {
+                    String threadName = Thread.currentThread().getName();
+                    System.out.printf("%03d: %s\n", num1++, threadName);
                   }
                 }
               });
@@ -56,13 +50,10 @@ public class Runner01 {
     for (int i = 0; i < 10; i++) {
       Thread t =
           new Thread(
-              new Runnable() {
-                @Override
-                public void run() {
-                  while (num3.get() < 999) {
-                    String threadName = Thread.currentThread().getName();
-                    System.out.printf("%03d: %s\n", num3.getAndIncrement(), threadName);
-                  }
+              () -> {
+                while (num3.get() < 999) {
+                  String threadName = Thread.currentThread().getName();
+                  System.out.printf("%03d: %s\n", num3.getAndIncrement(), threadName);
                 }
               });
       t.start();
