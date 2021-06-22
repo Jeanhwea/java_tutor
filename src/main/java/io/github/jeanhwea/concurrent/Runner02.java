@@ -102,6 +102,7 @@ public class Runner02 {
               () -> {
                 try {
                   mutex.lock();
+                  // mutex.lock(); // => 单线程不可重入
                   Thread.sleep(1000);
                   String name = Thread.currentThread().getName();
                   System.out.println(name + ": " + new Date());
