@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
+ * AQS 实现 Latch
+ *
  * @author Jinghui Hu
  * @since 2021-06-22, JDK1.8
  */

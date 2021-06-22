@@ -92,5 +92,26 @@ public class Runner02 {
     }
   }
 
-  public static void main(String[] args) {}
+  private static Mutex mutex = new Mutex();
+
+  public static void main(String[] args) throws InterruptedException {
+    System.out.println("=============== Start ===============");
+    for (int i = 0; i < 9; i++) {
+      Thread t =
+          new Thread(
+              () -> {
+                try {
+                  mutex.lock();
+                  Thread.sleep(2000);
+                  String name = Thread.currentThread().getName();
+                  System.out.println(name + ": " + new Date());
+                  mutex.unlock();
+                } catch (InterruptedException e) {
+                  e.printStackTrace();
+                }
+              });
+      t.start();
+    }
+    System.out.println("=============== Done ===============");
+  }
 }
