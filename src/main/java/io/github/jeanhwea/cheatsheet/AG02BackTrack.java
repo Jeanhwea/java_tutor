@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-15, JDK1.8
  */
-public class Algo02BackTrack {
+public class AG02BackTrack {
 
   public static List<String> tokenize(String s, List<String> wordDict) {
     Set<String> dict = new HashSet<>(wordDict);

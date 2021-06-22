@@ -8,7 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-06, JDK1.8
  */
-public class Algo01Sort {
+public class AG01Sort {
 
   ////////////////////////////////////////////////////////////////////////////////
   // 选择排序 selection sort
