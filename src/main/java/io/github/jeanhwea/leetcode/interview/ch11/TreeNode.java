@@ -127,4 +127,9 @@ public class TreeNode {
 
     System.out.println(values);
   }
+
+  @Override
+  public String toString() {
+    return String.valueOf(this.val);
+  }
 }
