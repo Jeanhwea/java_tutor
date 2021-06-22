@@ -69,6 +69,6 @@ public class Solution108 {
     // int[] nums = {0, 1, 2, 3, 4, 5, 6, 7};
     int[] nums = {1, 2};
     TreeNode tree1 = sortedArrayToBST(nums);
-    TreeNode.display(tree1);
+    TreeNode.dispTree(tree1);
   }
 }

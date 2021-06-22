@@ -66,6 +66,6 @@ public class Solution021 {
     ListNode p = ListNode.makeList(new int[] {1, 2, 3, 3, 4});
     ListNode q = ListNode.makeList(new int[] {1, 1, 2, 3, 3, 4});
     ListNode head = mergeTwoLists(p, q);
-    ListNode.display(head);
+    ListNode.dispList(head);
   }
 }

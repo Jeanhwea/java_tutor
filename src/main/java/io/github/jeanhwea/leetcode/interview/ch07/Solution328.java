@@ -57,16 +57,16 @@ public class Solution328 {
 
   public static void main(String[] args) {
     ListNode list1 = ListNode.makeList(new int[] {1, 2, 3, 4, 5, 6});
-    ListNode.display(list1);
-    ListNode.display(oddEvenList(list1));
+    ListNode.dispList(list1);
+    ListNode.dispList(oddEvenList(list1));
     ListNode list2 = ListNode.makeList(new int[] {1, 2, 3, 4, 5});
-    ListNode.display(list2);
-    ListNode.display(oddEvenList(list2));
+    ListNode.dispList(list2);
+    ListNode.dispList(oddEvenList(list2));
     ListNode list3 = ListNode.makeList(new int[] {});
-    ListNode.display(list3);
-    ListNode.display(oddEvenList(list3));
+    ListNode.dispList(list3);
+    ListNode.dispList(oddEvenList(list3));
     ListNode list4 = ListNode.makeList(new int[] {1, 2});
-    ListNode.display(list4);
-    ListNode.display(oddEvenList(list4));
+    ListNode.dispList(list4);
+    ListNode.dispList(oddEvenList(list4));
   }
 }

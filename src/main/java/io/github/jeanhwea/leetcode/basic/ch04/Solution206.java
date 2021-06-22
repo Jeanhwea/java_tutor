@@ -28,9 +28,9 @@ public class Solution206 {
 
   public static void main(String[] args) {
     ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5});
-    ListNode.display(head);
+    ListNode.dispList(head);
     System.out.println("========================================");
     head = reverseList(head);
-    ListNode.display(head);
+    ListNode.dispList(head);
   }
 }

@@ -37,7 +37,7 @@ public class Solution234 {
 
     p = head;
     for (int i = 1; i < (n + 1) / 2; i++) p = p.next;
-    // ListNode.display(p);
+    // ListNode.dispList(p);
 
     ListNode q = head, t = reverseList(p);
     while (q != null && t != null) {
@@ -51,7 +51,7 @@ public class Solution234 {
 
   public static void main(String[] args) {
     ListNode p = ListNode.makeList(new int[] {1, 2, 2, 1});
-    // ListNode.display(p);
+    // ListNode.dispList(p);
     System.out.println(isPalindrome(p));
   }
 }

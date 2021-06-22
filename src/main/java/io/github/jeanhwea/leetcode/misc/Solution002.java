@@ -38,9 +38,9 @@ public class Solution002 {
     ListNode l1 = ListNode.makeList(new int[] {2, 3, 4});
     ListNode l2 = ListNode.makeList(new int[] {5, 6, 4});
     ListNode ans = addTwoNumbers(l1, l2);
-    ListNode.display(l1);
-    ListNode.display(l2);
+    ListNode.dispList(l1);
+    ListNode.dispList(l2);
     System.out.println("========================================");
-    ListNode.display(ans);
+    ListNode.dispList(ans);
   }
 }

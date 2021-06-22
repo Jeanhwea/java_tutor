@@ -38,7 +38,7 @@ public class ListNode {
     return head;
   }
 
-  public static void display(ListNode head) {
+  public static void dispList(ListNode head) {
     if (head == null) {
       System.out.println("null");
       return;
@@ -51,10 +51,5 @@ public class ListNode {
       tail = tail.next;
     }
     System.out.println(Arrays.toString(vals.toArray()));
-  }
-
-  public static void main(String[] args) {
-    ListNode head = makeList(new int[] {1, 2, 3, 4});
-    display(head);
   }
 }

@@ -16,8 +16,8 @@ public class Solution237 {
   public static void main(String[] args) {
     ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4, 5});
     ListNode node = head.next;
-    ListNode.display(head);
+    ListNode.dispList(head);
     deleteNode(node);
-    ListNode.display(head);
+    ListNode.dispList(head);
   }
 }

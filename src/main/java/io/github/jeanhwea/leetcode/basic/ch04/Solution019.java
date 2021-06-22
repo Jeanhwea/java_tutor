@@ -34,8 +34,8 @@ public class Solution019 {
     // ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4});
     for (int i = 1; i <= 4; i++) {
       ListNode head = ListNode.makeList(new int[] {1, 2, 3, 4});
-      // ListNode.display(head);
-      ListNode.display(removeNthFromEnd(head, i));
+      // ListNode.dispList(head);
+      ListNode.dispList(removeNthFromEnd(head, i));
     }
   }
 }

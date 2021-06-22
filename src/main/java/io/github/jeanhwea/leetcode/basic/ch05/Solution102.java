@@ -34,7 +34,7 @@ public class Solution102 {
 
   public static void main(String[] args) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {3, 9, 20, -1, 15, 7});
-    TreeNode.display(tree1);
+    TreeNode.dispTree(tree1);
     List<List<Integer>> ans = levelOrder(tree1);
     System.out.println("done");
   }

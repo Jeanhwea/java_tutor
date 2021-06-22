@@ -45,7 +45,7 @@ public class Solution236 {
 
   public static void main(String[] args) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {3, 5, 1, 6, 2, 0, 8, -1, -1, 7, 4});
-    TreeNode.display(tree1);
+    TreeNode.dispTree(tree1);
     TreeNode p = findOneNode(tree1, 5);
     TreeNode q = findOneNode(tree1, 1);
     TreeNode ans = lowestCommonAncestor(tree1, p, q);

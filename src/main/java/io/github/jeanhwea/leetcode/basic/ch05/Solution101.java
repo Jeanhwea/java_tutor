@@ -80,17 +80,17 @@ public class Solution101 {
 
   public static void main(String[] args) {
     TreeNode tree1 = TreeNode.makeTree(new int[] {2, 3, 3});
-    TreeNode.display(tree1);
+    TreeNode.dispTree(tree1);
     System.out.println("========================================");
     System.out.println(isSymmetric(tree1));
 
     TreeNode tree2 = TreeNode.makeTree(new int[] {2});
-    TreeNode.display(tree2);
+    TreeNode.dispTree(tree2);
     System.out.println("========================================");
     System.out.println(isSymmetric(tree2));
 
     TreeNode tree3 = TreeNode.makeTree(new int[] {1, 2, 2, 4, -1, 4});
-    TreeNode.display(tree3);
+    TreeNode.dispTree(tree3);
     System.out.println("========================================");
     System.out.println(isSymmetric(tree3));
   }

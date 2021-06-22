@@ -54,7 +54,7 @@ public class Solution113 {
     TreeNode tree1 =
         TreeNode.makeTree(new int[] {5, 4, 8, 11, -1, 13, 4, 7, 2, -1, -1, -1, -1, 5, 1});
     int targetSum = 22;
-    TreeNode.display(tree1);
+    TreeNode.dispTree(tree1);
     List<List<Integer>> ans = pathSum(tree1, targetSum);
     System.out.println(ans.toString());
   }

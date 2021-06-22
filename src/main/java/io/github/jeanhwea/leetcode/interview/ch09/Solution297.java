@@ -52,6 +52,6 @@ public class Solution297 {
     String res = obj.serialize(tree1);
     System.out.println(res);
     TreeNode tree2 = obj.deserialize(res);
-    TreeNode.display(tree2);
+    TreeNode.dispTree(tree2);
   }
 }

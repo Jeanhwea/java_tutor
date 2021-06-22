@@ -72,7 +72,7 @@ public class TreeNode {
     return root;
   }
 
-  public static void display(TreeNode root) {
+  public static void dispTree(TreeNode root) {
     if (root == null) {
       System.out.println("null");
       return;
@@ -128,13 +128,4 @@ public class TreeNode {
     System.out.println(values);
   }
 
-  public static void main(String[] args) {
-    // TreeNode root = makeTree(new int[] {1, 2, 3, 4, 5});
-    TreeNode tree4 = makeTree(new int[] {1, 2, 3, -1, 4, 5, 6, -1, -1, 7});
-    // TreeNode tree4 = makeTree(new int[] {1, 2, 3});
-    display(tree4);
-    // System.out.println(1 << 3);
-    // display(root);
-    // System.out.println("====");
-  }
 }
