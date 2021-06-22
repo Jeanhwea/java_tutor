@@ -102,7 +102,7 @@ public class Runner02 {
               () -> {
                 try {
                   mutex.lock();
-                  Thread.sleep(2000);
+                  Thread.sleep(1000);
                   String name = Thread.currentThread().getName();
                   System.out.println(name + ": " + new Date());
                   mutex.unlock();
