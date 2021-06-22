@@ -8,6 +8,9 @@
 #+TAGS: tag1 tag2 tag3
 
 
-* 书目
+* 基础知识
+  1. [[https://leetcode-cn.com/leetbook/detail/tech-interview-cookbook/][校招基础知识详解]]
+
+* 算法练习
   1. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/][初级算法]]
   2. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions/][算法面试题汇总]]
