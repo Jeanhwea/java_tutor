@@ -35,7 +35,7 @@ public class Solution {
   }
 
   public static void main(String[] args) {
-    int[] a = {1, 3, 0, 4, 2, 3, 9, 3, 7, 6};
+    int[] a = {1, 3, 0, 4, 2, 3, 9, 3, 0, 7, 6};
     threeSum(a, 10);
   }
 }
