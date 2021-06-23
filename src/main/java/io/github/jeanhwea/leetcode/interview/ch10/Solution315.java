@@ -10,59 +10,55 @@ import java.util.*;
  */
 public class Solution315 {
 
-  private static int[] c;
-  private static int[] a;
+  private static int[] b, c;
 
-  // 树形数组
-  public static List<Integer> countSmaller(int[] nums) {
+  // 树状数组
+  public static List<Integer> countSmaller(int[] a) {
     List<Integer> resultList = new ArrayList<>();
 
     // 离散化数据
     Set<Integer> set = new HashSet<>();
-    for (int num : nums) set.add(num);
-
-    int size = set.size();
-    a = new int[size];
-    int index = 0;
-    for (int num : set) a[index++] = num;
-    Arrays.sort(a);
+    for (int e : a) set.add(e);
+    b = new int[set.size()];
+    int k = 0;
+    for (int e : set) b[k++] = e;
+    Arrays.sort(b);
 
     // 初始化树状数组
-    c = new int[nums.length + 5];
+    c = new int[a.length + 5];
     Arrays.fill(c, 0);
 
-    for (int i = nums.length - 1; i >= 0; --i) {
-      int id = getId(nums[i]);
-      resultList.add(ask(id - 1));
-      add(id);
+    for (int i = a.length - 1; i >= 0; --i) {
+      int id = getId(a[i]);
+      resultList.add(query(id - 1));
+      update(id);
     }
     Collections.reverse(resultList);
     return resultList;
   }
 
-  // parent(t[x]) -> t[x+lowBit(x)]
   private static int lowbit(int x) {
     return x & (-x);
   }
 
   private static int getId(int x) {
-    return Arrays.binarySearch(a, x) + 1;
+    return Arrays.binarySearch(b, x) + 1;
   }
 
-  private static void add(int pos) {
+  private static void update(int pos) {
     while (pos < c.length) {
       c[pos] += 1;
       pos += lowbit(pos);
     }
   }
 
-  private static int ask(int pos) {
-    int ret = 0;
+  private static int query(int pos) {
+    int count = 0;
     while (pos > 0) {
-      ret += c[pos];
+      count += c[pos];
       pos -= lowbit(pos);
     }
-    return ret;
+    return count;
   }
 
   // 暴力统计法
