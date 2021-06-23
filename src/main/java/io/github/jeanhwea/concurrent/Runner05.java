@@ -25,7 +25,7 @@ public class Runner05 {
             TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<Runnable>());
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < countThread; i++) {
       int waitSeconds = i;
       executorService.execute(
           () -> {
