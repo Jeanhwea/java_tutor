@@ -10,9 +10,59 @@ import java.util.*;
  */
 public class Solution315 {
 
-  // TODO: 高效的算法
-  public static List<Integer> countSmaller(int[] a) {
-    return null;
+  private static int[] c;
+  private static int[] a;
+
+  // 树形数组
+  public static List<Integer> countSmaller(int[] nums) {
+    List<Integer> resultList = new ArrayList<>();
+
+    // 离散化数据
+    Set<Integer> set = new HashSet<>();
+    for (int num : nums) set.add(num);
+
+    int size = set.size();
+    a = new int[size];
+    int index = 0;
+    for (int num : set) a[index++] = num;
+    Arrays.sort(a);
+
+    // 初始化树状数组
+    c = new int[nums.length + 5];
+    Arrays.fill(c, 0);
+
+    for (int i = nums.length - 1; i >= 0; --i) {
+      int id = getId(nums[i]);
+      resultList.add(ask(id - 1));
+      add(id);
+    }
+    Collections.reverse(resultList);
+    return resultList;
+  }
+
+  // parent(t[x]) -> t[x+lowBit(x)]
+  private static int lowbit(int x) {
+    return x & (-x);
+  }
+
+  private static int getId(int x) {
+    return Arrays.binarySearch(a, x) + 1;
+  }
+
+  private static void add(int pos) {
+    while (pos < c.length) {
+      c[pos] += 1;
+      pos += lowbit(pos);
+    }
+  }
+
+  private static int ask(int pos) {
+    int ret = 0;
+    while (pos > 0) {
+      ret += c[pos];
+      pos -= lowbit(pos);
+    }
+    return ret;
   }
 
   // 暴力统计法
