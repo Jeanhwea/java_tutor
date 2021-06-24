@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Solution128 {
 
-  public static int longestConsecutive(int[] a) {
+  public static int longestConsecutive0(int[] a) {
     Arrays.sort(a);
     int n = a.length, i = 0, prev = 0, len = 0, ans = 0;
     // System.out.println(Arrays.toString(a));
@@ -27,6 +27,21 @@ public class Solution128 {
       }
     }
 
+    return ans;
+  }
+
+  public static int longestConsecutive(int[] a) {
+    int ans = 0;
+    Set<Integer> nums = new HashSet<>();
+    for (int i = 0; i < a.length; i++) nums.add(a[i]);
+
+    for (int num : nums) {
+      if (nums.contains(num - 1)) continue;
+
+      int count = 0;
+      while (nums.contains(num++)) count++;
+      ans = Math.max(ans, count);
+    }
     return ans;
   }
 
