@@ -49,7 +49,6 @@ public class Solution324 {
     return b;
   }
 
-  // TODO: 添加 O(n) 的解法
   // O(nlog(n)) 解法解法如下
   public static void wiggleSort(int[] a) {
     Arrays.sort(a);
