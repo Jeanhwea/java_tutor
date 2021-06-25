@@ -4,8 +4,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Runner01 {
 
-  private static int numThread = 5;
-  private static int threshold = 99;
+  private static final int numThread = 5;
+  private static final int threshold = 99;
 
   private static void printNum(int num) {
     String threadName = Thread.currentThread().getName();
