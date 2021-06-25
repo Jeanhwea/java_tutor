@@ -11,6 +11,36 @@ import java.util.*;
 public class Solution300 {
 
   public static int lengthOfLIS(int[] a) {
+    List<Integer> choose = new LinkedList<>();
+    Deque<List<Integer>> ans = new LinkedList<>();
+    dfs(a, 0, choose, ans);
+    System.out.println(ans);
+    return currAns;
+  }
+
+  private static int currAns = 0;
+
+  public static void dfs(int[] a, int k, List<Integer> choose, Deque<List<Integer>> ans) {
+    // System.out.printf("currAns=%d, choose=%s\n", currAns, choose);
+    int n = a.length;
+    if (choose.size() > currAns) {
+      currAns = choose.size();
+      if (!ans.isEmpty()) ans.pop();
+      ans.push(new ArrayList<>(choose));
+    }
+
+    if (k >= n) return;
+
+    dfs(a, k + 1, choose, ans);
+
+    if (choose.isEmpty() || choose.get(choose.size() - 1) < a[k]) {
+      choose.add(a[k]);
+      dfs(a, k + 1, choose, ans);
+      choose.remove(choose.size() - 1);
+    }
+  }
+
+  public static int lengthOfLIS1(int[] a) {
     int ans = 1, n = a.length;
     int[] dp = new int[n];
 
@@ -30,7 +60,9 @@ public class Solution300 {
   }
 
   public static void main(String[] args) {
-    int[] a = {10, 9, 2, 5, 3, 7, 101, 18};
+    // int[] a = {10, 9, 2, 5, 3, 7, 101, 18};
+    // int[] a = {0, 1, 0, 3, 2, 3};
+    int[] a = {7, 7, 7, 7, 7, 7};
     System.out.println(lengthOfLIS(a));
   }
 }
