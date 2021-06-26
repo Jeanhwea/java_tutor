@@ -100,8 +100,22 @@ public class AG02BackTrack {
     }
   }
 
-  // 回溯法求全组合，k 表示当前处理的起始下标
   public static void comb(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
+    int n = a.length;
+    System.out.println(choose);
+    ans.add(new ArrayList<>(choose));
+    if (k >= n) return;
+
+    for (int i = k; i < n; i++) {
+      if (i > k && a[i] == a[i - 1]) continue;
+      choose.add(a[i]);
+      comb(a, i + 1, choose, ans);
+      choose.remove(choose.size() - 1);
+    }
+  }
+
+  // 回溯法求全组合，k 表示当前处理的起始下标
+  public static void comb2(int[] a, int k, List<Integer> choose, List<List<Integer>> ans) {
     // System.out.printf("k=%d, choose=%s\n", k, choose.toString());
 
     int n = a.length;
@@ -112,19 +126,21 @@ public class AG02BackTrack {
     }
 
     // 对于第 k 个元素，只可能出现 选取 或 不选取，故直接写出两种情况
-    comb(a, k + 1, choose, ans);
+    comb2(a, k + 1, choose, ans);
 
     choose.add(a[k]);
-    comb(a, k + 1, choose, ans);
+    comb2(a, k + 1, choose, ans);
     choose.remove(choose.size() - 1);
   }
 
   public static void main(String[] args) {
-    int[] a = {1, 2, 3, 4};
+    int[] a = {1, 2, 3};
     List<Integer> choose = new LinkedList<>();
     List<List<Integer>> ans = new LinkedList<>();
     perm(a, 0, choose, ans);
     System.out.println("========================================");
     comb(a, 0, choose, ans);
+    System.out.println("========================================");
+    comb2(a, 0, choose, ans);
   }
 }
