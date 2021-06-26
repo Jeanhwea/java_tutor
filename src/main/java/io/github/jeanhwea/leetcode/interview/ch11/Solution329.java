@@ -17,7 +17,6 @@ public class Solution329 {
     int[] dx = {0, 0, 1, -1}, dy = {1, -1, 0, 0};
 
     int[][] outdegree = new int[n][m];
-    int[][] dp = new int[n][m];
     for (int x = 0; x < n; x++) {
       for (int y = 0; y < m; y++) {
         for (int i = 0; i < 4; i++) {
@@ -37,31 +36,27 @@ public class Solution329 {
     for (int x = 0; x < n; x++) {
       for (int y = 0; y < m; y++) {
         if (outdegree[x][y] <= 0) {
-          dp[x][y] = 1;
           queue.add(new int[] {x, y});
         }
       }
     }
-    System.out.println(Arrays.deepToString(dp));
 
     int ans = 0;
     while (!queue.isEmpty()) {
-      int[] pos = queue.poll();
-      int x = pos[0], y = pos[1];
-      // System.out.printf("(x,y)=(%d,%d)\n", x, y);
-      for (int i = 0; i < 4; i++) {
-        int x1 = x + dx[i], y1 = y + dy[i];
-        if (x1 < 0 || x1 >= n || y1 < 0 || y1 >= m) continue;
-        if (a[x][y] < a[x1][y1]) {
-          dp[x][y] = Math.max(dp[x][y], dp[x1][y1] + 1);
-        }
-        outdegree[x1][y1]--;
-
-        if (outdegree[x1][y1] == 0 || dp[x1][y1] <= 0) {
-          queue.offer(new int[] {x1, y1});
+      ans++;
+      int size = queue.size();
+      for (int i = 0; i < size; i++) {
+        int[] pos = queue.poll();
+        int x = pos[0], y = pos[1];
+        for (int j = 0; j < 4; j++) {
+          int x1 = x + dx[j], y1 = y + dy[j];
+          if (x1 < 0 || x1 >= n || y1 < 0 || y1 >= m) continue;
+          if (a[x][y] > a[x1][y1]) {
+            outdegree[x1][y1]--;
+            if (outdegree[x1][y1] <= 0) queue.offer(new int[] {x1, y1});
+          }
         }
       }
-      ans = Math.max(ans, dp[x][y]);
     }
 
     return ans;
