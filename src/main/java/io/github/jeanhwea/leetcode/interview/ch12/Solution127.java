@@ -93,7 +93,6 @@ public class Solution127 {
     pq.offer(new int[] {0, 0});
     dist[0] = 0;
     while (!pq.isEmpty()) {
-
       int[] e = pq.poll();
       int x = e[0], mi = e[1];
       if (seen[x] == 1) continue;
