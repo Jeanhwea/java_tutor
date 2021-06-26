@@ -18,12 +18,12 @@ public class Solution329 {
 
     int[][] outdegree = new int[n][m];
     int[][] dp = new int[n][m];
-    for (int x0 = 0; x0 < n; x0++) {
-      for (int y0 = 0; y0 < m; y0++) {
-        for (int k = 0; k < 4; k++) {
-          int x = x0 + dx[k], y = y0 + dy[k];
-          if (x < 0 || x >= n || y < 0 || y >= m) continue;
-          if (a[x][y] < a[x0][y0]) {
+    for (int x = 0; x < n; x++) {
+      for (int y = 0; y < m; y++) {
+        for (int i = 0; i < 4; i++) {
+          int x1 = x + dx[i], y1 = y + dy[i];
+          if (x1 < 0 || x1 >= n || y1 < 0 || y1 >= m) continue;
+          if (a[x][y] < a[x1][y1]) {
             outdegree[x][y]++;
           }
         }
@@ -34,33 +34,34 @@ public class Solution329 {
     // System.out.println(Arrays.deepToString(dp));
 
     Deque<int[]> queue = new LinkedList<>();
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < m; j++) {
-        if (outdegree[i][j] <= 0) {
-          dp[i][j] = 1;
-          queue.add(new int[] {i, j});
+    for (int x = 0; x < n; x++) {
+      for (int y = 0; y < m; y++) {
+        if (outdegree[x][y] <= 0) {
+          dp[x][y] = 1;
+          queue.add(new int[] {x, y});
         }
       }
     }
+    System.out.println(Arrays.deepToString(dp));
 
     int ans = 0;
     while (!queue.isEmpty()) {
       int[] pos = queue.poll();
-      int x0 = pos[0], y0 = pos[1];
-      // System.out.printf("(x0,y0)=(%d,%d)\n", x0, y0);
-      for (int k = 0; k < 4; k++) {
-        int x = x0 + dx[k], y = y0 + dy[k];
-        if (x < 0 || x >= n || y < 0 || y >= m) continue;
-        if (a[x0][y0] < a[x][y]) {
-          dp[x0][y0] = Math.max(dp[x0][y0], dp[x][y] + 1);
-          outdegree[x][y]--;
+      int x = pos[0], y = pos[1];
+      // System.out.printf("(x,y)=(%d,%d)\n", x, y);
+      for (int i = 0; i < 4; i++) {
+        int x1 = x + dx[i], y1 = y + dy[i];
+        if (x1 < 0 || x1 >= n || y1 < 0 || y1 >= m) continue;
+        if (a[x][y] < a[x1][y1]) {
+          dp[x][y] = Math.max(dp[x][y], dp[x1][y1] + 1);
         }
+        outdegree[x1][y1]--;
 
-        if (outdegree[x][y] == 0 || dp[x][y] <= 0) {
-          queue.offer(new int[] {x, y});
+        if (outdegree[x1][y1] == 0 || dp[x1][y1] <= 0) {
+          queue.offer(new int[] {x1, y1});
         }
       }
-      ans = Math.max(ans, dp[x0][y0]);
+      ans = Math.max(ans, dp[x][y]);
     }
 
     return ans;
@@ -101,7 +102,8 @@ public class Solution329 {
   }
 
   public static void main(String[] args) {
-    int[][] a = {{9, 9, 4}, {6, 6, 8}, {2, 1, 1}};
+    // int[][] a = {{9, 9, 4}, {6, 6, 8}, {2, 1, 1}};
+    int[][] a = {{3, 4, 5}, {3, 2, 6}, {2, 2, 1}};
     System.out.println(longestIncreasingPath(a));
   }
 }
