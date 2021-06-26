@@ -43,15 +43,13 @@ public class Solution127 {
       }
     }
 
-    // PriorityQueue<int[]> queue = new PriorityQueue<>((x, y) -> x[1] - y[1]);
     int beginId = wordId.get(beginWord), endId = wordId.get(endWord);
-
-    Deque<Integer> queue = new LinkedList<>();
-    queue.offer(beginId);
     int[] dist = new int[n];
     Arrays.fill(dist, Integer.MAX_VALUE);
     dist[beginId] = 0;
 
+    Deque<Integer> queue = new LinkedList<>();
+    queue.offer(beginId);
     while (!queue.isEmpty()) {
       int x = queue.poll();
       if (x == endId) {
