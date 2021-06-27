@@ -13,29 +13,29 @@ public class Solution218 {
   public static List<List<Integer>> getSkyline(int[][] buildings) {
     List<List<Integer>> res = new ArrayList<>();
 
-    // pq 缓存当前所有建筑的最高点
-    PriorityQueue<int[]> pq = new PriorityQueue<>((x, y) -> y[2] - x[2]);
+    // heightRank 缓存当前所有建筑的最高点
+    PriorityQueue<int[]> heightRank = new PriorityQueue<>((x, y) -> y[2] - x[2]);
     // 这里必须用 TreeMap，因为 TreeMap 内部实现使用了红黑树， key 是有序的
-    Map<Integer, List<int[]>> map = new TreeMap<>();
+    Map<Integer, List<int[]>> keyPoints = new TreeMap<>();
     for (int[] e : buildings) {
-      map.putIfAbsent(e[0], new ArrayList<>());
-      map.putIfAbsent(e[1], new ArrayList<>());
-      map.get(e[0]).add(e);
-      map.get(e[1]).add(e);
+      keyPoints.putIfAbsent(e[0], new ArrayList<>());
+      keyPoints.putIfAbsent(e[1], new ArrayList<>());
+      keyPoints.get(e[0]).add(e);
+      keyPoints.get(e[1]).add(e);
     }
 
-    for (int k : map.keySet()) {
-      for (int[] e : map.get(k)) {
+    for (int k : keyPoints.keySet()) {
+      for (int[] e : keyPoints.get(k)) {
         if (e[0] == k) {
-          pq.offer(e);
+          heightRank.offer(e);
         } else {
-          pq.remove(e);
+          heightRank.remove(e);
         }
       }
-      if (pq.isEmpty()) {
+      if (heightRank.isEmpty()) {
         res.add(Arrays.asList(k, 0));
       } else {
-        int maxHeight = pq.peek()[2];
+        int maxHeight = heightRank.peek()[2];
         if (res.size() == 0 || res.get(res.size() - 1).get(1) != maxHeight) {
           res.add(Arrays.asList(k, maxHeight));
         }
