@@ -76,12 +76,12 @@ public class Solution146 {
       return p;
     }
 
-    private Node moveToFirst(Node p) {
-      if (p == head) return head;
+    private void moveToFirst(Node p) {
+      if (p == head) return;
       if (p == tail) tail = tail.prev;
       if (p.prev != null) p.prev.next = p.next;
       if (p.next != null) p.next.prev = p.prev;
-      return addFirst(p);
+      addFirst(p);
     }
   }
 
