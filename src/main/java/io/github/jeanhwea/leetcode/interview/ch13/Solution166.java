@@ -43,6 +43,7 @@ public class Solution166 {
   }
 
   public static void main(String[] args) {
-    System.out.println(fractionToDecimal(10, 3));
+    System.out.println(fractionToDecimal(100, 19));
+    System.out.println(fractionToDecimal(1, 3));
   }
 }
