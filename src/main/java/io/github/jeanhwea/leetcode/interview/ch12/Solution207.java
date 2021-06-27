@@ -19,10 +19,8 @@ public class Solution207 {
     valid = true;
     adj = new ArrayList<>();
     state = new int[numCourses];
+    for (int i = 0; i < numCourses; i++) adj.add(new ArrayList<>());
 
-    for (int i = 0; i < numCourses; i++) {
-      adj.add(new ArrayList<>());
-    }
     for (int i = 0; i < prerequisites.length; i++) {
       int[] e = prerequisites[i];
       adj.get(e[1]).add(e[0]);
@@ -30,14 +28,12 @@ public class Solution207 {
 
     int[] state = new int[numCourses];
     for (int i = 0; i < numCourses && valid; i++) {
-      if (state[i] == 0) {
-        dfs(i);
-      }
-      // System.out.println(Arrays.toString(state));
+      if (state[i] == 0) dfs(i);
     }
     return valid;
   }
 
+  // state 0:未搜索 1:搜索中 2:已完成
   private static void dfs(int u) {
     state[u] = 1;
     for (int v : adj.get(u)) {
@@ -56,13 +52,12 @@ public class Solution207 {
   public static boolean canFinish2(int numCourses, int[][] prerequisites) {
     int[] indeg = new int[numCourses];
     List<ArrayList<Integer>> edges = new ArrayList<>();
-    for (int i = 0; i < numCourses; i++) {
-      edges.add(new ArrayList<>());
-    }
+    for (int i = 0; i < numCourses; i++) edges.add(new ArrayList<>());
+
     for (int i = 0; i < prerequisites.length; i++) {
       int[] e = prerequisites[i];
-      edges.get(e[0]).add(e[1]);
-      indeg[e[1]]++;
+      edges.get(e[1]).add(e[0]);
+      indeg[e[0]]++;
     }
 
     Deque<Integer> que = new LinkedList<>();
@@ -89,5 +84,6 @@ public class Solution207 {
     int numCourses = 1;
     int[][] prerequisites = {};
     System.out.println(canFinish(numCourses, prerequisites));
+    System.out.println(canFinish2(numCourses, prerequisites));
   }
 }
