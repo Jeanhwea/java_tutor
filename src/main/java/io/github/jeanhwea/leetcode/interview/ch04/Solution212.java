@@ -10,18 +10,42 @@ import java.util.*;
  */
 public class Solution212 {
 
-  private static Trie root;
-  // private static Set<String> dict;
+  public static class TrieNode {
+    Map<Character, TrieNode> children;
+    String word = null;
+
+    void insert(String word) {
+      TrieNode p = this;
+      char[] letters = word.toCharArray();
+      for (int i = 0; i < letters.length; i++) {
+        char ch = letters[i];
+        TrieNode c = p.children.getOrDefault(ch, new TrieNode());
+        p.children.putIfAbsent(ch, c);
+        p = c;
+      }
+      p.word = word;
+    }
+
+    TrieNode nextPrefix(char ch) {
+      return this.children.get(ch);
+    }
+
+    public TrieNode() {
+      this.children = new HashMap<>();
+    }
+  }
+
+  private static TrieNode root;
   private static List<String> ans;
   private static int[][] seen;
-  private static StringBuffer c;
   private static char[][] a;
   private static int n, m;
   private static int[] dx = {0, 0, 1, -1}, dy = {1, -1, 0, 0};
 
   public static List<String> findWords(char[][] board, String[] words) {
-    root = new Trie();
-    for (int i = 0; i < words.length; i++) root.insert(words[i]);
+    root = new TrieNode();
+    for (String word : words) root.insert(word);
+
     ans = new LinkedList<>();
     a = board;
     n = board.length;
@@ -30,76 +54,26 @@ public class Solution212 {
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
         seen = new int[n][m];
-        c = new StringBuffer();
-        dfs(i, j);
+        dfs(i, j, root);
       }
     }
 
     return ans;
   }
 
-  private static void dfs(int x, int y) {
-    if (x < 0 || x >= n || y < 0 || y >= m) return;
-    if (seen[x][y] == 1) return;
-
+  private static void dfs(int x, int y, TrieNode root) {
+    if (x < 0 || x >= n || y < 0 || y >= m || seen[x][y] == 1) return;
     char ch = a[x][y];
-    String w = c.toString() + ch;
-    if (!root.startsWith(w)) return;
-    if (root.search(w) && !ans.contains(w)) ans.add(w);
+    TrieNode res = root.nextPrefix(ch);
+    if (res == null) return;
+    if (res.word != null && !ans.contains(res.word)) ans.add(res.word);
 
     seen[x][y] = 1;
     for (int i = 0; i < 4; i++) {
       int x1 = x + dx[i], y1 = y + dy[i];
-      c.append(ch);
-      dfs(x1, y1);
-      c.deleteCharAt(c.length() - 1);
+      dfs(x1, y1, res);
     }
     seen[x][y] = 0;
-  }
-
-  public static class Trie {
-
-    private boolean isLeaf;
-    private Trie[] children;
-
-    public Trie() {
-      this.isLeaf = false;
-      this.children = new Trie[26];
-    }
-
-    public void insert(String word) {
-      Trie p = this;
-      int n = word.length();
-      for (int i = 0; i < n; i++) {
-        int k = word.charAt(i) - 'a';
-        if (p.children[k] == null) {
-          p.children[k] = new Trie();
-        }
-        p = p.children[k];
-      }
-      p.isLeaf = true;
-    }
-
-    public boolean search(String word) {
-      Trie p = searchPrefix(word);
-      return p != null && p.isLeaf;
-    }
-
-    public boolean startsWith(String prefix) {
-      Trie p = searchPrefix(prefix);
-      return p != null;
-    }
-
-    private Trie searchPrefix(String prefix) {
-      Trie p = this;
-      int n = prefix.length();
-      for (int i = 0; i < n; i++) {
-        int k = prefix.charAt(i) - 'a';
-        if (p.children[k] == null) return null;
-        p = p.children[k];
-      }
-      return p;
-    }
   }
 
   public static void main(String[] args) {
@@ -110,6 +84,9 @@ public class Solution212 {
 
     // char[][] board = {{'a'}};
     // String[] words = {"a"};
+
+    // char[][] board = {{'a', 'a'}};
+    // String[] words = {"aaa"};
 
     // char[][] board = {{'a', 'b'}, {'c', 'd'}};
     // String[] words = {"abcd"};
