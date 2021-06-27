@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Solution212 {
 
-  private static Trie trie;
+  private static Trie root;
   // private static Set<String> dict;
   private static List<String> ans;
   private static int[][] seen;
@@ -20,8 +20,8 @@ public class Solution212 {
   private static int[] dx = {0, 0, 1, -1}, dy = {1, -1, 0, 0};
 
   public static List<String> findWords(char[][] board, String[] words) {
-    trie = new Trie();
-    for (int i = 0; i < words.length; i++) trie.insert(words[i]);
+    root = new Trie();
+    for (int i = 0; i < words.length; i++) root.insert(words[i]);
     ans = new LinkedList<>();
     a = board;
     n = board.length;
@@ -44,17 +44,17 @@ public class Solution212 {
 
     char ch = a[x][y];
     String w = c.toString() + ch;
-    if (trie.search(w) && !ans.contains(w)) ans.add(w);
-    if (!trie.startsWith(w)) return;
+    if (!root.startsWith(w)) return;
+    if (root.search(w) && !ans.contains(w)) ans.add(w);
 
+    seen[x][y] = 1;
     for (int i = 0; i < 4; i++) {
       int x1 = x + dx[i], y1 = y + dy[i];
       c.append(ch);
-      seen[x][y] = 1;
       dfs(x1, y1);
       c.deleteCharAt(c.length() - 1);
-      seen[x][y] = 0;
     }
+    seen[x][y] = 0;
   }
 
   public static class Trie {
