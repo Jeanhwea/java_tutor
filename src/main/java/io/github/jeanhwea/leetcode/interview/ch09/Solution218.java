@@ -15,6 +15,7 @@ public class Solution218 {
 
     // pq 缓存当前所有建筑的最高点
     PriorityQueue<int[]> pq = new PriorityQueue<>((x, y) -> y[2] - x[2]);
+    // TreeMap 的 key 是有序的
     TreeMap<Integer, List<int[]>> map = new TreeMap<>();
     for (int[] e : buildings) {
       map.putIfAbsent(e[0], new ArrayList<>());
