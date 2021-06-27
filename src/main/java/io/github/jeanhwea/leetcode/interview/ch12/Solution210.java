@@ -15,7 +15,8 @@ public class Solution210 {
   private static List<ArrayList<Integer>> adj;
   private static Deque<Integer> ans;
 
-  public static int[] findOrder(int numCourses, int[][] prerequisites) {
+  // DFS 解法
+  public static int[] findOrder2(int numCourses, int[][] prerequisites) {
     valid = true;
     state = new int[numCourses];
     ans = new LinkedList<>();
@@ -57,6 +58,38 @@ public class Solution210 {
     state[u] = 2;
     ans.push(u);
     // System.out.println(ans);
+  }
+
+  // BFS 解法
+  public static int[] findOrder(int numCourses, int[][] prerequisites) {
+    int[] ans = new int[numCourses];
+    int k = 0;
+
+    int[] indeg = new int[numCourses];
+    List<ArrayList<Integer>> edges = new ArrayList<>();
+    for (int i = 0; i < numCourses; i++) edges.add(new ArrayList<>());
+
+    for (int i = 0; i < prerequisites.length; i++) {
+      int[] e = prerequisites[i];
+      edges.get(e[1]).add(e[0]);
+      indeg[e[0]]++;
+    }
+
+    Deque<Integer> que = new LinkedList<>();
+    for (int i = 0; i < numCourses; i++) if (indeg[i] == 0) que.offer(i);
+
+    // System.out.println(que);
+    while (!que.isEmpty()) {
+      int u = que.poll();
+      ans[k++] = u;
+      for (int v : edges.get(u)) {
+        indeg[v]--;
+        if (indeg[v] == 0) que.offer(v);
+      }
+    }
+    // System.out.println(Arrays.toString(ans));
+
+    return k == numCourses ? ans : new int[] {};
   }
 
   public static void main(String[] args) {
