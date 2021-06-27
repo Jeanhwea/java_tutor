@@ -12,6 +12,48 @@ public class Solution146 {
 
   public static class LRUCache {
 
+    Map<Integer, int[]> cache;
+    Deque<int[]> deque;
+    int capacity;
+
+    public LRUCache(int capacity) {
+      cache = new HashMap<>();
+      deque = new LinkedList<>();
+      this.capacity = capacity;
+    }
+
+    public int get(int key) {
+      int[] e = cache.get(key);
+      if (e == null) return -1;
+      moveToFirst(e);
+      return e[1];
+    }
+
+    public void put(int key, int value) {
+      int[] e = cache.get(key);
+      if (e == null) {
+        e = new int[] {key, value};
+        cache.put(e[0], e);
+        deque.addFirst(e);
+        if (deque.size() > capacity) {
+          int[] p = deque.peekLast();
+          cache.remove(p[0]);
+          deque.removeLast();
+        }
+      } else {
+        e[1] = value;
+        moveToFirst(e);
+      }
+    }
+
+    private void moveToFirst(int[] e) {
+      deque.remove(e);
+      deque.addFirst(e);
+    }
+  }
+
+  public static class LRUCache0 {
+
     public static class Node {
       int key, val;
       Node prev, next;
@@ -27,7 +69,7 @@ public class Solution146 {
     private int size;
     private final int capacity;
 
-    public LRUCache(int capacity) {
+    public LRUCache0(int capacity) {
       cache = new HashMap<>();
       this.capacity = capacity;
       this.size = 0;
