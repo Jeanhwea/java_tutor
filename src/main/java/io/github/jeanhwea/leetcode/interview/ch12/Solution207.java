@@ -25,7 +25,7 @@ public class Solution207 {
     }
     for (int i = 0; i < prerequisites.length; i++) {
       int[] e = prerequisites[i];
-      adj.get(e[0]).add(e[1]);
+      adj.get(e[1]).add(e[0]);
     }
 
     int[] state = new int[numCourses];
