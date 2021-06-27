@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class Solution149 {
 
-  // 暴露解法
+  // 暴力解法
   public static int maxPoints(int[][] points) {
     int n = points.length, ans = 1;
 
