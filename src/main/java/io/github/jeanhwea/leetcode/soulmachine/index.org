@@ -34,7 +34,7 @@
   - Single Number
   - Single Number II
 
-* 单链表
+* 链表
   - Add Two Numbers
   - Reverse Linked List II
   - Partition List
@@ -74,38 +74,32 @@
   - Evaluate Reverse Polish Notation
 
 * 树
-** 二叉树的遍历
-   - Binary Tree Preorder Traversal
-   - Binary Tree Inorder Traversal
-   - Binary Tree Postorder Traversal
-   - Binary Tree Level Order Traversal
-   - Binary Tree Level Order Traversal II
-   - Binary Tree Zigzag Level Order Traversal
-   - Recover Binary Search Tree
-   - Same Tree
-   - Symmetric Tree
-   - Balanced Binary Tree
-   - Flatten Binary Tree to Linked List
-   - Populating Next Right Pointers in Each Node II
-
-** 二叉树的构建
-   - Construct Binary Tree from Preorder and Inorder Traversal
-   - Construct Binary Tree from Inorder and Postorder Traversal
-** 二叉树查找树
-   - Unique Binary Search Trees
-   - Unique Binary Search Trees II
-   - Validate Binary Search Tree
-   - Convert Sorted Array to Binary Search Tree
-   - Convert Sorted List to Binary Search Tree
-
-** 二叉树的递归
-   - Minimum Depth of Binary Tree
-   - Maximum Depth of Binary Tree
-   - Path Sum
-   - Path Sum II
-   - Binary Tree Maximum Path Sum
-   - Populating Next Right Pointers in Each Node
-   - Sum Root to Leaf Numbers
+  - Binary Tree Preorder Traversal
+  - Binary Tree Inorder Traversal
+  - Binary Tree Postorder Traversal
+  - Binary Tree Level Order Traversal
+  - Binary Tree Level Order Traversal II
+  - Binary Tree Zigzag Level Order Traversal
+  - Recover Binary Search Tree
+  - Same Tree
+  - Symmetric Tree
+  - Balanced Binary Tree
+  - Flatten Binary Tree to Linked List
+  - Populating Next Right Pointers in Each Node II
+  - Construct Binary Tree from Preorder and Inorder Traversal
+  - Construct Binary Tree from Inorder and Postorder Traversal
+  - Unique Binary Search Trees
+  - Unique Binary Search Trees II
+  - Validate Binary Search Tree
+  - Convert Sorted Array to Binary Search Tree
+  - Convert Sorted List to Binary Search Tree
+  - Minimum Depth of Binary Tree
+  - Maximum Depth of Binary Tree
+  - Path Sum
+  - Path Sum II
+  - Binary Tree Maximum Path Sum
+  - Populating Next Right Pointers in Each Node
+  - Sum Root to Leaf Numbers
 
 * 排序
   - Merge Sorted Array
