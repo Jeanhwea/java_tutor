@@ -15,9 +15,9 @@ public class Solution026 {
     for (int i = 0; i < n; i++) {
       if (k < 0) {
         k++;
-      } else {
-        if (a[i] != a[k]) a[++k] = a[i];
+        continue;
       }
+      if (a[i] != a[k]) a[++k] = a[i];
     }
     return k + 1;
   }
