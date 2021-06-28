@@ -18,17 +18,17 @@ public class Solution033 {
     int n = a.length, beg = 0, end = n - 1;
     while (beg <= end) {
       int mid = beg + (end - beg) / 2;
-      System.out.println(mid);
+      // System.out.println(mid);
       if (a[mid] == target) return mid;
 
-      if (a[0] <= a[mid]) {
-        if (a[0] <= target && target < a[mid]) {
+      if (a[beg] <= a[mid]) {
+        if (a[beg] <= target && target < a[mid]) {
           end = mid - 1;
         } else {
           beg = mid + 1;
         }
       } else {
-        if (a[mid] < target && target <= a[n - 1]) {
+        if (a[mid] < target && target <= a[end]) {
           beg = mid + 1;
         } else {
           end = mid - 1;
@@ -39,7 +39,7 @@ public class Solution033 {
   }
 
   public static void main(String[] args) {
-    int[] a = {4,5,0,1,2};
+    int[] a = {4, 5, 0, 1, 2};
     System.out.println(search(a, 5));
   }
 }
