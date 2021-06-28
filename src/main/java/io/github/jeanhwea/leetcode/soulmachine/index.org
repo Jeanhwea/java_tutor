@@ -16,9 +16,9 @@
   - Median of Two Sorted Arrays
   - Longest Consecutive Sequence
   - Two Sum
-  - 3Sum
-  - 3Sum Closest
-  - 4Sum
+  - 3 Sum
+  - 3 Sum Closest
+  - 4 Sum
   - Remove Element
   - Next Permutation
   - Permutation Sequence

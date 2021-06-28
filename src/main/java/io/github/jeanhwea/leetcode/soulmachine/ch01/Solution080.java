@@ -1,4 +1,4 @@
-package io.github.jeanhwea.leetcode.soulmachine.ch02;
+package io.github.jeanhwea.leetcode.soulmachine.ch01;
 
 import java.util.*;
 
