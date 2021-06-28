@@ -14,17 +14,15 @@ public class Solution080 {
     int n = a.length, k = -1, count = 0;
     for (int i = 0; i < n; i++) {
       if (k < 0) {
-        count++;
         k++;
+        count++;
       } else {
         if (a[i] != a[k]) {
           a[++k] = a[i];
+          count = 1;
         } else {
-          if (count > 1) {
-            a[++k] = a[i];
-            count = 0;
-          }
           ++count;
+          if (count <= 2) k++;
         }
       }
     }
