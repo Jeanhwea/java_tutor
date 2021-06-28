@@ -9,9 +9,9 @@
 
 
 * 数组
-  - LC026 [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][删除有序数组中的重复项]]
-  - LC080 [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][删除有序数组中的重复项 II]]
-  - Search in Rotated Sorted Array
+  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][LC026]] 删除有序数组中的重复项
+  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][LC080]] 删除有序数组中的重复项 II
+  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] 搜索旋转排序数组
   - Search in Rotated Sorted Array II
   - Median of Two Sorted Arrays
   - Longest Consecutive Sequence
