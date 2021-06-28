@@ -9,7 +9,7 @@
 
 
 * 数组
-  - Remove Duplicates from Sorted Array
+  - LC026 [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][删除有序数组中的重复项]]
   - Remove Duplicates from Sorted Array II
   - Search in Rotated Sorted Array
   - Search in Rotated Sorted Array II
