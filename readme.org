@@ -13,3 +13,7 @@
 * 算法练习
   1. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/][初级算法]]
   2. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions/][算法面试题汇总]]
+
+* 刷题连接
+  1. [[https://leetcode-cn.com/problemset/all/][LeetCode]]
+  2. [[https://codetop.cc][CodeTop]]
