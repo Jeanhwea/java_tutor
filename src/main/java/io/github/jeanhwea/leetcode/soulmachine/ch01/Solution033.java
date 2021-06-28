@@ -18,6 +18,7 @@ public class Solution033 {
     int n = a.length, beg = 0, end = n - 1;
     while (beg <= end) {
       int mid = beg + (end - beg) / 2;
+      // System.out.println(mid);
       if (a[mid] == target) return mid;
 
       if (a[0] <= a[mid]) {
@@ -39,6 +40,6 @@ public class Solution033 {
 
   public static void main(String[] args) {
     int[] a = {3, 1};
-    System.out.println(search(a, 1));
+    System.out.println(search(a, 2));
   }
 }
