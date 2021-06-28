@@ -11,18 +11,18 @@ import java.util.*;
 public class Solution080 {
 
   public static int removeDuplicates(int[] a) {
-    int n = a.length, k = -1, offset = 2;
-    for (int i = 0; i < n; i++) {
-        if (k<offset) {
-          k++;
-          continue;
-        }
-        if(a[i]!=a[k-offset]) {
-          a[k++] = a[i];
-        }
+    int n = a.length, offset = 2;
+
+    if (n <= offset) return n;
+
+    int k = offset;
+    for (int i = offset; i < n; i++) {
+      if (a[i] != a[k - offset]) {
+        a[k++] = a[i];
+      }
     }
 
-    return k ;
+    return k;
   }
 
   public static void main(String[] args) {

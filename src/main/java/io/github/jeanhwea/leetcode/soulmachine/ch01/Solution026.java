@@ -11,13 +11,12 @@ import java.util.*;
 public class Solution026 {
 
   public static int removeDuplicates(int[] a) {
-    int n = a.length, k = 0;
-    for (int i = 0; i < n; i++) {
-      if (k < 1) {
-        k++;
-        continue;
-      }
+    int n = a.length;
 
+    if (n <= 1) return n;
+
+    int k = 1;
+    for (int i = 1; i < n; i++) {
       if (a[i] != a[k - 1]) {
         a[k++] = a[i];
       }
@@ -26,8 +25,8 @@ public class Solution026 {
   }
 
   public static void main(String[] args) {
-    int[] a = {1, 2, 2, 3};
-    // int[] a = {1, 1, 1, 1};
+    // int[] a = {1, 2, 2, 3};
+    int[] a = {1, 1, 1, 1};
     // int[] a = {};
     int k = removeDuplicates(a);
     int[] b = Arrays.copyOfRange(a, 0, k);
