@@ -10,7 +10,7 @@
 
 * 数组
   - LC026 [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][删除有序数组中的重复项]]
-  - Remove Duplicates from Sorted Array II
+  - LC080 [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][删除有序数组中的重复项 II]]
   - Search in Rotated Sorted Array
   - Search in Rotated Sorted Array II
   - Median of Two Sorted Arrays
