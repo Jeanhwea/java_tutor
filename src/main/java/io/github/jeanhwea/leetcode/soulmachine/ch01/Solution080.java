@@ -11,23 +11,18 @@ import java.util.*;
 public class Solution080 {
 
   public static int removeDuplicates(int[] a) {
-    int n = a.length, k = -1, count = 0;
+    int n = a.length, k = -1, offset = 2;
     for (int i = 0; i < n; i++) {
-      if (k < 0) {
-        k++;
-        count++;
-      } else {
-        if (a[i] != a[k]) {
-          a[++k] = a[i];
-          count = 1;
-        } else {
-          ++count;
-          if (count <= 2) k++;
+        if (k<offset) {
+          k++;
+          continue;
         }
-      }
+        if(a[i]!=a[k-offset]) {
+          a[k++] = a[i];
+        }
     }
 
-    return k + 1;
+    return k ;
   }
 
   public static void main(String[] args) {
