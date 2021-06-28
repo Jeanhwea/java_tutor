@@ -112,6 +112,7 @@ public class Runner02 {
                 }
               });
       t.start();
+      t.join();
     }
     System.out.println("=============== Done ===============");
   }
