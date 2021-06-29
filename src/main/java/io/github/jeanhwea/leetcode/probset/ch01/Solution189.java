@@ -22,7 +22,7 @@ public class Solution189 {
   }
 
   // 三次反转法
-  public static void rotate(int[] a, int k) {
+  public static void rotate2(int[] a, int k) {
     int n = a.length;
     k %= n;
 
@@ -48,9 +48,29 @@ public class Solution189 {
     a[j] = t;
   }
 
+  // 源往目的复制方法
+  public static void rotate(int[] a, int k) {
+    int n = a.length, start = 0, count = 0;
+    k %= n;
+
+    while (true) {
+      int i = start, j = start, temp = a[start];
+      do {
+        j = i;
+        i = (n - k + j) % n;
+        a[j] = a[i];
+        count++;
+      } while (i != start);
+      a[j] = temp;
+
+      if (count < n) start++;
+      else break;
+    }
+  }
+
   public static void main(String[] args) {
-    int[] a = {1, 2, 3, 4, 5};
-    rotate(a, 2);
+    int[] a = {1, 2, 3, 4, 5, 6};
+    rotate(a, 3);
     System.out.println(Arrays.toString(a));
   }
 }
