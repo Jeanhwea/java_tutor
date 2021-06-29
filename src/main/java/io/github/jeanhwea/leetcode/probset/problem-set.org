@@ -114,7 +114,7 @@
   - Search Insert Position
   - Search a 2D Matrix
 
-* 回溯 BacKTrack
+* 回溯 BackTrack
   - Subsets
   - Subsets II
   - Permutations
