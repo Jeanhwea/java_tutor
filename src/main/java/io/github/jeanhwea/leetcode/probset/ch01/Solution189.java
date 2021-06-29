@@ -15,6 +15,7 @@ public class Solution189 {
   public static void rotate1(int[] a, int k) {
     int n = a.length;
     int[] b = Arrays.copyOf(a, n);
+
     for (int i = 0; i < n; i++) {
       a[(i + k) % n] = b[i];
     }
