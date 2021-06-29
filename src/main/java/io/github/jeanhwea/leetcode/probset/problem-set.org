@@ -14,7 +14,7 @@
   - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] [[file:ch01/Solution033.java][搜索旋转排序数组]]
   - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] [[file:ch01/Solution081.java][搜索旋转排序数组 II]]
   - [[https://leetcode-cn.com/problems/rotate-array/][LC189]] [[file:ch01/Solution189.java][旋转数组]]
-  - Median of Two Sorted Arrays
+  - [[https://leetcode-cn.com/problems/median-of-two-sorted-arrays/][LC004]] [[file:ch01/Solution004.java][寻找两个正序数组的中位数]]
   - Longest Consecutive Sequence
   - Two Sum
   - 3 Sum
@@ -35,7 +35,7 @@
   - Single Number
   - Single Number II
 
-* 链表List
+* 链表 List
   - Add Two Numbers
   - Reverse Linked List II
   - Partition List
