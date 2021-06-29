@@ -12,12 +12,38 @@ import java.util.*;
 public class Solution189 {
 
   // 临时中转数组
-  public static void rotate(int[] a, int k) {
+  public static void rotate1(int[] a, int k) {
     int n = a.length;
     int[] b = Arrays.copyOf(a, n);
     for (int i = 0; i < n; i++) {
       a[(i + k) % n] = b[i];
     }
+  }
+
+  // 三次反转
+  public static void rotate(int[] a, int k) {
+    int n = a.length;
+    k %= n;
+
+    // [---->-->] => [<--<----]
+    for (int i = 0; i < n / 2; i++) {
+      swap(a, i, n - i - 1);
+    }
+
+    // [<--<----] => [--><----]
+    for (int i = 0; i < k / 2; i++) {
+      swap(a, i, k - i - 1);
+    }
+    // [--><----] => [-->---->]
+    for (int i = k; i < n - (n - k) / 2; i++) {
+      swap(a, i, n + k - i - 1);
+    }
+  }
+
+  public static void swap(int[] a, int i, int j) {
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
   }
 
   public static void main(String[] args) {
