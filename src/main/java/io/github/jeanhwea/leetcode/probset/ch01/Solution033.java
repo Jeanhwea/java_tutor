@@ -1,4 +1,4 @@
-package io.github.jeanhwea.leetcode.soulmachine.ch01;
+package io.github.jeanhwea.leetcode.probset.ch01;
 
 /**
  * 搜索旋转排序数组

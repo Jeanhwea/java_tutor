@@ -1,6 +1,4 @@
-package io.github.jeanhwea.leetcode.soulmachine.ch01;
-
-import java.util.*;
+package io.github.jeanhwea.leetcode.probset.ch01;
 
 /**
  * 搜索旋转排序数组 II
