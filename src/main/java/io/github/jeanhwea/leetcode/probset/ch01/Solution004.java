@@ -56,7 +56,8 @@ public class Solution004 {
   }
 
   public static void main(String[] args) {
-    int[] a = {2}, b = {3};
+    // int[] a = {2}, b = {3};
+    int[] a = {1, 2, 3, 4, 5}, b = {3, 4, 5};
     System.out.println(findMedianSortedArrays(a, b));
   }
 }
