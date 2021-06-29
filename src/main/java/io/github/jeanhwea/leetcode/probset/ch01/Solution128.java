@@ -11,39 +11,24 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution128 {
 
-  // public static int longestConsecutive(int[] a) {
-  //   int n = a.length;
-  //   Map<Integer, Integer> map = new HashMap<>();
-
-  //   int ans = 0;
-  //   for (int i = 0; i < n; i++) {
-  //     int len = map.getOrDefault(a[i] - 1, 0) + 1;
-  //     ans = Math.max(ans, len);
-  //     map.put(a[i], len);
-  //   }
-
-  //   return ans;
-  // }
-
+  // 使用一个集合去重并记录数据
   public static int longestConsecutive(int[] a) {
-    Arrays.sort(a);
+    Set<Integer> set = new HashSet<>();
+    for (int i = 0; i < a.length; i++) set.add(a[i]);
 
-    int n = a.length, i = 0, prev = 0, len = 0, ans = 0;
-    while (i < n) {
-      while (i == 0 || (i < n && a[i] <= prev + 1)) {
-        if (i == 0 || a[i] != prev) len++;
-        prev = a[i++];
-      }
+    int ans = 0;
+    for (int e : set) {
+      if (set.contains(e - 1)) continue;
+
+      int len = 0;
+      while (set.contains(e + len)) len++;
       ans = Math.max(ans, len);
-      if (i < n) {
-        len = 1;
-        prev = a[i++];
-      }
     }
 
     return ans;
   }
 
+  // 排序后查找
   public static int longestConsecutive1(int[] a) {
     int n = a.length;
     if (n <= 0) return 0;
