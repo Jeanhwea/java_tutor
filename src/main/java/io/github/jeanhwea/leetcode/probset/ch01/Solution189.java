@@ -34,6 +34,7 @@ public class Solution189 {
     for (int i = 0; i < k / 2; i++) {
       swap(a, i, k - i - 1);
     }
+
     // [--><----] => [-->---->]
     for (int i = k; i < n - (n - k) / 2; i++) {
       swap(a, i, n + k - i - 1);
