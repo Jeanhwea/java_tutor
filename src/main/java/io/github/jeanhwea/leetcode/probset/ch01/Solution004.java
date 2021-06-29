@@ -39,20 +39,20 @@ public class Solution004 {
     }
   }
 
-  // 查找有序数组 a[x...], b[y...] 的第 k 个小的数
-  public static double findKth(int[] a, int x, int[] b, int y, int k) {
-    int n = a.length - x, m = b.length - y;
-    if (n > m) return findKth(b, y, a, x, k);
-    if (n == 0) return b[y + k - 1];
-    if (k == 1) return Math.min(a[x], b[y]);
+  // 查找有序数组 a[i...], b[j...] 的第 k 个小的数
+  public static double findKth(int[] a, int i, int[] b, int j, int k) {
+    int n = a.length - i, m = b.length - j;
+    if (n > m) return findKth(b, j, a, i, k);
+    if (n == 0) return b[j + k - 1];
+    if (k == 1) return Math.min(a[i], b[j]);
 
-    int i = Math.min(k / 2, n), j = k - i;
-    if (a[x + i - 1] < b[y + j - 1]) {
-      return findKth(a, x + i, b, y, k - i);
-    } else if (a[x + i - 1] > b[y + j - 1]) {
-      return findKth(a, x, b, y + j, k - j);
+    int x = Math.min(k / 2, n), y = k - x;
+    if (a[i + x - 1] < b[j + y - 1]) {
+      return findKth(a, i + x, b, j, k - x);
+    } else if (a[i + x - 1] > b[j + y - 1]) {
+      return findKth(a, i, b, j + y, k - y);
     }
-    return (double) a[x + i - 1];
+    return (double) a[i + x - 1];
   }
 
   public static void main(String[] args) {
