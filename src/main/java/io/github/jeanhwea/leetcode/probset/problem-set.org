@@ -9,11 +9,11 @@
 
 
 * 数组 Array
-  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][LC026]] 删除有序数组中的重复项
-  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][LC080]] 删除有序数组中的重复项 II
-  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] 搜索旋转排序数组
-  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] 搜索旋转排序数组 II
-  - [[https://leetcode-cn.com/problems/rotate-array/][LC189]] 旋转数组
+  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][LC026]] [[file:ch01/Solution026.java][删除有序数组中的重复项]]
+  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][LC080]] [[file:ch01/Solution080.java][删除有序数组中的重复项 II]]
+  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] [[file:ch01/Solution033.java][搜索旋转排序数组]]
+  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] [[file:ch01/Solution081.java][搜索旋转排序数组 II]]
+  - [[https://leetcode-cn.com/problems/rotate-array/][LC189]] [[file:ch01/Solution189.java][旋转数组]]
   - Median of Two Sorted Arrays
   - Longest Consecutive Sequence
   - Two Sum
