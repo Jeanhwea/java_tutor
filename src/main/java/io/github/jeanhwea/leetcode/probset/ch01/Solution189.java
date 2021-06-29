@@ -20,7 +20,7 @@ public class Solution189 {
     }
   }
 
-  // 三次反转
+  // 三次反转法
   public static void rotate(int[] a, int k) {
     int n = a.length;
     k %= n;
