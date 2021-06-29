@@ -1,4 +1,4 @@
-package io.github.jeanhwea.leetcode.misc;
+package io.github.jeanhwea.leetcode.probset.ch02;
 
 import java.util.Arrays;
 import java.util.LinkedList;

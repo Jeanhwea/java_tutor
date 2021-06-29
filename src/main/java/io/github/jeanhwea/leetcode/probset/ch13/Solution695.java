@@ -1,6 +1,4 @@
-package io.github.jeanhwea.leetcode.misc;
-
-import java.util.*;
+package io.github.jeanhwea.leetcode.probset.ch13;
 
 /**
  * 岛屿的最大面积

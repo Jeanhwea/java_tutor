@@ -1,6 +1,4 @@
-package io.github.jeanhwea.leetcode.misc;
-
-import java.util.*;
+package io.github.jeanhwea.leetcode.probset.ch02;
 
 /**
  * 两数相加

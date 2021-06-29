@@ -1,4 +1,4 @@
-package io.github.jeanhwea.leetcode.misc;
+package io.github.jeanhwea.leetcode.probset.ch05;
 
 import java.util.*;
 
