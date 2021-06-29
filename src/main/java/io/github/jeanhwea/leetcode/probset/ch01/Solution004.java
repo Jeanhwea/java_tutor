@@ -1,7 +1,5 @@
 package io.github.jeanhwea.leetcode.probset.ch01;
 
-import java.util.*;
-
 /**
  * 寻找两个正序数组的中位数
  *
@@ -33,25 +31,26 @@ public class Solution004 {
   public static double findMedianSortedArrays(int[] a, int[] b) {
     int n = a.length, m = b.length;
     if ((n + m) % 2 == 0) {
-      double u = findKth(a, b, 0, 0, (n + m) / 2);
-      double v = findKth(a, b, 0, 0, (n + m) / 2 + 1);
+      double u = findKth(a, 0, b, 0, (n + m) / 2);
+      double v = findKth(a, 0, b, 0, (n + m) / 2 + 1);
       return (u + v) / 2;
     } else {
-      return findKth(a, b, 0, 0, (n + m) / 2 + 1);
+      return findKth(a, 0, b, 0, (n + m) / 2 + 1);
     }
   }
 
-  public static double findKth(int[] a, int[] b, int x, int y, int k) {
+  // 查找有序数组 a[x...], b[y...] 的第 k 个小的数
+  public static double findKth(int[] a, int x, int[] b, int y, int k) {
     int n = a.length - x, m = b.length - y;
-    if (n > m) return findKth(b, a, y, x, k);
+    if (n > m) return findKth(b, y, a, x, k);
     if (n == 0) return b[y + k - 1];
     if (k == 1) return Math.min(a[x], b[y]);
 
     int i = Math.min(k / 2, n), j = k - i;
     if (a[x + i - 1] < b[y + j - 1]) {
-      return findKth(a, b, x + i, y, k - i);
+      return findKth(a, x + i, b, y, k - i);
     } else if (a[x + i - 1] > b[y + j - 1]) {
-      return findKth(a, b, x, y + j, k - j);
+      return findKth(a, x, b, y + j, k - j);
     }
     return (double) a[x + i - 1];
   }
