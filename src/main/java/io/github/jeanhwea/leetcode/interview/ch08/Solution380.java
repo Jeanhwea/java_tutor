@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-19, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution380 {
 
   // 思路：通过一个哈希表和变长数组来处理

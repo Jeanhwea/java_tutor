@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch09;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution326 {
 
   public static boolean isPowerOfThree(int n) {

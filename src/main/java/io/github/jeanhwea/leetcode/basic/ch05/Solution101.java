@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-12, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution101 {
 
   public static boolean isSymmetric(TreeNode root) {

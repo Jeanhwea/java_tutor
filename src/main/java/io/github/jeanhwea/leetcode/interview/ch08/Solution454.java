@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-19, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution454 {
 
   public static int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {

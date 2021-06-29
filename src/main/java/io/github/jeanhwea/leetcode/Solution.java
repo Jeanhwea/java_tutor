@@ -2,6 +2,7 @@ package io.github.jeanhwea.leetcode;
 
 import java.util.*;
 
+@SuppressWarnings("all")
 public class Solution {
 
   public static void threeSum(int[] a, int target) {

@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-15, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution230 {
 
   public static int kthSmallest(TreeNode root, int k) {

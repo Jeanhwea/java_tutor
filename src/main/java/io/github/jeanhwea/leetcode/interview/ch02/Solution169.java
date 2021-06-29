@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-14, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution169 {
 
   public static int majorityElement(int[] a) {

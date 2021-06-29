@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-28, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution026 {
 
   public static int removeDuplicates(int[] a) {

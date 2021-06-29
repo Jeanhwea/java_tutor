@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.interview.ch04;
  * @author Jinghui Hu
  * @since 2021-06-16, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution208 {
 
   public static class Trie {

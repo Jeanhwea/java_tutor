@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-26, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution127 {
 
   // BFS + 建图优化

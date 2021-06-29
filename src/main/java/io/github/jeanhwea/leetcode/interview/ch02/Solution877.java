@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-14, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution877 {
 
   public static int superEggDrop(int k, int n) {

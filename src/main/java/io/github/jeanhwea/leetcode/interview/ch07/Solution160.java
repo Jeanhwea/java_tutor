@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-16, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution160 {
 
   // 记忆所经过的节点

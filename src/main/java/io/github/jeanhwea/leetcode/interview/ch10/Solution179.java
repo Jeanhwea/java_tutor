@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-16, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution179 {
 
   public static String largestNumber0(int[] a) {

@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-19, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution227 {
 
   public static int calculate(String s) {

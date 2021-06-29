@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-18, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution295 {
 
   // 双堆缓存

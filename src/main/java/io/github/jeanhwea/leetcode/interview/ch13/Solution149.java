@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-27, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution149 {
 
   // 暴力解法

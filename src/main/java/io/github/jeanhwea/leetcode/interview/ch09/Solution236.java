@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-15, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution236 {
 
   public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

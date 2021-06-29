@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution102 {
 
   public static List<List<Integer>> levelOrder(TreeNode root) {

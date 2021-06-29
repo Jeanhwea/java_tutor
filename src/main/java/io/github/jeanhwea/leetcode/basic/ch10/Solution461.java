@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch10;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution461 {
 
   public static int hammingDistance0(int x, int y) {

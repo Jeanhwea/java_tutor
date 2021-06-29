@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-25, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution300 {
 
   public static int lengthOfLIS(int[] a) {

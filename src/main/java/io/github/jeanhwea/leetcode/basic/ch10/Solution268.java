@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch10;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution268 {
 
   // 哈希表查找

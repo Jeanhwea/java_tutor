@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution088 {
 
   // 双指针，添加临时数组

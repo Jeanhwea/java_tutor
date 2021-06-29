@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch03;
  * @author Jinghui Hu
  * @since 2021-06-09, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution242 {
 
   public static boolean isAnagram(String s, String t) {

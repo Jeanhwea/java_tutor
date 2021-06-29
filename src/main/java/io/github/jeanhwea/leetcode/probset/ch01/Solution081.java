@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.probset.ch01;
  * @author Jinghui Hu
  * @since 2021-06-28, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution081 {
 
   public static boolean search(int[] a, int target) {

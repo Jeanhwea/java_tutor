@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-10, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution014 {
 
   public static String longestCommonPrefix(String[] strs) {

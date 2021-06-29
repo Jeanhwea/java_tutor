@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-14, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution139 {
 
   // 动态规划， dp[i] 表示字符串 s 的前 i 个字串能否单词拆分

@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch03;
  * @author Jinghui Hu
  * @since 2021-06-07, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution007 {
 
   public static int reverse(int n) {

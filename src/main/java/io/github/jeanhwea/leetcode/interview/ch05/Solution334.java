@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-17, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution334 {
 
   // 回溯法暴露搜索所有可能解（超时）

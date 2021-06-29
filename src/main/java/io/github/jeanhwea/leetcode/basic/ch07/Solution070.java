@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch07;
  * @author Jinghui Hu
  * @since 2021-06-13, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution070 {
 
   public static int climbStairs(int n) {

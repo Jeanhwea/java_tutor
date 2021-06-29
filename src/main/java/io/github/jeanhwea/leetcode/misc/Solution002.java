@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-07, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution002 {
 
   public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {

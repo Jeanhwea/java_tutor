@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-20, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution324 {
 
   private static void swap(int[] a, int i, int j) {

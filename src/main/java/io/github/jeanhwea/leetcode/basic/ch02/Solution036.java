@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-08, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution036 {
 
   public static boolean isValidSudoku0(char[][] a) {

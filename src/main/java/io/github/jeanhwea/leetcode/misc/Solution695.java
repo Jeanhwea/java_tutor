@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-22, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution695 {
 
   public static int maxAreaOfIsland(int[][] grid) {

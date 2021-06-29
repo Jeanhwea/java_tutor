@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch03;
  * @author Jinghui Hu
  * @since 2021-06-11, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution038 {
 
   // 暴露统计解法

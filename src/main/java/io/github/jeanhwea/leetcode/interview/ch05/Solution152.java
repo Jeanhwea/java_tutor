@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-15, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution152 {
 
   // 暴露搜索

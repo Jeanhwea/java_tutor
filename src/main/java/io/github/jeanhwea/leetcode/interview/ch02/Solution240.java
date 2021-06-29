@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.interview.ch02;
  * @author Jinghui Hu
  * @since 2021-06-14, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution240 {
 
   // 从左下往右上搜索法

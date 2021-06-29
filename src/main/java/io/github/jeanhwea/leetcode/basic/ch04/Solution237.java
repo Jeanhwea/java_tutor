@@ -6,6 +6,7 @@ package io.github.jeanhwea.leetcode.basic.ch04;
  * @author Jinghui Hu
  * @since 2021-06-11, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution237 {
 
   public static void deleteNode(ListNode node) {

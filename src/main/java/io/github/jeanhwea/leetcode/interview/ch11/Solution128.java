@@ -8,6 +8,7 @@ import java.util.*;
  * @author Jinghui Hu
  * @since 2021-06-24, JDK1.8
  */
+@SuppressWarnings("all")
 public class Solution128 {
 
   public static int longestConsecutive0(int[] a) {
