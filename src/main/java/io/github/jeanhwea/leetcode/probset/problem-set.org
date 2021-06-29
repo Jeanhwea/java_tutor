@@ -1,4 +1,4 @@
-#+TITLE: 150 Problem Set
+#+TITLE: Problem Set
 #+AUTHOR: Jinghui Hu
 #+EMAIL: hujinghui@buaa.edu.cn
 #+DATE: <2021-06-28 Mon 15:58:19>
@@ -8,11 +8,12 @@
 #+TAGS: leetcode programming
 
 
-* 数组
+* 数组 Array
   - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][LC026]] 删除有序数组中的重复项
   - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][LC080]] 删除有序数组中的重复项 II
   - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] 搜索旋转排序数组
   - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] 搜索旋转排序数组 II
+  - [[https://leetcode-cn.com/problems/rotate-array/][LC189]] 旋转数组
   - Median of Two Sorted Arrays
   - Longest Consecutive Sequence
   - Two Sum
@@ -34,7 +35,7 @@
   - Single Number
   - Single Number II
 
-* 链表
+* 链表List
   - Add Two Numbers
   - Reverse Linked List II
   - Partition List
@@ -50,7 +51,7 @@
   - Reorder List
   - LRU Cache
 
-* 字符串
+* 字符串 String
   - Valid Palindrome
   - Implement strStr
   - String to Integer (atoi)
@@ -67,13 +68,13 @@
   - Simplify Path
   - Length of Last Word
 
-* 栈和队列
+* 栈和队列 Stack & Heap
   - Valid Parentheses
   - Longest Valid Parentheses
   - Largest Rectangle in Histogram
   - Evaluate Reverse Polish Notation
 
-* 树
+* 树 Tree
   - Binary Tree Preorder Traversal
   - Binary Tree Inorder Traversal
   - Binary Tree Postorder Traversal
@@ -101,7 +102,7 @@
   - Populating Next Right Pointers in Each Node
   - Sum Root to Leaf Numbers
 
-* 排序
+* 排序和查找 Sorting & Searching
   - Merge Sorted Array
   - Merge Two Sorted Lists
   - Merge k Sorted Lists
@@ -109,13 +110,11 @@
   - Sort List
   - First Missing Positive
   - Sort Colors
-
-* 查找
   - Search for a Range
   - Search Insert Position
   - Search a 2D Matrix
 
-* 回溯
+* 回溯 BacKTrack
   - Subsets
   - Subsets II
   - Permutations
@@ -123,12 +122,12 @@
   - Combinations
   - Letter Combinations of a Phone Number
 
-* 广度优先搜索
+* 广度优先搜索 BFS
   - Word Ladder
   - Word Ladder II
   - Surrounded Regions
 
-* 深度优先搜索
+* 深度优先搜索 DFS
   - Palindrome Partitioning
   - Unique Paths
   - Unique Paths II
@@ -141,11 +140,11 @@
   - Sudoku Solver
   - Word Search
 
-* 分治
+* 分治 Divide and Conquer
   - Pow(x,n)
   - Sqrt(x)
 
-* 贪心法
+* 贪心法 Greedy Algorithm
   - Jump Game
   - Jump Game II
   - Best Time to Buy and Sell Stock
@@ -153,7 +152,7 @@
   - Longest Substring Without Repeating Characters
   - Container With Most Water
 
-* 动态规划
+* 动态规划 Dynamic Programming
   - Triangle
   - Maximum Subarray
   - Palindrome Partitioning II
@@ -168,10 +167,10 @@
   - Word Break
   - Word Break II
 
-* 图
+* 图 Graph
   - Clone Graph
 
-* 细节题
+* 细节题 Misc
   - Reverse Integer
   - Palindrome Number
   - Insert Interval
