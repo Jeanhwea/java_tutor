@@ -169,7 +169,7 @@
 
 * 图 Graph
   - Clone Graph
-  - [[https://leetcode-cn.com/problems/max-area-of-island/][LC695]] 岛屿的最大面积
+  - [[https://leetcode-cn.com/problems/max-area-of-island/][LC695]] [[file:ch13/Solution695.java][岛屿的最大面积]]
 
 * 细节题 Misc
   - Reverse Integer
