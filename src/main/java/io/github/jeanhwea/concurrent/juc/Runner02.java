@@ -1,4 +1,4 @@
-package io.github.jeanhwea.concurrent;
+package io.github.jeanhwea.concurrent.juc;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
