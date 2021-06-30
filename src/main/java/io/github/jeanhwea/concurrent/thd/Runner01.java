@@ -9,6 +9,7 @@ package io.github.jeanhwea.concurrent.thd;
 public class Runner01 {
 
   public static class Person01 {
+
     private static String name;
 
     public String getName() {
@@ -21,6 +22,7 @@ public class Runner01 {
   }
 
   public static class Person02 {
+
     private static ThreadLocal<String> name = new ThreadLocal<>();
 
     public String getName() {
@@ -29,6 +31,11 @@ public class Runner01 {
 
     public void setName(String name) {
       this.name.set(name);
+    }
+
+    // ThreadLocal 变量使用时需要注意的是需要显示的释放内存
+    public void eraseName() {
+      this.name.remove();
     }
   }
 
