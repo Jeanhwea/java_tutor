@@ -23,7 +23,7 @@ public class Runner05 {
             countThread,
             0L,
             TimeUnit.MILLISECONDS,
-            new LinkedBlockingQueue<Runnable>());
+            new LinkedBlockingQueue<>());
 
     for (int i = 0; i < countThread; i++) {
       int waitSeconds = i;
@@ -31,7 +31,7 @@ public class Runner05 {
           () -> {
             try {
               String name = Thread.currentThread().getName();
-              Thread.sleep(1000 * waitSeconds);
+              Thread.sleep(1000L * waitSeconds);
               System.out.printf("%s: %s\n", name, new Date());
             } catch (InterruptedException e) {
               e.printStackTrace();
