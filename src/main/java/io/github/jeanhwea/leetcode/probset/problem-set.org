@@ -16,7 +16,7 @@
   - [[https://leetcode-cn.com/problems/rotate-array/][LC189]] [[file:ch01/Solution189.java][旋转数组]]
   - [[https://leetcode-cn.com/problems/median-of-two-sorted-arrays/][LC004]] [[file:ch01/Solution004.java][寻找两个正序数组的中位数]]
   - [[https://leetcode-cn.com/problems/longest-consecutive-sequence/][LC128]] [[file:ch01/Solution128.java][最长连续序列]]
-  - Two Sum
+  - [[https://leetcode-cn.com/problems/two-sum/][LC001]] [[file:ch01/Solution001.java][两数之和]]
   - 3 Sum
   - 3 Sum Closest
   - 4 Sum
