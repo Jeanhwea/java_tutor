@@ -26,7 +26,7 @@
   - Valid Sudoku
   - Trapping Rain Water
   - Rotate Image
-  - Plus One
+  - [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
   - Climbing Stairs
   - Gray Code
   - Set Matrix Zeroes
