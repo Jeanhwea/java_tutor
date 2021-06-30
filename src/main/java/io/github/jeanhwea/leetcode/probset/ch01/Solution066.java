@@ -25,6 +25,6 @@ public class Solution066 {
   public static void main(String[] args) {
     int[] a = {1, 2, 3};
     int[] b = plusOne(a);
-    System.out.println(Arrays.sort(b));
+    System.out.println(Arrays.toString(b));
   }
 }
