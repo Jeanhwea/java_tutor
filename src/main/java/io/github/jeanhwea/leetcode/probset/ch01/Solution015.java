@@ -13,6 +13,19 @@ public class Solution015 {
 
   public static List<List<Integer>> threeSum(int[] a) {
     int n = a.length;
+    Arrays.sort(a);
+
+    for (int i = 0; i < n; i++) {
+      while (i > 0 && a[i] == a[i - 1]) i++;
+      for (int j = 0; j < n; j--) {
+        while (j < n - 1 && a[j] == a[j + 1]) j--;
+
+      }
+    }
+  }
+
+  public static List<List<Integer>> threeSum0(int[] a) {
+    int n = a.length;
     Map<Integer, Integer> map = new HashMap<>();
     for (int i = 0; i < n; i++) map.put(a[i], i);
 
