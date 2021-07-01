@@ -16,19 +16,19 @@ public class Solution015 {
     int n = a.length;
     if (n < 3) return ans;
     Arrays.sort(a);
-    // System.out.println(Arrays.toString(a));
-    int i = 0, j = n - 1, k = 0;
-    for (i = 0; i < n - 1; i++) {
-      while (0 < i && i < n - 1 && a[i] == a[i - 1]) i++;
-      for (j = n - 1; j > i; j--) {
-        while (i < j && j < n - 1 && a[j] == a[j + 1]) j--;
-        for (k = i + 1; k < j; k++) {
-          while (k < j - 1 && a[k] == a[k + 1]) k++;
-          // System.out.printf("i,k,j=%d,%d,%d\n", i, k, j);
-          if (k != j && a[i] + a[k] + a[j] == 0) {
-            ans.add(Arrays.asList(a[i], a[k], a[j]));
-            break;
-          }
+
+    for (int i = 0; i < n - 1; i++) {
+      if (i != 0 && a[i] == a[i - 1]) continue;
+
+      int k = n - 1;
+      for (int j = i + 1; j < n; j++) {
+        if (j > i + 1 && a[j] == a[j - 1]) continue;
+
+        while (k > j && a[k] + a[i] + a[j] > 0) k--;
+
+        // System.out.printf("i,j,k=%d,%d,%d\n", i, j, k);
+        if (k > j && a[i] + a[j] + a[k] == 0) {
+          ans.add(Arrays.asList(a[i], a[j], a[k]));
         }
       }
     }
@@ -59,7 +59,7 @@ public class Solution015 {
   public static void main(String[] args) {
     // int[] a = {-1, 0, 1, 2, -1, -4};
     // int[] a = {0, 0, 0, 0};
-    int[] a = {0, 0, 0};
+    // int[] a = {0, 0, 0};
     // int[] a = {-1, 0, 1, 0};
     System.out.println(threeSum(a));
   }
