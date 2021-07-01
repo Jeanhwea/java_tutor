@@ -13,15 +13,27 @@ public class Solution015 {
 
   public static List<List<Integer>> threeSum(int[] a) {
     int n = a.length;
+    if (n < 3) return null;
+
     Arrays.sort(a);
+    List<List<Integer>> ans = new LinkedList<>();
 
     for (int i = 0; i < n; i++) {
       while (i > 0 && a[i] == a[i - 1]) i++;
-      for (int j = 0; j < n; j--) {
+
+      int target = -a[i];
+      for (int j = n - 1; j >= 0; j--) {
         while (j < n - 1 && a[j] == a[j + 1]) j--;
 
+        for (int k = i + 1; k < j; k++) {
+          if (a[j] + a[k] == target) {
+            ans.add(Arrays.asList(a[i], a[k], a[j]));
+          }
+        }
       }
     }
+
+    return ans;
   }
 
   public static List<List<Integer>> threeSum0(int[] a) {
