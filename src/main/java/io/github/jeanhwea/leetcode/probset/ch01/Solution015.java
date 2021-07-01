@@ -60,7 +60,7 @@ public class Solution015 {
     // int[] a = {-1, 0, 1, 2, -1, -4};
     // int[] a = {0, 0, 0, 0};
     // int[] a = {0, 0, 0};
-    // int[] a = {-1, 0, 1, 0};
+    int[] a = {-1, 0, 1, 0};
     System.out.println(threeSum(a));
   }
 }
