@@ -52,10 +52,7 @@ public class Problem0615 {
         // working
         int x = nodeHeight.getOrDefault(root.left, 0);
         int y = nodeHeight.getOrDefault(root.right, 0);
-        if (Math.abs(x - y) > 1) {
-          System.out.println(nodeHeight);
-          return false;
-        }
+        if (Math.abs(x - y) > 1) return false;
         int h = Math.max(x, y) + 1;
         nodeHeight.put(root, h);
 
