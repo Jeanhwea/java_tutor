@@ -1,16 +1,21 @@
-package io.github.jeanhwea.leetcode;
+package io.github.jeanhwea.realworld;
 
 import java.util.*;
 
+/**
+ * 打印矩阵：按右上角到左下角沿对角线逆序打印
+ *
+ * @author Jinghui Hu
+ * @since 2021-07-01, JDK1.8
+ */
 @SuppressWarnings("all")
-public class Solution {
+public class Problem0701 {
 
   public static void main(String[] args) {
     int[][] a = {
-      {1, 2, 3},
-      {5, 6, 7},
-      {9, 8, 1},
-      {9, 8, 1}
+      {9, 6, 3, 1},
+      {11, 8, 5, 2},
+      {12, 10, 7, 4}
     };
     System.out.println(visitMatrix(a));
   }
