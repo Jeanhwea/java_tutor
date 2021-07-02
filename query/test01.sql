@@ -33,6 +33,7 @@ insert into author(name,age,gender) values ('bca', 30, 'M');
 
 alter table author add unique key(name, age, gender);
 
+alter table author change a1 a int;
 
 update author set int01 = id - 30;
 
@@ -40,14 +41,12 @@ commit;
 
 select * from author;
 
-explain select * from author where name > 'a'\G
+explain select * from author where a > 'a'\G
+
+explain select age, id from author where name > 'a'\G
 
 explain select * from author where name > 'c'\G
 
-explain select * from author where int01 > 4\G
-
-
 explain select * from author where gender > 'a'\G
-
 
 explain select * from author where id > 32\G
