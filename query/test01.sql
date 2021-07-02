@@ -20,8 +20,34 @@ desc author;
 
 show create table author\G
 
-select * from author;
+delete from author;
 
-insert into author('aaa', 10, 'M');
+
+insert into author(name,age,gender) values ('aaa', 10, 'M');
+insert into author(name,age,gender) values ('abc', 1, 'M');
+insert into author(name,age,gender) values ('bbb', 10, 'F');
+insert into author(name,age,gender) values ('baa', 2, 'M');
+insert into author(name,age,gender) values ('bac', 22, 'F');
+insert into author(name,age,gender) values ('caa', 70, 'M');
+insert into author(name,age,gender) values ('bca', 30, 'M');
+
+alter table author add unique key(name, age, gender);
+
+
+update author set int01 = id - 30;
 
 commit;
+
+select * from author;
+
+explain select * from author where name > 'a'\G
+
+explain select * from author where name > 'c'\G
+
+explain select * from author where int01 > 4\G
+
+
+explain select * from author where gender > 'a'\G
+
+
+explain select * from author where id > 32\G
