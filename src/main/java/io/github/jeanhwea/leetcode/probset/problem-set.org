@@ -25,6 +25,7 @@
   - Permutation Sequence
   - Valid Sudoku
   - Trapping Rain Water
+  - [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch01/Solution054.java][螺旋矩阵]]
   - Rotate Image
   - [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
   - Climbing Stairs
