@@ -19,43 +19,11 @@ public class Solution {
     List<Integer> ans = new LinkedList<>();
 
     int n = a.length, m = a[0].length;
-    int left = 0, right = m - 1, top = 0, bottom = n - 1;
-
-    int x = 0, y = 0;
-    while (left < right || top < bottom) {
-      top++;
-      while (x <= right) System.out.println(a[y][x++]);
-      x--;
-      y++;
-
-      right--;
-      while (y <= bottom) System.out.println(a[y++][x]);
-      x--;
-      y--;
-
-      bottom--;
-      while (x >= left) System.out.println(a[y][x--]);
-      x++;
-      y--;
-
-      left++;
-      while (y >= top) System.out.println(a[y--][x]);
-      x++;
-      y++;
-    }
-
-    return ans;
-  }
-
-  public static List<Integer> visitMatrix1(int[][] a) {
-    List<Integer> ans = new LinkedList<>();
-
-    int n = a.length, m = a[0].length;
 
     for (int i = 0; i < n; i++) {
       int x = 0, y = i;
       while (x < m && y >= 0) {
-        System.out.println(a[y--][x++]);
+        ans.add(a[y--][x++]);
       }
     }
 
