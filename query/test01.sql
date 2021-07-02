@@ -6,7 +6,6 @@ create user 'user01'@'%' identified by 'user01';
 grant all privileges on *.* to 'user01'@'%';
 flush privileges;
 
-
 drop table author;
 
 create table author (
@@ -21,7 +20,6 @@ create table author (
 
 desc author;
 
-show create table author\G
 
 delete from author;
 
@@ -33,7 +31,21 @@ insert into author(name, age, gender, a, b, c) values ('bac', 22, 'F', 11, 22, 3
 insert into author(name, age, gender, a, b, c) values ('caa', 70, 'M', 11, 23, 33);
 insert into author(name, age, gender, a, b, c) values ('bca', 30, 'M', 11, 20, 30);
 
-alter table author add unique key(name, age, gender);
+alter table author add unique key uk_author_nag (name, age, gender);
+
+alter table author drop key uk_author_nag;
+
+alter table author drop index a;
+
+create index ix_author_abc on author(a, b, c);
+
+alter table author add index (a,b,c);
+
+show create table author\G
+
+show index from author;
+
+
 
 alter table author add c int;
 
@@ -44,7 +56,6 @@ update author set c = id % 2;
 
 select * from author;
 
-alter table author add index(a,b,c);
 
 explain select c from author where b > 2\G
 
@@ -57,3 +68,9 @@ explain select * from author where name > 'c'\G
 explain select * from author where gender > 'a'\G
 
 explain select * from author where id > 32\G
+
+
+select (cast 'a' as int);
+
+select '1' = 1;
+select '0' = 1;
