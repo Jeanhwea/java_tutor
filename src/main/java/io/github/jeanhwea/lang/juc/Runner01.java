@@ -1,4 +1,4 @@
-package io.github.jeanhwea.concurrent.juc;
+package io.github.jeanhwea.lang.juc;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

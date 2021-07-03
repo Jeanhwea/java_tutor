@@ -23,13 +23,13 @@ desc author;
 
 delete from author;
 
-insert into author(name, age, gender, a, b, c) values ('aaa', 11, 'M', 10, 21, 34);
-insert into author(name, age, gender, a, b, c) values ('abc', 12, 'M', 10, 22, 33);
-insert into author(name, age, gender, a, b, c) values ('bbb', 10, 'F', 10, 23, 31);
-insert into author(name, age, gender, a, b, c) values ('baa', 40, 'M', 11, 21, 31);
-insert into author(name, age, gender, a, b, c) values ('bac', 22, 'F', 11, 22, 32);
-insert into author(name, age, gender, a, b, c) values ('caa', 70, 'M', 11, 23, 33);
-insert into author(name, age, gender, a, b, c) values ('bca', 30, 'M', 11, 20, 30);
+insert into author(name, age, gender, a, b, c) values ('daa', 11, 'M', 10, 21, 34);
+insert into author(name, age, gender, a, b, c) values ('dbc', 12, 'M', 10, 22, 33);
+insert into author(name, age, gender, a, b, c) values ('dbb', 10, 'F', 10, 23, 31);
+insert into author(name, age, gender, a, b, c) values ('daa', 40, 'M', 11, 21, 31);
+insert into author(name, age, gender, a, b, c) values ('dac', 22, 'F', 11, 22, 32);
+insert into author(name, age, gender, a, b, c) values ('daa', 70, 'M', 11, 23, 33);
+insert into author(name, age, gender, a, b, c) values ('dca', 30, 'M', 11, 20, 30);
 
 alter table author add unique key uk_author_nag (name, age, gender);
 

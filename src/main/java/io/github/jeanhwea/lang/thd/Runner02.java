@@ -1,4 +1,4 @@
-package io.github.jeanhwea.concurrent.thd;
+package io.github.jeanhwea.lang.thd;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

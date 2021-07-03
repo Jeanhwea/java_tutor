@@ -1,4 +1,4 @@
-package io.github.jeanhwea.concurrent.thd;
+package io.github.jeanhwea.lang.thd;
 
 /**
  * ThreadLocal 类的方法
