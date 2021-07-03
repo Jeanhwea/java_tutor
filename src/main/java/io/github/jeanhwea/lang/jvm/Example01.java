@@ -27,6 +27,9 @@ public class Example01 {
   }
 }
 
+//  $ javac Example01.java
+//  $ javap -c Example01.class
+//
 // public class io.github.jeanhwea.lang.jvm.Example01 {
 //   public io.github.jeanhwea.lang.jvm.Example01();
 //     Code:
