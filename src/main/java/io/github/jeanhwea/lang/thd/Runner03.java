@@ -15,8 +15,8 @@ public class Runner03 {
     // test01();
     // test02();
     // test03();
-    test04();
-    // test05();
+    // test04();
+    test05();
   }
 
   private static void doWork() {
@@ -119,14 +119,12 @@ public class Runner03 {
                 phaser.register();
                 System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
                 doWork();
-                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
                 phaser.arriveAndDeregister();
+                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
               });
       t.start();
     }
     phaser.awaitAdvance(phaser.getPhase());
     System.out.printf("房间[%d]游戏开始\n", phaser.getPhase());
-    phaser.awaitAdvance(phaser.getPhase());
-    System.out.println("房间[1]游戏开始");
   }
 }
