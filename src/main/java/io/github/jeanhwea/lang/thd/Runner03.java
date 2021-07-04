@@ -52,7 +52,7 @@ public class Runner03 {
                 doWork();
                 try {
                   System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
-                  cyclicBarrier.await(); // 不阻塞，达到循环数字时所有线程同时唤醒
+                  cyclicBarrier.await(); // 不阻塞，达到循环数字时所有线程同时唤醒，并循环利用
                   System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
                 } catch (InterruptedException | BrokenBarrierException e) {
                   e.printStackTrace();
