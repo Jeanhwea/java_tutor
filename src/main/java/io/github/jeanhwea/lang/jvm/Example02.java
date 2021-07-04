@@ -12,9 +12,10 @@ import java.util.*;
 public class Example02 {
 
   // -Xmx10m -Xms10m -XX:+PrintGC -XX:-DoEscapeAnalysis
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     while (true) {
       Integer temp = new Integer(99999999);
+      Thread.sleep(100);
     }
   }
 }
