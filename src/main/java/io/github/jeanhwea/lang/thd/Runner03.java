@@ -15,7 +15,8 @@ public class Runner03 {
     // test01();
     // test02();
     // test03();
-    test04();
+    // test04();
+    test05();
   }
 
   private static void doWork() {
@@ -50,9 +51,9 @@ public class Runner03 {
               () -> {
                 doWork();
                 try {
-                  System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
-                  cyclicBarrier.await(); // 不阻塞，达到循环数字时所有线程同时唤醒，并循环利用
                   System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
+                  cyclicBarrier.await(); // 不阻塞，达到循环数字时所有线程同时唤醒，并循环利用
+                  System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
                 } catch (InterruptedException | BrokenBarrierException e) {
                   e.printStackTrace();
                 }
@@ -78,9 +79,9 @@ public class Runner03 {
           new Thread(
               () -> {
                 doWork();
-                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
-                phaser.arriveAndAwaitAdvance();
                 System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
+                phaser.arriveAndAwaitAdvance();
+                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
               });
       t.start();
     }
@@ -94,10 +95,32 @@ public class Runner03 {
           new Thread(
               () -> {
                 doWork();
-                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
+                System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
                 phaser.arrive();
                 phaserInfo(phaser);
+                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
+              });
+      t.start();
+    }
+    // phaser.awaitAdvance(0);
+    phaser.awaitAdvance(phaser.getPhase());
+    System.out.println("房间[0]游戏开始");
+    phaser.awaitAdvance(phaser.getPhase());
+    System.out.println("房间[1]游戏开始");
+  }
+
+  public static void test05() throws InterruptedException {
+    Phaser phaser = new Phaser();
+    phaserInfo(phaser);
+    for (int i = 0; i < 5; i++) {
+      Thread t =
+          new Thread(
+              () -> {
+                phaser.register();
                 System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
+                doWork();
+                System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
+                phaser.arriveAndDeregister();
               });
       t.start();
     }
