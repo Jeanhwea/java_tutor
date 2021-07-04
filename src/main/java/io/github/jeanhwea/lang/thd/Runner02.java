@@ -2,6 +2,12 @@ package io.github.jeanhwea.lang.thd;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 使用原子类型和 ThreadLocal 实现唯一线程 ID
+ *
+ * @author Jinghui Hu
+ * @since 2021-07-04, JDK1.8
+ */
 public class Runner02 {
 
   public static class ThreadId {
