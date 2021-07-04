@@ -103,10 +103,13 @@ public class Runner03 {
       t.start();
     }
     // phaser.awaitAdvance(0);
-    phaser.awaitAdvance(phaser.getPhase());
-    System.out.printf("房间[%d]游戏开始\n", phaser.getPhase());
-    phaser.awaitAdvance(phaser.getPhase());
-    System.out.printf("房间[%d]游戏开始\n", phaser.getPhase());
+    int currPhase = phaser.getPhase();
+    phaser.awaitAdvance(currPhase);
+    System.out.printf("房间[%d]游戏开始\n", currPhase);
+
+    currPhase = phaser.getPhase();
+    phaser.awaitAdvance(currPhase);
+    System.out.printf("房间[%d]游戏开始\n", currPhase);
   }
 
   public static void test05() throws InterruptedException {
@@ -124,7 +127,8 @@ public class Runner03 {
               });
       t.start();
     }
-    phaser.awaitAdvance(phaser.getPhase());
-    System.out.printf("房间[%d]游戏开始\n", phaser.getPhase());
+    int currPhase = phaser.getPhase();
+    phaser.awaitAdvance(currPhase);
+    System.out.printf("房间[%d]游戏开始\n", currPhase);
   }
 }
