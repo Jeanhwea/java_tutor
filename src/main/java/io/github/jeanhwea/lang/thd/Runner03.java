@@ -45,14 +45,14 @@ public class Runner03 {
 
   public static void test02() throws InterruptedException {
     CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 10; i++) {
       Thread t =
           new Thread(
               () -> {
                 doWork();
                 try {
                   System.out.printf("玩家[%s]准备就绪\n", Thread.currentThread().getName());
-                  cyclicBarrier.await();
+                  cyclicBarrier.await(); // 不阻塞，达到循环数字时所有线程同时唤醒
                   System.out.printf("玩家[%s]选择英雄\n", Thread.currentThread().getName());
                 } catch (InterruptedException | BrokenBarrierException e) {
                   e.printStackTrace();
