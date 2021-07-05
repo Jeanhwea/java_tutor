@@ -22,7 +22,7 @@
   - 4 Sum
   - Remove Element
   - Next Permutation
-  - Permutation Sequence
+  - [[https://leetcode-cn.com/problems/permutation-sequence/][LC060]] [[file:ch01/Solution060.java][排列顺序]]
   - Valid Sudoku
   - Trapping Rain Water
   - [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch01/Solution054.java][螺旋矩阵]]
