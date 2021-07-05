@@ -18,7 +18,7 @@
   - [[https://leetcode-cn.com/problems/longest-consecutive-sequence/][LC128]] [[file:ch01/Solution128.java][最长连续序列]]
   - [[https://leetcode-cn.com/problems/two-sum/][LC001]] [[file:ch01/Solution001.java][两数之和]]
   - [[https://leetcode-cn.com/problems/3sum/][LC015]] [[file:ch01/Solution015.java][三数之和]]
-  - 3 Sum Closest
+  - [[https://leetcode-cn.com/problems/3sum-closest/][LC016]] [[file:ch01/Solution016.java][最接近的三数之和]]
   - 4 Sum
   - Remove Element
   - Next Permutation
