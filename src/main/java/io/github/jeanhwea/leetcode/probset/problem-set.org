@@ -76,7 +76,7 @@
   - Evaluate Reverse Polish Notation
 
 * 树 Tree
-  - Binary Tree Preorder Traversal
+  - [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][LC144]] [[file:ch05/Solution144.java][二叉树的前序遍历]]
   - Binary Tree Inorder Traversal
   - Binary Tree Postorder Traversal
   - Binary Tree Level Order Traversal
