@@ -20,7 +20,7 @@
   9. [X] [[https://leetcode-cn.com/problems/3sum/][LC015]] [[file:ch01/Solution015.java][三数之和]]
   10. [X] [[https://leetcode-cn.com/problems/3sum-closest/][LC016]] [[file:ch01/Solution016.java][最接近的三数之和]]
   11. [X] [[https://leetcode-cn.com/problems/4sum/][LC018]] [[file:ch01/Solution018.java][四数之和]]
-  12. [ ] [[https://leetcode-cn.com/problems/remove-element/][LC027]] [[file:ch01/Solution027.java][移除元素]]
+  12. [X] [[https://leetcode-cn.com/problems/remove-element/][LC027]] [[file:ch01/Solution027.java][移除元素]]
   13. [ ] Next Permutation
   14. [X] [[https://leetcode-cn.com/problems/permutation-sequence/][LC060]] [[file:ch01/Solution060.java][排列顺序]]
   15. [ ] Valid Sudoku
