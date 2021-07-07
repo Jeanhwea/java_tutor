@@ -18,19 +18,18 @@ public class Solution042 {
       pq.offer(new int[] {i, height[i]});
     }
 
-    int ans = 0, prev = -1, curr = -1;
+    int ans = 0, curr = -1;
     List<Integer> list = new ArrayList<>();
     while (!pq.isEmpty()) {
       int[] e = pq.poll();
 
       curr = e[1];
-      if (prev < 0) prev = curr;
       list.add(e[0]);
       while (!pq.isEmpty() && pq.peek()[1] == curr) {
         list.add(pq.poll()[0]);
       }
       Collections.sort(list);
-      System.out.println(list);
+      // System.out.println(list);
 
       int left = list.get(0);
       int count = 0;
@@ -39,9 +38,8 @@ public class Solution042 {
         left = list.get(i);
       }
       // System.out.println(count);
-      System.out.printf("count,c,p=%d,%d,%d\n", count, prev, curr);
-      ans += count * (prev - curr);
-      prev = curr;
+      int next = pq.isEmpty() ? 0 : pq.peek()[1];
+      ans += count * (curr - next);
     }
     return ans;
   }
