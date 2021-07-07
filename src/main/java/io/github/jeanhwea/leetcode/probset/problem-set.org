@@ -24,9 +24,9 @@
   13. [X] [[https://leetcode-cn.com/problems/next-permutation/][LC031]] [[file:ch01/Solution031.java][下一个排列]]
   14. [X] [[https://leetcode-cn.com/problems/permutation-sequence/][LC060]] [[file:ch01/Solution060.java][排列顺序]]
   15. [X] [[https://leetcode-cn.com/problems/valid-sudoku/][LC036]] [[file:ch01/Solution036.java][有效的数独]]
-  16. [ ] [[https://leetcode-cn.com/problems/trapping-rain-water/][LC042]] [[file:ch01/Solution042.java][接雨水]]
+  16. [X] [[https://leetcode-cn.com/problems/trapping-rain-water/][LC042]] [[file:ch01/Solution042.java][接雨水]]
   17. [X] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch01/Solution054.java][螺旋矩阵]]
-  18. [ ] Rotate Image
+  18. [X] [[https://leetcode-cn.com/problems/rotate-image/][LC048]] [[file:ch01/Solution048.java][旋转图像]]
   19. [X] [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
   20. [ ] Climbing Stairs
   21. [ ] Gray Code
