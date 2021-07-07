@@ -29,12 +29,12 @@
   18. [X] [[https://leetcode-cn.com/problems/rotate-image/][LC048]] [[file:ch01/Solution048.java][旋转图像]]
   19. [X] [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
   20. [X] [[https://leetcode-cn.com/problems/climbing-stairs/][LC070]] [[file:ch01/Solution070.java][爬楼梯]]
-  21. [ ] [[https://leetcode-cn.com/problems/gray-code/][LC089]] Gray Code
+  21. [X] [[https://leetcode-cn.com/problems/gray-code/][LC089]] [[file:ch01/Solution089.java][格雷编码]]
   22. [ ] Set Matrix Zeroes
-  23. [ ] Gas Station
+  23. [ ] [[https://leetcode-cn.com/problems/gas-station/][LC134]] [[file:ch01/Solution134.java][加油站]]
   24. [ ] Candy
-  25. [ ] Single Number
-  26. [ ] Single Number II
+  25. [X] [[https://leetcode-cn.com/problems/single-number/][LC136]] [[file:ch01/Solution136.java][只出现一次的数字]]
+  26. [ ] [[https://leetcode-cn.com/problems/single-number-ii/][LC137]] [[file:ch01/Solution137.java][只出现一次的数字 II]]
 
 * 链表 List
   1. [ ] Add Two Numbers
