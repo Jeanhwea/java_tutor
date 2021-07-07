@@ -11,7 +11,43 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution042 {
 
+  // 双指针
   public static int trap(int[] height) {
+    int n = height.length;
+    int left = 0, right = n - 1, leftMax = 0, rightMax = 0, ans = 0;
+    while (left < right) {
+      leftMax = Math.max(leftMax, height[left]);
+      rightMax = Math.max(rightMax, height[right]);
+      if (leftMax < rightMax) {
+        ans += leftMax - height[left++];
+      } else {
+        ans += rightMax - height[right--];
+      }
+    }
+    return ans;
+  }
+
+  // 动态规划
+  public static int trap1(int[] height) {
+    int n = height.length;
+    int[] leftBound = new int[n], rightBound = new int[n];
+
+    for (int i = 1; i < n; i++) {
+      leftBound[i] = Math.max(leftBound[i - 1], height[i - 1]);
+    }
+    for (int i = n - 2; i >= 0; i--) {
+      rightBound[i] = Math.max(rightBound[i + 1], height[i + 1]);
+    }
+
+    int ans = 0;
+    for (int i = 0; i < n; i++) {
+      ans += Math.max(Math.min(leftBound[i], rightBound[i]) - height[i], 0);
+    }
+
+    return ans;
+  }
+
+  public static int trap0(int[] height) {
     int n = height.length;
     PriorityQueue<int[]> pq = new PriorityQueue<>((x, y) -> y[1] - x[1]);
     for (int i = 0; i < n; i++) {
@@ -45,8 +81,8 @@ public class Solution042 {
   }
 
   public static void main(String[] args) {
-    // int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-    int[] height = {4, 2, 0, 3, 2, 5};
+    int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+    // int[] height = {4, 2, 0, 3, 2, 5};
     System.out.println(trap(height));
   }
 }
