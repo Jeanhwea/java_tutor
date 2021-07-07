@@ -9,182 +9,182 @@
 
 
 * 数组 Array
-  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][LC026]] [[file:ch01/Solution026.java][删除有序数组中的重复项]]
-  - [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][LC080]] [[file:ch01/Solution080.java][删除有序数组中的重复项 II]]
-  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] [[file:ch01/Solution033.java][搜索旋转排序数组]]
-  - [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] [[file:ch01/Solution081.java][搜索旋转排序数组 II]]
-  - [[https://leetcode-cn.com/problems/rotate-array/][LC189]] [[file:ch01/Solution189.java][旋转数组]]
-  - [[https://leetcode-cn.com/problems/median-of-two-sorted-arrays/][LC004]] [[file:ch01/Solution004.java][寻找两个正序数组的中位数]]
-  - [[https://leetcode-cn.com/problems/longest-consecutive-sequence/][LC128]] [[file:ch01/Solution128.java][最长连续序列]]
-  - [[https://leetcode-cn.com/problems/two-sum/][LC001]] [[file:ch01/Solution001.java][两数之和]]
-  - [[https://leetcode-cn.com/problems/3sum/][LC015]] [[file:ch01/Solution015.java][三数之和]]
-  - [[https://leetcode-cn.com/problems/3sum-closest/][LC016]] [[file:ch01/Solution016.java][最接近的三数之和]]
-  - [[https://leetcode-cn.com/problems/4sum/][LC018]] [[file:ch01/Solution018.java][四数之和]]
-  - Remove Element
-  - Next Permutation
-  - [[https://leetcode-cn.com/problems/permutation-sequence/][LC060]] [[file:ch01/Solution060.java][排列顺序]]
-  - Valid Sudoku
-  - Trapping Rain Water
-  - [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch01/Solution054.java][螺旋矩阵]]
-  - Rotate Image
-  - [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
-  - Climbing Stairs
-  - Gray Code
-  - Set Matrix Zeroes
-  - Gas Station
-  - Candy
-  - Single Number
-  - Single Number II
+  - [X] [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][LC026]] [[file:ch01/Solution026.java][删除有序数组中的重复项]]
+  - [X] [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/][LC080]] [[file:ch01/Solution080.java][删除有序数组中的重复项 II]]
+  - [X] [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array/][LC033]] [[file:ch01/Solution033.java][搜索旋转排序数组]]
+  - [X] [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] [[file:ch01/Solution081.java][搜索旋转排序数组 II]]
+  - [X] [[https://leetcode-cn.com/problems/rotate-array/][LC189]] [[file:ch01/Solution189.java][旋转数组]]
+  - [X] [[https://leetcode-cn.com/problems/median-of-two-sorted-arrays/][LC004]] [[file:ch01/Solution004.java][寻找两个正序数组的中位数]]
+  - [X] [[https://leetcode-cn.com/problems/longest-consecutive-sequence/][LC128]] [[file:ch01/Solution128.java][最长连续序列]]
+  - [X] [[https://leetcode-cn.com/problems/two-sum/][LC001]] [[file:ch01/Solution001.java][两数之和]]
+  - [X] [[https://leetcode-cn.com/problems/3sum/][LC015]] [[file:ch01/Solution015.java][三数之和]]
+  - [X] [[https://leetcode-cn.com/problems/3sum-closest/][LC016]] [[file:ch01/Solution016.java][最接近的三数之和]]
+  - [ ] [[https://leetcode-cn.com/problems/4sum/][LC018]] [[file:ch01/Solution018.java][四数之和]]
+  - [ ] Remove Element
+  - [ ] Next Permutation
+  - [X] [[https://leetcode-cn.com/problems/permutation-sequence/][LC060]] [[file:ch01/Solution060.java][排列顺序]]
+  - [ ] Valid Sudoku
+  - [ ] Trapping Rain Water
+  - [X] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch01/Solution054.java][螺旋矩阵]]
+  - [ ] Rotate Image
+  - [X] [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
+  - [ ] Climbing Stairs
+  - [ ] Gray Code
+  - [ ] Set Matrix Zeroes
+  - [ ] Gas Station
+  - [ ] Candy
+  - [ ] Single Number
+  - [ ] Single Number II
 
 * 链表 List
-  - Add Two Numbers
-  - Reverse Linked List II
-  - Partition List
-  - Remove Duplicates from Sorted List
-  - Remove Duplicates from Sorted List II
-  - Rotate List
-  - Remove Nth Node From End of List
-  - Swap Nodes in Pairs
-  - Reverse Nodes in k-Group
-  - Copy List with Random Pointer
-  - Linked List Cycle
-  - Linked List Cycle II
-  - Reorder List
-  - LRU Cache
+  - [ ] Add Two Numbers
+  - [ ] Reverse Linked List II
+  - [ ] Partition List
+  - [ ] Remove Duplicates from Sorted List
+  - [ ] Remove Duplicates from Sorted List II
+  - [ ] Rotate List
+  - [ ] Remove Nth Node From End of List
+  - [ ] Swap Nodes in Pairs
+  - [ ] Reverse Nodes in k- [ ]Group
+  - [ ] Copy List with Random Pointer
+  - [ ] Linked List Cycle
+  - [ ] Linked List Cycle II
+  - [ ] Reorder List
+  - [ ] LRU Cache
 
 * 字符串 String
-  - Valid Palindrome
-  - Implement strStr
-  - String to Integer (atoi)
-  - Add Binary
-  - Longest Palindromic Substring
-  - Regular Expression Matching
-  - Wildcard Matching
-  - Longest Common Prefix
-  - Valid Number
-  - Integer to Roman
-  - Roman to Integer
-  - Count and Say
-  - Anagrams
-  - Simplify Path
-  - Length of Last Word
+  - [ ] Valid Palindrome
+  - [ ] Implement strStr
+  - [ ] String to Integer (atoi)
+  - [ ] Add Binary
+  - [ ] Longest Palindromic Substring
+  - [ ] Regular Expression Matching
+  - [ ] Wildcard Matching
+  - [ ] Longest Common Prefix
+  - [ ] Valid Number
+  - [ ] Integer to Roman
+  - [ ] Roman to Integer
+  - [ ] Count and Say
+  - [ ] Anagrams
+  - [ ] Simplify Path
+  - [ ] Length of Last Word
 
 * 栈和队列 Stack & Heap
-  - Valid Parentheses
-  - Longest Valid Parentheses
-  - Largest Rectangle in Histogram
-  - Evaluate Reverse Polish Notation
+  - [ ] Valid Parentheses
+  - [ ] Longest Valid Parentheses
+  - [ ] Largest Rectangle in Histogram
+  - [ ] Evaluate Reverse Polish Notation
 
 * 树 Tree
-  - [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][LC144]] [[file:ch05/Solution144.java][二叉树的前序遍历]]
-  - Binary Tree Inorder Traversal
-  - Binary Tree Postorder Traversal
-  - Binary Tree Level Order Traversal
-  - Binary Tree Level Order Traversal II
-  - Binary Tree Zigzag Level Order Traversal
-  - Recover Binary Search Tree
-  - Same Tree
-  - Symmetric Tree
-  - Balanced Binary Tree
-  - Flatten Binary Tree to Linked List
-  - Populating Next Right Pointers in Each Node II
-  - Construct Binary Tree from Preorder and Inorder Traversal
-  - Construct Binary Tree from Inorder and Postorder Traversal
-  - Unique Binary Search Trees
-  - Unique Binary Search Trees II
-  - Validate Binary Search Tree
-  - Convert Sorted Array to Binary Search Tree
-  - Convert Sorted List to Binary Search Tree
-  - Minimum Depth of Binary Tree
-  - Maximum Depth of Binary Tree
-  - Path Sum
-  - Path Sum II
-  - Binary Tree Maximum Path Sum
-  - Populating Next Right Pointers in Each Node
-  - Sum Root to Leaf Numbers
+  - [X] [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][LC144]] [[file:ch05/Solution144.java][二叉树的前序遍历]]
+  - [ ] Binary Tree Inorder Traversal
+  - [ ] Binary Tree Postorder Traversal
+  - [ ] Binary Tree Level Order Traversal
+  - [ ] Binary Tree Level Order Traversal II
+  - [ ] Binary Tree Zigzag Level Order Traversal
+  - [ ] Recover Binary Search Tree
+  - [ ] Same Tree
+  - [ ] Symmetric Tree
+  - [ ] Balanced Binary Tree
+  - [ ] Flatten Binary Tree to Linked List
+  - [ ] Populating Next Right Pointers in Each Node II
+  - [ ] Construct Binary Tree from Preorder and Inorder Traversal
+  - [ ] Construct Binary Tree from Inorder and Postorder Traversal
+  - [ ] Unique Binary Search Trees
+  - [ ] Unique Binary Search Trees II
+  - [ ] Validate Binary Search Tree
+  - [ ] Convert Sorted Array to Binary Search Tree
+  - [ ] Convert Sorted List to Binary Search Tree
+  - [ ] Minimum Depth of Binary Tree
+  - [ ] Maximum Depth of Binary Tree
+  - [ ] Path Sum
+  - [ ] Path Sum II
+  - [ ] Binary Tree Maximum Path Sum
+  - [ ] Populating Next Right Pointers in Each Node
+  - [ ] Sum Root to Leaf Numbers
 
 * 排序和查找 Sorting & Searching
-  - Merge Sorted Array
-  - Merge Two Sorted Lists
-  - Merge k Sorted Lists
-  - Insertion Sort List
-  - Sort List
-  - First Missing Positive
-  - Sort Colors
-  - Search for a Range
-  - Search Insert Position
-  - Search a 2D Matrix
+  - [ ] Merge Sorted Array
+  - [ ] Merge Two Sorted Lists
+  - [ ] Merge k Sorted Lists
+  - [ ] Insertion Sort List
+  - [ ] Sort List
+  - [ ] First Missing Positive
+  - [ ] Sort Colors
+  - [ ] Search for a Range
+  - [ ] Search Insert Position
+  - [ ] Search a 2D Matrix
 
 * 回溯 BackTrack
-  - Subsets
-  - Subsets II
-  - Permutations
-  - Permutations II
-  - Combinations
-  - Letter Combinations of a Phone Number
+  - [ ] Subsets
+  - [ ] Subsets II
+  - [ ] Permutations
+  - [ ] Permutations II
+  - [ ] Combinations
+  - [ ] Letter Combinations of a Phone Number
 
 * 广度优先搜索 BFS
-  - Word Ladder
-  - Word Ladder II
-  - Surrounded Regions
+  - [ ] Word Ladder
+  - [ ] Word Ladder II
+  - [ ] Surrounded Regions
 
 * 深度优先搜索 DFS
-  - Palindrome Partitioning
-  - Unique Paths
-  - Unique Paths II
-  - N-Queens
-  - N-Queens II
-  - Restore IP Addresses
-  - Combination Sum
-  - Combination Sum II
-  - Generate Parentheses
-  - Sudoku Solver
-  - Word Search
+  - [ ] Palindrome Partitioning
+  - [ ] Unique Paths
+  - [ ] Unique Paths II
+  - [ ] N Queens
+  - [ ] N Queens II
+  - [ ] Restore IP Addresses
+  - [ ] Combination Sum
+  - [ ] Combination Sum II
+  - [ ] Generate Parentheses
+  - [ ] Sudoku Solver
+  - [ ] Word Search
 
 * 分治 Divide and Conquer
-  - Pow(x,n)
-  - Sqrt(x)
+  - [ ] Pow(x,n)
+  - [ ] Sqrt(x)
 
 * 贪心法 Greedy Algorithm
-  - Jump Game
-  - Jump Game II
-  - Best Time to Buy and Sell Stock
-  - Best Time to Buy and Sell Stock II
-  - Longest Substring Without Repeating Characters
-  - Container With Most Water
+  - [ ] Jump Game
+  - [ ] Jump Game II
+  - [ ] Best Time to Buy and Sell Stock
+  - [ ] Best Time to Buy and Sell Stock II
+  - [ ] Longest Substring Without Repeating Characters
+  - [ ] Container With Most Water
 
 * 动态规划 Dynamic Programming
-  - Triangle
-  - Maximum Subarray
-  - Palindrome Partitioning II
-  - Maximal Rectangle
-  - Best Time to Buy and Sell Stock III
-  - Interleaving String
-  - Scramble String
-  - Minimum Path Sum
-  - Edit Distance
-  - Decode Ways
-  - Distinct Subsequences
-  - Word Break
-  - Word Break II
+  - [ ] Triangle
+  - [ ] Maximum Subarray
+  - [ ] Palindrome Partitioning II
+  - [ ] Maximal Rectangle
+  - [ ] Best Time to Buy and Sell Stock III
+  - [ ] Interleaving String
+  - [ ] Scramble String
+  - [ ] Minimum Path Sum
+  - [ ] Edit Distance
+  - [ ] Decode Ways
+  - [ ] Distinct Subsequences
+  - [ ] Word Break
+  - [ ] Word Break II
 
 * 图 Graph
-  - Clone Graph
-  - [[https://leetcode-cn.com/problems/max-area-of-island/][LC695]] [[file:ch13/Solution695.java][岛屿的最大面积]]
+  - [ ] Clone Graph
+  - [X] [[https://leetcode-cn.com/problems/max-area-of-island/][LC695]] [[file:ch13/Solution695.java][岛屿的最大面积]]
 
 * 细节题 Misc
-  - Reverse Integer
-  - Palindrome Number
-  - Insert Interval
-  - Merge Intervals
-  - Minimum Window Substring
-  - Multiply Strings
-  - Substring with Concatenation of All Words
-  - Pascal's Triangle
-  - Pascal's Triangle II
-  - Spiral Matrix
-  - Spiral Matrix II
-  - ZigZag Conversion
-  - Divide Two Integers
-  - Text Justification
-  - Max Points on a Line
+  - [ ] Reverse Integer
+  - [ ] Palindrome Number
+  - [ ] Insert Interval
+  - [ ] Merge Intervals
+  - [ ] Minimum Window Substring
+  - [ ] Multiply Strings
+  - [ ] Substring with Concatenation of All Words
+  - [ ] Pascal's Triangle
+  - [ ] Pascal's Triangle II
+  - [ ] Spiral Matrix
+  - [ ] Spiral Matrix II
+  - [ ] ZigZag Conversion
+  - [ ] Divide Two Integers
+  - [ ] Text Justification
+  - [ ] Max Points on a Line

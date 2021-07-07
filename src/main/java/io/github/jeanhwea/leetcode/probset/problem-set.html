@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-07-07 Wed 11:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Problem Set</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jinghui Hu" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+<script type="text/javascript" src="styles/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../readme.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">Problem Set</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2ab1a7c">1. 数组 Array</a></li>
+<li><a href="#org94da635">2. 链表 List</a></li>
+<li><a href="#orgd31831b">3. 字符串 String</a></li>
+<li><a href="#org56a6e82">4. 栈和队列 Stack &amp; Heap</a></li>
+<li><a href="#orgd4bc5ad">5. 树 Tree</a></li>
+<li><a href="#org075faa6">6. 排序和查找 Sorting &amp; Searching</a></li>
+<li><a href="#orgeba86ac">7. 回溯 BackTrack</a></li>
+<li><a href="#org07ace63">8. 广度优先搜索 BFS</a></li>
+<li><a href="#orgb0bc1cf">9. 深度优先搜索 DFS</a></li>
+<li><a href="#orgd656115">10. 分治 Divide and Conquer</a></li>
+<li><a href="#orgf89a2df">11. 贪心法 Greedy Algorithm</a></li>
+<li><a href="#orga0108d5">12. 动态规划 Dynamic Programming</a></li>
+<li><a href="#org2874776">13. 图 Graph</a></li>
+<li><a href="#org483a476">14. 细节题 Misc</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org2ab1a7c" class="outline-2">
+<h2 id="org2ab1a7c"><span class="section-number-2">1</span> 数组 Array</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">LC026</a> <a href="ch01/Solution026.java">删除有序数组中的重复项</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/">LC080</a> <a href="ch01/Solution080.java">删除有序数组中的重复项 II</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/">LC033</a> <a href="ch01/Solution033.java">搜索旋转排序数组</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/">LC081</a> <a href="ch01/Solution081.java">搜索旋转排序数组 II</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/rotate-array/">LC189</a> <a href="ch01/Solution189.java">旋转数组</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/">LC004</a> <a href="ch01/Solution004.java">寻找两个正序数组的中位数</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/longest-consecutive-sequence/">LC128</a> <a href="ch01/Solution128.java">最长连续序列</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/two-sum/">LC001</a> <a href="ch01/Solution001.java">两数之和</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/3sum/">LC015</a> <a href="ch01/Solution015.java">三数之和</a></li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/3sum-closest/">LC016</a> <a href="ch01/Solution016.java">最接近的三数之和</a></li>
+<li class="off"><code>[&#xa0;]</code> <a href="https://leetcode-cn.com/problems/4sum/">LC018</a> <a href="ch01/Solution018.java">四数之和</a></li>
+<li class="off"><code>[&#xa0;]</code> Remove Element</li>
+<li class="off"><code>[&#xa0;]</code> Next Permutation</li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/permutation-sequence/">LC060</a> <a href="ch01/Solution060.java">排列顺序</a></li>
+<li class="off"><code>[&#xa0;]</code> Valid Sudoku</li>
+<li class="off"><code>[&#xa0;]</code> Trapping Rain Water</li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/spiral-matrix/">LC054</a> <a href="ch01/Solution054.java">螺旋矩阵</a></li>
+<li class="off"><code>[&#xa0;]</code> Rotate Image</li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/plus-one/">LC066</a> <a href="ch01/Solution066.java">加一</a></li>
+<li class="off"><code>[&#xa0;]</code> Climbing Stairs</li>
+<li class="off"><code>[&#xa0;]</code> Gray Code</li>
+<li class="off"><code>[&#xa0;]</code> Set Matrix Zeroes</li>
+<li class="off"><code>[&#xa0;]</code> Gas Station</li>
+<li class="off"><code>[&#xa0;]</code> Candy</li>
+<li class="off"><code>[&#xa0;]</code> Single Number</li>
+<li class="off"><code>[&#xa0;]</code> Single Number II</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org94da635" class="outline-2">
+<h2 id="org94da635"><span class="section-number-2">2</span> 链表 List</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Add Two Numbers</li>
+<li class="off"><code>[&#xa0;]</code> Reverse Linked List II</li>
+<li class="off"><code>[&#xa0;]</code> Partition List</li>
+<li class="off"><code>[&#xa0;]</code> Remove Duplicates from Sorted List</li>
+<li class="off"><code>[&#xa0;]</code> Remove Duplicates from Sorted List II</li>
+<li class="off"><code>[&#xa0;]</code> Rotate List</li>
+<li class="off"><code>[&#xa0;]</code> Remove Nth Node From End of List</li>
+<li class="off"><code>[&#xa0;]</code> Swap Nodes in Pairs</li>
+<li class="off"><code>[&#xa0;]</code> Reverse Nodes in k- [ ]Group</li>
+<li class="off"><code>[&#xa0;]</code> Copy List with Random Pointer</li>
+<li class="off"><code>[&#xa0;]</code> Linked List Cycle</li>
+<li class="off"><code>[&#xa0;]</code> Linked List Cycle II</li>
+<li class="off"><code>[&#xa0;]</code> Reorder List</li>
+<li class="off"><code>[&#xa0;]</code> LRU Cache</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd31831b" class="outline-2">
+<h2 id="orgd31831b"><span class="section-number-2">3</span> 字符串 String</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Valid Palindrome</li>
+<li class="off"><code>[&#xa0;]</code> Implement strStr</li>
+<li class="off"><code>[&#xa0;]</code> String to Integer (atoi)</li>
+<li class="off"><code>[&#xa0;]</code> Add Binary</li>
+<li class="off"><code>[&#xa0;]</code> Longest Palindromic Substring</li>
+<li class="off"><code>[&#xa0;]</code> Regular Expression Matching</li>
+<li class="off"><code>[&#xa0;]</code> Wildcard Matching</li>
+<li class="off"><code>[&#xa0;]</code> Longest Common Prefix</li>
+<li class="off"><code>[&#xa0;]</code> Valid Number</li>
+<li class="off"><code>[&#xa0;]</code> Integer to Roman</li>
+<li class="off"><code>[&#xa0;]</code> Roman to Integer</li>
+<li class="off"><code>[&#xa0;]</code> Count and Say</li>
+<li class="off"><code>[&#xa0;]</code> Anagrams</li>
+<li class="off"><code>[&#xa0;]</code> Simplify Path</li>
+<li class="off"><code>[&#xa0;]</code> Length of Last Word</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org56a6e82" class="outline-2">
+<h2 id="org56a6e82"><span class="section-number-2">4</span> 栈和队列 Stack &amp; Heap</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Valid Parentheses</li>
+<li class="off"><code>[&#xa0;]</code> Longest Valid Parentheses</li>
+<li class="off"><code>[&#xa0;]</code> Largest Rectangle in Histogram</li>
+<li class="off"><code>[&#xa0;]</code> Evaluate Reverse Polish Notation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd4bc5ad" class="outline-2">
+<h2 id="orgd4bc5ad"><span class="section-number-2">5</span> 树 Tree</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal/">LC144</a> <a href="ch05/Solution144.java">二叉树的前序遍历</a></li>
+<li class="off"><code>[&#xa0;]</code> Binary Tree Inorder Traversal</li>
+<li class="off"><code>[&#xa0;]</code> Binary Tree Postorder Traversal</li>
+<li class="off"><code>[&#xa0;]</code> Binary Tree Level Order Traversal</li>
+<li class="off"><code>[&#xa0;]</code> Binary Tree Level Order Traversal II</li>
+<li class="off"><code>[&#xa0;]</code> Binary Tree Zigzag Level Order Traversal</li>
+<li class="off"><code>[&#xa0;]</code> Recover Binary Search Tree</li>
+<li class="off"><code>[&#xa0;]</code> Same Tree</li>
+<li class="off"><code>[&#xa0;]</code> Symmetric Tree</li>
+<li class="off"><code>[&#xa0;]</code> Balanced Binary Tree</li>
+<li class="off"><code>[&#xa0;]</code> Flatten Binary Tree to Linked List</li>
+<li class="off"><code>[&#xa0;]</code> Populating Next Right Pointers in Each Node II</li>
+<li class="off"><code>[&#xa0;]</code> Construct Binary Tree from Preorder and Inorder Traversal</li>
+<li class="off"><code>[&#xa0;]</code> Construct Binary Tree from Inorder and Postorder Traversal</li>
+<li class="off"><code>[&#xa0;]</code> Unique Binary Search Trees</li>
+<li class="off"><code>[&#xa0;]</code> Unique Binary Search Trees II</li>
+<li class="off"><code>[&#xa0;]</code> Validate Binary Search Tree</li>
+<li class="off"><code>[&#xa0;]</code> Convert Sorted Array to Binary Search Tree</li>
+<li class="off"><code>[&#xa0;]</code> Convert Sorted List to Binary Search Tree</li>
+<li class="off"><code>[&#xa0;]</code> Minimum Depth of Binary Tree</li>
+<li class="off"><code>[&#xa0;]</code> Maximum Depth of Binary Tree</li>
+<li class="off"><code>[&#xa0;]</code> Path Sum</li>
+<li class="off"><code>[&#xa0;]</code> Path Sum II</li>
+<li class="off"><code>[&#xa0;]</code> Binary Tree Maximum Path Sum</li>
+<li class="off"><code>[&#xa0;]</code> Populating Next Right Pointers in Each Node</li>
+<li class="off"><code>[&#xa0;]</code> Sum Root to Leaf Numbers</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org075faa6" class="outline-2">
+<h2 id="org075faa6"><span class="section-number-2">6</span> 排序和查找 Sorting &amp; Searching</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Merge Sorted Array</li>
+<li class="off"><code>[&#xa0;]</code> Merge Two Sorted Lists</li>
+<li class="off"><code>[&#xa0;]</code> Merge k Sorted Lists</li>
+<li class="off"><code>[&#xa0;]</code> Insertion Sort List</li>
+<li class="off"><code>[&#xa0;]</code> Sort List</li>
+<li class="off"><code>[&#xa0;]</code> First Missing Positive</li>
+<li class="off"><code>[&#xa0;]</code> Sort Colors</li>
+<li class="off"><code>[&#xa0;]</code> Search for a Range</li>
+<li class="off"><code>[&#xa0;]</code> Search Insert Position</li>
+<li class="off"><code>[&#xa0;]</code> Search a 2D Matrix</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeba86ac" class="outline-2">
+<h2 id="orgeba86ac"><span class="section-number-2">7</span> 回溯 BackTrack</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Subsets</li>
+<li class="off"><code>[&#xa0;]</code> Subsets II</li>
+<li class="off"><code>[&#xa0;]</code> Permutations</li>
+<li class="off"><code>[&#xa0;]</code> Permutations II</li>
+<li class="off"><code>[&#xa0;]</code> Combinations</li>
+<li class="off"><code>[&#xa0;]</code> Letter Combinations of a Phone Number</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org07ace63" class="outline-2">
+<h2 id="org07ace63"><span class="section-number-2">8</span> 广度优先搜索 BFS</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Word Ladder</li>
+<li class="off"><code>[&#xa0;]</code> Word Ladder II</li>
+<li class="off"><code>[&#xa0;]</code> Surrounded Regions</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb0bc1cf" class="outline-2">
+<h2 id="orgb0bc1cf"><span class="section-number-2">9</span> 深度优先搜索 DFS</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Palindrome Partitioning</li>
+<li class="off"><code>[&#xa0;]</code> Unique Paths</li>
+<li class="off"><code>[&#xa0;]</code> Unique Paths II</li>
+<li class="off"><code>[&#xa0;]</code> N Queens</li>
+<li class="off"><code>[&#xa0;]</code> N Queens II</li>
+<li class="off"><code>[&#xa0;]</code> Restore IP Addresses</li>
+<li class="off"><code>[&#xa0;]</code> Combination Sum</li>
+<li class="off"><code>[&#xa0;]</code> Combination Sum II</li>
+<li class="off"><code>[&#xa0;]</code> Generate Parentheses</li>
+<li class="off"><code>[&#xa0;]</code> Sudoku Solver</li>
+<li class="off"><code>[&#xa0;]</code> Word Search</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd656115" class="outline-2">
+<h2 id="orgd656115"><span class="section-number-2">10</span> 分治 Divide and Conquer</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Pow(x,n)</li>
+<li class="off"><code>[&#xa0;]</code> Sqrt(x)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf89a2df" class="outline-2">
+<h2 id="orgf89a2df"><span class="section-number-2">11</span> 贪心法 Greedy Algorithm</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Jump Game</li>
+<li class="off"><code>[&#xa0;]</code> Jump Game II</li>
+<li class="off"><code>[&#xa0;]</code> Best Time to Buy and Sell Stock</li>
+<li class="off"><code>[&#xa0;]</code> Best Time to Buy and Sell Stock II</li>
+<li class="off"><code>[&#xa0;]</code> Longest Substring Without Repeating Characters</li>
+<li class="off"><code>[&#xa0;]</code> Container With Most Water</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga0108d5" class="outline-2">
+<h2 id="orga0108d5"><span class="section-number-2">12</span> 动态规划 Dynamic Programming</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Triangle</li>
+<li class="off"><code>[&#xa0;]</code> Maximum Subarray</li>
+<li class="off"><code>[&#xa0;]</code> Palindrome Partitioning II</li>
+<li class="off"><code>[&#xa0;]</code> Maximal Rectangle</li>
+<li class="off"><code>[&#xa0;]</code> Best Time to Buy and Sell Stock III</li>
+<li class="off"><code>[&#xa0;]</code> Interleaving String</li>
+<li class="off"><code>[&#xa0;]</code> Scramble String</li>
+<li class="off"><code>[&#xa0;]</code> Minimum Path Sum</li>
+<li class="off"><code>[&#xa0;]</code> Edit Distance</li>
+<li class="off"><code>[&#xa0;]</code> Decode Ways</li>
+<li class="off"><code>[&#xa0;]</code> Distinct Subsequences</li>
+<li class="off"><code>[&#xa0;]</code> Word Break</li>
+<li class="off"><code>[&#xa0;]</code> Word Break II</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2874776" class="outline-2">
+<h2 id="org2874776"><span class="section-number-2">13</span> 图 Graph</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Clone Graph</li>
+<li class="on"><code>[X]</code> <a href="https://leetcode-cn.com/problems/max-area-of-island/">LC695</a> <a href="ch13/Solution695.java">岛屿的最大面积</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org483a476" class="outline-2">
+<h2 id="org483a476"><span class="section-number-2">14</span> 细节题 Misc</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Reverse Integer</li>
+<li class="off"><code>[&#xa0;]</code> Palindrome Number</li>
+<li class="off"><code>[&#xa0;]</code> Insert Interval</li>
+<li class="off"><code>[&#xa0;]</code> Merge Intervals</li>
+<li class="off"><code>[&#xa0;]</code> Minimum Window Substring</li>
+<li class="off"><code>[&#xa0;]</code> Multiply Strings</li>
+<li class="off"><code>[&#xa0;]</code> Substring with Concatenation of All Words</li>
+<li class="off"><code>[&#xa0;]</code> Pascal's Triangle</li>
+<li class="off"><code>[&#xa0;]</code> Pascal's Triangle II</li>
+<li class="off"><code>[&#xa0;]</code> Spiral Matrix</li>
+<li class="off"><code>[&#xa0;]</code> Spiral Matrix II</li>
+<li class="off"><code>[&#xa0;]</code> ZigZag Conversion</li>
+<li class="off"><code>[&#xa0;]</code> Divide Two Integers</li>
+<li class="off"><code>[&#xa0;]</code> Text Justification</li>
+<li class="off"><code>[&#xa0;]</code> Max Points on a Line</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Last Updated 2021-07-07 Wed 11:13. Created by Jinghui Hu at 2021-06-28 Mon 15:58.</p>
+</div>
+</body>
+</html>
