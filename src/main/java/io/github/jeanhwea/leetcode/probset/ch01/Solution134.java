@@ -13,20 +13,20 @@ public class Solution134 {
 
   public static int canCompleteCircuit(int[] gas, int[] cost) {
     int n = gas.length;
-
     int i = 0;
     while (i < n) {
-      int sumGas = 0, sumCost = 0;
-      for (int j = 0; j < n; j++) {
+      int sumGas = 0, sumCost = 0, j = 0;
+      while (j <= n) {
         int k = (i + j) % n;
         sumCost += cost[k];
         sumGas += gas[k];
-        if (sumCost >= sumGas) {
-          i = j;
+        if (sumCost > sumGas) {
           break;
         }
         if (j == n) return i;
+        j++;
       }
+      i += j + 1;
     }
     return -1;
   }
