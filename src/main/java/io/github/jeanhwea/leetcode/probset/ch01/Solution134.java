@@ -19,13 +19,16 @@ public class Solution134 {
       int sumGas = 0, sumCost = 0;
       for (int j = 0; j < n; j++) {
         int k = (i + j) % n;
-        sumGas += gas[k];
         sumCost += cost[k];
-        if (sumGas >= sumCost) continue;
-
+        sumGas += gas[k];
+        if (sumCost >= sumGas) {
+          i = j;
+          break;
+        }
+        if (j == n) return i;
       }
     }
-    return false;
+    return -1;
   }
 
   public static void main(String[] args) {
