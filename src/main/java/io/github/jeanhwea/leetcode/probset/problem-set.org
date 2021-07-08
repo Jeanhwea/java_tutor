@@ -30,7 +30,7 @@
   19. [X] [[https://leetcode-cn.com/problems/plus-one/][LC066]] [[file:ch01/Solution066.java][加一]]
   20. [X] [[https://leetcode-cn.com/problems/climbing-stairs/][LC070]] [[file:ch01/Solution070.java][爬楼梯]]
   21. [X] [[https://leetcode-cn.com/problems/gray-code/][LC089]] [[file:ch01/Solution089.java][格雷编码]]
-  22. [ ] [[https://leetcode-cn.com/problems/set-matrix-zeroes/][LC073]] [[file:ch01/Solution073.java][矩阵置零]]
+  22. [X] [[https://leetcode-cn.com/problems/set-matrix-zeroes/][LC073]] [[file:ch01/Solution073.java][矩阵置零]]
   23. [X] [[https://leetcode-cn.com/problems/gas-station/][LC134]] [[file:ch01/Solution134.java][加油站]]
   24. [ ] [[https://leetcode-cn.com/problems/candy/][LC135]] [[file:ch01/Solution135.java][分发糖果]]
   25. [X] [[https://leetcode-cn.com/problems/single-number/][LC136]] [[file:ch01/Solution136.java][只出现一次的数字]]
