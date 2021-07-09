@@ -12,8 +12,23 @@ import java.util.*;
 public class Solution135 {
 
   public static int candy(int[] a) {
-
-    return -1;
+    int n = a.length;
+    int[] left = new int[n];
+    Arrays.fill(left, 1);
+    for (int i = 1; i < n; i++) {
+      if (a[i] > a[i - 1]) {
+        left[i] = left[i - 1] + 1;
+      }
+    }
+    // System.out.println(Arrays.toString(left));
+    int right = 1, ans = Math.max(left[n - 1], right);
+    for (int i = n - 2; i >= 0; i--) {
+      if (a[i] > a[i + 1]) {
+        right++;
+      }
+      ans += Math.max(left[i], right);
+    }
+    return ans;
   }
 
   public static void main(String[] args) {
