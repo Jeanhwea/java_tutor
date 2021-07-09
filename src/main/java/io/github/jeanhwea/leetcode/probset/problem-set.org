@@ -38,7 +38,7 @@
 
 * 链表 List
   1. [X] [[https://leetcode-cn.com/problems/add-two-numbers/][LC002]] [[file:ch02/Solution002.java][两数相加]]
-  2. [ ] Reverse Linked List II
+  2. [ ] [[https://leetcode-cn.com/problems/reverse-linked-list-ii/][LC092]] Reverse Linked List II
   3. [ ] Partition List
   4. [ ] Remove Duplicates from Sorted List
   5. [ ] Remove Duplicates from Sorted List II
