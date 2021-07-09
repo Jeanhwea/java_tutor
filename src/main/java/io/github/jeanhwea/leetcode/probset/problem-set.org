@@ -34,7 +34,7 @@
   23. [X] [[https://leetcode-cn.com/problems/gas-station/][LC134]] [[file:ch01/Solution134.java][加油站]]
   24. [ ] [[https://leetcode-cn.com/problems/candy/][LC135]] [[file:ch01/Solution135.java][分发糖果]]
   25. [X] [[https://leetcode-cn.com/problems/single-number/][LC136]] [[file:ch01/Solution136.java][只出现一次的数字]]
-  26. [ ] [[https://leetcode-cn.com/problems/single-number-ii/][LC137]] [[file:ch01/Solution137.java][只出现一次的数字 II]]
+  26. [X] [[https://leetcode-cn.com/problems/single-number-ii/][LC137]] [[file:ch01/Solution137.java][只出现一次的数字 II]]
 
 * 链表 List
   1. [ ] Add Two Numbers

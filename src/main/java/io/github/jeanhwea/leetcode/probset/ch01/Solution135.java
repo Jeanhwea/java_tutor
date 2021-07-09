@@ -11,7 +11,13 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution135 {
 
-  public static void main(String[] args) {
+  public static int candy(int[] a) {
+
+    return -1;
   }
 
+  public static void main(String[] args) {
+    int[] ratings = {1, 0, 2};
+    System.out.println(candy(ratings));
+  }
 }
