@@ -25,6 +25,8 @@ public class Solution135 {
     for (int i = n - 2; i >= 0; i--) {
       if (a[i] > a[i + 1]) {
         right++;
+      } else {
+        right = 1;
       }
       ans += Math.max(left[i], right);
     }
