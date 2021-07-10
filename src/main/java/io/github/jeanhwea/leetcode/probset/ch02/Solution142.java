@@ -11,9 +11,25 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution142 {
 
+  // 距离计算法
   public static ListNode detectCycle(ListNode head) {
+    ListNode p = head, q = head;
 
-    return null;
+    // 查找快慢指针相遇点，如不存在返回空
+    while (q != null) {
+      if (q.next == null || q.next.next == null) return null;
+      p = p.next;
+      q = q.next.next;
+      if (p == q) break;
+    }
+
+    // 相遇点到交叉点的距离就是链表头到交叉点的距离
+    ListNode h = head;
+    while (q != h) {
+      q = q.next;
+      h = h.next;
+    }
+    return h;
   }
 
   public static ListNode detectCycle0(ListNode head) {
