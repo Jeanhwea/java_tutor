@@ -46,7 +46,7 @@
   7. [X] [[https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/][LC019]] [[file:ch02/Solution019.java][删除链表的倒数第 N 个结点]]
   8. [X] [[https://leetcode-cn.com/problems/swap-nodes-in-pairs/][LC024]] [[file:ch02/Solution024.java][两两交换链表中的节点]]
   9. [X] [[https://leetcode-cn.com/problems/reverse-nodes-in-k-group/][LC025]] [[file:ch02/Solution025.java][K 个一组翻转链表]]
-  10. [ ] Copy List with Random Pointer
+  10. [ ] [[https://leetcode-cn.com/problems/copy-list-with-random-pointer/][LC138]] [[file:ch02/Solution138.java][复制带随机指针的链表]]
   11. [ ] Linked List Cycle
   12. [ ] Linked List Cycle II
   13. [ ] Reorder List
