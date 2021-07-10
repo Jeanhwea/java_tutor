@@ -54,8 +54,8 @@
 
 * 字符串 String
   1. [X] [[https://leetcode-cn.com/problems/valid-palindrome/][LC125]] [[file:ch03/Solution125.java][验证回文串]]
-  2. [ ] [[https://leetcode-cn.com/problems/implement-strstr/][LC028]] [[file:ch03/Solution028.java][实现 strStr]]
-  3. [ ] String to Integer (atoi)
+  2. [X] [[https://leetcode-cn.com/problems/implement-strstr/][LC028]] [[file:ch03/Solution028.java][实现 strStr]]
+  3. [X] [[https://leetcode-cn.com/problems/string-to-integer-atoi/][LC008]] [[file:ch03/Solution008.java][字符串转换整数 (atoi)]]
   4. [ ] Add Binary
   5. [ ] Longest Palindromic Substring
   6. [ ] Regular Expression Matching
@@ -63,7 +63,7 @@
   8. [ ] Longest Common Prefix
   9. [ ] Valid Number
   10. [ ] Integer to Roman
-  11. [ ] Roman to Integer
+  11. [X] [[https://leetcode-cn.com/problems/roman-to-integer/][LC013]] [[file:ch03/Solution013.java][罗马数字转整数]]
   12. [ ] Count and Say
   13. [ ] Anagrams
   14. [ ] Simplify Path
