@@ -12,11 +12,46 @@ import java.util.*;
 public class Solution143 {
 
   public static void reorderList(ListNode head) {
-    ListNode dummy1 = new ListNode(-1), dummy2 = new ListNode(-1);
+    // 计算链表大小
+    int n = 0;
+    ListNode p = head, q = null;
+    while (p != null) {
+      n++;
+      p = p.next;
+    }
+
+    // 链表拆分，前半部分不需要倒序
+    p = head;
+    int i = 0;
+    while (++i <= n / 2) p = p.next;
+    q = p;
+    p = p.next;
+    q.next = null;
+
+    // 链表拆分，后半部分需要逆序
+    ListNode dummy = new ListNode(-1);
+    while (p != null) {
+      q = dummy.next;
+      dummy.next = p;
+      p = p.next;
+      dummy.next.next = q;
+    }
+
+    // 合并两个链表
+    p = head;
+    q = dummy.next;
+    while (p != null && q != null) {
+      ListNode t = p.next;
+      p.next = q;
+      q = q.next;
+      p.next.next = t;
+      p = t;
+    }
   }
 
   public static void main(String[] args) {
     ListNode list01 = ListNode.makeList(new int[] {1, 2, 3, 4});
-    ListNode.dispList(reorderList(list01));
+    reorderList(list01);
+    ListNode.dispList(list01);
   }
 }
