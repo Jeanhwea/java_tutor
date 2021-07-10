@@ -40,7 +40,6 @@ public class Solution013 {
       ans += map.getOrDefault(token, 0);
       i += token.length();
     }
-
     return ans;
   }
 
