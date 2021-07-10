@@ -53,7 +53,7 @@
   14. [X] [[https://leetcode-cn.com/problems/lru-cache/][LC146]] [[file:ch02/Solution146.java][LRU 缓存机制]]
 
 * 字符串 String
-  1. [ ] Valid Palindrome
+  1. [ ] [[https://leetcode-cn.com/problems/valid-palindrome/][LC125]] Valid Palindrome
   2. [ ] Implement strStr
   3. [ ] String to Integer (atoi)
   4. [ ] Add Binary
