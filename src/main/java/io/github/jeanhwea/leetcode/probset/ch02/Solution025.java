@@ -12,8 +12,19 @@ import java.util.*;
 public class Solution025 {
 
   public static ListNode reverseKGroup(ListNode head, int k) {
+    ListNode dummy = new ListNode(-1);
+    dummy.next = head;
 
-    return head;
+    ListNode p = dummy;
+    while (p != null) {
+      int i = k;
+      ListNode q = p.next;
+      while (--i > 0) {
+        q = q.next;
+      }
+    }
+
+    return dummy.next;
   }
 
   public static void main(String[] args) {
