@@ -39,13 +39,13 @@
 * 链表 List
   1. [X] [[https://leetcode-cn.com/problems/add-two-numbers/][LC002]] [[file:ch02/Solution002.java][两数相加]]
   2. [X] [[https://leetcode-cn.com/problems/reverse-linked-list-ii/][LC092]] [[file:ch02/Solution092.java][反转链表 II]]
-  3. [ ] [[https://leetcode-cn.com/problems/partition-list/][LC086]] [[file:ch02/Solution086.java][分隔链表]]
-  4. [ ] Remove Duplicates from Sorted List
-  5. [ ] Remove Duplicates from Sorted List II
+  3. [X] [[https://leetcode-cn.com/problems/partition-list/][LC086]] [[file:ch02/Solution086.java][分隔链表]]
+  4. [ ] [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/][LC083]] [[file:ch02/Solution083.java][删除排序链表中的重复元素]]
+  5. [ ] [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/][LC082]] [[file:ch02/Solution082.java][删除排序链表中的重复元素 II]]
   6. [ ] Rotate List
   7. [ ] Remove Nth Node From End of List
   8. [ ] Swap Nodes in Pairs
-  9. [ ] Reverse Nodes in k- [ ]Group
+  9. [ ] Reverse Nodes in k-Group
   10. [ ] Copy List with Random Pointer
   11. [ ] Linked List Cycle
   12. [ ] Linked List Cycle II
