@@ -15,40 +15,28 @@ public class Solution138 {
     int val;
     Node next, random;
 
-    Node() {}
-
     Node(int val) {
       this.val = val;
-    }
-
-    Node(int val, Node next) {
-      this.val = val;
-      this.next = next;
     }
   }
 
   public static Node copyRandomList(Node head) {
-    Map<Node, Node> tb = new HashMap<>();
-    Node p = head, head2 = null, q = null;
-    while (p != null) {
-      if (head2 == null) {
-        head2 = q = new Node(p.val);
-      } else {
-        q = q.next = new Node(p.val);
-      }
-      tb.put(p, q);
-      p = p.next;
-    }
+    Map<Node, Node> map = new HashMap<>();
+    Node dummy = new Node(-1);
 
-    p = head;
-    q = head2;
+    Node p = head, q = dummy;
     while (p != null) {
-      q.random = tb.get(p.random);
+      q.next = map.getOrDefault(p, new Node(p.val));
+      map.putIfAbsent(p, q.next);
+      if (p.random != null) {
+        q.next.random = map.getOrDefault(p.random, new Node(p.random.val));
+        map.putIfAbsent(p.random, q.next.random);
+      }
       p = p.next;
       q = q.next;
     }
 
-    return head2;
+    return dummy.next;
   }
 
   public static void main(String[] args) {
