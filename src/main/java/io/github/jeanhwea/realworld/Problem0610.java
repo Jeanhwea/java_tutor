@@ -3,6 +3,8 @@ package io.github.jeanhwea.realworld;
 import java.util.*;
 
 /**
+ * 翻转一个固定区间的链表
+ *
  * @author Jinghui Hu
  * @since 2021-07-10, JDK1.8
  */
