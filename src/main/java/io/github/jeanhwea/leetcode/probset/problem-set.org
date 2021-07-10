@@ -50,7 +50,7 @@
   11. [ ] Linked List Cycle
   12. [ ] Linked List Cycle II
   13. [ ] Reorder List
-  14. [ ] LRU Cache
+  14. [X] [[https://leetcode-cn.com/problems/lru-cache/][LC146]] [[file:ch02/Solution146.java][LRU 缓存机制]]
 
 * 字符串 String
   1. [ ] Valid Palindrome
