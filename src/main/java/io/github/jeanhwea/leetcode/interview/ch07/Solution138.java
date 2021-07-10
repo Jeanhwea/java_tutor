@@ -11,22 +11,6 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution138 {
 
-  private static class Node {
-    int val;
-    Node next, random;
-
-    Node() {}
-
-    Node(int val) {
-      this.val = val;
-    }
-
-    Node(int val, Node next) {
-      this.val = val;
-      this.next = next;
-    }
-  }
-
   public static Node copyRandomList(Node head) {
     Map<Node, Node> tb = new HashMap<>();
     Node p = head, head2 = null, q = null;
