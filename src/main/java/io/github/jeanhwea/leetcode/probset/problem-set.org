@@ -53,8 +53,8 @@
   14. [X] [[https://leetcode-cn.com/problems/lru-cache/][LC146]] [[file:ch02/Solution146.java][LRU 缓存机制]]
 
 * 字符串 String
-  1. [ ] [[https://leetcode-cn.com/problems/valid-palindrome/][LC125]] Valid Palindrome
-  2. [ ] Implement strStr
+  1. [X] [[https://leetcode-cn.com/problems/valid-palindrome/][LC125]] [[file:ch03/Solution125.java][验证回文串]]
+  2. [ ] [[https://leetcode-cn.com/problems/implement-strstr/][LC028]] [[file:ch03/Solution028.java][实现 strStr]]
   3. [ ] String to Integer (atoi)
   4. [ ] Add Binary
   5. [ ] Longest Palindromic Substring
