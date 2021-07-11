@@ -18,6 +18,7 @@ public class Solution065 {
   private static int S6 = 3; // 指数标记符 E
   private static int S7 = 4; // 指数符号
   private static int S8 = 8; // 指数数字
+  private static int S9 = 9; // 完成匹配
 
   public static boolean isNumber(String s) {
     int state = S0;
@@ -63,7 +64,9 @@ public class Solution065 {
         return false;
       }
     }
-    return state > 4;
+    // 结束，最终状态
+    state = state > 4 ? S9 : state;
+    return state == S9;
   }
 
   public static void main(String[] args) {
