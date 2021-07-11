@@ -60,8 +60,8 @@
   5. [X] [[https://leetcode-cn.com/problems/add-binary/][LC067]] [[file:ch03/Solution067.java][二进制求和]]
   6. [X] [[https://leetcode-cn.com/problems/longest-palindromic-substring/][LC005]] [[file:ch03/Solution005.java][最长回文子串]]
   7. [X] [[https://leetcode-cn.com/problems/longest-common-prefix/][LC014]] [[file:ch03/Solution014.java][最长公共前缀]]
-  8. [ ] Regular Expression Matching
-  9. [ ] Wildcard Matching
+  8. [ ] [[https://leetcode-cn.com/problems/regular-expression-matching/][LC010]] [[file:ch03/Solution010.java][正则表达式匹配]]
+  9. [X] [[https://leetcode-cn.com/problems/wildcard-matching/][LC044]] [[file:ch03/Solution044.java][通配符匹配]]
   10. [X] [[https://leetcode-cn.com/problems/integer-to-roman/][LC012]] [[file:ch03/Solution012.java][整数转罗马数字]]
   11. [X] [[https://leetcode-cn.com/problems/roman-to-integer/][LC013]] [[file:ch03/Solution013.java][罗马数字转整数]]
   12. [X] [[https://leetcode-cn.com/problems/count-and-say/][LC038]] [[file:ch03/Solution038.java][外观数列]]
