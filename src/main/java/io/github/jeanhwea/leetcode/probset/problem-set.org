@@ -56,12 +56,12 @@
   1. [X] [[https://leetcode-cn.com/problems/valid-palindrome/][LC125]] [[file:ch03/Solution125.java][验证回文串]]
   2. [X] [[https://leetcode-cn.com/problems/implement-strstr/][LC028]] [[file:ch03/Solution028.java][实现 strStr]]
   3. [X] [[https://leetcode-cn.com/problems/string-to-integer-atoi/][LC008]] [[file:ch03/Solution008.java][字符串转换整数 (atoi)]]
-  4. [X] [[https://leetcode-cn.com/problems/add-binary/][LC067]] [[file:ch03/Solution067.java][二进制求和]]
-  5. [X] [[https://leetcode-cn.com/problems/longest-palindromic-substring/][LC005]] [[file:ch03/Solution005.java][最长回文子串]]
-  6. [ ] Regular Expression Matching
-  7. [ ] Wildcard Matching
-  8. [ ] Longest Common Prefix
-  9. [X] [[https://leetcode-cn.com/problems/valid-number/][LC065]]  [[file:ch03/Solution065.java][有效数字]]
+  4. [X] [[https://leetcode-cn.com/problems/valid-number/][LC065]] [[file:ch03/Solution065.java][有效数字]]
+  5. [X] [[https://leetcode-cn.com/problems/add-binary/][LC067]] [[file:ch03/Solution067.java][二进制求和]]
+  6. [X] [[https://leetcode-cn.com/problems/longest-palindromic-substring/][LC005]] [[file:ch03/Solution005.java][最长回文子串]]
+  7. [ ] Longest Common Prefix
+  8. [ ] Regular Expression Matching
+  9. [ ] Wildcard Matching
   10. [ ] Integer to Roman
   11. [X] [[https://leetcode-cn.com/problems/roman-to-integer/][LC013]] [[file:ch03/Solution013.java][罗马数字转整数]]
   12. [X] [[https://leetcode-cn.com/problems/count-and-say/][LC038]] [[file:ch03/Solution038.java][外观数列]]
