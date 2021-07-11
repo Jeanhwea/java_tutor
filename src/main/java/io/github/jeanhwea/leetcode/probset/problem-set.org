@@ -61,7 +61,7 @@
   6. [ ] Regular Expression Matching
   7. [ ] Wildcard Matching
   8. [ ] Longest Common Prefix
-  9. [ ] Valid Number
+  9. [X] [[https://leetcode-cn.com/problems/valid-number/][LC065]]  [[file:ch03/Solution065.java][有效数字]]
   10. [ ] Integer to Roman
   11. [X] [[https://leetcode-cn.com/problems/roman-to-integer/][LC013]] [[file:ch03/Solution013.java][罗马数字转整数]]
   12. [X] [[https://leetcode-cn.com/problems/count-and-say/][LC038]] [[file:ch03/Solution038.java][外观数列]]
