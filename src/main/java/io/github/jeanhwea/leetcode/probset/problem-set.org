@@ -71,7 +71,7 @@
 
 * 栈和队列 Stack & Heap
   1. [X] [[https://leetcode-cn.com/problems/valid-parentheses/][LC020]] [[file:ch04/Solution020.java][有效的括号]]
-  2. [ ] [[https://leetcode-cn.com/problems/longest-valid-parentheses/][LC032]] [[file:ch04/Solution032.java][最长有效括号]]
+  2. [X] [[https://leetcode-cn.com/problems/longest-valid-parentheses/][LC032]] [[file:ch04/Solution032.java][最长有效括号]]
   3. [ ] Largest Rectangle in Histogram
   4. [ ] Evaluate Reverse Polish Notation
 
