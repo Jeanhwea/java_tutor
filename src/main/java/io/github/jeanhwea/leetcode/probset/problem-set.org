@@ -70,8 +70,8 @@
   15. [X] [[https://leetcode-cn.com/problems/length-of-last-word/][LC058]] [[file:ch03/Solution058.java][最后一个单词的长度]]
 
 * 栈和队列 Stack & Heap
-  1. [ ] Valid Parentheses
-  2. [ ] Longest Valid Parentheses
+  1. [X] [[https://leetcode-cn.com/problems/valid-parentheses/][LC020]] [[file:ch04/Solution020.java][有效的括号]]
+  2. [ ] [[https://leetcode-cn.com/problems/longest-valid-parentheses/][LC032]] [[file:ch04/Solution032.java][最长有效括号]]
   3. [ ] Largest Rectangle in Histogram
   4. [ ] Evaluate Reverse Polish Notation
 
