@@ -10,12 +10,35 @@ import java.util.*;
  */
 @SuppressWarnings("all")
 public class Solution032 {
-    public static int longestValidParentheses(String s) {
 
+  // TODO:
+  public static int longestValidParentheses(String s) {
+    Deque<Character> stack = new LinkedList<>();
+    int n = s.length(), i = 0, ans = 0, len = 0;
+    boolean flag = true;
+    while (i < n) {
+      char ch = s.charAt(i++);
+      if (ch == '(') {
+        flag = false;
+        stack.push(ch);
+      } else {
+        if (stack.isEmpty() || stack.peek() == ')') {
+          if (flag) ans = Math.max(ans, len);
+          len = 0;
+          stack.pop();
+          flag = true;
+        } else if (stack.peek() == '(') {
+          System.out.println(len);
+          len += 2;
+          stack.pop();
+        }
+      }
     }
-
-  public static void main(String[] args) {
-    System.out.println(longestValidParentheses("(()"));
+    ans = Math.max(ans, len);
+    return ans;
   }
 
+  public static void main(String[] args) {
+    System.out.println(longestValidParentheses("(())(()"));
+  }
 }
