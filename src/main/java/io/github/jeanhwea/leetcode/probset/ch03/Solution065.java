@@ -42,6 +42,9 @@ public class Solution065 {
         if (Character.isDigit(ch)) state = S5;
         else if (ch == 'e' || ch == 'E') state = S6;
         else return false;
+      } else if (state == S4) {
+        if (Character.isDigit(ch)) state = S5;
+        else return false;
       } else if (state == S5) {
         if (Character.isDigit(ch)) state = S5;
         else if (ch == 'e' || ch == 'E') state = S6;
@@ -55,9 +58,6 @@ public class Solution065 {
         else return false;
       } else if (state == S8) {
         if (Character.isDigit(ch)) state = S8;
-        else return false;
-      } else if (state == S4) {
-        if (Character.isDigit(ch)) state = S5;
         else return false;
       } else {
         return false;
