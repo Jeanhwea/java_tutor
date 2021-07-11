@@ -17,7 +17,6 @@ public class Solution014 {
     done:
     for (int i = 0; i < m; i++) {
       char ch = strs[0].charAt(i);
-      boolean same = true;
       for (int j = 1; j < n; j++) {
         if (i >= strs[j].length() || strs[j].charAt(i) != ch) {
           break done;
