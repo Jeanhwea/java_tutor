@@ -11,34 +11,30 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution032 {
 
-  // TODO:
   public static int longestValidParentheses(String s) {
-    Deque<Character> stack = new LinkedList<>();
-    int n = s.length(), i = 0, ans = 0, len = 0;
-    boolean flag = true;
-    while (i < n) {
-      char ch = s.charAt(i++);
+    Deque<Integer> stack = new LinkedList<>();
+    stack.push(-1);
+    int n = s.length(), ans = 0;
+    for (int i = 0; i < n; i++) {
+      char ch = s.charAt(i);
       if (ch == '(') {
-        flag = false;
-        stack.push(ch);
+        stack.push(i);
       } else {
-        if (stack.isEmpty() || stack.peek() == ')') {
-          if (flag) ans = Math.max(ans, len);
-          len = 0;
-          stack.pop();
-          flag = true;
-        } else if (stack.peek() == '(') {
-          System.out.println(len);
-          len += 2;
-          stack.pop();
+        stack.pop();
+        if (stack.isEmpty()) {
+          stack.push(i);
+        } else {
+          // System.out.printf("i,peek=%d,%d\n", i, stack.peek());
+          ans = Math.max(ans, i - stack.peek());
         }
       }
     }
-    ans = Math.max(ans, len);
     return ans;
   }
 
   public static void main(String[] args) {
-    System.out.println(longestValidParentheses("(())(()"));
+    // System.out.println(longestValidParentheses("(())(()"));
+    System.out.println(longestValidParentheses("()()"));
+    // System.out.println(longestValidParentheses("(()"));
   }
 }
