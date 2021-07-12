@@ -11,7 +11,12 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution084 {
 
-  public static void main(String[] args) {
+  public static int largestRectangleArea(int[] a) {
+    int n = a.length;
   }
 
+  public static void main(String[] args) {
+    int[] heights = {2, 1, 5, 6, 2, 3};
+    System.out.println(largestRectangleArea(heights));
+  }
 }
