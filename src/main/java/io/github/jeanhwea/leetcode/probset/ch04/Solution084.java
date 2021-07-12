@@ -34,7 +34,8 @@ public class Solution084 {
   }
 
   public static void main(String[] args) {
-    int[] heights = {2, 1, 6, 6, 2, 3};
+    // int[] heights = {2, 1, 6, 6, 2, 3};
+    int[] heights = {2, 1, 2};
     System.out.println(largestRectangleArea(heights));
   }
 }
