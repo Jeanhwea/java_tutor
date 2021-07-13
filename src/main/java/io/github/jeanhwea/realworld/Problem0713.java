@@ -47,10 +47,16 @@ public class Problem0713 {
 
     public void print() {
       Node<T> p = dummy.next;
+      StringBuilder sb = new StringBuilder();
+      sb.append("[");
       while (p != null) {
-        System.out.println(p.val);
+        sb.append(String.valueOf(p.val));
+        sb.append(", ");
         p = p.next;
       }
+      sb.delete(sb.length() - 2, sb.length());
+      sb.append("]");
+      System.out.println(sb.toString());
     }
   }
 
@@ -63,5 +69,14 @@ public class Problem0713 {
     list01.reverse();
     System.out.println("----------------------------------------");
     list01.print();
+
+    MyList<String> list02 = new MyList<>();
+    list02.insert("A");
+    list02.insert("B");
+    list02.insert("C");
+    list02.print();
+    list02.reverse();
+    System.out.println("----------------------------------------");
+    list02.print();
   }
 }
