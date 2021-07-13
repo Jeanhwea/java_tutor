@@ -77,10 +77,10 @@
 
 * 树 Tree
   1. [X] [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][LC144]] [[file:ch05/Solution144.java][二叉树的前序遍历]]
-  2. [ ] [[https://leetcode-cn.com/problems/binary-tree-inorder-traversal/][LC094]] [[file:ch05/Solution094.java][二叉树的中序遍历]]
-  3. [ ] Binary Tree Postorder Traversal
-  4. [ ] Binary Tree Level Order Traversal
-  5. [ ] Binary Tree Level Order Traversal II
+  2. [X] [[https://leetcode-cn.com/problems/binary-tree-inorder-traversal/][LC094]] [[file:ch05/Solution094.java][二叉树的中序遍历]]
+  3. [X] [[https://leetcode-cn.com/problems/binary-tree-postorder-traversal/][LC145]] [[file:ch05/Solution145.java][二叉树的后序遍历]]
+  4. [X] [[https://leetcode-cn.com/problems/binary-tree-level-order-traversal/][LC102]] [[file:ch05/Solution102.java][二叉树的层序遍历]]
+  5. [ ] [[https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/][LC107]] [[file:ch05/Solution107.java][二叉树的层序遍历 II]]
   6. [ ] Binary Tree Zigzag Level Order Traversal
   7. [ ] Recover Binary Search Tree
   8. [ ] Same Tree
