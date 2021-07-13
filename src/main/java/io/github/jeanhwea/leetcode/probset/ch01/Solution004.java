@@ -9,7 +9,7 @@ package io.github.jeanhwea.leetcode.probset.ch01;
 @SuppressWarnings("all")
 public class Solution004 {
 
-  // 双制造合并数组
+  // 双指针合并数组
   public static double findMedianSortedArrays1(int[] a, int[] b) {
     int n = a.length, m = b.length, i = 0, j = 0, u = 0, v = 0;
 
