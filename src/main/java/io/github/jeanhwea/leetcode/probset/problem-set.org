@@ -72,7 +72,7 @@
 * 栈和队列 Stack & Heap
   1. [X] [[https://leetcode-cn.com/problems/valid-parentheses/][LC020]] [[file:ch04/Solution020.java][有效的括号]]
   2. [X] [[https://leetcode-cn.com/problems/longest-valid-parentheses/][LC032]] [[file:ch04/Solution032.java][最长有效括号]]
-  3. [ ] [[https://leetcode-cn.com/problems/largest-rectangle-in-histogram/][LC084]] [[file:ch04/Solution084.java][柱状图中最大的矩形]]
+  3. [X] [[https://leetcode-cn.com/problems/largest-rectangle-in-histogram/][LC084]] [[file:ch04/Solution084.java][柱状图中最大的矩形]]
   4. [X] [[https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/][LC150]] [[file:ch04/Solution150.java][逆波兰表达式求值]]
 
 * 树 Tree
