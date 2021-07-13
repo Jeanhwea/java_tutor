@@ -81,8 +81,8 @@
   3. [X] [[https://leetcode-cn.com/problems/binary-tree-postorder-traversal/][LC145]] [[file:ch05/Solution145.java][二叉树的后序遍历]]
   4. [X] [[https://leetcode-cn.com/problems/binary-tree-level-order-traversal/][LC102]] [[file:ch05/Solution102.java][二叉树的层序遍历]]
   5. [X] [[https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/][LC107]] [[file:ch05/Solution107.java][二叉树的层序遍历 II]]
-  6. [ ] [[https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/][LC103]] [[file:ch05/Solution103.java][二叉树的锯齿形层序遍历]]
-  7. [ ] Recover Binary Search Tree
+  6. [X] [[https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/][LC103]] [[file:ch05/Solution103.java][二叉树的锯齿形层序遍历]]
+  7. [ ] [[https://leetcode-cn.com/problems/recover-binary-search-tree/][LC099]] [[file:ch05/Solution099.java][恢复二叉搜索树]]
   8. [ ] Same Tree
   9. [ ] Symmetric Tree
   10. [ ] Balanced Binary Tree
