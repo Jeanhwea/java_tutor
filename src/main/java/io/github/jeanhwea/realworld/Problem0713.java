@@ -67,16 +67,17 @@ public class Problem0713 {
     list01.insert(1);
     list01.print();
     list01.reverse();
-    System.out.println("----------------------------------------");
     list01.print();
+
+    System.out.println("----------------------------------------");
 
     MyList<String> list02 = new MyList<>();
     list02.insert("A");
     list02.insert("B");
     list02.insert("C");
+    list02.insert("D");
     list02.print();
     list02.reverse();
-    System.out.println("----------------------------------------");
     list02.print();
   }
 }

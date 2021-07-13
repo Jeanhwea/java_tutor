@@ -28,6 +28,7 @@ public class Solution084 {
       stack.push(i);
     }
 
+    stack.clear();
     for (int i = n - 1; i >= 0; i--) {
       while (!stack.isEmpty() && a[stack.peek()] >= a[i]) {
         stack.pop();
@@ -35,8 +36,8 @@ public class Solution084 {
       right[i] = stack.isEmpty() ? n : stack.peek();
       stack.push(i);
     }
-    System.out.println(Arrays.toString(left));
-    System.out.println(Arrays.toString(right));
+    // System.out.println(Arrays.toString(left));
+    // System.out.println(Arrays.toString(right));
 
     for (int i = 0; i < n; i++) {
       ans = Math.max(ans, (right[i] - left[i] - 1) * a[i]);
@@ -47,7 +48,7 @@ public class Solution084 {
 
   public static void main(String[] args) {
     // int[] heights = {2, 1, 6, 6, 2, 3};
-    int[] heights = {2, 1, 2};
+    int[] heights = {0, 9};
     System.out.println(largestRectangleArea(heights));
   }
 }
