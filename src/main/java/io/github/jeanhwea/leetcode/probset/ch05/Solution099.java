@@ -19,7 +19,7 @@ public class Solution099 {
     while (curr != null) {
       if (curr.left != null) {
         // prev 节点就是当前 curr 节点向左走一步，然后一直向右走至无法走为止
-        // prev 是 curr 中序遍历的前驱
+        // prev 是 curr 中序遍历的前驱，也是 mostRight
         prev = curr.left;
         while (prev.right != null && prev.right != curr) prev = prev.right;
 
