@@ -13,38 +13,41 @@ public class Solution099 {
 
   // Morris 遍历
   public static void recoverTree(TreeNode root) {
-    TreeNode x = null, y = null, pred = null, curr = null;
+    TreeNode x = null, y = null, pred = null;
 
-    while (root != null) {
-      if (root.left != null) {
-        // curr 节点就是当前 root 节点向左走一步，然后一直向右走至无法走为止
-        curr = root.left;
-        while (curr.right != null && curr.right != root) curr = curr.right;
+    TreeNode prev = null, curr = root;
+    while (curr != null) {
+      if (curr.left != null) {
+        // prev 节点就是当前 curr 节点向左走一步，然后一直向右走至无法走为止
+        // prev 是 curr 中序遍历的前驱
+        prev = curr.left;
+        while (prev.right != null && prev.right != curr) prev = prev.right;
 
-        // 让 curr 的右指针指向 root，继续遍历左子树
-        if (curr.right == null) {
-          curr.right = root;
-          root = root.left;
+        // 让 prev 的右指针指向 curr，继续遍历左子树
+        if (prev.right == null) {
+          prev.right = curr;
+          curr = curr.left;
         } else { // 说明左子树已经访问完了，我们需要断开链接
-          if (pred != null && root.val < pred.val) {
-            y = root;
+          if (pred != null && curr.val < pred.val) {
+            y = curr;
             if (x == null) x = pred;
           }
-          pred = root;
+          pred = curr;
 
-          curr.right = null;
-          root = root.right;
+          prev.right = null;
+          curr = curr.right;
         }
       } else { // 如果没有左孩子，则直接访问右孩子
-        if (pred != null && root.val < pred.val) {
-          y = root;
+        if (pred != null && curr.val < pred.val) {
+          y = curr;
           if (x == null) x = pred;
         }
-        pred = root;
+        pred = curr;
 
-        root = root.right;
+        curr = curr.right;
       }
     }
+
     swap(x, y);
   }
 
