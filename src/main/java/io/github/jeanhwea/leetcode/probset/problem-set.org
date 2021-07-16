@@ -102,6 +102,33 @@
   25. [ ] [[https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/][LC116]] 填充每个节点的下一个右侧节点指针
   26. [ ] [[https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/][LC129]] 求根节点到叶节点数字之和
 
+* 图 Graph
+  1. [ ] [[https://leetcode-cn.com/problems/clone-graph/][LC133]] 克隆图
+  2. [X] [[https://leetcode-cn.com/problems/max-area-of-island/][LC695]] [[file:ch13/Solution695.java][岛屿的最大面积]]
+
+* 贪心法 Greedy Algorithm
+  1. [ ] [[https://leetcode-cn.com/problems/jump-game/][LC055]] 跳跃游戏
+  2. [ ] [[https://leetcode-cn.com/problems/jump-game-ii/][LC045]] 跳跃游戏 II
+  3. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/][LC121]] 买卖股票的最佳时机
+  4. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/][LC122]] 买卖股票的最佳时机 II
+  5. [ ] [[https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/][LC003]] 无重复字符的最长子串
+  6. [ ] [[https://leetcode-cn.com/problems/container-with-most-water/][LC011]] 盛最多水的容器
+
+* 动态规划 Dynamic Programming
+  1. [ ] [[https://leetcode-cn.com/problems/triangle/][LC120]] 三角形最小路径和
+  2. [ ] [[https://leetcode-cn.com/problems/maximum-subarray/][LC053]] 最大子序和
+  3. [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning-ii/][LC132]] 分割回文串 II
+  4. [ ] [[https://leetcode-cn.com/problems/maximal-rectangle/][LC085]] 最大矩形
+  5. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/][LC123]] 买卖股票的最佳时机 III
+  6. [ ] [[https://leetcode-cn.com/problems/interleaving-string/][LC097]] 交错字符串
+  7. [ ] [[https://leetcode-cn.com/problems/scramble-string/][LC087]] 扰乱字符串
+  8. [ ] [[https://leetcode-cn.com/problems/minimum-path-sum/][LC064]] 最小路径和
+  9. [ ] [[https://leetcode-cn.com/problems/edit-distance/][LC072]] 编辑距离
+  10. [ ] [[https://leetcode-cn.com/problems/average-waiting-time/][LC1701]] 平均等待时间
+  11. [ ] [[https://leetcode-cn.com/problems/distinct-subsequences/][LC115]] 不同的子序列
+  12. [ ] [[https://leetcode-cn.com/problems/word-break/][LC139]] 单词拆分
+  13. [ ] [[https://leetcode-cn.com/problems/word-break-ii/][LC140]] 单词拆分 II
+
 * 排序和查找 Sorting & Searching
   1. [ ] [[https://leetcode-cn.com/problems/merge-sorted-array/][LC088]] 合并两个有序数组
   2. [ ] [[https://leetcode-cn.com/problems/merge-two-sorted-lists/][LC021]] 合并两个有序链表
@@ -141,33 +168,6 @@
 * 分治 Divide and Conquer
   1. [ ] [[https://leetcode-cn.com/problems/powx-n/][LC050]] Pow(x, n)
   2. [ ] [[https://leetcode-cn.com/problems/sqrtx/][LC069]] x 的平方根
-
-* 贪心法 Greedy Algorithm
-  1. [ ] [[https://leetcode-cn.com/problems/jump-game/][LC055]] 跳跃游戏
-  2. [ ] [[https://leetcode-cn.com/problems/jump-game-ii/][LC045]] 跳跃游戏 II
-  3. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/][LC121]] 买卖股票的最佳时机
-  4. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/][LC122]] 买卖股票的最佳时机 II
-  5. [ ] [[https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/][LC003]] 无重复字符的最长子串
-  6. [ ] [[https://leetcode-cn.com/problems/container-with-most-water/][LC011]] 盛最多水的容器
-
-* 动态规划 Dynamic Programming
-  1. [ ] [[https://leetcode-cn.com/problems/triangle/][LC120]] 三角形最小路径和
-  2. [ ] [[https://leetcode-cn.com/problems/maximum-subarray/][LC053]] 最大子序和
-  3. [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning-ii/][LC132]] 分割回文串 II
-  4. [ ] [[https://leetcode-cn.com/problems/maximal-rectangle/][LC085]] 最大矩形
-  5. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/][LC123]] 买卖股票的最佳时机 III
-  6. [ ] [[https://leetcode-cn.com/problems/interleaving-string/][LC097]] 交错字符串
-  7. [ ] [[https://leetcode-cn.com/problems/scramble-string/][LC087]] 扰乱字符串
-  8. [ ] [[https://leetcode-cn.com/problems/minimum-path-sum/][LC064]] 最小路径和
-  9. [ ] [[https://leetcode-cn.com/problems/edit-distance/][LC072]] 编辑距离
-  10. [ ] [[https://leetcode-cn.com/problems/average-waiting-time/][LC1701]] 平均等待时间
-  11. [ ] [[https://leetcode-cn.com/problems/distinct-subsequences/][LC115]] 不同的子序列
-  12. [ ] [[https://leetcode-cn.com/problems/word-break/][LC139]] 单词拆分
-  13. [ ] [[https://leetcode-cn.com/problems/word-break-ii/][LC140]] 单词拆分 II
-
-* 图 Graph
-  1. [ ] [[https://leetcode-cn.com/problems/clone-graph/][LC133]] 克隆图
-  2. [X] [[https://leetcode-cn.com/problems/max-area-of-island/][LC695]] [[file:ch13/Solution695.java][岛屿的最大面积]]
 
 * 细节题 Misc
   1. [ ] [[https://leetcode-cn.com/problems/reverse-integer/][LC007]] 整数反转
