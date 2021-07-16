@@ -28,7 +28,7 @@ public class Problem0716 {
           prev[i] = j;
         }
       }
-      if (dp[i] > dp[maxIndex]) maxIndex = i;
+      if (dp[i] >= dp[maxIndex]) maxIndex = i;
     }
 
     List<Integer> ans = new LinkedList<>();
@@ -41,7 +41,7 @@ public class Problem0716 {
   }
 
   public static void main(String[] args) {
-    // int[] a = {1, 2, 4, 6, 5};
+    // int[] a = {1, 2, 8, 6, 5};
     int[] a = {2, 1, 5, 3, 6, 4, 8, 9, 7};
     System.out.println(longestIncreasingSubsequence(a));
   }
