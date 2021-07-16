@@ -11,6 +11,36 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution105 {
 
+  // 辅助栈
+  public static TreeNode buildTree1(int[] preorder, int[] inorder) {
+    if (preorder == null || preorder.length == 0) return null;
+
+    TreeNode root = new TreeNode(preorder[0]);
+
+    // stack 记录当前节点还未考虑右儿子节点
+    Deque<TreeNode> stack = new LinkedList<TreeNode>();
+    stack.push(root);
+
+    int j = 0;
+    for (int i = 1; i < preorder.length; i++) {
+      TreeNode node = stack.peek();
+      if (node.val != inorder[j]) {
+        node.left = new TreeNode(preorder[i]);
+        stack.push(node.left);
+      } else {
+        // 中序遍历刚好和前序遍历顺序相反
+        while (!stack.isEmpty() && stack.peek().val == inorder[j]) {
+          node = stack.pop();
+          j++;
+        }
+        node.right = new TreeNode(preorder[i]);
+        stack.push(node.right);
+      }
+    }
+
+    return root;
+  }
+
   // 递归法
   public static TreeNode buildTree(int[] preorder, int[] inorder) {
     return buildTree(preorder, inorder, 0, 0, preorder.length);
@@ -32,7 +62,7 @@ public class Solution105 {
 
   public static void main(String[] args) {
     int[] preorder = {3, 9, 20, 15, 7}, inorder = {9, 3, 15, 20, 7};
-    TreeNode tree01 = buildTree(preorder, inorder);
+    TreeNode tree01 = buildTree1(preorder, inorder);
     TreeNode.dispTree(tree01);
   }
 }
