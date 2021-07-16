@@ -122,23 +122,21 @@
   5. [ ] [[https://leetcode-cn.com/problems/combinations/][LC077]] 组合
   6. [ ] [[https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/][LC017]] 电话号码的字母组合
 
-* 广度优先搜索 BFS
+* 广搜和深搜 BFS & DFS
   1. [ ] [[https://leetcode-cn.com/problems/word-ladder/][LC127]] 单词接龙
   2. [ ] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] 单词接龙 II
   3. [ ] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] 被围绕的区域
-
-* 深度优先搜索 DFS
-  1. [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] 分割回文串
-  2. [ ] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] 不同路径
-  3. [ ] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] 不同路径 II
-  4. [ ] [[https://leetcode-cn.com/problems/n-queens/][LC051]] N 皇后
-  5. [ ] [[https://leetcode-cn.com/problems/n-queens-ii/][LC052]] N 皇后 II
-  6. [ ] [[https://leetcode-cn.com/problems/restore-ip-addresses/][LC093]] 复原 IP 地址
-  7. [ ] [[https://leetcode-cn.com/problems/combination-sum/][LC039]] 组合总和
-  8. [ ] [[https://leetcode-cn.com/problems/combination-sum-ii/][LC040]] 组合总和 II
-  9. [ ] [[https://leetcode-cn.com/problems/generate-parentheses/][LC022]] 括号生成
-  10. [ ] [[https://leetcode-cn.com/problems/sudoku-solver/][LC037]] 解数独
-  11. [ ] [[https://leetcode-cn.com/problems/word-search/][LC079]] 单词搜索
+  4. [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] 分割回文串
+  5. [ ] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] 不同路径
+  6. [ ] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] 不同路径 II
+  7. [ ] [[https://leetcode-cn.com/problems/n-queens/][LC051]] N 皇后
+  8. [ ] [[https://leetcode-cn.com/problems/n-queens-ii/][LC052]] N 皇后 II
+  9. [ ] [[https://leetcode-cn.com/problems/restore-ip-addresses/][LC093]] 复原 IP 地址
+  10. [ ] [[https://leetcode-cn.com/problems/combination-sum/][LC039]] 组合总和
+  11. [ ] [[https://leetcode-cn.com/problems/combination-sum-ii/][LC040]] 组合总和 II
+  12. [ ] [[https://leetcode-cn.com/problems/generate-parentheses/][LC022]] 括号生成
+  13. [ ] [[https://leetcode-cn.com/problems/sudoku-solver/][LC037]] 解数独
+  14. [ ] [[https://leetcode-cn.com/problems/word-search/][LC079]] 单词搜索
 
 * 分治 Divide and Conquer
   1. [ ] [[https://leetcode-cn.com/problems/powx-n/][LC050]] Pow(x, n)
