@@ -28,7 +28,6 @@ public class Problem0716 {
           prev[i] = j;
         }
       }
-
       if (dp[i] > dp[maxIndex]) maxIndex = i;
     }
 
