@@ -12,7 +12,7 @@ import java.util.*;
 public class Solution105 {
 
   // 辅助栈
-  public static TreeNode buildTree1(int[] preorder, int[] inorder) {
+  public static TreeNode buildTree(int[] preorder, int[] inorder) {
     if (preorder == null || preorder.length == 0) return null;
 
     TreeNode root = new TreeNode(preorder[0]);
@@ -42,11 +42,11 @@ public class Solution105 {
   }
 
   // 递归法
-  public static TreeNode buildTree(int[] preorder, int[] inorder) {
-    return buildTree(preorder, inorder, 0, 0, preorder.length);
+  public static TreeNode buildTree1(int[] preorder, int[] inorder) {
+    return helper(preorder, inorder, 0, 0, preorder.length);
   }
 
-  public static TreeNode buildTree(int[] preorder, int[] inorder, int x, int y, int len) {
+  public static TreeNode helper(int[] preorder, int[] inorder, int x, int y, int len) {
     if (len <= 0) return null;
 
     TreeNode root = new TreeNode(preorder[x]);
@@ -55,8 +55,8 @@ public class Solution105 {
     int i = y;
     while (i < y + len && inorder[i] != root.val) i++;
 
-    root.left = buildTree(preorder, inorder, x + 1, y, i - y);
-    root.right = buildTree(preorder, inorder, x + 1 + i - y, i + 1, len - (i - y) - 1);
+    root.left = helper(preorder, inorder, x + 1, y, i - y);
+    root.right = helper(preorder, inorder, x + 1 + i - y, i + 1, len - (i - y) - 1);
     return root;
   }
 
