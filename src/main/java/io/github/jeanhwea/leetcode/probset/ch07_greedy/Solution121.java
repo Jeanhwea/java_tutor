@@ -1,6 +1,4 @@
-package io.github.jeanhwea.leetcode.probset.ch07_ga;
-
-import java.util.*;
+package io.github.jeanhwea.leetcode.probset.ch07_greedy;
 
 /**
  * 买卖股票的最佳时机
