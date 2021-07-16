@@ -3,23 +3,21 @@ package io.github.jeanhwea.leetcode.probset.ch07_ga;
 import java.util.*;
 
 /**
- * 买卖股票的最佳时机
+ * 买卖股票的最佳时机 II
  *
  * @author Jinghui Hu
  * @since 2021-07-16, JDK1.8
  */
 @SuppressWarnings("all")
-public class Solution121 {
+public class Solution122 {
 
   public static int maxProfit(int[] a) {
-    int n = a.length, ans = 0, buy = 0;
-
-    buy = a[0];
+    int n = a.length, ans = 0;
     for (int i = 1; i < n; i++) {
-      if (a[i] < buy) buy = a[i];
-      ans = Math.max(ans, a[i] - buy);
+      if (a[i] > a[i - 1]) {
+        ans += a[i] - a[i - 1];
+      }
     }
-
     return ans;
   }
 
