@@ -166,8 +166,8 @@
   14. [ ] [[https://leetcode-cn.com/problems/word-search/][LC079]] 单词搜索
 
 * 分治 Divide and Conquer
-  1. [ ] [[https://leetcode-cn.com/problems/powx-n/][LC050]] Pow(x, n)
-  2. [ ] [[https://leetcode-cn.com/problems/sqrtx/][LC069]] x 的平方根
+  1. [X] [[https://leetcode-cn.com/problems/powx-n/][LC050]] [[file:ch12_dnc/Solution050.java][Pow(x, n)]]
+  2. [X] [[https://leetcode-cn.com/problems/sqrtx/][LC069]] [[file:ch12_dnc/Solution069.java][x 的平方根]]
 
 * 细节题 Misc
   1. [ ] [[https://leetcode-cn.com/problems/reverse-integer/][LC007]] 整数反转
