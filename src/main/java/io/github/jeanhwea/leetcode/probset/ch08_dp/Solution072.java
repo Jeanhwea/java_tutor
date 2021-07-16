@@ -25,6 +25,7 @@ public class Solution072 {
         if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
           dp[i][j] = dp[i - 1][j - 1];
         } else {
+          // 取 word1 插入，删除，替换三种情况较小值加一
           int minValue = Math.min(dp[i][j - 1], dp[i - 1][j]);
           minValue = Math.min(minValue, dp[i - 1][j - 1]);
           dp[i][j] = 1 + minValue;
