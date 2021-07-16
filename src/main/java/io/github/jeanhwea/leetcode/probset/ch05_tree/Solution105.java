@@ -50,7 +50,6 @@ public class Solution105 {
     if (len <= 0) return null;
 
     TreeNode root = new TreeNode(preorder[x]);
-    if (len <= 1) return root;
 
     int i = y;
     while (i < y + len && inorder[i] != root.val) i++;
