@@ -123,7 +123,7 @@
   6. [ ] [[https://leetcode-cn.com/problems/interleaving-string/][LC097]] 交错字符串
   7. [ ] [[https://leetcode-cn.com/problems/scramble-string/][LC087]] 扰乱字符串
   8. [ ] [[https://leetcode-cn.com/problems/minimum-path-sum/][LC064]] 最小路径和
-  9. [ ] [[https://leetcode-cn.com/problems/edit-distance/][LC072]] 编辑距离
+  9. [ ] [[https://leetcode-cn.com/problems/edit-distance/][LC072]] [[file:ch08_dp/Solution072.java][编辑距离]]
   10. [ ] [[https://leetcode-cn.com/problems/average-waiting-time/][LC1701]] 平均等待时间
   11. [ ] [[https://leetcode-cn.com/problems/distinct-subsequences/][LC115]] 不同的子序列
   12. [ ] [[https://leetcode-cn.com/problems/word-break/][LC139]] 单词拆分
