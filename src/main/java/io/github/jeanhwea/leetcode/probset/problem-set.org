@@ -117,7 +117,7 @@
 * 动态规划 Dynamic Programming
   1. [X] [[https://leetcode-cn.com/problems/edit-distance/][LC072]] [[file:ch08_dp/Solution072.java][编辑距离]]
   2. [X] [[https://leetcode-cn.com/problems/longest-increasing-subsequence/][LC300]] [[file:ch08_dp/Solution300.java][最长递增子序列]]
-  3. [ ] [[https://leetcode-cn.com/problems/triangle/][LC120]] 三角形最小路径和
+  3. [X] [[https://leetcode-cn.com/problems/triangle/][LC120]] [[file:ch08_dp/Solution120.java][三角形最小路径和]]
   4. [ ] [[https://leetcode-cn.com/problems/maximum-subarray/][LC053]] 最大子序和
   5. [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning-ii/][LC132]] 分割回文串 II
   6. [ ] [[https://leetcode-cn.com/problems/maximal-rectangle/][LC085]] 最大矩形
