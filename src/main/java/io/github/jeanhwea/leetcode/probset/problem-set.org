@@ -179,7 +179,7 @@
   5. [ ] [[https://leetcode-cn.com/problems/minimum-window-substring/][LC076]] 最小覆盖子串
   6. [ ] [[https://leetcode-cn.com/problems/multiply-strings/][LC043]] 字符串相乘
   7. [ ] [[https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/][LC030]] 串联所有单词的子串
-  8. [ ] [[https://leetcode-cn.com/problems/pascals-triangle-ii/][LC119]] 杨辉三角 II
+  8. [X] [[https://leetcode-cn.com/problems/pascals-triangle-ii/][LC119]] 杨辉三角 II
   9. [ ] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] 螺旋矩阵
   10. [ ] [[https://leetcode-cn.com/problems/spiral-matrix-ii/][LC059]] 螺旋矩阵 II
   11. [ ] [[https://leetcode-cn.com/problems/zigzag-conversion/][LC006]] Z 字形变换
