@@ -12,13 +12,14 @@ import java.util.*;
 public class Solution085 {
 
   public static int maximalRectangle(char[][] matrix) {
-    int m = matrix.length;
-    if (m == 0) return 0;
-    int n = matrix[0].length;
-    int[][] left = new int[m][n];
+    // n*m matrix
+    int n = matrix.length;
+    if (n == 0) return 0;
+    int m = matrix[0].length;
+    int[][] left = new int[n][m];
 
-    for (int i = 0; i < m; i++) {
-      for (int j = 0; j < n; j++) {
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
         if (matrix[i][j] == '1') {
           left[i][j] = (j == 0 ? 0 : left[i][j - 1]) + 1;
         }
@@ -27,8 +28,8 @@ public class Solution085 {
     // System.out.println(Arrays.deepToString(left).replaceAll("],", "],\n"));
 
     int ans = 0;
-    for (int i = 0; i < m; i++) {
-      for (int j = 0; j < n; j++) {
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
         if (matrix[i][j] == '0') continue;
         int width = left[i][j];
         int area = width;
