@@ -11,7 +11,34 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution120 {
 
+  // 一维动规 时间复杂度 O(n^2) 空间复杂度 O(n)
   public static int minimumTotal(List<List<Integer>> triangle) {
+    int n = triangle.size();
+
+    // dp[i-1] 上一层的第 i 个元素选取时的最小路径和
+    int[] dp = new int[n];
+    Arrays.fill(dp, Integer.MAX_VALUE);
+
+    dp[0] = triangle.get(0).get(0);
+    for (int i = 2; i <= n; i++) {
+      int topVal = dp[0], topLeftVal = Integer.MAX_VALUE;
+      for (int j = 1; j <= i; j++) {
+        topVal = dp[j - 1];
+        int currVal = triangle.get(i - 1).get(j - 1);
+        dp[j - 1] = Math.min(topVal, topLeftVal) + currVal;
+        topLeftVal = topVal;
+      }
+    }
+
+    int ans = Integer.MAX_VALUE;
+    for (int i = 0; i < n; i++) {
+      ans = Math.min(ans, dp[i]);
+    }
+    return ans;
+  }
+
+  // 二维动规 时间复杂度 O(n^2) 空间复杂度 O(n^2)
+  public static int minimumTotal1(List<List<Integer>> triangle) {
     int n = triangle.size();
 
     // dp[i][j] 表示第 i 层的第 j 个元素选取时的最小路径和
