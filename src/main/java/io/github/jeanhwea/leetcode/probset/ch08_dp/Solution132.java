@@ -19,10 +19,9 @@ public class Solution132 {
     // dp[i-1][j-1] 表示 str 第 i 个字符到第 j 个字符是否为回文串
     boolean[][] dp = new boolean[n][n];
     for (int i = 0; i < n; i++) Arrays.fill(dp[i], true);
-
-    for (int i = n - 1; i >= 0; i--) {
-      for (int j = i + 1; j < n; j++) {
-        dp[i][j] = (a[i] == a[j]) && dp[i + 1][j - 1];
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < i; j++) {
+        dp[j][i] = (a[j] == a[i]) && dp[j + 1][i - 1];
       }
     }
 
