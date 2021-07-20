@@ -13,6 +13,25 @@ public class Solution019 {
     ListNode dummy = new ListNode(-1);
     dummy.next = head;
 
+    ListNode fast, slow;
+    fast = slow = dummy;
+    while (n-- >= 0) fast = fast.next;
+
+    while (fast != null) {
+      fast = fast.next;
+      slow = slow.next;
+    }
+    if (slow != null && slow.next != null) {
+      slow.next = slow.next.next;
+    }
+
+    return dummy.next;
+  }
+
+  public static ListNode removeNthFromEnd0(ListNode head, int n) {
+    ListNode dummy = new ListNode(-1);
+    dummy.next = head;
+
     int size = 0;
     ListNode p = dummy;
     while (p != null) {
@@ -31,7 +50,7 @@ public class Solution019 {
 
   public static void main(String[] args) {
     ListNode list01 = ListNode.makeList(new int[] {1, 2, 3, 4, 5});
-    ListNode.dispList(removeNthFromEnd(list01, 2));
+    ListNode.dispList(removeNthFromEnd(list01, 5));
     // ListNode list01 = ListNode.makeList(new int[] {1});
     // ListNode.dispList(removeNthFromEnd(list01, 1));
   }
