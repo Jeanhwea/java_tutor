@@ -120,7 +120,7 @@
   3. [X] [[https://leetcode-cn.com/problems/triangle/][LC120]] [[file:ch08_dp/Solution120.java][三角形最小路径和]]
   4. [X] [[https://leetcode-cn.com/problems/maximum-subarray/][LC053]] [[file:ch08_dp/Solution053.java][最大子序和]]
   5. [X] [[https://leetcode-cn.com/problems/palindrome-partitioning-ii/][LC132]] [[file:ch08_dp/Solution132.java][分割回文串 II]]
-  6. [ ] [[https://leetcode-cn.com/problems/maximal-rectangle/][LC085]] 最大矩形
+  6. [ ] [[https://leetcode-cn.com/problems/maximal-rectangle/][LC085]] [[file:ch08_dp/Solution085.java][最大矩形]]
   7. [ ] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/][LC123]] 买卖股票的最佳时机 III
   8. [ ] [[https://leetcode-cn.com/problems/interleaving-string/][LC097]] 交错字符串
   9. [ ] [[https://leetcode-cn.com/problems/scramble-string/][LC087]] 扰乱字符串
