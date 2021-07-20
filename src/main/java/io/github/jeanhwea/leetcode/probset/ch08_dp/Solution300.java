@@ -13,7 +13,7 @@ public class Solution300 {
 
   public static int lengthOfLIS(int[] nums) {
     int n = nums.length;
-    // dp[i] 表示 nums[0..i-1] 的 LIS
+    // dp[i] 表示以 nums[i-1] 数字结尾的 LIS 的长度
     int[] dp = new int[n + 1];
     int maxIndex = 0;
     Arrays.fill(dp, 1);
