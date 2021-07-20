@@ -9,6 +9,7 @@ package io.github.jeanhwea.leetcode.probset.ch02_list;
 @SuppressWarnings("all")
 public class Solution019 {
 
+  // 快慢指针
   public static ListNode removeNthFromEnd(ListNode head, int n) {
     ListNode dummy = new ListNode(-1);
     dummy.next = head;
@@ -28,6 +29,7 @@ public class Solution019 {
     return dummy.next;
   }
 
+  // 计算链表长度
   public static ListNode removeNthFromEnd0(ListNode head, int n) {
     ListNode dummy = new ListNode(-1);
     dummy.next = head;
