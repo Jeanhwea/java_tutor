@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.thd;
+package io.github.jeanhwea.lang.jdk.p04_juc_tools;
 
 import java.util.concurrent.*;
 
@@ -9,7 +9,7 @@ import java.util.concurrent.*;
  * @since 2021-07-04, JDK1.8
  */
 @SuppressWarnings("all")
-public class Runner03 {
+public class App04 {
 
   public static void main(String[] args) throws InterruptedException {
     // test01();
