@@ -5,8 +5,8 @@ import java.sql.*;
 public class App01 {
 
   private static String url = "jdbc:mysql://localhost:3306/mysql?useSSL=false";
-  private static String username = "root";
-  private static String password = "root";
+  private static String username = "user01";
+  private static String password = "user01";
 
   public static void test01() throws Exception {
     // 加载驱动
