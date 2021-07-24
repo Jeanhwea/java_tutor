@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.thd;
+package io.github.jeanhwea.lang.jdk.p02_threadlocal;
 
 /**
  * ThreadLocal 类的方法
@@ -6,7 +6,7 @@ package io.github.jeanhwea.lang.thd;
  * @author Jinghui Hu
  * @since 2021-06-30, JDK1.8
  */
-public class Runner01 {
+public class App02 {
 
   public static class Person01 {
 

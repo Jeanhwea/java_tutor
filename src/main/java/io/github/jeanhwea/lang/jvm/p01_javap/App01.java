@@ -1,6 +1,4 @@
-package io.github.jeanhwea.lang.jvm;
-
-import java.util.*;
+package io.github.jeanhwea.lang.jvm.p01_javap;
 
 /**
  * 线程栈
@@ -9,7 +7,7 @@ import java.util.*;
  * @since 2021-07-03, JDK1.8
  */
 @SuppressWarnings("all")
-public class Example01 {
+public class App01 {
 
   private static final int FINAL_VAR01 = 2;
   private String name = "hello";
@@ -22,18 +20,18 @@ public class Example01 {
   }
 
   public static void main(String[] args) {
-    Example01 example = new Example01();
+    App01 example = new App01();
     example.method01();
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-//  $ javac Example01.java
-//  $ javap -c Example01.class
+//  $ javac App01.java
+//  $ javap -c App01.class
 ////////////////////////////////////////////////////////////////////////////////
 //
-// public class io.github.jeanhwea.lang.jvm.Example01 {
-//   public io.github.jeanhwea.lang.jvm.Example01();
+// public class io.github.jeanhwea.lang.jvm.p01_javap.App01 {
+//   public io.github.jeanhwea.lang.jvm.p01_javap.App01();
 //     Code:
 //        0: aload_0
 //        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
@@ -59,7 +57,7 @@ public class Example01 {
 //
 //   public static void main(java.lang.String[]);
 //     Code:
-//        0: new           #4                  // class io/github/jeanhwea/lang/jvm/Example01
+//        0: new           #4                  // class io/github/jeanhwea/lang/jvm/App01
 //        3: dup
 //        4: invokespecial #5                  // Method "<init>":()V
 //        7: astore_1

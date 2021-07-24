@@ -1,4 +1,4 @@
-package io.github.jeanhwea.jdk.app01_jdbc;
+package io.github.jeanhwea.lang.jdk.p01_jdbc;
 
 import java.sql.*;
 

@@ -1,8 +1,8 @@
-package io.github.jeanhwea.lang.juc;
+package io.github.jeanhwea.lang.juc.p01_cas_operation;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Runner01 {
+public class App01 {
 
   private static final int numThread = 5;
   private static final int threshold = 99;
@@ -36,7 +36,7 @@ public class Runner01 {
       Thread t =
           new Thread(
               () -> {
-                synchronized (Runner01.class) {
+                synchronized (App01.class) {
                   while (num2 < threshold) printNum(num2++);
                 }
               });

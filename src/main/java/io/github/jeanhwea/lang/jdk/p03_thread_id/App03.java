@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.thd;
+package io.github.jeanhwea.lang.jdk.p03_thread_id;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Jinghui Hu
  * @since 2021-07-04, JDK1.8
  */
-public class Runner02 {
+public class App03 {
 
   public static class ThreadId {
 
