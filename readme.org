@@ -1,4 +1,4 @@
-#+TITLE: ANOTHER TRI
+#+TITLE: ANOTHER TRY
 #+AUTHOR: Jinghui Hu
 #+EMAIL: hujinghui@buaa.edu.cn
 #+DATE: <2021-06-15 Tue 13:04:49>
@@ -6,6 +6,10 @@
 #+HTML_LINK_HOME: ../index.html
 #+SETUPFILE: ~/.emacs.d/site-lisp/org-html-themes/setup/theme-readtheorg-local.setup
 
+
+* TODO List
+  1. 将 lang 包中的代码材料迁移到 language 包中
+  2. 完成 probset 包
 
 * 基础知识
   1. [[https://leetcode-cn.com/leetbook/detail/tech-interview-cookbook/][校招基础知识详解]]
