@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.jdk.p02_threadlocal;
+package io.github.jeanhwea.language.juc.p02_threadlocal;
 
 /**
  * ThreadLocal 类的方法

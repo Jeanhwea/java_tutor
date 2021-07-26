@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.jdk.p03_thread_id;
+package io.github.jeanhwea.language.juc.p03_thread_id;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
