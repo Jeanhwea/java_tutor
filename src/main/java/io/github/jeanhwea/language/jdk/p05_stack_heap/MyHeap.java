@@ -1,14 +1,15 @@
-package io.github.jeanhwea.cheatsheet;
+package io.github.jeanhwea.language.jdk.p05_stack_heap;
 
 import java.util.*;
 
 /**
- * 优先队列，堆，堆排序
+ * 堆
  *
  * @author Jinghui Hu
- * @since 2021-06-06, JDK1.8
+ * @since 2021-07-26, JDK1.8
  */
-public class DS03Heap {
+@SuppressWarnings("all")
+public class MyHeap {
 
   /**
    * 优先队列的堆实现方式使用：上浮 (swim) 和下沉 (sink) 两个操作

@@ -1,4 +1,4 @@
-package io.github.jeanhwea.cheatsheet;
+package io.github.jeanhwea.language.jdk.p05_stack_heap;
 
 import java.util.*;
 
@@ -6,9 +6,10 @@ import java.util.*;
  * 栈
  *
  * @author Jinghui Hu
- * @since 2021-06-13, JDK1.8
+ * @since 2021-07-26, JDK1.8
  */
-public class DS02Stack {
+@SuppressWarnings("all")
+public class MyStack {
 
   // 链表节点定义
   public static class ListNode {

@@ -1,4 +1,4 @@
-package io.github.jeanhwea.cheatsheet;
+package io.github.jeanhwea.language.jdk.p07_tree;
 
 import java.util.*;
 
@@ -6,9 +6,10 @@ import java.util.*;
  * 二叉树
  *
  * @author Jinghui Hu
- * @since 2021-06-12, JDK1.8
+ * @since 2021-07-26, JDK1.8
  */
-public class DS04Tree {
+@SuppressWarnings("all")
+public class MyTree {
 
   // 二叉树定义
   public static class TreeNode {

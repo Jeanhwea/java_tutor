@@ -1,14 +1,15 @@
-package io.github.jeanhwea.cheatsheet;
+package io.github.jeanhwea.language.jdk.p08_sort;
 
 import java.util.*;
 
 /**
- * 各种排序算法
+ * 常见排序
  *
  * @author Jinghui Hu
- * @since 2021-06-06, JDK1.8
+ * @since 2021-07-26, JDK1.8
  */
-public class AG01Sort {
+@SuppressWarnings("all")
+public class App08 {
 
   ////////////////////////////////////////////////////////////////////////////////
   // 选择排序 selection sort

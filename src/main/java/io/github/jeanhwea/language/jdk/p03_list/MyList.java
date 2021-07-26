@@ -1,14 +1,15 @@
-package io.github.jeanhwea.cheatsheet;
+package io.github.jeanhwea.language.jdk.p03_list;
 
 import java.util.*;
 
 /**
- * 链表
+ * 链表实现
  *
  * @author Jinghui Hu
- * @since 2021-06-11, JDK1.8
+ * @since 2021-07-26, JDK1.8
  */
-public class DS01List {
+@SuppressWarnings("all")
+public class MyList {
 
   // 链表节点定义
   public static class ListNode {

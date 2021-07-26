@@ -1,4 +1,4 @@
-package io.github.jeanhwea.cheatsheet;
+package io.github.jeanhwea.language.jdk.p07_tree;
 
 import java.util.*;
 
@@ -11,9 +11,10 @@ import java.util.*;
  * <li>5. 节点 A 下的所有叶子节点到节点 A 的路径上的黑色节点数目相等
  *
  * @author Jinghui Hu
- * @since 2021-06-06, JDK1.8
+ * @since 2021-07-26, JDK1.8
  */
-public class DS10RbTree {
+@SuppressWarnings("all")
+public class MyRBTree {
 
   public static class RBTree {
     public int val;
