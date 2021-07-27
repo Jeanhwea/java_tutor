@@ -12,23 +12,9 @@ import java.util.*;
 @SuppressWarnings("all")
 public class App01 {
 
-  public static class Person {
-    private String name;
-
-    public Person() {}
-
-    public String getName() {
-      return this.name;
-    }
-
-    public void setName(String name) {
-      this.name = name;
-    }
-  }
-
   public static void main(String[] args) throws Exception {
     // 获取 Class 类
-    Class<?> clz = Class.forName("io.github.jeanhwea.language.jvm.p01_reflection.App01$Person");
+    Class<?> clz = Class.forName("io.github.jeanhwea.language.jvm.p01_reflection.beans.Person");
 
     // 获取类的构造器
     Constructor<?> ctor = clz.getConstructor();
