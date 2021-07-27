@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.jdk.p04_juc_tools;
+package io.github.jeanhwea.lang.juc;
 
 import java.util.concurrent.*;
 
