@@ -26,12 +26,12 @@ public class App21 {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-//  $ javac App01.java
-//  $ javap -c App01.class
+//  $ javac App21.java
+//  $ javap -c App21.class
 ////////////////////////////////////////////////////////////////////////////////
 //
-// public class io.github.jeanhwea.lang.jvm.p01_javap.App01 {
-//   public io.github.jeanhwea.lang.jvm.p01_javap.App01();
+// public class io.github.jeanhwea.language.jvm.p21_javap.App21 {
+//   public io.github.jeanhwea.language.jvm.p21_javap.App21();
 //     Code:
 //        0: aload_0
 //        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
@@ -57,7 +57,7 @@ public class App21 {
 //
 //   public static void main(java.lang.String[]);
 //     Code:
-//        0: new           #4                  // class io/github/jeanhwea/lang/jvm/App01
+//        0: new           #4                  // class io/github/jeanhwea/language/jvm/p21_javap/App21
 //        3: dup
 //        4: invokespecial #5                  // Method "<init>":()V
 //        7: astore_1
@@ -66,3 +66,5 @@ public class App21 {
 //       12: pop
 //       13: return
 // }
+//
+////////////////////////////////////////////////////////////////////////////////
