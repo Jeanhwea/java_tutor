@@ -1,6 +1,4 @@
-package io.github.jeanhwea.lang.jvm.p02_escape_analysis;
-
-import java.util.*;
+package io.github.jeanhwea.language.jvm.p22_escape_analysis;
 
 /**
  * 逃逸分析
@@ -9,7 +7,7 @@ import java.util.*;
  * @since 2021-07-04, JDK1.8
  */
 @SuppressWarnings("all")
-public class App02 {
+public class App22 {
 
   // -Xmx10m -Xms10m -XX:+PrintGC -XX:-DoEscapeAnalysis
   public static void main(String[] args) throws InterruptedException {

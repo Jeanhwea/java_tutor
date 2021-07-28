@@ -1,4 +1,4 @@
-package io.github.jeanhwea.lang.jvm.p01_javap;
+package io.github.jeanhwea.language.jvm.p21_javap;
 
 /**
  * 线程栈
@@ -7,7 +7,7 @@ package io.github.jeanhwea.lang.jvm.p01_javap;
  * @since 2021-07-03, JDK1.8
  */
 @SuppressWarnings("all")
-public class App01 {
+public class App21 {
 
   private static final int FINAL_VAR01 = 2;
   private String name = "hello";
@@ -20,7 +20,7 @@ public class App01 {
   }
 
   public static void main(String[] args) {
-    App01 example = new App01();
+    App21 example = new App21();
     example.method01();
   }
 }
