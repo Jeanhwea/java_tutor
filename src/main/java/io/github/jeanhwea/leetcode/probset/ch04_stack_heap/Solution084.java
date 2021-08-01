@@ -32,8 +32,6 @@ public class Solution084 {
       right[i] = stack.isEmpty() ? n : stack.peek();
       stack.push(i);
     }
-    // System.out.println(Arrays.toString(left));
-    // System.out.println(Arrays.toString(right));
 
     for (int i = 0; i < n; i++) {
       ans = Math.max(ans, (right[i] - left[i] - 1) * a[i]);
