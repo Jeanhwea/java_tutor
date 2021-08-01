@@ -145,7 +145,7 @@
 * 回溯 BackTrack
   1. [X] [[https://leetcode-cn.com/problems/subsets/][LC078]] [[file:ch10_backtrack/Solution078.java][子集]]
   2. [ ] [[https://leetcode-cn.com/problems/subsets-ii/][LC090]] 子集 II
-  3. [ ] [[https://leetcode-cn.com/problems/permutations/][LC046]] 全排列
+  3. [X] [[https://leetcode-cn.com/problems/permutations/][LC046]] [[file:ch10_backtrack/Solution046.java][全排列]]
   4. [ ] [[https://leetcode-cn.com/problems/permutations-ii/][LC047]] 全排列 II
   5. [X] [[https://leetcode-cn.com/problems/combinations/][LC077]] [[file:ch10_backtrack/Solution077.java][组合]]
   6. [ ] [[https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/][LC017]] 电话号码的字母组合
