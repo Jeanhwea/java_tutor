@@ -21,18 +21,14 @@ public class Solution084 {
 
     int ans = 0;
     for (int i = 0; i < n; i++) {
-      while (!stack.isEmpty() && a[stack.peek()] >= a[i]) {
-        stack.pop();
-      }
+      while (!stack.isEmpty() && a[stack.peek()] >= a[i]) stack.pop();
       left[i] = stack.isEmpty() ? -1 : stack.peek();
       stack.push(i);
     }
 
     stack.clear();
     for (int i = n - 1; i >= 0; i--) {
-      while (!stack.isEmpty() && a[stack.peek()] >= a[i]) {
-        stack.pop();
-      }
+      while (!stack.isEmpty() && a[stack.peek()] >= a[i]) stack.pop();
       right[i] = stack.isEmpty() ? n : stack.peek();
       stack.push(i);
     }
