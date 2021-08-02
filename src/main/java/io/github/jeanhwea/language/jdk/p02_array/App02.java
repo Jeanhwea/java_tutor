@@ -82,6 +82,8 @@ public class App02 {
       {1, 1, 0, 0, 0},
       {0, 0, 0, 0, 0}
     };
+    List<List<Integer>> ans = new LinkedList<>();
+
     // n 总行数, m 总列数
     int n = grid.length, m = grid[0].length;
 
@@ -89,18 +91,24 @@ public class App02 {
     for (int i = 0; i < n; i++) {
       // x 当前行数, y 当前列数
       int x = i, y = m - 1;
+      List<Integer> line = new LinkedList<>();
       while (x >= 0 && y >= 0) {
-        System.out.println(grid[x--][y--]);
+        line.add(grid[x--][y--]);
       }
+      ans.add(line);
     }
 
     // 打印下三角 (去除对角线)
     for (int j = m - 2; j >= 0; j--) {
       int x = n - 1, y = j;
+      List<Integer> line = new LinkedList<>();
       while (x >= 0 && y >= 0) {
-        System.out.println(grid[x--][y--]);
+        line.add(grid[x--][y--]);
       }
+      ans.add(line);
     }
+
+    System.out.println(ans);
   }
 
   public static void main(String[] args) {
