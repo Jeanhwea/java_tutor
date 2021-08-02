@@ -123,10 +123,10 @@
   6. [X] [[https://leetcode-cn.com/problems/maximal-rectangle/][LC085]] [[file:ch08_dp/Solution085.java][最大矩形]]
   7. [X] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/][LC123]] [[file:ch08_dp/Solution123.java][买卖股票的最佳时机 III]]
   8. [X] [[https://leetcode-cn.com/problems/interleaving-string/][LC097]] [[file:ch08_dp/Solution097.java][交错字符串]]
-  9. [ ] [[https://leetcode-cn.com/problems/scramble-string/][LC087]] 扰乱字符串
+  9. [ ] [[https://leetcode-cn.com/problems/scramble-string/][LC087]] [[file:ch08_dp/Solution087.java][扰乱字符串]]
   10. [X] [[https://leetcode-cn.com/problems/minimum-path-sum/][LC064]] [[file:ch08_dp/Solution064.java][最小路径和]]
   11. [ ] [[https://leetcode-cn.com/problems/distinct-subsequences/][LC115]] 不同的子序列
-  12. [ ] [[https://leetcode-cn.com/problems/word-break/][LC139]] 单词拆分
+  12. [X] [[https://leetcode-cn.com/problems/word-break/][LC139]] [[file:ch08_dp/Solution139.java][单词拆分]]
   13. [ ] [[https://leetcode-cn.com/problems/word-break-ii/][LC140]] 单词拆分 II
   14. [ ] [[https://leetcode-cn.com/problems/average-waiting-time/][LC1701]] 平均等待时间
 
