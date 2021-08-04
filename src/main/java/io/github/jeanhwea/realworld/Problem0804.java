@@ -12,10 +12,8 @@ import java.util.*;
 public class Problem0804 {
 
   public static void main(String[] args) {
-    int[] a = {4, 5, 6, 7, 1, 2, 3};
-    for (int i = 1; i <= 7; i++) {
-      System.out.println(search(a, i));
-    }
+    int[] a = {1, 3};
+    System.out.println(search(a, 3));
   }
 
   public static int search(int[] a, int k) {
@@ -23,14 +21,14 @@ public class Problem0804 {
     while (beg <= end) {
       int mid = beg + (end - beg) / 2;
       if (a[mid] == k) return mid;
-      if (a[beg] < a[mid]) {
+      if (a[beg] <= a[mid]) {
         if (a[beg] <= k && k < a[mid]) {
           end = mid - 1;
         } else {
           beg = mid + 1;
         }
       } else {
-        if (a[end] <= k && k < a[mid]) {
+        if (a[mid] < k && k <= a[end]) {
           beg = mid + 1;
         } else {
           end = mid - 1;
