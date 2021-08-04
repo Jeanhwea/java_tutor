@@ -11,7 +11,7 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution114 {
 
-  // 迭代的辅助前序遍历
+  // 辅助栈迭代前序遍历
   public static void flatten(TreeNode root) {
     if (root == null) return;
     TreeNode tail = root;
