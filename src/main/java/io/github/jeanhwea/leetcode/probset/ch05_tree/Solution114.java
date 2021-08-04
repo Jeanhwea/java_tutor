@@ -12,7 +12,7 @@ import java.util.*;
 public class Solution114 {
 
   // 辅助栈迭代前序遍历
-  public static void flatten(TreeNode root) {
+  public static void flatten0(TreeNode root) {
     if (root == null) return;
     TreeNode tail = root;
     Deque<TreeNode> stack = new LinkedList<>();
@@ -28,6 +28,22 @@ public class Solution114 {
       } else {
         curr.left = curr.right = null;
       }
+    }
+  }
+
+  // 寻找前驱的解法, 参考 Morris 变量思路
+  public static void flatten(TreeNode root) {
+    TreeNode curr = root;
+    while (curr != null) {
+      if (curr.left != null) {
+        TreeNode next = curr.left;
+        TreeNode prev = next;
+        while (prev.right != null) prev = prev.right;
+        prev.right = curr.right;
+        curr.left = null;
+        curr.right = next;
+      }
+      curr = curr.right;
     }
   }
 
