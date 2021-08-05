@@ -2,7 +2,7 @@ package io.github.jeanhwea.language.juc.p04_cas_operation;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class App04 {
+public class App {
 
   private static final int numThread = 5;
   private static final int threshold = 99;
@@ -36,7 +36,7 @@ public class App04 {
       Thread t =
           new Thread(
               () -> {
-                synchronized (App04.class) {
+                synchronized (App.class) {
                   while (num2 < threshold) printNum(num2++);
                 }
               });

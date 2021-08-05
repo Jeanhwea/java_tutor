@@ -2,7 +2,7 @@ package io.github.jeanhwea.language.jdk.p11_jdbc;
 
 import java.sql.*;
 
-public class App11 {
+public class App {
 
   private static String url = "jdbc:mysql://localhost:3306/mysql?useSSL=false";
   private static String username = "user01";

@@ -9,7 +9,7 @@ import java.util.*;
  * @since 2021-07-26, JDK1.8
  */
 @SuppressWarnings("all")
-public class App03 {
+public class App {
 
   public static void test01() {
     // 单链表

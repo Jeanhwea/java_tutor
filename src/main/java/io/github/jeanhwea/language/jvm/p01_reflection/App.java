@@ -10,7 +10,7 @@ import java.util.*;
  * @since 2021-07-27, JDK1.8
  */
 @SuppressWarnings("all")
-public class App01 {
+public class App {
 
   public static void main(String[] args) throws Exception {
     // 获取 Class 类

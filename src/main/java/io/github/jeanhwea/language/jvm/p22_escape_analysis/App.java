@@ -7,7 +7,7 @@ package io.github.jeanhwea.language.jvm.p22_escape_analysis;
  * @since 2021-07-04, JDK1.8
  */
 @SuppressWarnings("all")
-public class App22 {
+public class App {
 
   // -Xmx10m -Xms10m -XX:+PrintGC -XX:-DoEscapeAnalysis
   public static void main(String[] args) throws InterruptedException {

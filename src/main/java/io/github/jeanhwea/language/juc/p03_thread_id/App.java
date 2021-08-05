@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Jinghui Hu
  * @since 2021-07-04, JDK1.8
  */
-public class App03 {
+public class App {
 
   public static class ThreadId {
 

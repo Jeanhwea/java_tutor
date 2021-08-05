@@ -6,7 +6,7 @@ package io.github.jeanhwea.language.juc.p02_threadlocal;
  * @author Jinghui Hu
  * @since 2021-06-30, JDK1.8
  */
-public class App02 {
+public class App {
 
   public static class Person01 {
 

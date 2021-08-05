@@ -6,7 +6,7 @@ package io.github.jeanhwea.language.juc.p01_thread;
  * @author Jinghui Hu
  * @since 2021-07-26, JDK1.8
  */
-public class App01 {
+public class App {
   public static void main(String[] args) {
     Runnable runnable =
         new Runnable() {

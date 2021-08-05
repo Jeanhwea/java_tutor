@@ -10,7 +10,7 @@ import java.util.*;
  * @since 2021-07-26, JDK1.8
  */
 @SuppressWarnings("all")
-public class App01 {
+public class App {
 
   public static void test01() {
     // 字符串基本操作

@@ -9,7 +9,7 @@ import java.util.*;
  * @since 2021-07-27, JDK1.8
  */
 @SuppressWarnings("all")
-public class App02 {
+public class App {
 
   public static void main(String[] args) {
     ClassLoader loader = ClassLoader.getSystemClassLoader();

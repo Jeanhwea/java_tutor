@@ -9,7 +9,7 @@ import java.util.*;
  * @since 2021-08-02, JDK1.8
  */
 @SuppressWarnings("all")
-public class App13 {
+public class App {
 
   public static void main(String[] args) {
     // 匿名内部类写法

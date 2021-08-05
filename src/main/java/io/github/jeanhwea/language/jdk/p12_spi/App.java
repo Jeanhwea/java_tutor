@@ -10,7 +10,7 @@ import java.util.*;
  * @since 2021-07-28, JDK1.8
  */
 @SuppressWarnings("all")
-public class App12 {
+public class App {
 
   public static void main(String[] args) {
     ServiceLoader<Person> persons = ServiceLoader.load(Person.class);

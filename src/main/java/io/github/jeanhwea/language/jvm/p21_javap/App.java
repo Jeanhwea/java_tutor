@@ -7,7 +7,7 @@ package io.github.jeanhwea.language.jvm.p21_javap;
  * @since 2021-07-03, JDK1.8
  */
 @SuppressWarnings("all")
-public class App21 {
+public class App {
 
   private static final int FINAL_VAR01 = 2;
   private String name = "hello";
@@ -20,18 +20,18 @@ public class App21 {
   }
 
   public static void main(String[] args) {
-    App21 example = new App21();
+    App example = new App();
     example.method01();
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-//  $ javac App21.java
-//  $ javap -c App21.class
+//  $ javac App.java
+//  $ javap -c App.class
 ////////////////////////////////////////////////////////////////////////////////
 //
-// public class io.github.jeanhwea.language.jvm.p21_javap.App21 {
-//   public io.github.jeanhwea.language.jvm.p21_javap.App21();
+// public class io.github.jeanhwea.language.jvm.p21_javap.App {
+//   public io.github.jeanhwea.language.jvm.p21_javap.App();
 //     Code:
 //        0: aload_0
 //        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
@@ -57,7 +57,7 @@ public class App21 {
 //
 //   public static void main(java.lang.String[]);
 //     Code:
-//        0: new           #4                  // class io/github/jeanhwea/language/jvm/p21_javap/App21
+//        0: new           #4                  // class io/github/jeanhwea/language/jvm/p21_javap/App
 //        3: dup
 //        4: invokespecial #5                  // Method "<init>":()V
 //        7: astore_1
