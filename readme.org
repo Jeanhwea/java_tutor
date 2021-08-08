@@ -20,6 +20,7 @@
   3. [[file:src/main/java/io/github/jeanhwea/leetcode/probset/problem-set.org][习题集]]
 
 * 刷题连接
-  1. [[https://leetcode-cn.com/problemset/all/][LeetCode]]
-  2. [[https://codetop.cc][CodeTop]]
-  3. [[https://labuladong.gitee.io/algo/][labuladong 的算法小抄]]
+  1. [[https://www.cs.usfca.edu/~galles/visualization/Algorithms.html][数据结构可视化]]
+  2. [[https://leetcode-cn.com/problemset/all/][LeetCode]]
+  3. [[https://codetop.cc][CodeTop]]
+  4. [[https://labuladong.gitee.io/algo/][labuladong 的算法小抄]]
