@@ -23,18 +23,10 @@ public class Problem0811 {
 
     int i = 0, j = 0, k = 0;
     while (i < lenA && j < lenB) {
-      if (a[i] < b[j]) {
-        c[k++] = a[i++];
-      } else {
-        c[k++] = b[j++];
-      }
+      c[k++] = a[i] < b[j] ? a[i++] : b[j++];
     }
-
-    if (i < lenA) {
-      while (i < lenA) c[k++] = a[i++];
-    } else {
-      while (j < lenB) c[k++] = b[j++];
-    }
+    while (i < lenA) c[k++] = a[i++];
+    while (j < lenB) c[k++] = b[j++];
 
     return c;
   }
