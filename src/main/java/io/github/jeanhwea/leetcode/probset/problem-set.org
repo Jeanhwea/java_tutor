@@ -90,7 +90,7 @@
   - [X] [[https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/][LC105]] [[file:ch05_tree/Solution105.java][从前序与中序遍历序列构造二叉树]]
   - [X] [[https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/][LC106]] [[file:ch05_tree/Solution106.java][从中序与后序遍历序列构造二叉树]]
   - [X] [[https://leetcode-cn.com/problems/unique-binary-search-trees/][LC096]] [[file:ch05_tree/Solution096.java][不同的二叉搜索树]]
-  - [ ] [[https://leetcode-cn.com/problems/unique-binary-search-trees-ii/][LC095]] 不同的二叉搜索树 II
+  - [X] [[https://leetcode-cn.com/problems/unique-binary-search-trees-ii/][LC095]] [[file:ch05_tree/Solution095.java][不同的二叉搜索树 II]]
   - [ ] [[https://leetcode-cn.com/problems/validate-binary-search-tree/][LC098]] 验证二叉搜索树
   - [ ] [[https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/][LC108]] 将有序数组转换为二叉搜索树
   - [ ] [[https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/][LC109]] 有序链表转换二叉搜索树
