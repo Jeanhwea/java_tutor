@@ -3,6 +3,8 @@ package io.github.jeanhwea.leetcode.probset.ch05_tree;
 import java.util.*;
 
 /**
+ * 填充每个节点的下一个右侧节点指针 II
+ *
  * @author Jinghui Hu
  * @since 2021-08-05, JDK1.8
  */
@@ -10,7 +12,21 @@ import java.util.*;
 public class Solution117 {
 
   public static Node connect(Node root) {
-    return null;
+    if (root == null) return null;
+    Deque<Node> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+      Node prev = null;
+      for (int i = 0; i < size; i++) {
+        Node curr = queue.poll();
+        if (curr.left != null) queue.offer(curr.left);
+        if (curr.right != null) queue.offer(curr.right);
+        if (prev != null) prev.next = curr;
+        prev = curr;
+      }
+    }
+    return root;
   }
 
   public static void main(String[] args) {
