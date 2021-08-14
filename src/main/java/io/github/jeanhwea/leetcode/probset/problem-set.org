@@ -86,6 +86,7 @@
   - [X] [[https://leetcode-cn.com/problems/symmetric-tree/][LC101]] [[file:ch05_tree/Solution101.java][对称二叉树]]
   - [X] [[https://leetcode-cn.com/problems/balanced-binary-tree/][LC110]] [[file:ch05_tree/Solution110.java][平衡二叉树]]
   - [X] [[https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/][LC114]] [[file:ch05_tree/Solution114.java][二叉树展开为链表]]
+  - [X] [[https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/][LC116]] [[file:ch05_tree/Solution116.java][填充每个节点的下一个右侧节点指针]]
   - [X] [[https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/][LC117]] [[file:ch05_tree/Solution117.java][填充每个节点的下一个右侧节点指针 II]]
   - [X] [[https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/][LC105]] [[file:ch05_tree/Solution105.java][从前序与中序遍历序列构造二叉树]]
   - [X] [[https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/][LC106]] [[file:ch05_tree/Solution106.java][从中序与后序遍历序列构造二叉树]]
@@ -99,7 +100,6 @@
   - [ ] [[https://leetcode-cn.com/problems/path-sum/][LC112]] [[file:ch05_tree/Solution112.java][路径总和]]
   - [ ] [[https://leetcode-cn.com/problems/path-sum-ii/][LC113]] 路径总和 II
   - [ ] [[https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/][LC124]] 二叉树中的最大路径和
-  - [ ] [[https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/][LC116]] 填充每个节点的下一个右侧节点指针
   - [ ] [[https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/][LC129]] 求根节点到叶节点数字之和
 
 * 图 Graph
