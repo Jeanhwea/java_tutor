@@ -86,9 +86,9 @@
   - [X] [[https://leetcode-cn.com/problems/symmetric-tree/][LC101]] [[file:ch05_tree/Solution101.java][对称二叉树]]
   - [X] [[https://leetcode-cn.com/problems/balanced-binary-tree/][LC110]] [[file:ch05_tree/Solution110.java][平衡二叉树]]
   - [X] [[https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/][LC114]] [[file:ch05_tree/Solution114.java][二叉树展开为链表]]
-  - [ ] [[https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/][LC117]] [[file:ch05_tree/Solution117.java][填充每个节点的下一个右侧节点指针 II]]
+  - [X] [[https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/][LC117]] [[file:ch05_tree/Solution117.java][填充每个节点的下一个右侧节点指针 II]]
   - [X] [[https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/][LC105]] [[file:ch05_tree/Solution105.java][从前序与中序遍历序列构造二叉树]]
-  - [ ] [[https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/][LC106]] 从中序与后序遍历序列构造二叉树
+  - [X] [[https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/][LC106]] [[file:ch05_tree/Solution106.java][从中序与后序遍历序列构造二叉树]]
   - [ ] [[https://leetcode-cn.com/problems/unique-binary-search-trees/][LC096]] 不同的二叉搜索树
   - [ ] [[https://leetcode-cn.com/problems/unique-binary-search-trees-ii/][LC095]] 不同的二叉搜索树 II
   - [ ] [[https://leetcode-cn.com/problems/validate-binary-search-tree/][LC098]] 验证二叉搜索树

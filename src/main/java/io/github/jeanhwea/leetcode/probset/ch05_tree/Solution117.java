@@ -11,7 +11,8 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution117 {
 
-  public static Node connect(Node root) {
+  // 使用层序遍历
+  public static Node connect0(Node root) {
     if (root == null) return null;
     Deque<Node> queue = new LinkedList<>();
     queue.offer(root);
@@ -24,6 +25,32 @@ public class Solution117 {
         if (curr.right != null) queue.offer(curr.right);
         if (prev != null) prev.next = curr;
         prev = curr;
+      }
+    }
+    return root;
+  }
+
+  // 优化空间复杂度, 利用上层已经记录好的链表结构
+  public static Node connect(Node root) {
+    if (root == null) return null;
+    Node head = root;
+    while (head != null) {
+      Node p = head, prev = null, curr = null;
+      head = null;
+      while (p != null) {
+        if (p.left != null) {
+          curr = p.left;
+          if (prev == null) head = curr;
+          if (prev != null) prev.next = curr;
+          prev = curr;
+        }
+        if (p.right != null) {
+          curr = p.right;
+          if (prev == null) head = curr;
+          if (prev != null) prev.next = curr;
+          prev = curr;
+        }
+        p = p.next;
       }
     }
     return root;
