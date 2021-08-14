@@ -14,21 +14,18 @@ public class Solution105 {
   // 辅助栈
   public static TreeNode buildTree(int[] preorder, int[] inorder) {
     if (preorder == null || preorder.length == 0) return null;
-
     TreeNode root = new TreeNode(preorder[0]);
-
     // stack 记录当前节点还未考虑右儿子节点
     Deque<TreeNode> stack = new LinkedList<TreeNode>();
     stack.push(root);
-
     int j = 0;
     for (int i = 1; i < preorder.length; i++) {
-      TreeNode node = stack.peek();
+      TreeNode node = stack.peek(); // 栈顶元素是上次新建的节点
       if (node.val != inorder[j]) {
         node.left = new TreeNode(preorder[i]);
         stack.push(node.left);
       } else {
-        // 中序遍历刚好和前序遍历顺序相反
+        // 中序遍历刚好和 stack 里面的元素顺序相反, 同时出栈和中序数组下标右移
         while (!stack.isEmpty() && stack.peek().val == inorder[j]) {
           node = stack.pop();
           j++;
@@ -37,7 +34,6 @@ public class Solution105 {
         stack.push(node.right);
       }
     }
-
     return root;
   }
 
