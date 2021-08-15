@@ -11,6 +11,7 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution045 {
 
+  // 记录当前最远的距离 rightMost
   public static int jump(int[] nums) {
     int n = nums.length, rightMost = 0, prevRightMost = 0, steps = 0;
     for (int i = 0; i < n - 1; i++) {
