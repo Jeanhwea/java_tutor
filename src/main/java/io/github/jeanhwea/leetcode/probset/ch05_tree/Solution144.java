@@ -18,10 +18,10 @@ public class Solution144 {
     Deque<TreeNode> stack = new LinkedList<>();
     stack.push(root);
     while (!stack.isEmpty()) {
-      TreeNode p = stack.pop();
-      ans.add(p.val);
-      if (p.right != null) stack.push(p.right);
-      if (p.left != null) stack.push(p.left);
+      root = stack.pop();
+      ans.add(root.val);
+      if (root.right != null) stack.push(root.right);
+      if (root.left != null) stack.push(root.left);
     }
 
     return ans;

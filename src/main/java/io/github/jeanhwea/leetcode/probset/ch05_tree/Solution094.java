@@ -16,6 +16,7 @@ public class Solution094 {
     if (root == null) return ans;
 
     Deque<TreeNode> stack = new LinkedList<>();
+    // 注意: 这里不需要将 root 压栈
     while (root != null || !stack.isEmpty()) {
       while (root != null) {
         stack.push(root);
@@ -23,7 +24,7 @@ public class Solution094 {
       }
       root = stack.pop();
       ans.add(root.val);
-      root = root.right;
+      root = root.right; // 有右孩子就转向右, 无右孩子则回溯
     }
 
     return ans;
