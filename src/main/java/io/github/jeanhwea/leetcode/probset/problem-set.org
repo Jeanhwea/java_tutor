@@ -108,7 +108,7 @@
 
 * 贪心法 Greedy Algorithm
   - [X] [[https://leetcode-cn.com/problems/jump-game/][LC055]] [[file:ch07_greedy/Solution055.java][跳跃游戏]]
-  - [ ] [[https://leetcode-cn.com/problems/jump-game-ii/][LC045]] [[file:ch07_greedy/Solution045.java][跳跃游戏 II]]
+  - [X] [[https://leetcode-cn.com/problems/jump-game-ii/][LC045]] [[file:ch07_greedy/Solution045.java][跳跃游戏 II]]
   - [X] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/][LC121]] [[file:ch07_greedy/Solution121.java][买卖股票的最佳时机]]
   - [X] [[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/][LC122]] [[file:ch07_greedy/Solution122.java][买卖股票的最佳时机 II]]
   - [ ] [[https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/][LC003]] 无重复字符的最长子串
