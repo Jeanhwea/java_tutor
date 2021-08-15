@@ -11,7 +11,30 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution098 {
 
+  ////////////////////////////////////////////////////////////////////////////////
+  // 迭代版
+  ////////////////////////////////////////////////////////////////////////////////
   public static boolean isValidBST(TreeNode root) {
+    if (root == null) return true;
+    TreeNode prev = null;
+    Deque<TreeNode> stack = new LinkedList<>();
+    while (!stack.isEmpty() || root != null) {
+      while (root != null) {
+        stack.push(root);
+        root = root.left;
+      }
+      root = stack.pop();
+      if (prev != null && prev.val >= root.val) return false;
+      prev = root;
+      root = root.right;
+    }
+    return true;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // 递归版
+  ////////////////////////////////////////////////////////////////////////////////
+  public static boolean isValidBST0(TreeNode root) {
     prev = null;
     return traverse(root);
   }
