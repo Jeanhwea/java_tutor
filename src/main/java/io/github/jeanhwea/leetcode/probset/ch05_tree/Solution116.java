@@ -1,7 +1,5 @@
 package io.github.jeanhwea.leetcode.probset.ch05_tree;
 
-import java.util.*;
-
 /**
  * 填充每个节点的下一个右侧节点指针
  *
@@ -30,5 +28,5 @@ public class Solution116 {
 
   public static void main(String[] args) {
     // pass
-  }
+  };
 }
