@@ -98,7 +98,7 @@
   - [X] [[https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/][LC111]] [[file:ch05_tree/Solution111.java][二叉树的最小深度]]
   - [X] [[https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/][LC104]] [[file:ch05_tree/Solution104.java][二叉树的最大深度]]
   - [X] [[https://leetcode-cn.com/problems/path-sum/][LC112]] [[file:ch05_tree/Solution112.java][路径总和]]
-  - [ ] [[https://leetcode-cn.com/problems/path-sum-ii/][LC113]] 路径总和 II
+  - [X] [[https://leetcode-cn.com/problems/path-sum-ii/][LC113]] [[file:ch05_tree/Solution113.java][路径总和 II]]
   - [ ] [[https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/][LC124]] 二叉树中的最大路径和
   - [ ] [[https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/][LC129]] 求根节点到叶节点数字之和
 

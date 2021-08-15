@@ -31,7 +31,7 @@ public class Solution114 {
     }
   }
 
-  // 寻找前驱的解法, 参考 Morris 变量思路
+  // 寻找前驱的解法, 参考 Morris 遍历思路
   public static void flatten(TreeNode root) {
     TreeNode curr = root;
     while (curr != null) {
