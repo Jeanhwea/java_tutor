@@ -16,8 +16,8 @@ public class Solution695 {
       for (int j = 0; j < m; j++) {
         if (grid[i][j] == 1) {
           grid[i][j] = 0;
-          int ans1 = dfs(grid, i, j, 1);
-          ans = Math.max(ans, ans1);
+          int currArea = dfs(grid, i, j, 1);
+          ans = Math.max(ans, currArea);
         }
       }
     }
