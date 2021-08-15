@@ -13,41 +13,35 @@ public class Solution113 {
 
   public static List<List<Integer>> pathSum(TreeNode root, int targetSum) {
     List<List<Integer>> ans = new LinkedList<>();
-
     if (root == null) return ans;
-
-    Stack<TreeNode> nodes = new Stack<>();
+    Deque<TreeNode> stack = new LinkedList<>();
+    Deque<Integer> sumStack = new LinkedList<>();
     Map<TreeNode, TreeNode> parent = new HashMap<>();
-    Map<TreeNode, Integer> sum = new HashMap<>();
-    nodes.push(root);
-    parent.put(root, null);
-    sum.put(root, root.val);
-    while (!nodes.isEmpty()) {
-      TreeNode p = nodes.pop();
-      if (p.left == null && p.right == null && sum.get(p) == targetSum) {
-        List<Integer> path = new LinkedList<>();
+    stack.push(root);
+    sumStack.push(root.val);
+    while (!stack.isEmpty()) {
+      TreeNode p = stack.pop();
+      int currSum = sumStack.pop();
+      if (currSum == targetSum && p.left == null && p.right == null) {
+        LinkedList<Integer> path = new LinkedList<>();
         TreeNode q = p;
         while (q != null) {
-          path.add(q.val);
+          path.addFirst(q.val);
           q = parent.get(q);
         }
-        Collections.reverse(path);
         ans.add(path);
       }
-
-      int s = sum.getOrDefault(p, 0);
       if (p.left != null) {
-        nodes.add(p.left);
-        sum.put(p.left, s + p.left.val);
         parent.put(p.left, p);
+        stack.push(p.left);
+        sumStack.push(currSum + p.left.val);
       }
       if (p.right != null) {
-        nodes.add(p.right);
-        sum.put(p.right, s + p.right.val);
         parent.put(p.right, p);
+        stack.push(p.right);
+        sumStack.push(currSum + p.right.val);
       }
     }
-
     return ans;
   }
 
