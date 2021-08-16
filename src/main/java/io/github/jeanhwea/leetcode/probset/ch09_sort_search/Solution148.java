@@ -11,7 +11,50 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution148 {
 
-  public static void main(String[] args) {
+  public static ListNode sortList(ListNode head) {
+    return merge(head, null);
   }
 
+  // 归并排序 [beg, end)
+  private static ListNode merge(ListNode beg, ListNode end) {
+    if (beg == null) return null;
+
+    if (beg.next == end) {
+      beg.next = null;
+      return beg;
+    }
+
+    ListNode fast = beg, slow = beg;
+    while (fast != end && fast.next != end) {
+      fast = fast.next.next;
+      slow = slow.next;
+    }
+
+    ListNode a = merge(beg, slow);
+    ListNode b = merge(slow, end);
+
+    ListNode dummy = new ListNode(-1), p = dummy;
+    while (a != null && b != null) {
+      if (a.val < b.val) {
+        p.next = a;
+        a = a.next;
+        p = p.next;
+        p.next = null;
+      } else {
+        p.next = b;
+        b = b.next;
+        p = p.next;
+        p.next = null;
+      }
+    }
+    p.next = a != null ? a : b;
+
+    return dummy.next;
+  }
+
+  public static void main(String[] args) {
+    ListNode head = ListNode.makeList(new int[] {1, 3, 8, 9, 11, 4, 5});
+    ListNode res = sortList(head);
+    ListNode.dispList(res);
+  }
 }

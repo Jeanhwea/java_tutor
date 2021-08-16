@@ -135,7 +135,7 @@
   - [X] [[https://leetcode-cn.com/problems/merge-two-sorted-lists/][LC021]] [[file:ch09_sort_search/Solution021.java][合并两个有序链表]]
   - [X] [[https://leetcode-cn.com/problems/merge-k-sorted-lists/][LC023]] [[file:ch09_sort_search/Solution023.java][合并 K 个升序链表]]
   - [X] [[https://leetcode-cn.com/problems/insertion-sort-list/][LC147]] [[file:ch09_sort_search/Solution147.java][对链表进行插入排序]]
-  - [ ] [[https://leetcode-cn.com/problems/sort-list/][LC148]] [[file:ch09_sort_search/Solution148.java][排序链表]]
+  - [X] [[https://leetcode-cn.com/problems/sort-list/][LC148]] [[file:ch09_sort_search/Solution148.java][排序链表]] 采用归并排序
   - [ ] [[https://leetcode-cn.com/problems/first-missing-positive/][LC041]] [[file:ch09_sort_search/Solution041.java][缺失的第一个正数]]
   - [X] [[https://leetcode-cn.com/problems/sort-colors/][LC075]] [[file:ch09_sort_search/Solution075.java][颜色分类]] (荷兰旗)
   - [ ] [[https://leetcode-cn.com/problems/range-module/][LC715]] Range 模块
