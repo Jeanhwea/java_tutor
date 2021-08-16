@@ -15,14 +15,9 @@ public class Solution148 {
     return merge(head, null);
   }
 
-  // 归并排序 [beg, end)
+  // 归并排序 [beg, end]
   private static ListNode merge(ListNode beg, ListNode end) {
-    if (beg == null) return null;
-
-    if (beg.next == end) {
-      beg.next = null;
-      return beg;
-    }
+    if (beg == end) return beg;
 
     ListNode fast = beg, slow = beg;
     while (fast != end && fast.next != end) {
@@ -30,8 +25,9 @@ public class Solution148 {
       slow = slow.next;
     }
 
-    ListNode a = merge(beg, slow);
-    ListNode b = merge(slow, end);
+    ListNode a = merge(slow.next, end);
+    slow.next = null;
+    ListNode b = merge(beg, slow);
 
     ListNode dummy = new ListNode(-1), p = dummy;
     while (a != null && b != null) {
