@@ -14,20 +14,16 @@ public class Solution169 {
   // 选举法
   public static int majorityElement(int[] a) {
     int n = a.length, candiate = 0, count = 0;
-
+    // Step1: 选举, 选出备选人
     for (int i = 0; i < n; i++) {
       if (count <= 0) {
         candiate = a[i];
         count++;
-      } else {
-        if (a[i] == candiate) {
-          count++;
-        } else {
-          count--;
-        }
+        continue;
       }
+      count += a[i] == candiate ? 1 : -1;
     }
-
+    // Step2: 复验, 确保选举出的人确实是占用多数选票的
     count = 0;
     for (int i = 0; i < n; i++) {
       if (a[i] == candiate) count++;
