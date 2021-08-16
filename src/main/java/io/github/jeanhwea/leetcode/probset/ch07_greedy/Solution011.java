@@ -11,8 +11,18 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution011 {
 
+  // 双指针+贪心算法
   public static int maxArea(int[] height) {
-    int ans = 0;
+    int n = height.length, i = 0, j = n - 1, ans = 0;
+    while (i < j) {
+      ans = Math.max(ans, Math.min(height[j], height[i]) * (j - i));
+      // 每次移动较小的高度才有可能获得较大的容量
+      if (height[i] < height[j]) {
+        i++;
+      } else {
+        j--;
+      }
+    }
     return ans;
   }
 
