@@ -36,7 +36,25 @@ public class App {
     map1.entrySet(); // 键值对的集合
   }
 
+  public static void test02() {
+    // 有序集合
+    SortedSet<Integer> set1 = new TreeSet<>();
+    set1.add(3);
+    set1.add(3);
+    set1.add(4);
+    set1.add(5);
+    set1.add(9);
+    set1.contains(4);
+    SortedSet<Integer> heads1 = set1.headSet(4);
+    SortedSet<Integer> tails1 = set1.tailSet(4);
+    SortedSet<Integer> sub1 = set1.subSet(4, 9);
+    // System.out.println(heads1);
+    // System.out.println(tails1);
+    // System.out.println(sub1);
+  }
+
   public static void main(String[] args) {
     test01();
+    test02();
   }
 }
