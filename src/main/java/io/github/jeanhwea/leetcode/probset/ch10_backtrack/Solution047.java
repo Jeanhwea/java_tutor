@@ -24,9 +24,11 @@ public class Solution047 {
     }
 
     for (int i = 0; i < n; i++) {
-      if (seen[i] || (i > 0 && a[i] == a[i - 1] && !seen[i - 1])) {
-        continue;
-      }
+      // 如果 a[i] 依旧访问直接跳过
+      if (seen[i]) continue;
+      // 如果 a[i-1] 已经访问，并且 a[i] 等于 a[i-1] 则需要去重跳过
+      if (i > 0 && !seen[i - 1] && a[i] == a[i - 1]) continue;
+
       choose.add(a[i]);
       seen[i] = true;
       backtrack(k + 1);
