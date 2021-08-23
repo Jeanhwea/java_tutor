@@ -13,18 +13,25 @@ public class Solution047 {
 
   private static List<List<Integer>> ans;
   private static List<Integer> choose;
-  private static boolean seen;
+  private static boolean[] seen;
   private static int[] a;
   private static int n;
 
-  private static void permute(int k) {
-    if (k==n) {
+  private static void backtrack(int k) {
+    if (k == n) {
       ans.add(new ArrayList<>(choose));
-      return ;
+      return;
     }
 
-    for (int i = k; i < n; i++) {
-
+    for (int i = 0; i < n; i++) {
+      if (seen[i] || (i > 0 && a[i] == a[i - 1] && !seen[i - 1])) {
+        continue;
+      }
+      choose.add(a[i]);
+      seen[i] = true;
+      backtrack(k + 1);
+      seen[i] = false;
+      choose.remove(k);
     }
   }
 
@@ -35,11 +42,12 @@ public class Solution047 {
     seen = new boolean[n];
     ans = new LinkedList<>();
     choose = new LinkedList<>();
-    permute(0);
+    backtrack(0);
     return ans;
   }
 
   public static void main(String[] args) {
     int[] nums = new int[] {1, 1, 2};
+    System.out.println(permuteUnique(nums));
   }
 }
