@@ -31,7 +31,7 @@ public class Solution047 {
       seen[i] = true;
       backtrack(k + 1);
       seen[i] = false;
-      choose.remove(k);
+      choose.remove(choose.size() - 1);
     }
   }
 
