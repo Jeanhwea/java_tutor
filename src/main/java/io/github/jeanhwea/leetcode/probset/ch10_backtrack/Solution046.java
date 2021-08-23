@@ -12,13 +12,14 @@ import java.util.*;
 public class Solution046 {
 
   private static int n;
+  private static int[] a;
   private static List<Integer> choose;
   private static List<List<Integer>> ans;
 
   public static List<List<Integer>> permute(int[] nums) {
     n = nums.length;
+    a = nums;
     choose = new LinkedList<>();
-    for (int i = 0; i < n; i++) choose.add(nums[i]);
     ans = new LinkedList<>();
     perm(0);
     return ans;
@@ -30,10 +31,18 @@ public class Solution046 {
       return;
     }
     for (int i = k; i < n; i++) {
-      Collections.swap(choose, i, k);
+      choose.add(a[i]);
+      swap(i, k);
       perm(k + 1);
-      Collections.swap(choose, i, k);
+      swap(i, k);
+      choose.remove(choose.size() - 1);
     }
+  }
+
+  private static void swap(int i, int j) {
+    int k = a[i];
+    a[i] = a[j];
+    a[j] = k;
   }
 
   public static void main(String[] args) {
