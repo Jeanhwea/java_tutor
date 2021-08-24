@@ -49,7 +49,6 @@ public class Solution054 {
 
   public static List<Integer> spiralOrder(int[][] a) {
     List<Integer> ans = new LinkedList<>();
-
     int n = a.length, m = a[0].length, count = n * m, i = 0, j = -1, k = 0;
     boolean[][] seen = new boolean[n][m];
     int[] di = new int[] {0, 1, 0, -1}, dj = new int[] {1, 0, -1, 0};
@@ -70,12 +69,12 @@ public class Solution054 {
   }
 
   public static void main(String[] args) {
-    int[][] a = {
-      {1, 2, 3, 4},
-      {5, 6, 7, 8},
-      {9, 10, 11, 12}
-    };
-    // int[][] a = {{9}};
+    // int[][] a = {
+    //   {1, 2, 3, 4},
+    //   {5, 6, 7, 8},
+    //   {9, 10, 11, 12}
+    // };
+    int[][] a = {{9}};
     System.out.println(spiralOrder(a));
   }
 }
