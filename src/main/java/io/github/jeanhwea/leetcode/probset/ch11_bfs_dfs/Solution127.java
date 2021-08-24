@@ -59,11 +59,11 @@ public class Solution127 {
     int n = wordCount;
 
     PriorityQueue<int[]> queue = new PriorityQueue<>((x, y) -> x[1] - y[1]);
-    queue.offer(new int[] {beginId, 0});
     int[] dist = new int[n];
     Arrays.fill(dist, Integer.MAX_VALUE);
     dist[beginId] = 0;
 
+    queue.offer(new int[] {beginId, dist[beginId]});
     while (!queue.isEmpty()) {
       int[] front = queue.poll();
       int currId = front[0], currDist = front[1];
@@ -71,9 +71,9 @@ public class Solution127 {
         return dist[currId] / 2 + 1;
       }
       for (int y : edges.get(currId)) {
-        if (dist[y] == Integer.MAX_VALUE) {
-          dist[y] = dist[currId] + 1;
-          // queue.offer(y);
+        if (currDist + 1 < dist[y]) {
+          dist[y] = currDist + 1;
+          queue.offer(new int[] {y, dist[y]});
         }
       }
     }
