@@ -55,25 +55,25 @@ public class Solution127 {
 
     buildGraph(wordSet);
 
-    // PriorityQueue<int[]> queue = new PriorityQueue<>((x, y) -> x[1] - y[1]);
     int beginId = getWordId(beginWord), endId = getWordId(endWord);
     int n = wordCount;
 
-    Deque<Integer> queue = new LinkedList<>();
-    queue.offer(beginId);
+    PriorityQueue<int[]> queue = new PriorityQueue<>((x, y) -> x[1] - y[1]);
+    queue.offer(new int[] {beginId, 0});
     int[] dist = new int[n];
     Arrays.fill(dist, Integer.MAX_VALUE);
     dist[beginId] = 0;
 
     while (!queue.isEmpty()) {
-      int currId = queue.poll();
+      int[] front = queue.poll();
+      int currId = front[0], currDist = front[1];
       if (currId == endId) {
         return dist[currId] / 2 + 1;
       }
-      for (Integer y : edges.get(currId)) {
+      for (int y : edges.get(currId)) {
         if (dist[y] == Integer.MAX_VALUE) {
           dist[y] = dist[currId] + 1;
-          queue.offer(y);
+          // queue.offer(y);
         }
       }
     }
