@@ -20,7 +20,7 @@
   - [X] [[https://leetcode-cn.com/problems/3sum-closest/][LC016]] [[file:ch01_array/Solution016.java][最接近的三数之和]]
   - [X] [[https://leetcode-cn.com/problems/4sum/][LC018]] [[file:ch01_array/Solution018.java][四数之和]]
   - [X] [[https://leetcode-cn.com/problems/remove-element/][LC027]] [[file:ch01_array/Solution027.java][移除元素]]
-  - [X] [[https://leetcode-cn.com/problems/next-permutation/][LC031]] [[file:ch01_array/Solution031.java][下一个排列]]
+  - [X] [[https://leetcode-cn.com/problems/next-permutation/][LC031]] [[file:ch01_array/Solution031.java][下一个排列]] 固定算法，两遍扫描后翻转
   - [X] [[https://leetcode-cn.com/problems/permutation-sequence/][LC060]] [[file:ch01_array/Solution060.java][排列顺序]]
   - [X] [[https://leetcode-cn.com/problems/valid-sudoku/][LC036]] [[file:ch01_array/Solution036.java][有效的数独]]
   - [X] [[https://leetcode-cn.com/problems/trapping-rain-water/][LC042]] [[file:ch01_array/Solution042.java][接雨水]]
