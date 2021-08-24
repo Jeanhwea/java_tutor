@@ -48,14 +48,8 @@ public class Solution127 {
     // System.out.println(edges);
   }
 
-  public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
-    Set<String> wordSet = new HashSet<>(wordList);
-    wordSet.add(beginWord);
-    if (!wordSet.contains(endWord)) return 0;
-
-    buildGraph(wordSet);
-
-    int beginId = getWordId(beginWord), endId = getWordId(endWord);
+  // 查找最短路径, Dijkstra 最短路径算法
+  private static int findShortestPath(int beginId, int endId) {
     int n = wordCount;
 
     PriorityQueue<int[]> queue = new PriorityQueue<>((x, y) -> x[1] - y[1]);
@@ -79,6 +73,18 @@ public class Solution127 {
     }
 
     return 0;
+  }
+
+  public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
+    Set<String> wordSet = new HashSet<>(wordList);
+    wordSet.add(beginWord);
+    if (!wordSet.contains(endWord)) return 0;
+
+    buildGraph(wordSet);
+
+    int beginId = getWordId(beginWord), endId = getWordId(endWord);
+
+    return findShortestPath(beginId, endId);
   }
 
   public static void main(String[] args) {
