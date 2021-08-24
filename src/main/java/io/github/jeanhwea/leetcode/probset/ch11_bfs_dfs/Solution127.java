@@ -70,10 +70,10 @@ public class Solution127 {
       if (currId == endId) {
         return dist[currId] / 2 + 1;
       }
-      for (int y : edges.get(currId)) {
-        if (currDist + 1 < dist[y]) {
-          dist[y] = currDist + 1;
-          queue.offer(new int[] {y, dist[y]});
+      for (int nextId : edges.get(currId)) {
+        if (currDist + 1 < dist[nextId]) {
+          dist[nextId] = currDist + 1;
+          queue.offer(new int[] {nextId, dist[nextId]});
         }
       }
     }
