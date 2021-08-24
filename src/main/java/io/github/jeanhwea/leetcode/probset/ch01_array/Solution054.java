@@ -54,12 +54,12 @@ public class Solution054 {
     int[] di = new int[] {0, 1, 0, -1}, dj = new int[] {1, 0, -1, 0};
     boolean[][] seen = new boolean[n][m];
     while (count > 0) {
-      i += di[k % 4];
-      j += dj[k % 4];
+      i += di[k];
+      j += dj[k];
       if (i < 0 || i >= n || j < 0 || j >= m || seen[i][j]) {
-        i -= di[k % 4];
-        j -= dj[k % 4];
-        k++;
+        i -= di[k];
+        j -= dj[k];
+        k = (k + 1) % 4;
         continue;
       }
       ans.add(a[i][j]);
@@ -70,12 +70,12 @@ public class Solution054 {
   }
 
   public static void main(String[] args) {
-    // int[][] a = {
-    //   {1, 2, 3, 4},
-    //   {5, 6, 7, 8},
-    //   {9, 10, 11, 12}
-    // };
-    int[][] a = {{9}};
+    int[][] a = {
+      {1, 2, 3, 4},
+      {5, 6, 7, 8},
+      {9, 10, 11, 12}
+    };
+    // int[][] a = {{9}};
     System.out.println(spiralOrder(a));
   }
 }
