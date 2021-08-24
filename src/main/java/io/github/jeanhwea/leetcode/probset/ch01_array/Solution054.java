@@ -49,9 +49,10 @@ public class Solution054 {
 
   public static List<Integer> spiralOrder(int[][] a) {
     List<Integer> ans = new LinkedList<>();
+    if (a.length <= 0 || a[0].length <= 0) return ans;
     int n = a.length, m = a[0].length, count = n * m, i = 0, j = -1, k = 0;
-    boolean[][] seen = new boolean[n][m];
     int[] di = new int[] {0, 1, 0, -1}, dj = new int[] {1, 0, -1, 0};
+    boolean[][] seen = new boolean[n][m];
     while (count > 0) {
       i += di[k % 4];
       j += dj[k % 4];
