@@ -151,7 +151,7 @@
   - [X] [[https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/][LC017]] [[file:ch10_backtrack/Solution017.java][电话号码的字母组合]]
 
 * 广搜和深搜 BFS & DFS
-  - [ ] [[https://leetcode-cn.com/problems/word-ladder/][LC127]] [[file:ch11_bfs_dfs/Solution127.java][单词接龙]]
+  - [X] [[https://leetcode-cn.com/problems/word-ladder/][LC127]] [[file:ch11_bfs_dfs/Solution127.java][单词接龙]]
   - [ ] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] 单词接龙 II
   - [ ] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] 被围绕的区域
   - [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] 分割回文串
