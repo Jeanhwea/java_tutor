@@ -19,12 +19,10 @@ public class Solution126 {
     wordSet.remove(beginWord);
 
     // 第 1 步：广度优先遍历建图
-    // 记录扩展出的单词是在第几次扩展的时候得到的，key：单词，value：在广度优先遍历的第几层
-    Map<String, Integer> steps = new HashMap<>();
-    steps.put(beginWord, 0);
-    // 记录了单词是从哪些单词扩展而来，key：单词，value：单词列表，这些单词可以变换到 key ，它们是一对多关系
+    Map<String, Integer> wordDepth = new HashMap<>();
+    wordDepth.put(beginWord, 0);
     Map<String, List<String>> from = new HashMap<>();
-    int step = 1;
+    int depth = 1;
     boolean found = false;
     int wordLen = beginWord.length();
     Deque<String> queue = new LinkedList<>();
@@ -33,20 +31,21 @@ public class Solution126 {
       int size = queue.size();
       for (int i = 0; i < size; i++) {
         String currWord = queue.poll();
-        char[] charArray = currWord.toCharArray();
+        char[] arr = currWord.toCharArray();
         // 将每一位替换成 26 个小写英文字母
         for (int j = 0; j < wordLen; j++) {
-          char origin = charArray[j];
+          char origin = arr[j];
           for (char c = 'a'; c <= 'z'; c++) {
-            charArray[j] = c;
-            String nextWord = String.valueOf(charArray);
-            if (steps.containsKey(nextWord) && step == steps.get(nextWord)) {
+            arr[j] = c;
+            String nextWord = String.valueOf(arr);
+            if (wordDepth.containsKey(nextWord) && depth == wordDepth.get(nextWord)) {
               from.get(nextWord).add(currWord);
             }
             if (!wordSet.contains(nextWord)) {
               continue;
             }
-            // 如果从一个单词扩展出来的单词以前遍历过，距离一定更远，为了避免搜索到已经遍历到，且距离更远的单词，需要将它从 wordSet 中删除
+            // 如果从一个单词扩展出来的单词以前遍历过，距离一定更远，为了避免搜
+            // 索到已经遍历到，且距离更远的单词，需要将它从 wordSet 中删除
             wordSet.remove(nextWord);
             // 这一层扩展出的单词进入队列
             queue.offer(nextWord);
@@ -54,16 +53,16 @@ public class Solution126 {
             // 记录 nextWord 从 currWord 而来
             from.putIfAbsent(nextWord, new ArrayList<>());
             from.get(nextWord).add(currWord);
-            // 记录 nextWord 的 step
-            steps.put(nextWord, step);
+            // 记录 nextWord 的 depth
+            wordDepth.put(nextWord, depth);
             if (nextWord.equals(endWord)) {
               found = true;
             }
           }
-          charArray[j] = origin;
+          arr[j] = origin;
         }
       }
-      step++;
+      depth++;
       if (found) break;
     }
 
