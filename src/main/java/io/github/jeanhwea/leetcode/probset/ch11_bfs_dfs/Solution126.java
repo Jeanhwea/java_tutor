@@ -11,10 +11,12 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution126 {
 
-  // 构建搜索树
+  // wordDepth 保存单词所在搜索树的深度
   private static Map<String, Integer> wordDepth;
+  // wordFrom 的 values 的单词可以变换到 key
   private static Map<String, List<String>> wordFrom;
 
+  // 构建搜索树
   private static boolean buildSearchTree(String beginWord, String endWord, Set<String> wordSet) {
     boolean found = false;
     int depth = 1;
