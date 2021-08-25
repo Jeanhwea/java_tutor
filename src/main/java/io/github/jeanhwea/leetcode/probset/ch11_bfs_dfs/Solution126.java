@@ -28,9 +28,9 @@ public class Solution126 {
       ans.add(new ArrayList<>(choose));
       return;
     }
-    for (String precursor : searchTree.get(curr)) {
-      choose.addFirst(precursor);
-      dfs(beginWord, precursor);
+    for (String next : searchTree.get(curr)) {
+      choose.addFirst(next);
+      dfs(beginWord, next);
       choose.removeFirst();
     }
   }
@@ -45,12 +45,11 @@ public class Solution126 {
     wordDepth = new HashMap<>();
     searchTree = new HashMap<>();
     boolean found = buildSearchTree(beginWord, endWord, wordSet);
+    if (!found) return ans;
 
-    if (found) {
-      Deque<String> path = new ArrayDeque<>();
-      path.addFirst(endWord);
-      dfs(beginWord, endWord);
-    }
+    choose = new ArrayDeque<>();
+    choose.addFirst(endWord);
+    dfs(beginWord, endWord);
     return ans;
   }
 
