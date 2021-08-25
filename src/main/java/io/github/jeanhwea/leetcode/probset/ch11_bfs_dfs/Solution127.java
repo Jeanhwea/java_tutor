@@ -48,22 +48,17 @@ public class Solution127 {
     // System.out.println(edges);
   }
 
-  // 查找最短路径, Dijkstra 最短路径算法
+  // Dijkstra 单源最短路径算法
   private static int findShortestPath(int beginId, int endId) {
-    int n = wordCount;
-
     PriorityQueue<int[]> queue = new PriorityQueue<>((x, y) -> x[1] - y[1]);
-    int[] dist = new int[n];
+    int[] dist = new int[wordCount];
     Arrays.fill(dist, Integer.MAX_VALUE);
     dist[beginId] = 0;
-
     queue.offer(new int[] {beginId, dist[beginId]});
     while (!queue.isEmpty()) {
       int[] front = queue.poll();
       int currId = front[0], currDist = front[1];
-      if (currId == endId) {
-        return dist[currId] / 2 + 1;
-      }
+      if (currId == endId) return dist[currId] / 2 + 1;
       for (int nextId : edges.get(currId)) {
         if (currDist + 1 < dist[nextId]) {
           dist[nextId] = currDist + 1;
@@ -71,7 +66,6 @@ public class Solution127 {
         }
       }
     }
-
     return 0;
   }
 
