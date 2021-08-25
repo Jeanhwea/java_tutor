@@ -21,17 +21,17 @@ public class Solution126 {
 
   // 添加深度优先搜索 DFS
   private static List<List<String>> ans;
-  private static Deque<String> path;
+  private static Deque<String> choose;
 
   private static void dfs(String beginWord, String curr) {
     if (curr.equals(beginWord)) {
-      ans.add(new ArrayList<>(path));
+      ans.add(new ArrayList<>(choose));
       return;
     }
     for (String precursor : searchTree.get(curr)) {
-      path.addFirst(precursor);
+      choose.addFirst(precursor);
       dfs(beginWord, precursor);
-      path.removeFirst();
+      choose.removeFirst();
     }
   }
 
