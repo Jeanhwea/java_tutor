@@ -20,7 +20,7 @@ public class Solution126 {
   private static boolean buildSearchTree(String beginWord, String endWord, Set<String> wordSet) {
     boolean found = false;
     int depth = 1;
-    wordDepth.put(beginWord, depth);
+    wordDepth.put(beginWord, 0);
     wordSet.remove(beginWord);
     Deque<String> queue = new LinkedList<>();
     queue.offer(beginWord);
@@ -41,10 +41,13 @@ public class Solution126 {
             if (!wordSet.contains(nextWord)) continue;
             wordSet.remove(nextWord);
             queue.offer(nextWord);
-            wordFrom.putIfAbsent(nextWord, new LinkedList<>());
+
+            wordFrom.putIfAbsent(nextWord, new ArrayList<>());
             wordFrom.get(nextWord).add(currWord);
-            wordDepth.putIfAbsent(nextWord, depth);
-            if (nextWord.equals(endWord)) found = true;
+            wordDepth.put(nextWord, depth);
+            if (nextWord.equals(endWord)) {
+              found = true;
+            }
           }
           arr[j] = origin;
         }
