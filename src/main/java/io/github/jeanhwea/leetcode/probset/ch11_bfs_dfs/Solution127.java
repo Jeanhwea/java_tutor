@@ -37,7 +37,7 @@ public class Solution127 {
       for (int i = 0; i < wordX.length(); i++) {
         char ch = arr[i];
         arr[i] = '_';
-        String wordY = new String(arr);
+        String wordY = String.valueOf(arr);
         arr[i] = ch;
         int y = getWordId(wordY);
         edges.get(x).add(y);

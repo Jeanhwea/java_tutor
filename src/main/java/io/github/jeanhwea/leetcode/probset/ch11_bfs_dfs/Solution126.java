@@ -32,7 +32,6 @@ public class Solution126 {
       for (int i = 0; i < size; i++) {
         String currWord = queue.poll();
         char[] arr = currWord.toCharArray();
-        // 将每一位替换成 26 个小写英文字母
         for (int j = 0; j < wordLen; j++) {
           char origin = arr[j];
           for (char c = 'a'; c <= 'z'; c++) {
@@ -41,23 +40,13 @@ public class Solution126 {
             if (wordDepth.containsKey(nextWord) && depth == wordDepth.get(nextWord)) {
               from.get(nextWord).add(currWord);
             }
-            if (!wordSet.contains(nextWord)) {
-              continue;
-            }
-            // 如果从一个单词扩展出来的单词以前遍历过，距离一定更远，为了避免搜
-            // 索到已经遍历到，且距离更远的单词，需要将它从 wordSet 中删除
+            if (!wordSet.contains(nextWord)) continue;
             wordSet.remove(nextWord);
-            // 这一层扩展出的单词进入队列
             queue.offer(nextWord);
-
-            // 记录 nextWord 从 currWord 而来
             from.putIfAbsent(nextWord, new ArrayList<>());
             from.get(nextWord).add(currWord);
-            // 记录 nextWord 的 depth
             wordDepth.put(nextWord, depth);
-            if (nextWord.equals(endWord)) {
-              found = true;
-            }
+            if (nextWord.equals(endWord)) found = true;
           }
           arr[j] = origin;
         }
