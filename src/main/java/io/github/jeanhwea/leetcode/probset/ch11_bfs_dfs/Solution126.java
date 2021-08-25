@@ -16,6 +16,33 @@ public class Solution126 {
   private static Map<String, List<String>> searchTree;
 
   private static boolean buildSearchTree(String beginWord, String endWord, Set<String> wordSet) {
+    int depth = 1;
+    Deque<String> queue = new LinkedList<>();
+    queue.offer(beginWord);
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+      for (int i = 0; i < size; i++) {
+        String currWord = queue.poll();
+        if (wordDepth.containsKey(currWord)) continue;
+        char[] arr = currWord.toCharArray();
+        for (int j = 0; j < arr.length; j++) {
+          char origin = arr[j];
+          for (char ch = 'a'; ch <= 'z'; ch++) {
+            arr[j] = ch;
+            String nextWord = String.valueOf(arr);
+            if (!wordSet.contains(nextWord)) continue;
+            searchTree.putIfAbsent(currWord, new LinkedList<>());
+            searchTree.get(currWord).add(nextWord);
+            wordDepth.putIfAbsent(currWord, depth + 1);
+            queue.offer(nextWord);
+          }
+          arr[j] = origin;
+        }
+      }
+      depth++;
+    }
+    System.out.println(wordDepth);
+    System.out.println(searchTree);
     return true;
   }
 
