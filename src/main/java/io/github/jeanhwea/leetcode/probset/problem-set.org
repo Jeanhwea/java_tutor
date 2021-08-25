@@ -152,7 +152,7 @@
 
 * 广搜和深搜 BFS & DFS
   - [X] [[https://leetcode-cn.com/problems/word-ladder/][LC127]] [[file:ch11_bfs_dfs/Solution127.java][单词接龙]]
-  - [ ] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] 单词接龙 II
+  - [ ] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] [[file:ch11_bfs_dfs/Solution126.java][单词接龙 II]]
   - [ ] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] 被围绕的区域
   - [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] 分割回文串
   - [ ] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] 不同路径
