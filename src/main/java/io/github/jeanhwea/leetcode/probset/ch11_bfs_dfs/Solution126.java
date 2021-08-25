@@ -11,82 +11,47 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution126 {
 
+  // 构建搜索树
   private static Map<String, Integer> wordDepth;
   private static Map<String, List<String>> searchTree;
 
   private static boolean buildSearchTree(String beginWord, String endWord, Set<String> wordSet) {
-    wordDepth.put(beginWord, 0);
-    int depth = 1;
-    boolean found = false;
-    int wordLen = beginWord.length();
-    Deque<String> queue = new LinkedList<>();
-    queue.offer(beginWord);
-    while (!queue.isEmpty()) {
-      int size = queue.size();
-      for (int i = 0; i < size; i++) {
-        String currWord = queue.poll();
-        char[] arr = currWord.toCharArray();
-        for (int j = 0; j < wordLen; j++) {
-          char origin = arr[j];
-          for (char c = 'a'; c <= 'z'; c++) {
-            arr[j] = c;
-            String nextWord = String.valueOf(arr);
-            if (wordDepth.containsKey(nextWord) && depth == wordDepth.get(nextWord)) {
-              searchTree.get(nextWord).add(currWord);
-            }
-            if (!wordSet.contains(nextWord)) continue;
-            wordSet.remove(nextWord);
-            queue.offer(nextWord);
-            searchTree.putIfAbsent(nextWord, new ArrayList<>());
-            searchTree.get(nextWord).add(currWord);
-            wordDepth.put(nextWord, depth);
-            if (nextWord.equals(endWord)) found = true;
-          }
-          arr[j] = origin;
-        }
-      }
-      depth++;
-      if (found) break;
-    }
-    return found;
+    return true;
   }
 
-  public static List<List<String>> findLadders(
-      String beginWord, String endWord, List<String> wordList) {
-    List<List<String>> ans = new ArrayList<>();
-    Set<String> wordSet = new HashSet<>(wordList);
-    if (!wordSet.contains(endWord)) return ans;
-    wordSet.remove(beginWord);
+  // 添加深度优先搜索 DFS
+  private static List<List<String>> ans;
+  private static Deque<String> path;
 
-    // 第 1 步：广度优先遍历建图
-    wordDepth = new HashMap<>();
-    searchTree = new HashMap<>();
-    boolean found = buildSearchTree(beginWord, endWord, wordSet);
-
-    // 第 2 步：深度优先遍历找到所有解，从 endWord 恢复到 beginWord ，所以每次尝试操作 path 列表的头部
-    if (found) {
-      Deque<String> path = new ArrayDeque<>();
-      path.add(endWord);
-      dfs(searchTree, path, beginWord, endWord, ans);
-    }
-    return ans;
-  }
-
-  private static void dfs(
-      Map<String, List<String>> from,
-      Deque<String> path,
-      String beginWord,
-      String curr,
-      List<List<String>> ans) {
+  private static void dfs(String beginWord, String curr) {
     if (curr.equals(beginWord)) {
       ans.add(new ArrayList<>(path));
       return;
     }
-    for (String precursor : from.get(curr)) {
+    for (String precursor : searchTree.get(curr)) {
       path.addFirst(precursor);
-      dfs(from, path, beginWord, precursor, ans);
+      dfs(beginWord, precursor);
       path.removeFirst();
     }
+  }
+
+  public static List<List<String>> findLadders(
+      String beginWord, String endWord, List<String> wordList) {
+    ans = new ArrayList<>();
+    Set<String> wordSet = new HashSet<>(wordList);
+    if (!wordSet.contains(endWord)) return ans;
+    wordSet.remove(beginWord);
+
+    wordDepth = new HashMap<>();
+    searchTree = new HashMap<>();
+    boolean found = buildSearchTree(beginWord, endWord, wordSet);
+
+    if (found) {
+      Deque<String> path = new ArrayDeque<>();
+      path.addFirst(endWord);
+      dfs(beginWord, endWord);
+    }
+    return ans;
   }
 
   public static void main(String[] args) {
