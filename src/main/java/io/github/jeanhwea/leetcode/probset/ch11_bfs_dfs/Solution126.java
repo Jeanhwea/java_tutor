@@ -11,17 +11,11 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Solution126 {
 
-  public static List<List<String>> findLadders(
-      String beginWord, String endWord, List<String> wordList) {
-    List<List<String>> ans = new ArrayList<>();
-    Set<String> wordSet = new HashSet<>(wordList);
-    if (!wordSet.contains(endWord)) return ans;
-    wordSet.remove(beginWord);
+  private static Map<String, Integer> wordDepth;
+  private static Map<String, List<String>> searchTree;
 
-    // 第 1 步：广度优先遍历建图
-    Map<String, Integer> wordDepth = new HashMap<>();
+  private static boolean buildSearchTree(String beginWord, String endWord, Set<String> wordSet) {
     wordDepth.put(beginWord, 0);
-    Map<String, List<String>> from = new HashMap<>();
     int depth = 1;
     boolean found = false;
     int wordLen = beginWord.length();
@@ -38,13 +32,13 @@ public class Solution126 {
             arr[j] = c;
             String nextWord = String.valueOf(arr);
             if (wordDepth.containsKey(nextWord) && depth == wordDepth.get(nextWord)) {
-              from.get(nextWord).add(currWord);
+              searchTree.get(nextWord).add(currWord);
             }
             if (!wordSet.contains(nextWord)) continue;
             wordSet.remove(nextWord);
             queue.offer(nextWord);
-            from.putIfAbsent(nextWord, new ArrayList<>());
-            from.get(nextWord).add(currWord);
+            searchTree.putIfAbsent(nextWord, new ArrayList<>());
+            searchTree.get(nextWord).add(currWord);
             wordDepth.put(nextWord, depth);
             if (nextWord.equals(endWord)) found = true;
           }
@@ -54,12 +48,26 @@ public class Solution126 {
       depth++;
       if (found) break;
     }
+    return found;
+  }
+
+  public static List<List<String>> findLadders(
+      String beginWord, String endWord, List<String> wordList) {
+    List<List<String>> ans = new ArrayList<>();
+    Set<String> wordSet = new HashSet<>(wordList);
+    if (!wordSet.contains(endWord)) return ans;
+    wordSet.remove(beginWord);
+
+    // 第 1 步：广度优先遍历建图
+    wordDepth = new HashMap<>();
+    searchTree = new HashMap<>();
+    boolean found = buildSearchTree(beginWord, endWord, wordSet);
 
     // 第 2 步：深度优先遍历找到所有解，从 endWord 恢复到 beginWord ，所以每次尝试操作 path 列表的头部
     if (found) {
       Deque<String> path = new ArrayDeque<>();
       path.add(endWord);
-      dfs(from, path, beginWord, endWord, ans);
+      dfs(searchTree, path, beginWord, endWord, ans);
     }
     return ans;
   }
