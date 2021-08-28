@@ -155,8 +155,8 @@
   - [X] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] [[file:ch11_bfs_dfs/Solution126.java][单词接龙 II]]
   - [X] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] [[file:ch11_bfs_dfs/Solution130.java][被围绕的区域]]
   - [X] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] [[file:ch11_bfs_dfs/Solution131.java][分割回文串]]
-  - [ ] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] [[file:ch11_bfs_dfs/Solution062.java][不同路径]]
-  - [ ] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] [[file:ch11_bfs_dfs/Solution063.java][不同路径 II]]
+  - [X] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] [[file:ch11_bfs_dfs/Solution062.java][不同路径]]
+  - [X] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] [[file:ch11_bfs_dfs/Solution063.java][不同路径 II]]
   - [ ] [[https://leetcode-cn.com/problems/n-queens/][LC051]] N 皇后
   - [ ] [[https://leetcode-cn.com/problems/n-queens-ii/][LC052]] N 皇后 II
   - [ ] [[https://leetcode-cn.com/problems/restore-ip-addresses/][LC093]] 复原 IP 地址
@@ -172,7 +172,7 @@
   - [X] [[https://leetcode-cn.com/problems/majority-element/][LC169]] [[file:ch12_dnc/Solution169.java][多数元素]]
 
 * 细节题 Misc
-  - [ ] [[https://leetcode-cn.com/problems/reverse-integer/][LC007]] 整数反转
+  - [X] [[https://leetcode-cn.com/problems/reverse-integer/][LC007]] [[file:ch13_misc/Solution007.java][整数反转]]
   - [ ] [[https://leetcode-cn.com/problems/palindrome-number/][LC009]] 回文数
   - [ ] [[https://leetcode-cn.com/problems/insert-interval/][LC057]] 插入区间
   - [ ] [[https://leetcode-cn.com/problems/merge-intervals/][LC056]] 合并区间
@@ -180,7 +180,7 @@
   - [ ] [[https://leetcode-cn.com/problems/multiply-strings/][LC043]] 字符串相乘
   - [ ] [[https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/][LC030]] 串联所有单词的子串
   - [X] [[https://leetcode-cn.com/problems/pascals-triangle-ii/][LC119]] [[file:ch13_misc/Solution119.java][杨辉三角 II]]
-  - [ ] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] 螺旋矩阵
+  - [X] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch13_misc/Solution054.java][螺旋矩阵]]
   - [ ] [[https://leetcode-cn.com/problems/spiral-matrix-ii/][LC059]] 螺旋矩阵 II
   - [ ] [[https://leetcode-cn.com/problems/zigzag-conversion/][LC006]] Z 字形变换
   - [ ] [[https://leetcode-cn.com/problems/divide-two-integers/][LC029]] 两数相除
