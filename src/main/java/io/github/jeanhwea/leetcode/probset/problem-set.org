@@ -154,7 +154,7 @@
   - [X] [[https://leetcode-cn.com/problems/word-ladder/][LC127]] [[file:ch11_bfs_dfs/Solution127.java][单词接龙]]
   - [X] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] [[file:ch11_bfs_dfs/Solution126.java][单词接龙 II]]
   - [X] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] [[file:ch11_bfs_dfs/Solution130.java][被围绕的区域]]
-  - [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] 分割回文串
+  - [ ] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] [[file:ch11_bfs_dfs/Solution131.java][分割回文串]]
   - [ ] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] 不同路径
   - [ ] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] 不同路径 II
   - [ ] [[https://leetcode-cn.com/problems/n-queens/][LC051]] N 皇后
