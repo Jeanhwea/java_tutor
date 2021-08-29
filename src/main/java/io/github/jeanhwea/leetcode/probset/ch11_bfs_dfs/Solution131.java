@@ -52,7 +52,7 @@ public class Solution131 {
       return;
     }
 
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     for (int i = k; i < n; i++) {
       sb.append(s[i]);
       if (dp[k][i]) {

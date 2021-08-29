@@ -15,7 +15,7 @@ public class Solution017 {
       new String[] {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
   private static List<String> ans;
-  private static StringBuffer choose;
+  private static StringBuilder choose;
   private static String a;
   private static int n;
 
@@ -37,7 +37,7 @@ public class Solution017 {
     a = digits;
     n = digits.length();
     ans = new LinkedList<>();
-    choose = new StringBuffer();
+    choose = new StringBuilder();
 
     if (digits.length() <= 0) return ans;
 

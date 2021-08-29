@@ -37,7 +37,7 @@ public class Solution115 {
   ////////////////////////////////////////////////////////////////////////////////
   private static int ans;
   private static int n;
-  private static StringBuffer sb;
+  private static StringBuilder sb;
   private static String s, t;
 
   public static int numDistinct0(String source, String target) {
@@ -45,7 +45,7 @@ public class Solution115 {
     n = source.length();
     s = source;
     t = target;
-    sb = new StringBuffer();
+    sb = new StringBuilder();
     dfs(0);
     return ans;
   }
