@@ -1,41 +1,33 @@
-package io.github.jeanhwea.leetcode.probset.ch11_bfs_dfs;
+package io.github.jeanhwea.leetcode.probset.ch06_graph;
 
 import java.util.*;
 
 /**
- * N 皇后
+ * N 皇后 II
  *
  * @author Jinghui Hu
  * @since 2021-08-29, JDK1.8
  */
 @SuppressWarnings("all")
-public class Solution051 {
+public class Solution052 {
 
-  private static char[][] board;
-  private static int n;
-  private static List<List<String>> ans;
-
-  public static List<List<String>> solveNQueens(int num) {
+  public static int totalNQueens(int num) {
     n = num;
     board = new char[n][n];
-    ans = new LinkedList<>();
+    ans = 0;
     for (int i = 0; i < n; i++) Arrays.fill(board[i], '.');
     dfs(0);
     return ans;
   }
 
+  private static char[][] board;
+  private static int n;
+  private static int ans;
+
   private static void dfs(int k) {
     if (k == n) {
       // System.out.println(Arrays.deepToString(board).replaceAll("],", "],\n"));
-      List<String> solution = new LinkedList<>();
-      for (int i = 0; i < n; i++) {
-        StringBuilder sb = new StringBuilder();
-        for (int j = 0; j < n; j++) {
-          sb.append(board[i][j]);
-        }
-        solution.add(sb.toString());
-      }
-      ans.add(solution);
+      ans++;
       return;
     }
     for (int i = 0; i < n; i++) {
@@ -61,7 +53,6 @@ public class Solution051 {
   }
 
   public static void main(String[] args) {
-    int n = 4;
-    System.out.println(solveNQueens(n));
+    System.out.println(totalNQueens(4));
   }
 }
