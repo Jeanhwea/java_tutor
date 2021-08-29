@@ -161,8 +161,8 @@
   - [X] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] [[file:ch11_bfs_dfs/Solution062.java][不同路径]]
   - [X] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] [[file:ch11_bfs_dfs/Solution063.java][不同路径 II]]
   - [X] [[https://leetcode-cn.com/problems/restore-ip-addresses/][LC093]] [[file:ch11_bfs_dfs/Solution093.java][复原 IP 地址]]
-  - [X] [[https://leetcode-cn.com/problems/combination-sum/][LC039]] [[file:ch11_bfs_dfs/Solution039.java][组合总和]]
-  - [X] [[https://leetcode-cn.com/problems/combination-sum-ii/][LC040]] [[file:ch11_bfs_dfs/Solution040.java][组合总和 II]]
+  - [X] [[https://leetcode-cn.com/problems/combination-sum/][LC039]] [[file:ch11_bfs_dfs/Solution039.java][组合总和]] 可以重复选, dfs 在取下一个时使用 ~dfs(i, target-a[i])~
+  - [X] [[https://leetcode-cn.com/problems/combination-sum-ii/][LC040]] [[file:ch11_bfs_dfs/Solution040.java][组合总和 II]] 添加统计 ~List<int[]> numCount~ 来去重
   - [ ] [[https://leetcode-cn.com/problems/generate-parentheses/][LC022]] 括号生成
   - [ ] [[https://leetcode-cn.com/problems/sudoku-solver/][LC037]] 解数独
   - [ ] [[https://leetcode-cn.com/problems/word-search/][LC079]] 单词搜索
