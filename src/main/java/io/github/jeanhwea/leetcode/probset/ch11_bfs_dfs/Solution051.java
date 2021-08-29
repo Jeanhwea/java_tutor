@@ -28,9 +28,8 @@ public class Solution051 {
     if (k == n) {
       // System.out.println(Arrays.deepToString(board).replaceAll("],", "],\n"));
       List<String> solution = new LinkedList<>();
-      StringBuilder sb = new StringBuilder();
       for (int i = 0; i < n; i++) {
-        sb.delete(0, sb.length());
+        StringBuilder sb = new StringBuilder();
         for (int j = 0; j < n; j++) {
           sb.append(board[i][j]);
         }
