@@ -101,6 +101,7 @@
   - [X] [[https://leetcode-cn.com/problems/path-sum-ii/][LC113]] [[file:ch05_tree/Solution113.java][路径总和 II]]
   - [X] [[https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/][LC124]] [[file:ch05_tree/Solution124.java][二叉树中的最大路径和]]
   - [X] [[https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/][LC129]] [[file:ch05_tree/Solution129.java][求根节点到叶节点数字之和]]
+  - [X] [[https://leetcode-cn.com/problems/invert-binary-tree/][LC226]] [[file:ch05_tree/Solution226.java][翻转二叉树]]
 
 * 图 Graph
   - [X] [[https://leetcode-cn.com/problems/clone-graph/][LC133]] [[file:ch06_graph/Solution695.java][克隆图]]
