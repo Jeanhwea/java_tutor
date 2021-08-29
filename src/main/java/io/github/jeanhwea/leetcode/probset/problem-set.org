@@ -182,7 +182,7 @@
   - [X] [[https://leetcode-cn.com/problems/pascals-triangle-ii/][LC119]] [[file:ch13_misc/Solution119.java][杨辉三角 II]]
   - [X] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch13_misc/Solution054.java][螺旋矩阵]]
   - [ ] [[https://leetcode-cn.com/problems/spiral-matrix-ii/][LC059]] 螺旋矩阵 II
-  - [ ] [[https://leetcode-cn.com/problems/zigzag-conversion/][LC006]] Z 字形变换
+  - [X] [[https://leetcode-cn.com/problems/zigzag-conversion/][LC006]] [[file:ch13_misc/Solution006.java][Z 字形变换]]
   - [ ] [[https://leetcode-cn.com/problems/divide-two-integers/][LC029]] 两数相除
   - [ ] [[https://leetcode-cn.com/problems/text-justification/][LC068]] 文本左右对齐
   - [ ] [[https://leetcode-cn.com/problems/max-points-on-a-line/][LC149]] 直线上最多的点数
