@@ -156,14 +156,14 @@
 * 广搜和深搜 BFS & DFS
   - [X] [[https://leetcode-cn.com/problems/word-ladder/][LC127]] [[file:ch11_bfs_dfs/Solution127.java][单词接龙]]
   - [X] [[https://leetcode-cn.com/problems/word-ladder-ii/][LC126]] [[file:ch11_bfs_dfs/Solution126.java][单词接龙 II]]
-  - [X] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] [[file:ch11_bfs_dfs/Solution130.java][被围绕的区域]]
-  - [X] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] [[file:ch11_bfs_dfs/Solution131.java][分割回文串]]
-  - [X] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] [[file:ch11_bfs_dfs/Solution062.java][不同路径]]
-  - [X] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] [[file:ch11_bfs_dfs/Solution063.java][不同路径 II]]
+  - [X] [[https://leetcode-cn.com/problems/surrounded-regions/][LC130]] [[file:ch11_bfs_dfs/Solution130.java][被围绕的区域]] 从边缘深搜, 标记好再重置
+  - [X] [[https://leetcode-cn.com/problems/palindrome-partitioning/][LC131]] [[file:ch11_bfs_dfs/Solution131.java][分割回文串]] 先动规求字串是否为回文串, 然后使用深搜构造所有解
+  - [X] [[https://leetcode-cn.com/problems/unique-paths/][LC062]] [[file:ch11_bfs_dfs/Solution062.java][不同路径]] 动规法解, 可以考虑使用滚动数组优化
+  - [X] [[https://leetcode-cn.com/problems/unique-paths-ii/][LC063]] [[file:ch11_bfs_dfs/Solution063.java][不同路径 II]] 与上一题类似, 需要对障碍物特殊考虑
   - [X] [[https://leetcode-cn.com/problems/restore-ip-addresses/][LC093]] [[file:ch11_bfs_dfs/Solution093.java][复原 IP 地址]]
   - [X] [[https://leetcode-cn.com/problems/combination-sum/][LC039]] [[file:ch11_bfs_dfs/Solution039.java][组合总和]] 可以重复选, dfs 在取下一个时使用 ~dfs(i, target-a[i])~
   - [X] [[https://leetcode-cn.com/problems/combination-sum-ii/][LC040]] [[file:ch11_bfs_dfs/Solution040.java][组合总和 II]] 添加统计 ~List<int[]> numCount~ 来去重
-  - [ ] [[https://leetcode-cn.com/problems/generate-parentheses/][LC022]] 括号生成
+  - [X] [[https://leetcode-cn.com/problems/generate-parentheses/][LC022]] [[file:ch11_bfs_dfs/Solution022.java][括号生成]] 对开括号和闭括号进行深搜 ~dfs(int open, int close)~
   - [ ] [[https://leetcode-cn.com/problems/sudoku-solver/][LC037]] 解数独
   - [ ] [[https://leetcode-cn.com/problems/word-search/][LC079]] 单词搜索
 
