@@ -35,9 +35,9 @@ public class Solution056 {
   }
 
   public static void main(String[] args) {
-    // int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+    int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
     // int[][] intervals = {{1, 4}, {4, 5}};
-    int[][] intervals = {};
+    // int[][] intervals = {};
     int[][] ans = merge(intervals);
     for (int i = 0; i < ans.length; i++) {
       System.out.printf("[%d,%d]\n", ans[i][0], ans[i][1]);
