@@ -13,14 +13,43 @@ public class Solution037 {
 
   public static void solveSudoku(char[][] board) {
     n = board.length;
-    board = a;
+    choose = board;
+    seen = new boolean[n][n];
+    ans = false;
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        seen[i][j] = '.' == board[i][j];
+      }
+    }
+    dfs(0, 0);
   }
 
-  private static char[][] a;
+  private static boolean[][] seen;
+  private static char[][] choose;
   private static int n;
+  private static boolean ans;
 
   private static void dfs(int x, int y) {
-    //
+    if (x == n && y == n) {
+      ans = true;
+      System.out.println(Arrays.deepToString(choose));
+      return;
+    }
+    System.out.printf("x=%d, y=%d\n", x, y);
+
+    if (x < 0 || x >= n || y < 0 || y >= n || seen[x][y] || !isValidSudoku(choose)) return;
+
+    for (char ch = '1'; ch <= '9'; ch++) {
+      choose[x][y] = ch;
+      seen[x][y] = true;
+      if (x < n - 1) {
+        dfs(x + 1, y);
+      } else {
+        dfs(0, y + 1);
+      }
+      seen[x][y] = false;
+      choose[x][y] = '.';
+    }
   }
 
   @SuppressWarnings("unchecked")
@@ -62,6 +91,6 @@ public class Solution037 {
       {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
       {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
     };
-    System.out.println(isValidSudoku(board));
+    solveSudoku(board);
   }
 }
