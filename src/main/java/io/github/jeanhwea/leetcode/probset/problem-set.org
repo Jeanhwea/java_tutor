@@ -174,7 +174,7 @@
 
 * 细节题 Misc
   - [X] [[https://leetcode-cn.com/problems/reverse-integer/][LC007]] [[file:ch13_misc/Solution007.java][整数反转]]
-  - [ ] [[https://leetcode-cn.com/problems/palindrome-number/][LC009]] 回文数
+  - [ ] [[https://leetcode-cn.com/problems/palindrome-number/][LC009]] [[file:ch13_misc/Solution009.java][回文数]]
   - [ ] [[https://leetcode-cn.com/problems/insert-interval/][LC057]] 插入区间
   - [ ] [[https://leetcode-cn.com/problems/merge-intervals/][LC056]] 合并区间
   - [ ] [[https://leetcode-cn.com/problems/minimum-window-substring/][LC076]] 最小覆盖子串
