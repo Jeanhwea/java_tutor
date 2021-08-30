@@ -35,20 +35,28 @@ public class Solution037 {
       System.out.println(Arrays.deepToString(choose));
       return;
     }
-    System.out.printf("x=%d, y=%d\n", x, y);
+    // System.out.printf("x=%d, y=%d\n", x, y);
 
-    if (x < 0 || x >= n || y < 0 || y >= n || seen[x][y] || !isValidSudoku(choose)) return;
+    if (x < 0 || x >= n || y < 0 || y >= n || !isValidSudoku(choose)) return;
 
     for (char ch = '1'; ch <= '9'; ch++) {
-      choose[x][y] = ch;
-      seen[x][y] = true;
-      if (x < n - 1) {
-        dfs(x + 1, y);
+      if (seen[x][y]) {
+        if (x < n - 1) {
+          dfs(x + 1, y);
+        } else {
+          dfs(0, y + 1);
+        }
       } else {
-        dfs(0, y + 1);
+        choose[x][y] = ch;
+        seen[x][y] = true;
+        if (x < n - 1) {
+          dfs(x + 1, y);
+        } else {
+          dfs(0, y + 1);
+        }
+        seen[x][y] = false;
+        choose[x][y] = '.';
       }
-      seen[x][y] = false;
-      choose[x][y] = '.';
     }
   }
 
