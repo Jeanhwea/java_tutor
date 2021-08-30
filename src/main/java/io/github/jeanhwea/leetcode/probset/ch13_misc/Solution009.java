@@ -13,6 +13,7 @@ public class Solution009 {
 
   public static boolean isPalindrome(int x) {
     if (x < 0) return false;
+    if (x % 10 == 0 && x != 0) return false;
     int y = 0;
     while (x > y) {
       y = y * 10 + x % 10;
@@ -23,7 +24,7 @@ public class Solution009 {
 
   public static void main(String[] args) {
     System.out.println(isPalindrome(0));
-    System.out.println(isPalindrome(11));
+    System.out.println(isPalindrome(10));
     System.out.println(isPalindrome(12));
     System.out.println(isPalindrome(121));
     System.out.println(isPalindrome(1001));
