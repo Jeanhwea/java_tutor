@@ -13,15 +13,14 @@ public class Solution149 {
 
   public static int maxPoints(int[][] points) {
     int n = points.length;
-    if (n <= 2) return n;
-
+    if (n <= 2) return n; // 如果点数小于2, 直接返回数量
     int ans = 0;
     for (int i = 0; i < n; i++) {
       int[] p1 = points[i];
-      Map<Integer, Integer> slopeMap = new HashMap<>();
+      Map<Integer, Integer> slopeMap = new HashMap<>(); // 存储 p1, p2 两点的斜率
       for (int j = i + 1; j < n; j++) {
         int[] p2 = points[j];
-        int[] slope = null;
+        int[] slope = null; // {dy, dx}
         if (p1[0] == p2[0]) {
           slope = new int[] {1, 0};
         } else if (p1[1] == p2[1]) {
@@ -49,7 +48,6 @@ public class Solution149 {
         ans = Math.max(ans, value + 1);
       }
     }
-
     return ans;
   }
 
