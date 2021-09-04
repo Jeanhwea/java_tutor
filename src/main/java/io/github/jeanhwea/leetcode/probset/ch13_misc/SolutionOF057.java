@@ -9,7 +9,7 @@ import java.util.*;
  * @since 2021-09-04, JDK1.8
  */
 @SuppressWarnings("all")
-public class SolutionOf057 {
+public class SolutionOF057 {
 
   public static int[] twoSum(int[] nums, int target) {
     int i = 0, j = nums.length - 1;
