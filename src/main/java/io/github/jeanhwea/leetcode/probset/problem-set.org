@@ -14,6 +14,7 @@
   - [X] [[https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/][LC081]] [[file:ch01_array/Solution081.java][搜索旋转排序数组 II]]
   - [X] [[https://leetcode-cn.com/problems/rotate-array/][LC189]] [[file:ch01_array/Solution189.java][旋转数组]]
   - [X] [[https://leetcode-cn.com/problems/median-of-two-sorted-arrays/][LC004]] [[file:ch01_array/Solution004.java][寻找两个正序数组的中位数]]
+  - [X] [[https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/][LC034]] [[file:ch01_array/Solution034.java][在排序数组中查找元素的第一个和最后一个位置]]
   - [X] [[https://leetcode-cn.com/problems/longest-consecutive-sequence/][LC128]] [[file:ch01_array/Solution128.java][最长连续序列]]
   - [X] [[https://leetcode-cn.com/problems/two-sum/][LC001]] [[file:ch01_array/Solution001.java][两数之和]]
   - [X] [[https://leetcode-cn.com/problems/3sum/][LC015]] [[file:ch01_array/Solution015.java][三数之和]]
