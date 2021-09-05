@@ -177,7 +177,7 @@
   - [X] [[https://leetcode-cn.com/problems/palindrome-number/][LC009]] [[file:ch13_misc/Solution009.java][回文数]]
   - [X] [[https://leetcode-cn.com/problems/insert-interval/][LC057]] [[file:ch13_misc/Solution057.java][插入区间]]
   - [X] [[https://leetcode-cn.com/problems/merge-intervals/][LC056]] [[file:ch13_misc/Solution056.java][合并区间]]
-  - [ ] [[https://leetcode-cn.com/problems/minimum-window-substring/][LC076]] 最小覆盖子串
+  - [X] [[https://leetcode-cn.com/problems/minimum-window-substring/][LC076]] [[file:ch13_misc/Solution076.java][最小覆盖子串]] 滑动窗口法，维护 t 和 s 串的距离 ~distST~ 来判断是否覆盖
   - [X] [[https://leetcode-cn.com/problems/divide-two-integers/][LC029]] [[file:ch13_misc/Solution029.java][两数相除]]
   - [X] [[https://leetcode-cn.com/problems/multiply-strings/][LC043]] [[file:ch13_misc/Solution043.java][字符串相乘]]
   - [X] [[https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/][LC030]] [[file:ch13_misc/Solution030.java][串联所有单词的子串]]
