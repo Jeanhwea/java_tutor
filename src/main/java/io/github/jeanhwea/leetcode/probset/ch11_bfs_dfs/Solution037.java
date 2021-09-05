@@ -61,6 +61,6 @@ public class Solution037 {
       {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
     };
     solveSudoku(board);
-    System.out.println(Arrays.deepToString(board));
+    System.out.println(Arrays.deepToString(board).replace("], [", "],\n ["));
   }
 }
