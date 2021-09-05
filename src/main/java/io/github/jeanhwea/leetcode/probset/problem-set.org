@@ -180,10 +180,10 @@
   - [ ] [[https://leetcode-cn.com/problems/minimum-window-substring/][LC076]] 最小覆盖子串
   - [X] [[https://leetcode-cn.com/problems/divide-two-integers/][LC029]] [[file:ch13_misc/Solution029.java][两数相除]]
   - [X] [[https://leetcode-cn.com/problems/multiply-strings/][LC043]] [[file:ch13_misc/Solution043.java][字符串相乘]]
-  - [ ] [[https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/][LC030]] 串联所有单词的子串
+  - [X] [[https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/][LC030]] [[file:ch13_misc/Solution030.java][串联所有单词的子串]]
   - [X] [[https://leetcode-cn.com/problems/pascals-triangle-ii/][LC119]] [[file:ch13_misc/Solution119.java][杨辉三角 II]]
   - [X] [[https://leetcode-cn.com/problems/spiral-matrix/][LC054]] [[file:ch13_misc/Solution054.java][螺旋矩阵]]
-  - [ ] [[https://leetcode-cn.com/problems/spiral-matrix-ii/][LC059]] 螺旋矩阵 II
+  - [X] [[https://leetcode-cn.com/problems/spiral-matrix-ii/][LC059]] [[file:ch13_misc/Solution059.java][螺旋矩阵 II]]
   - [X] [[https://leetcode-cn.com/problems/zigzag-conversion/][LC006]] [[file:ch13_misc/Solution006.java][Z 字形变换]]
   - [X] [[https://leetcode-cn.com/problems/text-justification/][LC068]] [[file:ch13_misc/Solution068.java][文本左右对齐]]
   - [X] [[https://leetcode-cn.com/problems/max-points-on-a-line/][LC149]] [[file:ch13_misc/Solution149.java][直线上最多的点数]]
