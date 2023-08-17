@@ -1,29 +1,25 @@
-#+TITLE: ANOTHER TRY
+#+TITLE: Java 基础教程
 #+AUTHOR: Jinghui Hu
 #+EMAIL: hujinghui@buaa.edu.cn
 #+DATE: <2021-06-15 Tue 13:04:49>
-#+HTML_LINK_UP: ../readme.html
-#+HTML_LINK_HOME: ../index.html
-#+SETUPFILE: ~/.emacs.d/site-lisp/org-html-themes/setup/theme-readtheorg-local.setup
+#+STARTUP: overview num indent
+#+OPTIONS: ^:nil
+#+FILETAGS: :verb:
 
-
-* TODO List
-  1. [X] 将 lang 包中的代码材料迁移到 language 包中
-  2. [X] 完成 probset 包
 
 * 基础知识
-  1. [[https://leetcode-cn.com/leetbook/detail/tech-interview-cookbook/][校招基础知识详解]]
+1. [[https://leetcode-cn.com/leetbook/detail/tech-interview-cookbook/][校招基础知识详解]]
 
 * 算法练习
-  1. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/][LeetCode 初级算法]]
-  2. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-medium/][LeetCode 中级算法]]
-  3. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-hard/][LeetCode 高级算法]]
-  4. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions/][LeetCode 算法面试题汇总]]
-  5. [[https://leetcode-cn.com/problem-list/2cktkvj/][LeetCode HOT 100]]
-  6. [[file:src/main/java/io/github/jeanhwea/leetcode/probset/problem-set.org][LeetCode 习题集]]
+1. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/][LeetCode 初级算法]]
+2. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-medium/][LeetCode 中级算法]]
+3. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions-hard/][LeetCode 高级算法]]
+4. [[https://leetcode-cn.com/leetbook/detail/top-interview-questions/][LeetCode 算法面试题汇总]]
+5. [[https://leetcode-cn.com/problem-list/2cktkvj/][LeetCode HOT 100]]
+6. [[file:src/main/java/io/github/jeanhwea/leetcode/probset/problem-set.org][LeetCode 习题集]]
 
 * 刷题连接
-  1. [[https://www.cs.usfca.edu/~galles/visualization/Algorithms.html][数据结构可视化]]
-  2. [[https://leetcode-cn.com/problemset/all/][LeetCode]]
-  3. [[https://codetop.cc][CodeTop]]
-  4. [[https://labuladong.gitee.io/algo/][labuladong 的算法小抄]]
+1. [[https://www.cs.usfca.edu/~galles/visualization/Algorithms.html][数据结构可视化]]
+2. [[https://leetcode-cn.com/problemset/all/][LeetCode]]
+3. [[https://codetop.cc][CodeTop]]
+4. [[https://labuladong.gitee.io/algo/][labuladong 的算法小抄]]
